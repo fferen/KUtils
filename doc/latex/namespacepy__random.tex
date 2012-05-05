@@ -1,0 +1,156 @@
+\hypertarget{namespacepy__random}{\section{py\-\_\-random Namespace Reference}
+\label{namespacepy__random}\index{py\-\_\-random@{py\-\_\-random}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacepy__random_ac21b34e4e56b3863dcdd3bfef24d4319}{randint} (int low, int high)
+\item 
+long \hyperlink{namespacepy__random_ab2d98a941b012d2e2aa47ce70a6d7e51}{randint} (long low, long high)
+\item 
+long long \hyperlink{namespacepy__random_a0f224448fbf742639f2eba6e9576c2a2}{randint} (long long low, long long high)
+\item 
+double \hyperlink{namespacepy__random_a7dde5bdd031aa6ec9b3179dda0e7e56d}{random} ()
+\item 
+float \hyperlink{namespacepy__random_a1462ed7b909fb4f5b29934b683cc9889}{uniform} (float low, float high)
+\item 
+double \hyperlink{namespacepy__random_aab2ed6628e9e0cabbbb83d95c7599f6d}{uniform} (double low, double high)
+\item 
+{\footnotesize template$<$class Iter\-Type $>$ }\\void \hyperlink{namespacepy__random_a7b7c1282dbbc2850b8b723dab3b23691}{shuffle} (Iter\-Type start, Iter\-Type end)
+\item 
+{\footnotesize template$<$class Seq\-Type $>$ }\\void \hyperlink{namespacepy__random_ab66bcc464baa50ad98112eb5c2df8c86}{shuffle} (Seq\-Type \&seq)
+\item 
+{\footnotesize template$<$template$<$ typename U, typename...\-Args $>$ class Seq\-Type, typename Item\-Type $>$ }\\Item\-Type \hyperlink{namespacepy__random_ae50e828bedece790b2631f461ef136e2}{choice} (const Seq\-Type$<$ Item\-Type $>$ \&seq)
+\item 
+vector$<$ unsigned $>$ \& \hyperlink{namespacepy__random_ae9e440ebbc147a12da87b7beb6b9a749}{get\-Sample\-Inds} (unsigned pop\-Size, unsigned samp\-Size, vector$<$ unsigned $>$ \&inds, bool with\-Replacement=true)
+\item 
+vector$<$ unsigned $>$ \hyperlink{namespacepy__random_a487a3de2095347f5759d88b64673ba24}{get\-Sample\-Inds} (unsigned pop\-Size, unsigned samp\-Size, bool with\-Replacement=true)
+\item 
+{\footnotesize template$<$typename Seq\-Type $>$ }\\void \hyperlink{namespacepy__random_ab19bd560711e2208769bd09a80ea185f}{sample} (const Seq\-Type \&seq, unsigned samp\-Size, Seq\-Type \&out, bool with\-Replacement=true)
+\item 
+{\footnotesize template$<$typename Seq\-Type $>$ }\\Seq\-Type \hyperlink{namespacepy__random_a9db6806890355daad49822818b8c8378}{sample} (const Seq\-Type \&seq, unsigned samp\-Size, bool with\-Replacement=true)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+random\-\_\-device \hyperlink{namespacepy__random_a1965c2cf853d039447d4c533e5d65293}{engine}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple wrapper around {\ttfamily $<$random$>$} with a Python interface. 
+
+\subsection{Function Documentation}
+\hypertarget{namespacepy__random_ae50e828bedece790b2631f461ef136e2}{\index{py\-\_\-random@{py\-\_\-random}!choice@{choice}}
+\index{choice@{choice}!py_random@{py\-\_\-random}}
+\subsubsection[{choice}]{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ typename U, typename...\-Args $>$ class Seq\-Type, typename Item\-Type $>$ Item\-Type {\bf py\-\_\-random\-::choice} (
+\begin{DoxyParamCaption}
+\item[{const Seq\-Type$<$ Item\-Type $>$ \&}]{seq}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_ae50e828bedece790b2631f461ef136e2}
+\hypertarget{namespacepy__random_ae9e440ebbc147a12da87b7beb6b9a749}{\index{py\-\_\-random@{py\-\_\-random}!get\-Sample\-Inds@{get\-Sample\-Inds}}
+\index{get\-Sample\-Inds@{get\-Sample\-Inds}!py_random@{py\-\_\-random}}
+\subsubsection[{get\-Sample\-Inds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ unsigned $>$ \& {\bf py\-\_\-random\-::get\-Sample\-Inds} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pop\-Size, }
+\item[{unsigned}]{samp\-Size, }
+\item[{vector$<$ unsigned $>$ \&}]{inds, }
+\item[{bool}]{with\-Replacement = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_ae9e440ebbc147a12da87b7beb6b9a749}
+Store {\ttfamily samp\-Size} random numbers in range \mbox{[}0, {\ttfamily pop\-Size}) in {\ttfamily inds}, with or without replacement. \hypertarget{namespacepy__random_a487a3de2095347f5759d88b64673ba24}{\index{py\-\_\-random@{py\-\_\-random}!get\-Sample\-Inds@{get\-Sample\-Inds}}
+\index{get\-Sample\-Inds@{get\-Sample\-Inds}!py_random@{py\-\_\-random}}
+\subsubsection[{get\-Sample\-Inds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned$>$ {\bf py\-\_\-random\-::get\-Sample\-Inds} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pop\-Size, }
+\item[{unsigned}]{samp\-Size, }
+\item[{bool}]{with\-Replacement = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_a487a3de2095347f5759d88b64673ba24}
+\hypertarget{namespacepy__random_ac21b34e4e56b3863dcdd3bfef24d4319}{\index{py\-\_\-random@{py\-\_\-random}!randint@{randint}}
+\index{randint@{randint}!py_random@{py\-\_\-random}}
+\subsubsection[{randint}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf py\-\_\-random\-::randint} (
+\begin{DoxyParamCaption}
+\item[{int}]{low, }
+\item[{int}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_ac21b34e4e56b3863dcdd3bfef24d4319}
+\hypertarget{namespacepy__random_ab2d98a941b012d2e2aa47ce70a6d7e51}{\index{py\-\_\-random@{py\-\_\-random}!randint@{randint}}
+\index{randint@{randint}!py_random@{py\-\_\-random}}
+\subsubsection[{randint}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf py\-\_\-random\-::randint} (
+\begin{DoxyParamCaption}
+\item[{long}]{low, }
+\item[{long}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_ab2d98a941b012d2e2aa47ce70a6d7e51}
+\hypertarget{namespacepy__random_a0f224448fbf742639f2eba6e9576c2a2}{\index{py\-\_\-random@{py\-\_\-random}!randint@{randint}}
+\index{randint@{randint}!py_random@{py\-\_\-random}}
+\subsubsection[{randint}]{\setlength{\rightskip}{0pt plus 5cm}long long {\bf py\-\_\-random\-::randint} (
+\begin{DoxyParamCaption}
+\item[{long long}]{low, }
+\item[{long long}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_a0f224448fbf742639f2eba6e9576c2a2}
+\hypertarget{namespacepy__random_a7dde5bdd031aa6ec9b3179dda0e7e56d}{\index{py\-\_\-random@{py\-\_\-random}!random@{random}}
+\index{random@{random}!py_random@{py\-\_\-random}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf py\-\_\-random\-::random} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_a7dde5bdd031aa6ec9b3179dda0e7e56d}
+\hypertarget{namespacepy__random_ab19bd560711e2208769bd09a80ea185f}{\index{py\-\_\-random@{py\-\_\-random}!sample@{sample}}
+\index{sample@{sample}!py_random@{py\-\_\-random}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Seq\-Type $>$ void {\bf py\-\_\-random\-::sample} (
+\begin{DoxyParamCaption}
+\item[{const Seq\-Type \&}]{seq, }
+\item[{unsigned}]{samp\-Size, }
+\item[{Seq\-Type \&}]{out, }
+\item[{bool}]{with\-Replacement = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_ab19bd560711e2208769bd09a80ea185f}
+\hypertarget{namespacepy__random_a9db6806890355daad49822818b8c8378}{\index{py\-\_\-random@{py\-\_\-random}!sample@{sample}}
+\index{sample@{sample}!py_random@{py\-\_\-random}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Seq\-Type $>$ Seq\-Type {\bf py\-\_\-random\-::sample} (
+\begin{DoxyParamCaption}
+\item[{const Seq\-Type \&}]{seq, }
+\item[{unsigned}]{samp\-Size, }
+\item[{bool}]{with\-Replacement = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_a9db6806890355daad49822818b8c8378}
+\hypertarget{namespacepy__random_a7b7c1282dbbc2850b8b723dab3b23691}{\index{py\-\_\-random@{py\-\_\-random}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!py_random@{py\-\_\-random}}
+\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Iter\-Type $>$ void {\bf py\-\_\-random\-::shuffle} (
+\begin{DoxyParamCaption}
+\item[{Iter\-Type}]{start, }
+\item[{Iter\-Type}]{end}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_a7b7c1282dbbc2850b8b723dab3b23691}
+\hypertarget{namespacepy__random_ab66bcc464baa50ad98112eb5c2df8c86}{\index{py\-\_\-random@{py\-\_\-random}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!py_random@{py\-\_\-random}}
+\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-Type $>$ void {\bf py\-\_\-random\-::shuffle} (
+\begin{DoxyParamCaption}
+\item[{Seq\-Type \&}]{seq}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_ab66bcc464baa50ad98112eb5c2df8c86}
+\hypertarget{namespacepy__random_a1462ed7b909fb4f5b29934b683cc9889}{\index{py\-\_\-random@{py\-\_\-random}!uniform@{uniform}}
+\index{uniform@{uniform}!py_random@{py\-\_\-random}}
+\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf py\-\_\-random\-::uniform} (
+\begin{DoxyParamCaption}
+\item[{float}]{low, }
+\item[{float}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_a1462ed7b909fb4f5b29934b683cc9889}
+\hypertarget{namespacepy__random_aab2ed6628e9e0cabbbb83d95c7599f6d}{\index{py\-\_\-random@{py\-\_\-random}!uniform@{uniform}}
+\index{uniform@{uniform}!py_random@{py\-\_\-random}}
+\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf py\-\_\-random\-::uniform} (
+\begin{DoxyParamCaption}
+\item[{double}]{low, }
+\item[{double}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacepy__random_aab2ed6628e9e0cabbbb83d95c7599f6d}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacepy__random_a1965c2cf853d039447d4c533e5d65293}{\index{py\-\_\-random@{py\-\_\-random}!engine@{engine}}
+\index{engine@{engine}!py_random@{py\-\_\-random}}
+\subsubsection[{engine}]{\setlength{\rightskip}{0pt plus 5cm}random\-\_\-device {\bf py\-\_\-random\-::engine}}}\label{namespacepy__random_a1965c2cf853d039447d4c533e5d65293}

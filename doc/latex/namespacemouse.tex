@@ -1,0 +1,149 @@
+\hypertarget{namespacemouse}{\section{mouse Namespace Reference}
+\label{namespacemouse}\index{mouse@{mouse}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmouse_1_1_mouse_state}{Mouse\-State}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacemouse_a185e90053251dae588490005b1953fee}{Mouse\-Button} \{ \hyperlink{namespacemouse_a185e90053251dae588490005b1953feead099c4586c3d6cf30e4d4da38bc414ca}{L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}, 
+\hyperlink{namespacemouse_a185e90053251dae588490005b1953feea9ab944e0c7a1999da316be044705f024}{R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+C\-G\-Point \hyperlink{namespacemouse_a79070f384b35609da75b77cf6e8927a6}{cv\-Pt\-To\-C\-G\-Pt} (cv\-::\-Point pt)
+\item 
+void \hyperlink{namespacemouse_a1aa19d41e15ecc34b3857d534f6ece0d}{move} (C\-G\-Point pos)
+\item 
+void \hyperlink{namespacemouse_acaa00a7edd06298d2bc17cefdcbb8fb6}{move} (cv\-::\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a7321a1fda149eec822a35e87a96260eb}{down} (\hyperlink{namespacemouse_a185e90053251dae588490005b1953fee}{Mouse\-Button} button, C\-G\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a607ecaa87d22645c6d9cefab000334cb}{down} (\hyperlink{namespacemouse_a185e90053251dae588490005b1953fee}{Mouse\-Button} button, cv\-::\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a0af3fb86cc86ef2dc26197f91af7c77d}{up} (\hyperlink{namespacemouse_a185e90053251dae588490005b1953fee}{Mouse\-Button} button, C\-G\-Point pos)
+\item 
+void \hyperlink{namespacemouse_abb69652fb6c500e1432caa8b9f820d59}{up} (\hyperlink{namespacemouse_a185e90053251dae588490005b1953fee}{Mouse\-Button} button, cv\-::\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a3bbccf75b153e8cd32a2f7b24b58465f}{click} (\hyperlink{namespacemouse_a185e90053251dae588490005b1953fee}{Mouse\-Button} button, C\-G\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a1c6558bbb4c0fcac4f7e048e6ec46388}{click} (\hyperlink{namespacemouse_a185e90053251dae588490005b1953fee}{Mouse\-Button} button, cv\-::\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a986f9759482024b9f338832e6ff2911d}{drag} (\hyperlink{namespacemouse_a185e90053251dae588490005b1953fee}{Mouse\-Button} button, C\-G\-Point start\-Pos, C\-G\-Point end\-Pos)
+\item 
+void \hyperlink{namespacemouse_a0c7fe082f4ed23b4c2940a1a6893d407}{drag} (\hyperlink{namespacemouse_a185e90053251dae588490005b1953fee}{Mouse\-Button} button, cv\-::\-Point start\-Pos, cv\-::\-Point end\-Pos)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for modeling the mouse state and controlling the mouse. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespacemouse_a185e90053251dae588490005b1953fee}{\index{mouse@{mouse}!Mouse\-Button@{Mouse\-Button}}
+\index{Mouse\-Button@{Mouse\-Button}!mouse@{mouse}}
+\subsubsection[{Mouse\-Button}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf mouse\-::\-Mouse\-Button}}}\label{namespacemouse_a185e90053251dae588490005b1953fee}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N@{L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}!mouse@{mouse}}\index{mouse@{mouse}!L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N@{L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}}\item[{\em 
+\hypertarget{namespacemouse_a185e90053251dae588490005b1953feead099c4586c3d6cf30e4d4da38bc414ca}{L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}\label{namespacemouse_a185e90053251dae588490005b1953feead099c4586c3d6cf30e4d4da38bc414ca}
+}]\index{R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N@{R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}!mouse@{mouse}}\index{mouse@{mouse}!R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N@{R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}}\item[{\em 
+\hypertarget{namespacemouse_a185e90053251dae588490005b1953feea9ab944e0c7a1999da316be044705f024}{R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}\label{namespacemouse_a185e90053251dae588490005b1953feea9ab944e0c7a1999da316be044705f024}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacemouse_a3bbccf75b153e8cd32a2f7b24b58465f}{\index{mouse@{mouse}!click@{click}}
+\index{click@{click}!mouse@{mouse}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf mouse\-::click} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{C\-G\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespacemouse_a3bbccf75b153e8cd32a2f7b24b58465f}
+Simulate a mouse click (button down, then up) event at {\ttfamily pos}. \hypertarget{namespacemouse_a1c6558bbb4c0fcac4f7e048e6ec46388}{\index{mouse@{mouse}!click@{click}}
+\index{click@{click}!mouse@{mouse}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf mouse\-::click} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{cv\-::\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespacemouse_a1c6558bbb4c0fcac4f7e048e6ec46388}
+\hypertarget{namespacemouse_a79070f384b35609da75b77cf6e8927a6}{\index{mouse@{mouse}!cv\-Pt\-To\-C\-G\-Pt@{cv\-Pt\-To\-C\-G\-Pt}}
+\index{cv\-Pt\-To\-C\-G\-Pt@{cv\-Pt\-To\-C\-G\-Pt}!mouse@{mouse}}
+\subsubsection[{cv\-Pt\-To\-C\-G\-Pt}]{\setlength{\rightskip}{0pt plus 5cm}C\-G\-Point {\bf mouse\-::cv\-Pt\-To\-C\-G\-Pt} (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Point}]{pt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespacemouse_a79070f384b35609da75b77cf6e8927a6}
+\hypertarget{namespacemouse_a7321a1fda149eec822a35e87a96260eb}{\index{mouse@{mouse}!down@{down}}
+\index{down@{down}!mouse@{mouse}}
+\subsubsection[{down}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf mouse\-::down} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{C\-G\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespacemouse_a7321a1fda149eec822a35e87a96260eb}
+Simulate a mouse down event at {\ttfamily pos}. \hypertarget{namespacemouse_a607ecaa87d22645c6d9cefab000334cb}{\index{mouse@{mouse}!down@{down}}
+\index{down@{down}!mouse@{mouse}}
+\subsubsection[{down}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf mouse\-::down} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{cv\-::\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespacemouse_a607ecaa87d22645c6d9cefab000334cb}
+\hypertarget{namespacemouse_a986f9759482024b9f338832e6ff2911d}{\index{mouse@{mouse}!drag@{drag}}
+\index{drag@{drag}!mouse@{mouse}}
+\subsubsection[{drag}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf mouse\-::drag} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{C\-G\-Point}]{start\-Pos, }
+\item[{C\-G\-Point}]{end\-Pos}
+\end{DoxyParamCaption}
+)}}\label{namespacemouse_a986f9759482024b9f338832e6ff2911d}
+Simulate a mouse drag event at from {\ttfamily start\-Pos} to {\ttfamily end\-Pos}. \hypertarget{namespacemouse_a0c7fe082f4ed23b4c2940a1a6893d407}{\index{mouse@{mouse}!drag@{drag}}
+\index{drag@{drag}!mouse@{mouse}}
+\subsubsection[{drag}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf mouse\-::drag} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{cv\-::\-Point}]{start\-Pos, }
+\item[{cv\-::\-Point}]{end\-Pos}
+\end{DoxyParamCaption}
+)}}\label{namespacemouse_a0c7fe082f4ed23b4c2940a1a6893d407}
+\hypertarget{namespacemouse_a1aa19d41e15ecc34b3857d534f6ece0d}{\index{mouse@{mouse}!move@{move}}
+\index{move@{move}!mouse@{mouse}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf mouse\-::move} (
+\begin{DoxyParamCaption}
+\item[{C\-G\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespacemouse_a1aa19d41e15ecc34b3857d534f6ece0d}
+Move cursor to {\ttfamily pos}. \hypertarget{namespacemouse_acaa00a7edd06298d2bc17cefdcbb8fb6}{\index{mouse@{mouse}!move@{move}}
+\index{move@{move}!mouse@{mouse}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf mouse\-::move} (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespacemouse_acaa00a7edd06298d2bc17cefdcbb8fb6}
+\hypertarget{namespacemouse_a0af3fb86cc86ef2dc26197f91af7c77d}{\index{mouse@{mouse}!up@{up}}
+\index{up@{up}!mouse@{mouse}}
+\subsubsection[{up}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf mouse\-::up} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{C\-G\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespacemouse_a0af3fb86cc86ef2dc26197f91af7c77d}
+Simulate a mouse up event at {\ttfamily pos}. \hypertarget{namespacemouse_abb69652fb6c500e1432caa8b9f820d59}{\index{mouse@{mouse}!up@{up}}
+\index{up@{up}!mouse@{mouse}}
+\subsubsection[{up}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf mouse\-::up} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{cv\-::\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespacemouse_abb69652fb6c500e1432caa8b9f820d59}

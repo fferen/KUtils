@@ -1,0 +1,112 @@
+\hypertarget{structseq_1_1math_1_1_x_range}{\section{seq\-:\-:math\-:\-:X\-Range$<$ Num\-T $>$ Struct Template Reference}
+\label{structseq_1_1math_1_1_x_range}\index{seq\-::math\-::\-X\-Range$<$ Num\-T $>$@{seq\-::math\-::\-X\-Range$<$ Num\-T $>$}}
+}
+
+
+Represent a lazily-\/evaluated range of numbers.  
+
+
+
+
+{\ttfamily \#include $<$seq.\-hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classseq_1_1math_1_1_x_range_iterator}{X\-Range\-Iterator}$<$ Num\-T $>$ \hyperlink{structseq_1_1math_1_1_x_range_abafa12c8fe329c911982d7437e7b0281}{iterator}
+\item 
+typedef Num\-T \hyperlink{structseq_1_1math_1_1_x_range_adfd6ff29384303c71cf33c903e099e3c}{value\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structseq_1_1math_1_1_x_range_aa3b9c544a4c740bc0a9dee803bbde3a8}{X\-Range} ()
+\item 
+\hyperlink{structseq_1_1math_1_1_x_range_ab96ca4e1cb77c57b49bee3071b027f4b}{X\-Range} (Num\-T low, Num\-T high, Num\-T step=1)
+\item 
+{\footnotesize template$<$typename Other\-Num\-T $>$ }\\\hyperlink{structseq_1_1math_1_1_x_range_aec92a32c748822f6aeb1935e045f4eb3}{X\-Range} (const \hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}$<$ Other\-Num\-T $>$ \&other)
+\item 
+const \hyperlink{structseq_1_1math_1_1_x_range_abafa12c8fe329c911982d7437e7b0281}{iterator} \& \hyperlink{structseq_1_1math_1_1_x_range_a231541cb2a2f68811f3bb96ea14689bf}{begin} () const 
+\item 
+const \hyperlink{structseq_1_1math_1_1_x_range_abafa12c8fe329c911982d7437e7b0281}{iterator} \& \hyperlink{structseq_1_1math_1_1_x_range_afe800d3e48413221a54ff54bfcf14206}{end} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structseq_1_1math_1_1_x_range_abafa12c8fe329c911982d7437e7b0281}{iterator} \hyperlink{structseq_1_1math_1_1_x_range_ab79c83388a6443fe62ad2a4162af999d}{start\-It}
+\item 
+\hyperlink{structseq_1_1math_1_1_x_range_abafa12c8fe329c911982d7437e7b0281}{iterator} \hyperlink{structseq_1_1math_1_1_x_range_ad0c15c89614e21576d3f6175d9ca1009}{end\-It}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Num\-T = int$>$struct seq\-::math\-::\-X\-Range$<$ Num\-T $>$}
+
+Represent a lazily-\/evaluated range of numbers. 
+
+Analogous to Python's \char`\"{}xrange\char`\"{} objects, returned by the function {\ttfamily xrange}. Typically only exists to provide iterators via {\ttfamily \hyperlink{structseq_1_1math_1_1_x_range_a231541cb2a2f68811f3bb96ea14689bf}{begin()}} and {\ttfamily \hyperlink{structseq_1_1math_1_1_x_range_afe800d3e48413221a54ff54bfcf14206}{end()}}. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{structseq_1_1math_1_1_x_range_abafa12c8fe329c911982d7437e7b0281}{\index{seq\-::math\-::\-X\-Range@{seq\-::math\-::\-X\-Range}!iterator@{iterator}}
+\index{iterator@{iterator}!seq::math::XRange@{seq\-::math\-::\-X\-Range}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T = int$>$ typedef {\bf X\-Range\-Iterator}$<$Num\-T$>$ {\bf seq\-::math\-::\-X\-Range}$<$ Num\-T $>$\-::{\bf iterator}}}\label{structseq_1_1math_1_1_x_range_abafa12c8fe329c911982d7437e7b0281}
+\hypertarget{structseq_1_1math_1_1_x_range_adfd6ff29384303c71cf33c903e099e3c}{\index{seq\-::math\-::\-X\-Range@{seq\-::math\-::\-X\-Range}!value\-\_\-type@{value\-\_\-type}}
+\index{value\-\_\-type@{value\-\_\-type}!seq::math::XRange@{seq\-::math\-::\-X\-Range}}
+\subsubsection[{value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T = int$>$ typedef Num\-T {\bf seq\-::math\-::\-X\-Range}$<$ Num\-T $>$\-::{\bf value\-\_\-type}}}\label{structseq_1_1math_1_1_x_range_adfd6ff29384303c71cf33c903e099e3c}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structseq_1_1math_1_1_x_range_aa3b9c544a4c740bc0a9dee803bbde3a8}{\index{seq\-::math\-::\-X\-Range@{seq\-::math\-::\-X\-Range}!X\-Range@{X\-Range}}
+\index{X\-Range@{X\-Range}!seq::math::XRange@{seq\-::math\-::\-X\-Range}}
+\subsubsection[{X\-Range}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T = int$>$ {\bf seq\-::math\-::\-X\-Range}$<$ Num\-T $>$\-::{\bf X\-Range} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1math_1_1_x_range_aa3b9c544a4c740bc0a9dee803bbde3a8}
+\hypertarget{structseq_1_1math_1_1_x_range_ab96ca4e1cb77c57b49bee3071b027f4b}{\index{seq\-::math\-::\-X\-Range@{seq\-::math\-::\-X\-Range}!X\-Range@{X\-Range}}
+\index{X\-Range@{X\-Range}!seq::math::XRange@{seq\-::math\-::\-X\-Range}}
+\subsubsection[{X\-Range}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T = int$>$ {\bf seq\-::math\-::\-X\-Range}$<$ Num\-T $>$\-::{\bf X\-Range} (
+\begin{DoxyParamCaption}
+\item[{Num\-T}]{low, }
+\item[{Num\-T}]{high, }
+\item[{Num\-T}]{step = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1math_1_1_x_range_ab96ca4e1cb77c57b49bee3071b027f4b}
+\hypertarget{structseq_1_1math_1_1_x_range_aec92a32c748822f6aeb1935e045f4eb3}{\index{seq\-::math\-::\-X\-Range@{seq\-::math\-::\-X\-Range}!X\-Range@{X\-Range}}
+\index{X\-Range@{X\-Range}!seq::math::XRange@{seq\-::math\-::\-X\-Range}}
+\subsubsection[{X\-Range}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T = int$>$ template$<$typename Other\-Num\-T $>$ {\bf seq\-::math\-::\-X\-Range}$<$ Num\-T $>$\-::{\bf X\-Range} (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\-Range}$<$ Other\-Num\-T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1math_1_1_x_range_aec92a32c748822f6aeb1935e045f4eb3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structseq_1_1math_1_1_x_range_a231541cb2a2f68811f3bb96ea14689bf}{\index{seq\-::math\-::\-X\-Range@{seq\-::math\-::\-X\-Range}!begin@{begin}}
+\index{begin@{begin}!seq::math::XRange@{seq\-::math\-::\-X\-Range}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T = int$>$ const {\bf iterator}\& {\bf seq\-::math\-::\-X\-Range}$<$ Num\-T $>$\-::{\bf begin} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1math_1_1_x_range_a231541cb2a2f68811f3bb96ea14689bf}
+\hypertarget{structseq_1_1math_1_1_x_range_afe800d3e48413221a54ff54bfcf14206}{\index{seq\-::math\-::\-X\-Range@{seq\-::math\-::\-X\-Range}!end@{end}}
+\index{end@{end}!seq::math::XRange@{seq\-::math\-::\-X\-Range}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T = int$>$ const {\bf iterator}\& {\bf seq\-::math\-::\-X\-Range}$<$ Num\-T $>$\-::{\bf end} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1math_1_1_x_range_afe800d3e48413221a54ff54bfcf14206}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structseq_1_1math_1_1_x_range_ad0c15c89614e21576d3f6175d9ca1009}{\index{seq\-::math\-::\-X\-Range@{seq\-::math\-::\-X\-Range}!end\-It@{end\-It}}
+\index{end\-It@{end\-It}!seq::math::XRange@{seq\-::math\-::\-X\-Range}}
+\subsubsection[{end\-It}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T = int$>$ {\bf iterator} {\bf seq\-::math\-::\-X\-Range}$<$ Num\-T $>$\-::{\bf end\-It}}}\label{structseq_1_1math_1_1_x_range_ad0c15c89614e21576d3f6175d9ca1009}
+\hypertarget{structseq_1_1math_1_1_x_range_ab79c83388a6443fe62ad2a4162af999d}{\index{seq\-::math\-::\-X\-Range@{seq\-::math\-::\-X\-Range}!start\-It@{start\-It}}
+\index{start\-It@{start\-It}!seq::math::XRange@{seq\-::math\-::\-X\-Range}}
+\subsubsection[{start\-It}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T = int$>$ {\bf iterator} {\bf seq\-::math\-::\-X\-Range}$<$ Num\-T $>$\-::{\bf start\-It}}}\label{structseq_1_1math_1_1_x_range_ab79c83388a6443fe62ad2a4162af999d}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{seq_8hpp}{seq.\-hpp}\end{DoxyCompactItemize}

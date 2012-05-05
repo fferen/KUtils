@@ -1,0 +1,60 @@
+\hypertarget{namespaceio}{\section{io Namespace Reference}
+\label{namespaceio}\index{io@{io}}
+}
+
+
+Convenience functions for printing values.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceio_ad8499487f5202220fead59833138f4ab}{print} ()
+\item 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\void \hyperlink{namespaceio_ab9528b2fe57a002bb153f1b9f8dde743}{print} (T value, Args...\-args)
+\item 
+void \hyperlink{namespaceio_ae85db8edfd95c17427c2606360bb97af}{print\-Imm} ()
+\item 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\void \hyperlink{namespaceio_ade4f05edb2cd007404540f67d416bd4a}{print\-Imm} (T value, Args...\-args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Convenience functions for printing values. 
+
+\subsection{Function Documentation}
+\hypertarget{namespaceio_ad8499487f5202220fead59833138f4ab}{\index{io@{io}!print@{print}}
+\index{print@{print}!io@{io}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf io\-::print} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespaceio_ad8499487f5202220fead59833138f4ab}
+Simply print a newline.
+
+Used as a recursive base-\/case for print(...) below. \hypertarget{namespaceio_ab9528b2fe57a002bb153f1b9f8dde743}{\index{io@{io}!print@{print}}
+\index{print@{print}!io@{io}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename... Args$>$ void {\bf io\-::print} (
+\begin{DoxyParamCaption}
+\item[{T}]{value, }
+\item[{Args...}]{args}
+\end{DoxyParamCaption}
+)}}\label{namespaceio_ab9528b2fe57a002bb153f1b9f8dde743}
+Print arguments separated by spaces, then a newline. \hypertarget{namespaceio_ae85db8edfd95c17427c2606360bb97af}{\index{io@{io}!print\-Imm@{print\-Imm}}
+\index{print\-Imm@{print\-Imm}!io@{io}}
+\subsubsection[{print\-Imm}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf io\-::print\-Imm} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespaceio_ae85db8edfd95c17427c2606360bb97af}
+Call {\ttfamily fflush(stdout);}.
+
+Used as a recursive base-\/case for print\-Imm(...) below. \hypertarget{namespaceio_ade4f05edb2cd007404540f67d416bd4a}{\index{io@{io}!print\-Imm@{print\-Imm}}
+\index{print\-Imm@{print\-Imm}!io@{io}}
+\subsubsection[{print\-Imm}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename... Args$>$ void {\bf io\-::print\-Imm} (
+\begin{DoxyParamCaption}
+\item[{T}]{value, }
+\item[{Args...}]{args}
+\end{DoxyParamCaption}
+)}}\label{namespaceio_ade4f05edb2cd007404540f67d416bd4a}
+Print arguments separated by spaces with no newline (by default values only show up on the screen when a newline is printed). There will be an extra space after the last argument. 

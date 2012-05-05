@@ -1,0 +1,39 @@
+\hypertarget{str_8hpp}{\section{str.\-hpp File Reference}
+\label{str_8hpp}\index{str.\-hpp@{str.\-hpp}}
+}
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacestr}{str}
+\begin{DoxyCompactList}\small\item\em String utilities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{str_8hpp_ad02d698209df17aef336d5633065c5ab}{str\-Fmt}(fmt,...)~(snprintf(\hyperlink{namespacestr_a51a7257ade189ec55f5d1c9da0f0e8b4}{str\-::\-\_\-buf}, 100, fmt, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-), \hyperlink{namespacestr_a51a7257ade189ec55f5d1c9da0f0e8b4}{str\-::\-\_\-buf})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacestr_a7b677ee9cce42c91dcd37d68b7fa04ac}{str\-::word\-Wrap} (string in, unsigned cols=80)  throw (length\-\_\-error)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{namespacestr_a51a7257ade189ec55f5d1c9da0f0e8b4}{str\-::\-\_\-buf} \mbox{[}100\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{str_8hpp_ad02d698209df17aef336d5633065c5ab}{\index{str.\-hpp@{str.\-hpp}!str\-Fmt@{str\-Fmt}}
+\index{str\-Fmt@{str\-Fmt}!str.hpp@{str.\-hpp}}
+\subsubsection[{str\-Fmt}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf str\-Fmt}(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~(snprintf({\bf str\-::\-\_\-buf}, 100, fmt, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-), {\bf str\-::\-\_\-buf})}}\label{str_8hpp_ad02d698209df17aef336d5633065c5ab}
+Functional version of {\ttfamily snprintf}.
+
+Yes, macros are evil, but this is so convenient. 

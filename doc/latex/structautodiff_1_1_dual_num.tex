@@ -1,0 +1,75 @@
+\hypertarget{structautodiff_1_1_dual_num}{\section{autodiff\-:\-:Dual\-Num Struct Reference}
+\label{structautodiff_1_1_dual_num}\index{autodiff\-::\-Dual\-Num@{autodiff\-::\-Dual\-Num}}
+}
+
+
+Represents the \char`\"{}real\char`\"{} part of a number in member {\ttfamily r} and the derivative in {\ttfamily d}.  
+
+
+
+
+{\ttfamily \#include $<$autodiff.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structautodiff_1_1_dual_num_a59cc7ae0820734ea70b97a5e44a31994}{Dual\-Num} (double \hyperlink{structautodiff_1_1_dual_num_a09c8328f01c11052faad5928ab6cf587}{r}, double \hyperlink{structautodiff_1_1_dual_num_a6123e34e9dc68f7e40bf54cc67088b01}{d}=0)
+\item 
+\hyperlink{structautodiff_1_1_dual_num_aff54e197c1eeaf2421908cb55f0cd824}{operator double} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{structautodiff_1_1_dual_num_a09c8328f01c11052faad5928ab6cf587}{r}
+\item 
+double \hyperlink{structautodiff_1_1_dual_num_a6123e34e9dc68f7e40bf54cc67088b01}{d}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the \char`\"{}real\char`\"{} part of a number in member {\ttfamily r} and the derivative in {\ttfamily d}. 
+
+Can be converted to and from {\ttfamily double}s as required, so that generic code such as\-: \begin{DoxyVerb} template <class NumT>
+ NumT doIt(NumT x) {
+     NumT y = x;
+     for (int i = 0; i < 100; i++) {
+         y = dSin(x + y);
+     }
+     return y;
+ }\end{DoxyVerb}
+ will work for both {\ttfamily double}s and {\ttfamily \hyperlink{structautodiff_1_1_dual_num}{Dual\-Num}}s. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structautodiff_1_1_dual_num_a59cc7ae0820734ea70b97a5e44a31994}{\index{autodiff\-::\-Dual\-Num@{autodiff\-::\-Dual\-Num}!Dual\-Num@{Dual\-Num}}
+\index{Dual\-Num@{Dual\-Num}!autodiff::DualNum@{autodiff\-::\-Dual\-Num}}
+\subsubsection[{Dual\-Num}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dual\-Num\-::\-Dual\-Num} (
+\begin{DoxyParamCaption}
+\item[{double}]{r, }
+\item[{double}]{d = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{structautodiff_1_1_dual_num_a59cc7ae0820734ea70b97a5e44a31994}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structautodiff_1_1_dual_num_aff54e197c1eeaf2421908cb55f0cd824}{\index{autodiff\-::\-Dual\-Num@{autodiff\-::\-Dual\-Num}!operator double@{operator double}}
+\index{operator double@{operator double}!autodiff::DualNum@{autodiff\-::\-Dual\-Num}}
+\subsubsection[{operator double}]{\setlength{\rightskip}{0pt plus 5cm}Dual\-Num\-::operator double (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{structautodiff_1_1_dual_num_aff54e197c1eeaf2421908cb55f0cd824}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structautodiff_1_1_dual_num_a6123e34e9dc68f7e40bf54cc67088b01}{\index{autodiff\-::\-Dual\-Num@{autodiff\-::\-Dual\-Num}!d@{d}}
+\index{d@{d}!autodiff::DualNum@{autodiff\-::\-Dual\-Num}}
+\subsubsection[{d}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf autodiff\-::\-Dual\-Num\-::d}}}\label{structautodiff_1_1_dual_num_a6123e34e9dc68f7e40bf54cc67088b01}
+\hypertarget{structautodiff_1_1_dual_num_a09c8328f01c11052faad5928ab6cf587}{\index{autodiff\-::\-Dual\-Num@{autodiff\-::\-Dual\-Num}!r@{r}}
+\index{r@{r}!autodiff::DualNum@{autodiff\-::\-Dual\-Num}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf autodiff\-::\-Dual\-Num\-::r}}}\label{structautodiff_1_1_dual_num_a09c8328f01c11052faad5928ab6cf587}
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{autodiff_8hpp}{autodiff.\-hpp}\item 
+\hyperlink{autodiff_8cpp}{autodiff.\-cpp}\end{DoxyCompactItemize}

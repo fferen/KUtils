@@ -1,0 +1,68 @@
+\hypertarget{classktime_1_1_running_avg_timer}{\section{ktime\-:\-:Running\-Avg\-Timer Class Reference}
+\label{classktime_1_1_running_avg_timer}\index{ktime\-::\-Running\-Avg\-Timer@{ktime\-::\-Running\-Avg\-Timer}}
+}
+
+
+{\ttfamily \#include $<$ktime.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classktime_1_1_running_avg_timer_acda9a0be9b8d32ef75c4e47b618298a6}{Running\-Avg\-Timer} (size\-\_\-t sz)
+\item 
+void \hyperlink{classktime_1_1_running_avg_timer_a1b28c95f0c44346321af8738e35f8025}{add\-Time} ()
+\item 
+\hyperlink{namespacektime_aacefffdcc0ccc2f45598475b3557d6f2}{Time\-Diff} \hyperlink{classktime_1_1_running_avg_timer_ac308f3b5606d61fc5dd8f4350f972b0e}{avg} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacektime_aacefffdcc0ccc2f45598475b3557d6f2}{Time\-Diff} \hyperlink{classktime_1_1_running_avg_timer_a6a22c54aaa6acb0a414f1c276a31ee1c}{sum}
+\item 
+\hyperlink{namespacektime_a038a3d1fb2cb9885396233d6e412773e}{Time\-Point} \hyperlink{classktime_1_1_running_avg_timer_aebd941b0d88a2ea2a5b9fe48b6466f56}{last\-Point}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Keep a running average of the time between calls to {\ttfamily \hyperlink{classktime_1_1_running_avg_timer_a1b28c95f0c44346321af8738e35f8025}{add\-Time()}}. Useful for calculating F\-P\-S. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classktime_1_1_running_avg_timer_acda9a0be9b8d32ef75c4e47b618298a6}{\index{ktime\-::\-Running\-Avg\-Timer@{ktime\-::\-Running\-Avg\-Timer}!Running\-Avg\-Timer@{Running\-Avg\-Timer}}
+\index{Running\-Avg\-Timer@{Running\-Avg\-Timer}!ktime::RunningAvgTimer@{ktime\-::\-Running\-Avg\-Timer}}
+\subsubsection[{Running\-Avg\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ktime\-::\-Running\-Avg\-Timer\-::\-Running\-Avg\-Timer} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{sz}
+\end{DoxyParamCaption}
+)}}\label{classktime_1_1_running_avg_timer_acda9a0be9b8d32ef75c4e47b618298a6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classktime_1_1_running_avg_timer_a1b28c95f0c44346321af8738e35f8025}{\index{ktime\-::\-Running\-Avg\-Timer@{ktime\-::\-Running\-Avg\-Timer}!add\-Time@{add\-Time}}
+\index{add\-Time@{add\-Time}!ktime::RunningAvgTimer@{ktime\-::\-Running\-Avg\-Timer}}
+\subsubsection[{add\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf ktime\-::\-Running\-Avg\-Timer\-::add\-Time} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classktime_1_1_running_avg_timer_a1b28c95f0c44346321af8738e35f8025}
+\hypertarget{classktime_1_1_running_avg_timer_ac308f3b5606d61fc5dd8f4350f972b0e}{\index{ktime\-::\-Running\-Avg\-Timer@{ktime\-::\-Running\-Avg\-Timer}!avg@{avg}}
+\index{avg@{avg}!ktime::RunningAvgTimer@{ktime\-::\-Running\-Avg\-Timer}}
+\subsubsection[{avg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\-Diff} {\bf ktime\-::\-Running\-Avg\-Timer\-::avg} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classktime_1_1_running_avg_timer_ac308f3b5606d61fc5dd8f4350f972b0e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classktime_1_1_running_avg_timer_aebd941b0d88a2ea2a5b9fe48b6466f56}{\index{ktime\-::\-Running\-Avg\-Timer@{ktime\-::\-Running\-Avg\-Timer}!last\-Point@{last\-Point}}
+\index{last\-Point@{last\-Point}!ktime::RunningAvgTimer@{ktime\-::\-Running\-Avg\-Timer}}
+\subsubsection[{last\-Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\-Point} {\bf ktime\-::\-Running\-Avg\-Timer\-::last\-Point}}}\label{classktime_1_1_running_avg_timer_aebd941b0d88a2ea2a5b9fe48b6466f56}
+\hypertarget{classktime_1_1_running_avg_timer_a6a22c54aaa6acb0a414f1c276a31ee1c}{\index{ktime\-::\-Running\-Avg\-Timer@{ktime\-::\-Running\-Avg\-Timer}!sum@{sum}}
+\index{sum@{sum}!ktime::RunningAvgTimer@{ktime\-::\-Running\-Avg\-Timer}}
+\subsubsection[{sum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\-Diff} {\bf ktime\-::\-Running\-Avg\-Timer\-::sum}}}\label{classktime_1_1_running_avg_timer_a6a22c54aaa6acb0a414f1c276a31ee1c}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ktime_8hpp}{ktime.\-hpp}\item 
+\hyperlink{ktime_8cpp}{ktime.\-cpp}\end{DoxyCompactItemize}

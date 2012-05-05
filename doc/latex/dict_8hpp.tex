@@ -1,0 +1,72 @@
+\hypertarget{dict_8hpp}{\section{dict.\-hpp File Reference}
+\label{dict_8hpp}\index{dict.\-hpp@{dict.\-hpp}}
+}
+{\ttfamily \#include $<$unordered\-\_\-map$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacedict}{dict}
+\begin{DoxyCompactList}\small\item\em Utilities for working with {\ttfamily Dict}s ({\ttfamily unordered\-\_\-map}s). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Key\-Type , typename Val\-Type $>$ }\\void \hyperlink{dict_8hpp_aad450cc243fecdc56252ec17b2c7f242}{\-\_\-make\-Dict\-I\-P} (Dict$<$ Key\-Type, Val\-Type $>$ \&d, Key\-Type key, Val\-Type val)
+\item 
+{\footnotesize template$<$typename Key\-Type , typename Val\-Type , typename... Args$>$ }\\void \hyperlink{dict_8hpp_a63c4edeb75c1a98c92321da3c0feb818}{\-\_\-make\-Dict\-I\-P} (Dict$<$ Key\-Type, Val\-Type $>$ \&d, Key\-Type key, Val\-Type val, Args...\-args)
+\item 
+{\footnotesize template$<$typename Key\-Type , typename Val\-Type , typename... Args$>$ }\\Dict$<$ Key\-Type, Val\-Type $>$ \hyperlink{dict_8hpp_acf532dcb9ac916d2ac99b609a3a2422d}{make\-Dict} (Key\-Type key, Val\-Type val, Args...\-args)
+\item 
+{\footnotesize template$<$typename Key\-Type , typename Val\-Type $>$ }\\Dict$<$ Key\-Type, Val\-Type $>$ \hyperlink{dict_8hpp_a952263572be8fc115fb88a93631e6fc3}{make\-Dict} ()
+\item 
+{\footnotesize template$<$typename Key\-T , typename Val\-T $>$ }\\ostream \& \hyperlink{dict_8hpp_a3c4515d6a24ee85ca1ff76eff687c06b}{operator$<$$<$} (ostream \&out, const Dict$<$ Key\-T, Val\-T $>$ \&seq)
+\item 
+{\footnotesize template$<$typename Iter\-T , typename Elem\-T $>$ }\\Dict$<$ Elem\-T, unsigned $>$ \& \hyperlink{namespacedict_a25d4adabc11b7754dad27d591de51df6}{dict\-::count\-Elems} (const Iter\-T \&start, const Iter\-T \&end, Dict$<$ Elem\-T, unsigned $>$ \&out)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{dict_8hpp_aad450cc243fecdc56252ec17b2c7f242}{\index{dict.\-hpp@{dict.\-hpp}!\-\_\-make\-Dict\-I\-P@{\-\_\-make\-Dict\-I\-P}}
+\index{\-\_\-make\-Dict\-I\-P@{\-\_\-make\-Dict\-I\-P}!dict.hpp@{dict.\-hpp}}
+\subsubsection[{\-\_\-make\-Dict\-I\-P}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key\-Type , typename Val\-Type $>$ void {\bf \-\_\-make\-Dict\-I\-P} (
+\begin{DoxyParamCaption}
+\item[{Dict$<$ Key\-Type, Val\-Type $>$ \&}]{d, }
+\item[{Key\-Type}]{key, }
+\item[{Val\-Type}]{val}
+\end{DoxyParamCaption}
+)}}\label{dict_8hpp_aad450cc243fecdc56252ec17b2c7f242}
+\hypertarget{dict_8hpp_a63c4edeb75c1a98c92321da3c0feb818}{\index{dict.\-hpp@{dict.\-hpp}!\-\_\-make\-Dict\-I\-P@{\-\_\-make\-Dict\-I\-P}}
+\index{\-\_\-make\-Dict\-I\-P@{\-\_\-make\-Dict\-I\-P}!dict.hpp@{dict.\-hpp}}
+\subsubsection[{\-\_\-make\-Dict\-I\-P}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key\-Type , typename Val\-Type , typename... Args$>$ void {\bf \-\_\-make\-Dict\-I\-P} (
+\begin{DoxyParamCaption}
+\item[{Dict$<$ Key\-Type, Val\-Type $>$ \&}]{d, }
+\item[{Key\-Type}]{key, }
+\item[{Val\-Type}]{val, }
+\item[{Args...}]{args}
+\end{DoxyParamCaption}
+)}}\label{dict_8hpp_a63c4edeb75c1a98c92321da3c0feb818}
+\hypertarget{dict_8hpp_acf532dcb9ac916d2ac99b609a3a2422d}{\index{dict.\-hpp@{dict.\-hpp}!make\-Dict@{make\-Dict}}
+\index{make\-Dict@{make\-Dict}!dict.hpp@{dict.\-hpp}}
+\subsubsection[{make\-Dict}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key\-Type , typename Val\-Type , typename... Args$>$ Dict$<$Key\-Type, Val\-Type$>$ {\bf make\-Dict} (
+\begin{DoxyParamCaption}
+\item[{Key\-Type}]{key, }
+\item[{Val\-Type}]{val, }
+\item[{Args...}]{args}
+\end{DoxyParamCaption}
+)}}\label{dict_8hpp_acf532dcb9ac916d2ac99b609a3a2422d}
+\hypertarget{dict_8hpp_a952263572be8fc115fb88a93631e6fc3}{\index{dict.\-hpp@{dict.\-hpp}!make\-Dict@{make\-Dict}}
+\index{make\-Dict@{make\-Dict}!dict.hpp@{dict.\-hpp}}
+\subsubsection[{make\-Dict}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key\-Type , typename Val\-Type $>$ Dict$<$Key\-Type, Val\-Type$>$ {\bf make\-Dict} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{dict_8hpp_a952263572be8fc115fb88a93631e6fc3}
+Construct a {\ttfamily Dict} ({\ttfamily unordered\-\_\-map}). For an empty {\ttfamily Dict}, must specify {\ttfamily Key\-Type} and {\ttfamily Val\-Type}. \hypertarget{dict_8hpp_a3c4515d6a24ee85ca1ff76eff687c06b}{\index{dict.\-hpp@{dict.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!dict.hpp@{dict.\-hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key\-T , typename Val\-T $>$ ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const Dict$<$ Key\-T, Val\-T $>$ \&}]{seq}
+\end{DoxyParamCaption}
+)}}\label{dict_8hpp_a3c4515d6a24ee85ca1ff76eff687c06b}
+Print each element of a {\ttfamily Dict}. 

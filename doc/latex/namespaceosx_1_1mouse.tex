@@ -1,0 +1,154 @@
+\hypertarget{namespaceosx_1_1mouse}{\section{osx\-:\-:mouse Namespace Reference}
+\label{namespaceosx_1_1mouse}\index{osx\-::mouse@{osx\-::mouse}}
+}
+
+
+Utilities for modeling the mouse state and controlling the mouse.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structosx_1_1mouse_1_1_mouse_state}{Mouse\-State}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{Mouse\-Button} \{ \hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499aba5b540b1c997fb283ad354d66d6b5c8}{L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}, 
+\hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499a8f8087d9c68a22fe0ab65e0995e6649b}{R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+C\-G\-Point \hyperlink{namespaceosx_1_1mouse_a5beb2ba12cce052099603ac3002ec47f}{cv\-Pt\-To\-C\-G\-Pt} (cv\-::\-Point pt)
+\item 
+void \hyperlink{namespaceosx_1_1mouse_a96fc2b2983c0d9ee610ca9404ccc0506}{move} (C\-G\-Point pos)
+\item 
+void \hyperlink{namespaceosx_1_1mouse_a1671ac54e08642dea10d41ef9423c8d0}{move} (cv\-::\-Point pos)
+\item 
+void \hyperlink{namespaceosx_1_1mouse_af6a13b95720ba5d280a64dc3c169c4ab}{down} (\hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{Mouse\-Button} button, C\-G\-Point pos)
+\item 
+void \hyperlink{namespaceosx_1_1mouse_a707436c4ace9b3509137a0e84b395a4e}{down} (\hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{Mouse\-Button} button, cv\-::\-Point pos)
+\item 
+void \hyperlink{namespaceosx_1_1mouse_a653d01ba6a07d9a07581934e80cd5138}{up} (\hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{Mouse\-Button} button, C\-G\-Point pos)
+\item 
+void \hyperlink{namespaceosx_1_1mouse_aceec473053347deae91c85d33560e2fd}{up} (\hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{Mouse\-Button} button, cv\-::\-Point pos)
+\item 
+void \hyperlink{namespaceosx_1_1mouse_af0b3d4b3af410086362a3faaff78d3b6}{click} (\hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{Mouse\-Button} button, C\-G\-Point pos)
+\item 
+void \hyperlink{namespaceosx_1_1mouse_a4fb0394a644317eab05c06aed13e3d10}{click} (\hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{Mouse\-Button} button, cv\-::\-Point pos)
+\item 
+void \hyperlink{namespaceosx_1_1mouse_ac87df58c78bf4f2ed44eb74a272a155e}{drag} (\hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{Mouse\-Button} button, C\-G\-Point start\-Pos, C\-G\-Point end\-Pos)
+\item 
+void \hyperlink{namespaceosx_1_1mouse_ab88258b91b67cdf7b5949bc9664f2a85}{drag} (\hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{Mouse\-Button} button, cv\-::\-Point start\-Pos, cv\-::\-Point end\-Pos)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utilities for modeling the mouse state and controlling the mouse. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{\index{osx\-::mouse@{osx\-::mouse}!Mouse\-Button@{Mouse\-Button}}
+\index{Mouse\-Button@{Mouse\-Button}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{Mouse\-Button}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf osx\-::mouse\-::\-Mouse\-Button}}}\label{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N@{L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}!osx\-::mouse@{osx\-::mouse}}\index{osx\-::mouse@{osx\-::mouse}!L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N@{L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}}\item[{\em 
+\hypertarget{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499aba5b540b1c997fb283ad354d66d6b5c8}{L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}\label{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499aba5b540b1c997fb283ad354d66d6b5c8}
+}]\index{R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N@{R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}!osx\-::mouse@{osx\-::mouse}}\index{osx\-::mouse@{osx\-::mouse}!R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N@{R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}}\item[{\em 
+\hypertarget{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499a8f8087d9c68a22fe0ab65e0995e6649b}{R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}\label{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499a8f8087d9c68a22fe0ab65e0995e6649b}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceosx_1_1mouse_af0b3d4b3af410086362a3faaff78d3b6}{\index{osx\-::mouse@{osx\-::mouse}!click@{click}}
+\index{click@{click}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf osx\-::mouse\-::click} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{C\-G\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespaceosx_1_1mouse_af0b3d4b3af410086362a3faaff78d3b6}
+Simulate a mouse click (button down, then up) event at {\ttfamily pos}. \hypertarget{namespaceosx_1_1mouse_a4fb0394a644317eab05c06aed13e3d10}{\index{osx\-::mouse@{osx\-::mouse}!click@{click}}
+\index{click@{click}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf osx\-::mouse\-::click} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{cv\-::\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespaceosx_1_1mouse_a4fb0394a644317eab05c06aed13e3d10}
+\hypertarget{namespaceosx_1_1mouse_a5beb2ba12cce052099603ac3002ec47f}{\index{osx\-::mouse@{osx\-::mouse}!cv\-Pt\-To\-C\-G\-Pt@{cv\-Pt\-To\-C\-G\-Pt}}
+\index{cv\-Pt\-To\-C\-G\-Pt@{cv\-Pt\-To\-C\-G\-Pt}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{cv\-Pt\-To\-C\-G\-Pt}]{\setlength{\rightskip}{0pt plus 5cm}C\-G\-Point {\bf osx\-::mouse\-::cv\-Pt\-To\-C\-G\-Pt} (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Point}]{pt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespaceosx_1_1mouse_a5beb2ba12cce052099603ac3002ec47f}
+\hypertarget{namespaceosx_1_1mouse_af6a13b95720ba5d280a64dc3c169c4ab}{\index{osx\-::mouse@{osx\-::mouse}!down@{down}}
+\index{down@{down}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{down}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf osx\-::mouse\-::down} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{C\-G\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespaceosx_1_1mouse_af6a13b95720ba5d280a64dc3c169c4ab}
+Simulate a mouse down event at {\ttfamily pos}. \hypertarget{namespaceosx_1_1mouse_a707436c4ace9b3509137a0e84b395a4e}{\index{osx\-::mouse@{osx\-::mouse}!down@{down}}
+\index{down@{down}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{down}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf osx\-::mouse\-::down} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{cv\-::\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespaceosx_1_1mouse_a707436c4ace9b3509137a0e84b395a4e}
+\hypertarget{namespaceosx_1_1mouse_ac87df58c78bf4f2ed44eb74a272a155e}{\index{osx\-::mouse@{osx\-::mouse}!drag@{drag}}
+\index{drag@{drag}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{drag}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf osx\-::mouse\-::drag} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{C\-G\-Point}]{start\-Pos, }
+\item[{C\-G\-Point}]{end\-Pos}
+\end{DoxyParamCaption}
+)}}\label{namespaceosx_1_1mouse_ac87df58c78bf4f2ed44eb74a272a155e}
+Simulate a mouse drag event at from {\ttfamily start\-Pos} to {\ttfamily end\-Pos}. \hypertarget{namespaceosx_1_1mouse_ab88258b91b67cdf7b5949bc9664f2a85}{\index{osx\-::mouse@{osx\-::mouse}!drag@{drag}}
+\index{drag@{drag}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{drag}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf osx\-::mouse\-::drag} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{cv\-::\-Point}]{start\-Pos, }
+\item[{cv\-::\-Point}]{end\-Pos}
+\end{DoxyParamCaption}
+)}}\label{namespaceosx_1_1mouse_ab88258b91b67cdf7b5949bc9664f2a85}
+\hypertarget{namespaceosx_1_1mouse_a96fc2b2983c0d9ee610ca9404ccc0506}{\index{osx\-::mouse@{osx\-::mouse}!move@{move}}
+\index{move@{move}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf osx\-::mouse\-::move} (
+\begin{DoxyParamCaption}
+\item[{C\-G\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespaceosx_1_1mouse_a96fc2b2983c0d9ee610ca9404ccc0506}
+Move cursor to {\ttfamily pos}. \hypertarget{namespaceosx_1_1mouse_a1671ac54e08642dea10d41ef9423c8d0}{\index{osx\-::mouse@{osx\-::mouse}!move@{move}}
+\index{move@{move}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf osx\-::mouse\-::move} (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespaceosx_1_1mouse_a1671ac54e08642dea10d41ef9423c8d0}
+\hypertarget{namespaceosx_1_1mouse_a653d01ba6a07d9a07581934e80cd5138}{\index{osx\-::mouse@{osx\-::mouse}!up@{up}}
+\index{up@{up}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{up}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf osx\-::mouse\-::up} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{C\-G\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespaceosx_1_1mouse_a653d01ba6a07d9a07581934e80cd5138}
+Simulate a mouse up event at {\ttfamily pos}. \hypertarget{namespaceosx_1_1mouse_aceec473053347deae91c85d33560e2fd}{\index{osx\-::mouse@{osx\-::mouse}!up@{up}}
+\index{up@{up}!osx::mouse@{osx\-::mouse}}
+\subsubsection[{up}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf osx\-::mouse\-::up} (
+\begin{DoxyParamCaption}
+\item[{{\bf mouse\-::\-Mouse\-Button}}]{button, }
+\item[{cv\-::\-Point}]{pos}
+\end{DoxyParamCaption}
+)}}\label{namespaceosx_1_1mouse_aceec473053347deae91c85d33560e2fd}

@@ -1,0 +1,87 @@
+\hypertarget{cocoa_8hpp}{\section{cocoa.\-hpp File Reference}
+\label{cocoa_8hpp}\index{cocoa.\-hpp@{cocoa.\-hpp}}
+}
+{\ttfamily \#include $<$cstdint$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\-hpp$>$}\\*
+{\ttfamily \#include $<$Application\-Services/\-Application\-Services.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}io.\-hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmouse_1_1_mouse_state}{mouse\-::\-Mouse\-State}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacemouse}{mouse}
+\item 
+namespace \hyperlink{namespacedisp}{disp}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cocoa_8hpp_ac041cfa66801dc389105798b67525f1e}{U\-N\-U\-S\-E\-D\-\_\-\-V\-A\-R}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacemouse_a185e90053251dae588490005b1953fee}{mouse\-::\-Mouse\-Button} \{ \hyperlink{namespacemouse_a185e90053251dae588490005b1953feead099c4586c3d6cf30e4d4da38bc414ca}{mouse\-::\-L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}, 
+\hyperlink{namespacemouse_a185e90053251dae588490005b1953feea9ab944e0c7a1999da316be044705f024}{mouse\-::\-R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}
+ \}
+\item 
+enum \hyperlink{namespacedisp_a3fe26067fc36284055f51c9063a8d771}{disp\-::\-R\-G\-B\-Type} \{ \hyperlink{namespacedisp_a3fe26067fc36284055f51c9063a8d771afe53ce31ce41cee6eb9fba18bd117ec4}{disp\-::\-C\-O\-L\-O\-R\-\_\-\-B\-G\-R}, 
+\hyperlink{namespacedisp_a3fe26067fc36284055f51c9063a8d771a1500b650e69483ea28dc94d0edf8b9e6}{disp\-::\-C\-O\-L\-O\-R\-\_\-\-A\-R\-G\-B}, 
+\hyperlink{namespacedisp_a3fe26067fc36284055f51c9063a8d771ad2cae24eb56bcd9de466532418c07a64}{disp\-::\-C\-O\-L\-O\-R\-\_\-\-R\-G\-B\-A}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+C\-G\-Point \hyperlink{namespacemouse_a79070f384b35609da75b77cf6e8927a6}{mouse\-::cv\-Pt\-To\-C\-G\-Pt} (cv\-::\-Point pt)
+\item 
+void \hyperlink{namespacemouse_a1aa19d41e15ecc34b3857d534f6ece0d}{mouse\-::move} (C\-G\-Point pos)
+\item 
+void \hyperlink{namespacemouse_acaa00a7edd06298d2bc17cefdcbb8fb6}{mouse\-::move} (cv\-::\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a7321a1fda149eec822a35e87a96260eb}{mouse\-::down} (Mouse\-Button button, C\-G\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a607ecaa87d22645c6d9cefab000334cb}{mouse\-::down} (Mouse\-Button button, cv\-::\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a0af3fb86cc86ef2dc26197f91af7c77d}{mouse\-::up} (Mouse\-Button button, C\-G\-Point pos)
+\item 
+void \hyperlink{namespacemouse_abb69652fb6c500e1432caa8b9f820d59}{mouse\-::up} (Mouse\-Button button, cv\-::\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a3bbccf75b153e8cd32a2f7b24b58465f}{mouse\-::click} (Mouse\-Button button, C\-G\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a1c6558bbb4c0fcac4f7e048e6ec46388}{mouse\-::click} (Mouse\-Button button, cv\-::\-Point pos)
+\item 
+void \hyperlink{namespacemouse_a986f9759482024b9f338832e6ff2911d}{mouse\-::drag} (Mouse\-Button button, C\-G\-Point start\-Pos, C\-G\-Point end\-Pos)
+\item 
+void \hyperlink{namespacemouse_a0c7fe082f4ed23b4c2940a1a6893d407}{mouse\-::drag} (Mouse\-Button button, cv\-::\-Point start\-Pos, cv\-::\-Point end\-Pos)
+\item 
+cv\-::\-Mat \& \hyperlink{namespacedisp_a764c2b712f54b0453f00f2ab744ca92e}{disp\-::get\-Screen} (cv\-::\-Mat \&out, R\-G\-B\-Type dest\-Type=C\-O\-L\-O\-R\-\_\-\-B\-G\-R)
+\item 
+cv\-::\-Mat \hyperlink{namespacedisp_ace1b5fd6d30a2dd47ad8fe9b35f1e571}{disp\-::get\-Screen} (R\-G\-B\-Type dest\-Type=C\-O\-L\-O\-R\-\_\-\-B\-G\-R)
+\item 
+cv\-::\-Mat \& \hyperlink{namespacedisp_a839f9b2e3eec52d78311195347d75a5b}{disp\-::\-C\-G\-Image\-Ref\-To\-Mat} (const C\-G\-Image\-Ref \&image, cv\-::\-Mat \&out, R\-G\-B\-Type dest\-Type=C\-O\-L\-O\-R\-\_\-\-B\-G\-R)  throw (invalid\-\_\-argument)
+\item 
+ostream \& \hyperlink{cocoa_8hpp_af829f2833c7596fe7b9cf41b58ae29b1}{operator$<$$<$} (ostream \&out, const \hyperlink{structmouse_1_1_mouse_state}{mouse\-::\-Mouse\-State} \&m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{cocoa_8hpp_ac041cfa66801dc389105798b67525f1e}{\index{cocoa.\-hpp@{cocoa.\-hpp}!U\-N\-U\-S\-E\-D\-\_\-\-V\-A\-R@{U\-N\-U\-S\-E\-D\-\_\-\-V\-A\-R}}
+\index{U\-N\-U\-S\-E\-D\-\_\-\-V\-A\-R@{U\-N\-U\-S\-E\-D\-\_\-\-V\-A\-R}!cocoa.hpp@{cocoa.\-hpp}}
+\subsubsection[{U\-N\-U\-S\-E\-D\-\_\-\-V\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf U\-N\-U\-S\-E\-D\-\_\-\-V\-A\-R}}}\label{cocoa_8hpp_ac041cfa66801dc389105798b67525f1e}
+Functions to access the mouse and display using Application\-Services. 
+
+\subsection{Function Documentation}
+\hypertarget{cocoa_8hpp_af829f2833c7596fe7b9cf41b58ae29b1}{\index{cocoa.\-hpp@{cocoa.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cocoa.hpp@{cocoa.\-hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf mouse\-::\-Mouse\-State} \&}]{m}
+\end{DoxyParamCaption}
+)}}\label{cocoa_8hpp_af829f2833c7596fe7b9cf41b58ae29b1}

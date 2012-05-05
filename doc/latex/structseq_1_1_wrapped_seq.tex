@@ -1,0 +1,124 @@
+\hypertarget{structseq_1_1_wrapped_seq}{\section{seq\-:\-:Wrapped\-Seq$<$ Seq\-T $>$ Struct Template Reference}
+\label{structseq_1_1_wrapped_seq}\index{seq\-::\-Wrapped\-Seq$<$ Seq\-T $>$@{seq\-::\-Wrapped\-Seq$<$ Seq\-T $>$}}
+}
+
+
+Sequence wrapper that supports wrap-\/around indexing -\/ all accessors will accept negative and out-\/of-\/bound indices and wrap around.  
+
+
+
+
+{\ttfamily \#include $<$seq.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structseq_1_1_wrapped_seq_aeb07ecb3ae54bc7460405d3f95098bcd}{Wrapped\-Seq} (Seq\-T \&\hyperlink{structseq_1_1_wrapped_seq_a838d548016ce08b745cb29dbee635437}{s})
+\item 
+Seq\-T\-::reference \hyperlink{structseq_1_1_wrapped_seq_a2267a0d93467dc4db6b64a9914a0e265}{at} (int i)
+\item 
+const Seq\-T\-::reference \hyperlink{structseq_1_1_wrapped_seq_a09864746e7dfb9e0d1ef6ebc59a9a4e8}{at} (int i) const 
+\item 
+Seq\-T\-::reference \hyperlink{structseq_1_1_wrapped_seq_a7ffd5783fc6d50fad65f89e6e2cc8489}{operator\mbox{[}$\,$\mbox{]}} (int i)
+\item 
+const Seq\-T\-::reference \hyperlink{structseq_1_1_wrapped_seq_a562c969d3a8f3c8aeede89d25747ba64}{operator\mbox{[}$\,$\mbox{]}} (int i) const 
+\item 
+size\-\_\-t \hyperlink{structseq_1_1_wrapped_seq_ab892f134a58400cc8a8ae32a2dabb7c4}{size} () const 
+\item 
+bool \hyperlink{structseq_1_1_wrapped_seq_abef397e7335e8705520777284326fe23}{empty} () const 
+\item 
+size\-\_\-t \hyperlink{structseq_1_1_wrapped_seq_a0259bb6a1a44a68e4dbda5b37750f503}{real\-I} (int i) const 
+\item 
+size\-\_\-t \hyperlink{structseq_1_1_wrapped_seq_a2b929ec2f56c92a9b2269f1853e4cd10}{real\-I\-Dist} (size\-\_\-t left\-I, size\-\_\-t right\-I) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Seq\-T \& \hyperlink{structseq_1_1_wrapped_seq_a838d548016ce08b745cb29dbee635437}{s}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Seq\-T$>$struct seq\-::\-Wrapped\-Seq$<$ Seq\-T $>$}
+
+Sequence wrapper that supports wrap-\/around indexing -\/ all accessors will accept negative and out-\/of-\/bound indices and wrap around. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structseq_1_1_wrapped_seq_aeb07ecb3ae54bc7460405d3f95098bcd}{\index{seq\-::\-Wrapped\-Seq@{seq\-::\-Wrapped\-Seq}!Wrapped\-Seq@{Wrapped\-Seq}}
+\index{Wrapped\-Seq@{Wrapped\-Seq}!seq::WrappedSeq@{seq\-::\-Wrapped\-Seq}}
+\subsubsection[{Wrapped\-Seq}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ {\bf seq\-::\-Wrapped\-Seq}$<$ Seq\-T $>$\-::{\bf Wrapped\-Seq} (
+\begin{DoxyParamCaption}
+\item[{Seq\-T \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1_wrapped_seq_aeb07ecb3ae54bc7460405d3f95098bcd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structseq_1_1_wrapped_seq_a2267a0d93467dc4db6b64a9914a0e265}{\index{seq\-::\-Wrapped\-Seq@{seq\-::\-Wrapped\-Seq}!at@{at}}
+\index{at@{at}!seq::WrappedSeq@{seq\-::\-Wrapped\-Seq}}
+\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ Seq\-T\-::reference {\bf seq\-::\-Wrapped\-Seq}$<$ Seq\-T $>$\-::{\bf at} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1_wrapped_seq_a2267a0d93467dc4db6b64a9914a0e265}
+\hypertarget{structseq_1_1_wrapped_seq_a09864746e7dfb9e0d1ef6ebc59a9a4e8}{\index{seq\-::\-Wrapped\-Seq@{seq\-::\-Wrapped\-Seq}!at@{at}}
+\index{at@{at}!seq::WrappedSeq@{seq\-::\-Wrapped\-Seq}}
+\subsubsection[{at}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ const Seq\-T\-::reference {\bf seq\-::\-Wrapped\-Seq}$<$ Seq\-T $>$\-::{\bf at} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1_wrapped_seq_a09864746e7dfb9e0d1ef6ebc59a9a4e8}
+\hypertarget{structseq_1_1_wrapped_seq_abef397e7335e8705520777284326fe23}{\index{seq\-::\-Wrapped\-Seq@{seq\-::\-Wrapped\-Seq}!empty@{empty}}
+\index{empty@{empty}!seq::WrappedSeq@{seq\-::\-Wrapped\-Seq}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ bool {\bf seq\-::\-Wrapped\-Seq}$<$ Seq\-T $>$\-::{\bf empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1_wrapped_seq_abef397e7335e8705520777284326fe23}
+\hypertarget{structseq_1_1_wrapped_seq_a7ffd5783fc6d50fad65f89e6e2cc8489}{\index{seq\-::\-Wrapped\-Seq@{seq\-::\-Wrapped\-Seq}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!seq::WrappedSeq@{seq\-::\-Wrapped\-Seq}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ Seq\-T\-::reference {\bf seq\-::\-Wrapped\-Seq}$<$ Seq\-T $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1_wrapped_seq_a7ffd5783fc6d50fad65f89e6e2cc8489}
+\hypertarget{structseq_1_1_wrapped_seq_a562c969d3a8f3c8aeede89d25747ba64}{\index{seq\-::\-Wrapped\-Seq@{seq\-::\-Wrapped\-Seq}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!seq::WrappedSeq@{seq\-::\-Wrapped\-Seq}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ const Seq\-T\-::reference {\bf seq\-::\-Wrapped\-Seq}$<$ Seq\-T $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1_wrapped_seq_a562c969d3a8f3c8aeede89d25747ba64}
+\hypertarget{structseq_1_1_wrapped_seq_a0259bb6a1a44a68e4dbda5b37750f503}{\index{seq\-::\-Wrapped\-Seq@{seq\-::\-Wrapped\-Seq}!real\-I@{real\-I}}
+\index{real\-I@{real\-I}!seq::WrappedSeq@{seq\-::\-Wrapped\-Seq}}
+\subsubsection[{real\-I}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ size\-\_\-t {\bf seq\-::\-Wrapped\-Seq}$<$ Seq\-T $>$\-::{\bf real\-I} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1_wrapped_seq_a0259bb6a1a44a68e4dbda5b37750f503}
+Return the real, bounded index from a possibly out-\/of-\/bounds one. \hypertarget{structseq_1_1_wrapped_seq_a2b929ec2f56c92a9b2269f1853e4cd10}{\index{seq\-::\-Wrapped\-Seq@{seq\-::\-Wrapped\-Seq}!real\-I\-Dist@{real\-I\-Dist}}
+\index{real\-I\-Dist@{real\-I\-Dist}!seq::WrappedSeq@{seq\-::\-Wrapped\-Seq}}
+\subsubsection[{real\-I\-Dist}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ size\-\_\-t {\bf seq\-::\-Wrapped\-Seq}$<$ Seq\-T $>$\-::{\bf real\-I\-Dist} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{left\-I, }
+\item[{size\-\_\-t}]{right\-I}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1_wrapped_seq_a2b929ec2f56c92a9b2269f1853e4cd10}
+Return the real (wrapped) distance between two indices. See \-\_\-real\-I\-Dist. \hypertarget{structseq_1_1_wrapped_seq_ab892f134a58400cc8a8ae32a2dabb7c4}{\index{seq\-::\-Wrapped\-Seq@{seq\-::\-Wrapped\-Seq}!size@{size}}
+\index{size@{size}!seq::WrappedSeq@{seq\-::\-Wrapped\-Seq}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ size\-\_\-t {\bf seq\-::\-Wrapped\-Seq}$<$ Seq\-T $>$\-::{\bf size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structseq_1_1_wrapped_seq_ab892f134a58400cc8a8ae32a2dabb7c4}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structseq_1_1_wrapped_seq_a838d548016ce08b745cb29dbee635437}{\index{seq\-::\-Wrapped\-Seq@{seq\-::\-Wrapped\-Seq}!s@{s}}
+\index{s@{s}!seq::WrappedSeq@{seq\-::\-Wrapped\-Seq}}
+\subsubsection[{s}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ Seq\-T\& {\bf seq\-::\-Wrapped\-Seq}$<$ Seq\-T $>$\-::{\bf s}}}\label{structseq_1_1_wrapped_seq_a838d548016ce08b745cb29dbee635437}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{seq_8hpp}{seq.\-hpp}\end{DoxyCompactItemize}

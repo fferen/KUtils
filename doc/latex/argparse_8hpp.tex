@@ -1,0 +1,30 @@
+\hypertarget{argparse_8hpp}{\section{argparse.\-hpp File Reference}
+\label{argparse_8hpp}\index{argparse.\-hpp@{argparse.\-hpp}}
+}
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}dict.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}str.\-hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structargparse_1_1_arg_holder}{argparse\-::\-Arg\-Holder}
+\begin{DoxyCompactList}\small\item\em Holds the result of parsing arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceargparse}{argparse}
+\begin{DoxyCompactList}\small\item\em Command-\/line argument parser with a focus on brevity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespaceargparse_a9178c3eba71719d6bed428a94e42010e}{argparse\-::make\-Usage\-String} (const string \&prog\-Name, const string \&desc, const string \&pos\-Args=string(), const Dict$<$ string, string $>$ \&opt\-To\-Help=Dict$<$ string, string $>$(), int cols=80, int help\-Cols=60)
+\item 
+{\footnotesize template$<$class Func\-Type $>$ }\\Arg\-Holder \hyperlink{namespaceargparse_a6a82e35cb0ec90fbe4a17db4ae3539d4}{argparse\-::parse} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const Dict$<$ string, Func\-Type $>$ \&opt\-To\-Chker, char opt\-Char='-\/', bool gen\-Help\-Chker=true)  throw (invalid\-\_\-argument)
+\item 
+\hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} \hyperlink{namespaceargparse_a6cfba06102a610840779069dfda1b98d}{argparse\-::parse} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const char opt\-Char='-\/', bool gen\-Help\-Chker=true)
+\end{DoxyCompactItemize}

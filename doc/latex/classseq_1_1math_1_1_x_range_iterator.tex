@@ -1,0 +1,153 @@
+\hypertarget{classseq_1_1math_1_1_x_range_iterator}{\section{seq\-:\-:math\-:\-:X\-Range\-Iterator$<$ Num\-T $>$ Class Template Reference}
+\label{classseq_1_1math_1_1_x_range_iterator}\index{seq\-::math\-::\-X\-Range\-Iterator$<$ Num\-T $>$@{seq\-::math\-::\-X\-Range\-Iterator$<$ Num\-T $>$}}
+}
+
+
+Lazy iterator used for X\-Range(), usually not necessary to use directly.  
+
+
+
+
+{\ttfamily \#include $<$seq.\-hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Num\-T \hyperlink{classseq_1_1math_1_1_x_range_iterator_a18b93b3a4ea6128dedb3668b35814bf0}{value\-\_\-type}
+\item 
+typedef Num\-T \& \hyperlink{classseq_1_1math_1_1_x_range_iterator_a0bb59d21d7807cd3c0f354d4657ce543}{reference\-\_\-type}
+\item 
+typedef Num\-T $\ast$ \hyperlink{classseq_1_1math_1_1_x_range_iterator_a594e9803c20ec88fc489fc70e61b13a2}{pointer}
+\item 
+typedef forward\-\_\-iterator\-\_\-tag \hyperlink{classseq_1_1math_1_1_x_range_iterator_afa575aa34d0b2740ccfbd9ca512309a0}{iterator\-\_\-category}
+\item 
+typedef ptrdiff\-\_\-t \hyperlink{classseq_1_1math_1_1_x_range_iterator_aff997a44dcd04a95ae2e0255d9cdaf43}{difference\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classseq_1_1math_1_1_x_range_iterator_ab5a22866a4f442205cfd48706abfccae}{X\-Range\-Iterator} ()
+\item 
+\hyperlink{classseq_1_1math_1_1_x_range_iterator_a816bede24a264db47024b9d4d68e071e}{X\-Range\-Iterator} (Num\-T start, Num\-T \hyperlink{classseq_1_1math_1_1_x_range_iterator_a73d7e94422117d0f2eff60edb9cb4273}{step}=0)
+\item 
+{\footnotesize template$<$typename Other\-Num\-T $>$ }\\\hyperlink{classseq_1_1math_1_1_x_range_iterator_a9c5e86abe5f22bd6948199ca45903072}{X\-Range\-Iterator} (const \hyperlink{classseq_1_1math_1_1_x_range_iterator}{X\-Range\-Iterator}$<$ Other\-Num\-T $>$ \&other)
+\item 
+const \hyperlink{classseq_1_1math_1_1_x_range_iterator_a18b93b3a4ea6128dedb3668b35814bf0}{value\-\_\-type} \& \hyperlink{classseq_1_1math_1_1_x_range_iterator_a1d2dd554ef5b57918368118e40f0d5b5}{operator$\ast$} () const 
+\item 
+void \hyperlink{classseq_1_1math_1_1_x_range_iterator_a1300df3f2e7804d5222f0dc33e9cb882}{operator++} ()
+\item 
+{\footnotesize template$<$typename Other\-Num\-T $>$ }\\bool \hyperlink{classseq_1_1math_1_1_x_range_iterator_abc9809b474c95cf6084e653fc6e0f949}{operator==} (const \hyperlink{classseq_1_1math_1_1_x_range_iterator}{X\-Range\-Iterator}$<$ Other\-Num\-T $>$ \&it)
+\item 
+{\footnotesize template$<$typename Other\-Num\-T $>$ }\\bool \hyperlink{classseq_1_1math_1_1_x_range_iterator_a883f1df0c26af59f698f27baec0e9ce4}{operator!=} (const \hyperlink{classseq_1_1math_1_1_x_range_iterator}{X\-Range\-Iterator}$<$ Other\-Num\-T $>$ \&it)
+\item 
+\hyperlink{classseq_1_1math_1_1_x_range_iterator_aff997a44dcd04a95ae2e0255d9cdaf43}{difference\-\_\-type} \hyperlink{classseq_1_1math_1_1_x_range_iterator_af564e5e69dfa23d36c1258db91c91610}{operator-\/} (const \hyperlink{classseq_1_1math_1_1_x_range_iterator}{X\-Range\-Iterator} \&it)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Num\-T \hyperlink{classseq_1_1math_1_1_x_range_iterator_aab232a017c574d7190828cc2633aad4a}{val}
+\item 
+Num\-T \hyperlink{classseq_1_1math_1_1_x_range_iterator_a73d7e94422117d0f2eff60edb9cb4273}{step}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Num\-T$>$class seq\-::math\-::\-X\-Range\-Iterator$<$ Num\-T $>$}
+
+Lazy iterator used for X\-Range(), usually not necessary to use directly. 
+
+{\ttfamily this-\/$>$step == 0} means that it's the end of a range. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_aff997a44dcd04a95ae2e0255d9cdaf43}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!difference\-\_\-type@{difference\-\_\-type}}
+\index{difference\-\_\-type@{difference\-\_\-type}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{difference\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ typedef ptrdiff\-\_\-t {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::{\bf difference\-\_\-type}}}\label{classseq_1_1math_1_1_x_range_iterator_aff997a44dcd04a95ae2e0255d9cdaf43}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_afa575aa34d0b2740ccfbd9ca512309a0}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!iterator\-\_\-category@{iterator\-\_\-category}}
+\index{iterator\-\_\-category@{iterator\-\_\-category}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{iterator\-\_\-category}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ typedef forward\-\_\-iterator\-\_\-tag {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::{\bf iterator\-\_\-category}}}\label{classseq_1_1math_1_1_x_range_iterator_afa575aa34d0b2740ccfbd9ca512309a0}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_a594e9803c20ec88fc489fc70e61b13a2}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!pointer@{pointer}}
+\index{pointer@{pointer}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{pointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ typedef Num\-T$\ast$ {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::{\bf pointer}}}\label{classseq_1_1math_1_1_x_range_iterator_a594e9803c20ec88fc489fc70e61b13a2}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_a0bb59d21d7807cd3c0f354d4657ce543}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!reference\-\_\-type@{reference\-\_\-type}}
+\index{reference\-\_\-type@{reference\-\_\-type}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{reference\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ typedef Num\-T\& {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::{\bf reference\-\_\-type}}}\label{classseq_1_1math_1_1_x_range_iterator_a0bb59d21d7807cd3c0f354d4657ce543}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_a18b93b3a4ea6128dedb3668b35814bf0}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!value\-\_\-type@{value\-\_\-type}}
+\index{value\-\_\-type@{value\-\_\-type}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ typedef Num\-T {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::{\bf value\-\_\-type}}}\label{classseq_1_1math_1_1_x_range_iterator_a18b93b3a4ea6128dedb3668b35814bf0}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_ab5a22866a4f442205cfd48706abfccae}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!X\-Range\-Iterator@{X\-Range\-Iterator}}
+\index{X\-Range\-Iterator@{X\-Range\-Iterator}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{X\-Range\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::{\bf X\-Range\-Iterator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classseq_1_1math_1_1_x_range_iterator_ab5a22866a4f442205cfd48706abfccae}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_a816bede24a264db47024b9d4d68e071e}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!X\-Range\-Iterator@{X\-Range\-Iterator}}
+\index{X\-Range\-Iterator@{X\-Range\-Iterator}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{X\-Range\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::{\bf X\-Range\-Iterator} (
+\begin{DoxyParamCaption}
+\item[{Num\-T}]{start, }
+\item[{Num\-T}]{step = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classseq_1_1math_1_1_x_range_iterator_a816bede24a264db47024b9d4d68e071e}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_a9c5e86abe5f22bd6948199ca45903072}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!X\-Range\-Iterator@{X\-Range\-Iterator}}
+\index{X\-Range\-Iterator@{X\-Range\-Iterator}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{X\-Range\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ template$<$typename Other\-Num\-T $>$ {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::{\bf X\-Range\-Iterator} (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\-Range\-Iterator}$<$ Other\-Num\-T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classseq_1_1math_1_1_x_range_iterator_a9c5e86abe5f22bd6948199ca45903072}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_a883f1df0c26af59f698f27baec0e9ce4}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ template$<$typename Other\-Num\-T $>$ bool {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\-Range\-Iterator}$<$ Other\-Num\-T $>$ \&}]{it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classseq_1_1math_1_1_x_range_iterator_a883f1df0c26af59f698f27baec0e9ce4}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_a1d2dd554ef5b57918368118e40f0d5b5}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ const {\bf value\-\_\-type}\& {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classseq_1_1math_1_1_x_range_iterator_a1d2dd554ef5b57918368118e40f0d5b5}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_a1300df3f2e7804d5222f0dc33e9cb882}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ void {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classseq_1_1math_1_1_x_range_iterator_a1300df3f2e7804d5222f0dc33e9cb882}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_af564e5e69dfa23d36c1258db91c91610}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ {\bf difference\-\_\-type} {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\-Range\-Iterator}$<$ Num\-T $>$ \&}]{it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classseq_1_1math_1_1_x_range_iterator_af564e5e69dfa23d36c1258db91c91610}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_abc9809b474c95cf6084e653fc6e0f949}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ template$<$typename Other\-Num\-T $>$ bool {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\-Range\-Iterator}$<$ Other\-Num\-T $>$ \&}]{it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classseq_1_1math_1_1_x_range_iterator_abc9809b474c95cf6084e653fc6e0f949}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_a73d7e94422117d0f2eff60edb9cb4273}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!step@{step}}
+\index{step@{step}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ Num\-T {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::{\bf step}}}\label{classseq_1_1math_1_1_x_range_iterator_a73d7e94422117d0f2eff60edb9cb4273}
+\hypertarget{classseq_1_1math_1_1_x_range_iterator_aab232a017c574d7190828cc2633aad4a}{\index{seq\-::math\-::\-X\-Range\-Iterator@{seq\-::math\-::\-X\-Range\-Iterator}!val@{val}}
+\index{val@{val}!seq::math::XRangeIterator@{seq\-::math\-::\-X\-Range\-Iterator}}
+\subsubsection[{val}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T$>$ Num\-T {\bf seq\-::math\-::\-X\-Range\-Iterator}$<$ Num\-T $>$\-::{\bf val}}}\label{classseq_1_1math_1_1_x_range_iterator_aab232a017c574d7190828cc2633aad4a}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{seq_8hpp}{seq.\-hpp}\end{DoxyCompactItemize}

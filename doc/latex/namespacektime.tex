@@ -1,0 +1,53 @@
+\hypertarget{namespacektime}{\section{ktime Namespace Reference}
+\label{namespacektime}\index{ktime@{ktime}}
+}
+
+
+Utilities for working with time.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classktime_1_1_running_avg_timer}{Running\-Avg\-Timer}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef chrono\-::system\-\_\-clock \hyperlink{namespacektime_ac6b33ea027bdc032e7ba377509c8e51f}{Clock\-T}
+\item 
+typedef Clock\-T\-::duration \hyperlink{namespacektime_aacefffdcc0ccc2f45598475b3557d6f2}{Time\-Diff}
+\item 
+typedef Clock\-T\-::time\-\_\-point \hyperlink{namespacektime_a038a3d1fb2cb9885396233d6e412773e}{Time\-Point}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{namespacektime_a89b89374ae2f385f58b64c5a2438a718}{to\-Secs} (const \hyperlink{namespacektime_aacefffdcc0ccc2f45598475b3557d6f2}{Time\-Diff} \&diff)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utilities for working with time. 
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacektime_ac6b33ea027bdc032e7ba377509c8e51f}{\index{ktime@{ktime}!Clock\-T@{Clock\-T}}
+\index{Clock\-T@{Clock\-T}!ktime@{ktime}}
+\subsubsection[{Clock\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef chrono\-::system\-\_\-clock {\bf ktime\-::\-Clock\-T}}}\label{namespacektime_ac6b33ea027bdc032e7ba377509c8e51f}
+\hypertarget{namespacektime_aacefffdcc0ccc2f45598475b3557d6f2}{\index{ktime@{ktime}!Time\-Diff@{Time\-Diff}}
+\index{Time\-Diff@{Time\-Diff}!ktime@{ktime}}
+\subsubsection[{Time\-Diff}]{\setlength{\rightskip}{0pt plus 5cm}typedef Clock\-T\-::duration {\bf ktime\-::\-Time\-Diff}}}\label{namespacektime_aacefffdcc0ccc2f45598475b3557d6f2}
+\hypertarget{namespacektime_a038a3d1fb2cb9885396233d6e412773e}{\index{ktime@{ktime}!Time\-Point@{Time\-Point}}
+\index{Time\-Point@{Time\-Point}!ktime@{ktime}}
+\subsubsection[{Time\-Point}]{\setlength{\rightskip}{0pt plus 5cm}typedef Clock\-T\-::time\-\_\-point {\bf ktime\-::\-Time\-Point}}}\label{namespacektime_a038a3d1fb2cb9885396233d6e412773e}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacektime_a89b89374ae2f385f58b64c5a2438a718}{\index{ktime@{ktime}!to\-Secs@{to\-Secs}}
+\index{to\-Secs@{to\-Secs}!ktime@{ktime}}
+\subsubsection[{to\-Secs}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf ktime\-::to\-Secs} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Time\-Diff} \&}]{diff}
+\end{DoxyParamCaption}
+)}}\label{namespacektime_a89b89374ae2f385f58b64c5a2438a718}
+Convert a Time\-Diff to seconds. 

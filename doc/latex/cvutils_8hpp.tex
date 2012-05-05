@@ -1,0 +1,85 @@
+\hypertarget{cvutils_8hpp}{\section{cvutils.\-hpp File Reference}
+\label{cvutils_8hpp}\index{cvutils.\-hpp@{cvutils.\-hpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\-hpp$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcvutils_1_1___data_depth___fixed}{cvutils\-::\-\_\-\-Data\-Depth\-\_\-\-Fixed$<$ T $>$}
+\item 
+struct \hyperlink{structcvutils_1_1___data_depth___fixed_3_01uchar_01_4}{cvutils\-::\-\_\-\-Data\-Depth\-\_\-\-Fixed$<$ uchar $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacecvutils}{cvutils}
+\begin{DoxyCompactList}\small\item\em Open\-C\-V utilities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacecvutils_aa292da4b50c7692374fdde56afdd6baf}{cvutils\-::wait\-For\-Keypress} ()
+\item 
+ostream \& \hyperlink{cvutils_8hpp_a0b14696e4e43f7a2a1e707fa208b4ea6}{operator$<$$<$} (ostream \&out, const cv\-::\-Rect r)
+\item 
+ostream \& \hyperlink{cvutils_8hpp_acac9a564a7e46f10e2e1603edac9e540}{operator$<$$<$} (ostream \&out, const cv\-::\-Size s)
+\item 
+ostream \& \hyperlink{cvutils_8hpp_a5b3e75872c29d47c8c8fe2226927b511}{operator$<$$<$} (ostream \&out, const cv\-::\-Size2f s)
+\item 
+ostream \& \hyperlink{cvutils_8hpp_a4ca6efe2216f3d895e6de2a5cec34fc1}{operator$<$$<$} (ostream \&out, const cv\-::\-Scalar s)
+\item 
+ostream \& \hyperlink{cvutils_8hpp_a19e2583b33817fa0157b7ba5d0ef42cb}{operator$<$$<$} (ostream \&out, const uchar c)
+\item 
+{\footnotesize template$<$typename T , int cn$>$ }\\ostream \& \hyperlink{cvutils_8hpp_a2a8d9a7b33a01731771e3ef6a6fbfa7f}{operator$<$$<$} (ostream \&out, const cv\-::\-Vec$<$ T, cn $>$ v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{cvutils_8hpp_a0b14696e4e43f7a2a1e707fa208b4ea6}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cvutils.hpp@{cvutils.\-hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const cv\-::\-Rect}]{r}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_a0b14696e4e43f7a2a1e707fa208b4ea6}
+\hypertarget{cvutils_8hpp_acac9a564a7e46f10e2e1603edac9e540}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cvutils.hpp@{cvutils.\-hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const cv\-::\-Size}]{s}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_acac9a564a7e46f10e2e1603edac9e540}
+\hypertarget{cvutils_8hpp_a5b3e75872c29d47c8c8fe2226927b511}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cvutils.hpp@{cvutils.\-hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const cv\-::\-Size2f}]{s}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_a5b3e75872c29d47c8c8fe2226927b511}
+\hypertarget{cvutils_8hpp_a4ca6efe2216f3d895e6de2a5cec34fc1}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cvutils.hpp@{cvutils.\-hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const cv\-::\-Scalar}]{s}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_a4ca6efe2216f3d895e6de2a5cec34fc1}
+\hypertarget{cvutils_8hpp_a19e2583b33817fa0157b7ba5d0ef42cb}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cvutils.hpp@{cvutils.\-hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const uchar}]{c}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_a19e2583b33817fa0157b7ba5d0ef42cb}
+\hypertarget{cvutils_8hpp_a2a8d9a7b33a01731771e3ef6a6fbfa7f}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!cvutils.hpp@{cvutils.\-hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , int cn$>$ ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const cv\-::\-Vec$<$ T, cn $>$}]{v}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_a2a8d9a7b33a01731771e3ef6a6fbfa7f}
