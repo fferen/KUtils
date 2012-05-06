@@ -2,6 +2,20 @@
 \label{io_8hpp}\index{io.\-hpp@{io.\-hpp}}
 }
 {\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for io.\-hpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{io_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{io_8hpp__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -11,15 +25,15 @@ namespace \hyperlink{namespaceio}{io}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T1 , typename T2 $>$ }\\ostream \& \hyperlink{io_8hpp_a932f5ab08815fcdc72f2866b0d6e1ee2}{operator$<$$<$} (ostream \&out, const pair$<$ T1, T2 $>$ \&p)
-\item 
+\begin{DoxyCompactList}\small\item\em Print a {\ttfamily pair}. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceio_ad8499487f5202220fead59833138f4ab}{io\-::print} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Simply print a newline. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T , typename... Args$>$ }\\void \hyperlink{namespaceio_ab9528b2fe57a002bb153f1b9f8dde743}{io\-::print} (T value, Args...\-args)
-\item 
+\begin{DoxyCompactList}\small\item\em Print arguments separated by spaces, then a newline. \end{DoxyCompactList}\item 
 void \hyperlink{namespaceio_ae85db8edfd95c17427c2606360bb97af}{io\-::print\-Imm} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Call {\ttfamily fflush(stdout);}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T , typename... Args$>$ }\\void \hyperlink{namespaceio_ade4f05edb2cd007404540f67d416bd4a}{io\-::print\-Imm} (T value, Args...\-args)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Print arguments separated by spaces with no newline (by default values only show up on the screen when a newline is printed). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -31,4 +45,7 @@ void \hyperlink{namespaceio_ae85db8edfd95c17427c2606360bb97af}{io\-::print\-Imm}
 \item[{const pair$<$ T1, T2 $>$ \&}]{p}
 \end{DoxyParamCaption}
 )}}\label{io_8hpp_a932f5ab08815fcdc72f2866b0d6e1ee2}
+
+
 Print a {\ttfamily pair}. 
+

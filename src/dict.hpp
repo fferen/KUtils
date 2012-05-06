@@ -61,7 +61,7 @@ ostream &operator<<(ostream &out, const Dict<KeyT, ValT> &seq) {
     return out;
 }
 
-/*! \brief Utilities for working with `Dict`s (`unordered_map`s). */
+/*! Utilities for working with `Dict`s (`unordered_map`s). */
 namespace dict {
     /*! Given a pair of iterators, store a mapping from element to count in
      * `out`, and return `out`.

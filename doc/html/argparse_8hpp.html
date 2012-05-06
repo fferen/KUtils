@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,6 +106,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;iostream&gt;</code><br/>
 <code>#include &quot;<a class="el" href="dict_8hpp_source.html">dict.hpp</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="str_8hpp_source.html">str.hpp</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for argparse.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="argparse_8hpp__incl.png" border="0" usemap="#argparse_8hpp" alt=""/></div>
+<map name="argparse_8hpp" id="argparse_8hpp">
+<area shape="rect" id="node15" href="dict_8hpp.html" title="dict.hpp" alt="" coords="633,80,705,107"/><area shape="rect" id="node21" href="str_8hpp.html" title="str.hpp" alt="" coords="534,80,599,107"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="argparse_8hpp__dep__incl.png" border="0" usemap="#argparse_8hppdep" alt=""/></div>
+<map name="argparse_8hppdep" id="argparse_8hppdep">
+<area shape="rect" id="node3" href="argparse_8cpp.html" title="argparse.cpp" alt="" coords="5,80,107,107"/></map>
+</div>
 </div>
 <p><a href="argparse_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -119,16 +133,19 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespaceargparse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command-line argument parser with a focus on brevity. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9178c3eba71719d6bed428a94e42010e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargparse.html#a9178c3eba71719d6bed428a94e42010e">argparse::makeUsageString</a> (const string &amp;progName, const string &amp;desc, const string &amp;posArgs=string(), const Dict&lt; string, string &gt; &amp;optToHelp=Dict&lt; string, string &gt;(), int cols=80, int helpCols=60)</td></tr>
+<tr class="memitem:a336ebbf4216b617d79a43d8211600118"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargparse.html#a336ebbf4216b617d79a43d8211600118">argparse::makeUsageString</a> (const string &amp;progName, const string &amp;desc, const string &amp;posArgs=string(), const Dict&lt; string, string &gt; &amp;optToHelp=Dict&lt; string, string &gt;(), unsigned cols=80, unsigned helpCols=60)</td></tr>
+<tr class="memdesc:a336ebbf4216b617d79a43d8211600118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a usage string.  <a href="#a336ebbf4216b617d79a43d8211600118"></a><br/></td></tr>
 <tr class="memitem:a6a82e35cb0ec90fbe4a17db4ae3539d4"><td class="memTemplParams" colspan="2">template&lt;class FuncType &gt; </td></tr>
-<tr class="memitem:a6a82e35cb0ec90fbe4a17db4ae3539d4"><td class="memTemplItemLeft" align="right" valign="top">ArgHolder&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargparse.html#a6a82e35cb0ec90fbe4a17db4ae3539d4">argparse::parse</a> (int argc, const char *argv[], const Dict&lt; string, FuncType &gt; &amp;optToChker, char optChar='-', bool genHelpChker=true)  throw (invalid_argument)</td></tr>
+<tr class="memitem:a6a82e35cb0ec90fbe4a17db4ae3539d4"><td class="memTemplItemLeft" align="right" valign="top">ArgHolder&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargparse.html#a6a82e35cb0ec90fbe4a17db4ae3539d4">argparse::parse</a> (int argc, const char *argv[], const Dict&lt; string, FuncType &gt; &amp;optToChker, char optChar='-', bool genHelpChker=true)</td></tr>
+<tr class="memdesc:a6a82e35cb0ec90fbe4a17db4ae3539d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an <a class="el" href="structargparse_1_1_arg_holder.html" title="Holds the result of parsing arguments.">ArgHolder</a> object holding the parsed arguments.  <a href="#a6a82e35cb0ec90fbe4a17db4ae3539d4"></a><br/></td></tr>
 <tr class="memitem:a6cfba06102a610840779069dfda1b98d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structargparse_1_1_arg_holder.html">ArgHolder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargparse.html#a6cfba06102a610840779069dfda1b98d">argparse::parse</a> (int argc, const char *argv[], const char optChar='-', bool genHelpChker=true)</td></tr>
+<tr class="memdesc:a6cfba06102a610840779069dfda1b98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">For programs that take no options.  <a href="#a6cfba06102a610840779069dfda1b98d"></a><br/></td></tr>
 </table>
 </div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:32 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

@@ -1,0 +1,79 @@
+\hypertarget{kmath_8hpp}{\section{kmath.\-hpp File Reference}
+\label{kmath_8hpp}\index{kmath.\-hpp@{kmath.\-hpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+Include dependency graph for kmath.\-hpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kmath_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kmath_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structkmath_1_1_point}{kmath\-::\-Point$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Generic point class. \end{DoxyCompactList}\item 
+struct \hyperlink{structkmath_1_1_interval}{kmath\-::\-Interval}
+\begin{DoxyCompactList}\small\item\em Represents an interval of real numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacekmath}{kmath}
+\begin{DoxyCompactList}\small\item\em Miscellaneous mathematical functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Point$<$ int $>$ \hyperlink{namespacekmath_afaf3fde3b20c9932e144eb48e736cad9}{kmath\-::\-Point\-I}
+\item 
+typedef Point$<$ float $>$ \hyperlink{namespacekmath_ad80aa80b21a1aeadbd484a0fc56f4e95}{kmath\-::\-Point\-F}
+\item 
+typedef Point$<$ double $>$ \hyperlink{namespacekmath_aad2e627ee7da1b98c2c516f20ed5b7e3}{kmath\-::\-Point\-D}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacekmath_a1e00ae34fe8ed9548870fc759ea82609}{kmath\-::\-Round\-Type} \{ \hyperlink{namespacekmath_a1e00ae34fe8ed9548870fc759ea82609ae04658d947a7879a4502f837c286f1ac}{kmath\-::\-R\-O\-U\-N\-D}, 
+\hyperlink{namespacekmath_a1e00ae34fe8ed9548870fc759ea82609a449ece60a17b2668fdb165fd8740dbdf}{kmath\-::\-C\-E\-I\-L}, 
+\hyperlink{namespacekmath_a1e00ae34fe8ed9548870fc759ea82609a8f67a6160bf7ac646e9b1bb6ef1a56c1}{kmath\-::\-F\-L\-O\-O\-R}
+ \}
+\begin{DoxyCompactList}\small\item\em Type of rounding to do, used in \hyperlink{namespacekmath_aa18b5fc52315b0ca7717a52bdf152ee6}{fround()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \hyperlink{namespacekmath_a1e0f4e049ef1ec26bf84a8aa77f067d1}{kmath\-::sgn} (T val)
+\begin{DoxyCompactList}\small\item\em Return 1 if {\ttfamily val} $>$ 0, -\/1 if {\ttfamily val} $<$ 0, or 0 if {\ttfamily val} == 0. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\int \hyperlink{namespacekmath_af5735a3b3983474d19d1a982a26cb473}{kmath\-::sgn} (unsigned val)
+\begin{DoxyCompactList}\small\item\em Specialization for unsigned types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\int \hyperlink{namespacekmath_a7308728815e450bfe583078b893afd2b}{kmath\-::sgn} (unsigned long val)
+\begin{DoxyCompactList}\small\item\em Specialization for unsigned types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\int \hyperlink{namespacekmath_a06e8ca1a174b7eb44ba4ffdebbdf0179}{kmath\-::sgn} (unsigned long long val)
+\begin{DoxyCompactList}\small\item\em Specialization for unsigned types. \end{DoxyCompactList}\item 
+double \hyperlink{namespacekmath_ac9d0f66e32f84c22626883c171893f48}{kmath\-::normal\-C\-D\-F} (double x)
+\begin{DoxyCompactList}\small\item\em Return the cumulative density of a Gaussian distribution with mean = 0, variance = 1. \end{DoxyCompactList}\item 
+unsigned \hyperlink{namespacekmath_abfda38c9ce9a9d07af7f93a731d8fe51}{kmath\-::factorial} (unsigned n)
+\begin{DoxyCompactList}\small\item\em Return {\ttfamily n!}. \end{DoxyCompactList}\item 
+unsigned \hyperlink{namespacekmath_a53519d2ec30d9df038dbe8ceaead1a9c}{kmath\-::combinations} (unsigned n, unsigned k)
+\begin{DoxyCompactList}\small\item\em Return {\ttfamily n}C{\ttfamily k} (n choose k). \end{DoxyCompactList}\item 
+float \hyperlink{namespacekmath_aa18b5fc52315b0ca7717a52bdf152ee6}{kmath\-::fround} (float val, float scale=1.\-0, \hyperlink{namespacekmath_a1e00ae34fe8ed9548870fc759ea82609}{Round\-Type} action=R\-O\-U\-N\-D)
+\begin{DoxyCompactList}\small\item\em Round val to nearest multiple of scale. \end{DoxyCompactList}\item 
+int \hyperlink{namespacekmath_a32d7d4c091092ac7e21d7beb15daaf1a}{kmath\-::iround} (float val)
+\begin{DoxyCompactList}\small\item\em Specialization of {\ttfamily fround} that rounds float to nearest integer. \end{DoxyCompactList}\item 
+float \hyperlink{namespacekmath_af21fdb579807bd7054875a2369e15941}{kmath\-::interval\-Project} (float val, const Interval \&domain, const Interval \&range, const function$<$ float(float)$>$ \&func=\mbox{[}$\,$\mbox{]}(float x)\{return x;\}, const Interval \&func\-Domain=Interval(0, 1), const Interval \&func\-Range=Interval(0, 1))
+\begin{DoxyCompactList}\small\item\em Project a value within {\ttfamily domain} to a new \hyperlink{structkmath_1_1_interval}{Interval} {\ttfamily range} using {\ttfamily func}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{namespacekmath_a1224c45abb03af2a5136e24f09d9b4c3}{kmath\-::\-P\-I} = 3.\-141592654
+\begin{DoxyCompactList}\small\item\em The ratio of the circumference of a circle to its diameter. \end{DoxyCompactList}\end{DoxyCompactItemize}

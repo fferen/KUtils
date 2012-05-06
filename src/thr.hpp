@@ -5,19 +5,20 @@
 
 using namespace std;
 
-/*! \brief Common multi-threading patterns. */
+/*! Multi-threading utilities. */
 namespace thr {
-    /*! \brief Producer-consumer queue. */
+    /*! Producer-consumer queue. */
     template <typename T>
-    class Queue {
-    public:
+    struct Queue {
         static mutex lock;
 
         deque<T> q;
 
         Queue() {};
 
-        /* Return `true` if next item in queue was stored in `out`. */
+        /*! Return `true` if next item in queue was stored in `out` or `false`
+         * if there was no item.
+         */
         bool poll(T &out) {
             lock_guard<mutex> lk(lock);
             bool found = false;
@@ -29,12 +30,12 @@ namespace thr {
             return found;
         }
 
-        /* Block until next item is stored in `out`. */
+        /*! Block until next item is stored in `out`. */
         void wait(T &out) {
             while (not poll(out));
         }
 
-        /* Push a new item into the queue. */
+        /*! Push a new item into the queue. */
         void push(const T &in) {
             lock_guard<mutex> lk(lock);
             q.push_front(in);

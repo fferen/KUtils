@@ -16,17 +16,17 @@ Producer-\/consumer queue.
 \hyperlink{classthr_1_1_queue_a5b21c17bdad3f7d88f7a30f92a2bd42d}{Queue} ()
 \item 
 bool \hyperlink{classthr_1_1_queue_a1ce03f6aee29d5dc8e4b3a247de063e5}{poll} (T \&out)
-\item 
+\begin{DoxyCompactList}\small\item\em Return {\ttfamily true} if next item in queue was stored in {\ttfamily out}. \end{DoxyCompactList}\item 
 void \hyperlink{classthr_1_1_queue_ab095129fe0ba3dc63fa7300ffe2b11b9}{wait} (T \&out)
-\item 
+\begin{DoxyCompactList}\small\item\em Block until next item is stored in {\ttfamily out}. \end{DoxyCompactList}\item 
 void \hyperlink{classthr_1_1_queue_a62768ce373068fa4b3baf574f5fed995}{push} (const T \&in)
-\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
+\begin{DoxyCompactList}\small\item\em Push a new item into the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 deque$<$ T $>$ \hyperlink{classthr_1_1_queue_aecde97de4091b83a35dcf2ec42cdcd7b}{q}
 \end{DoxyCompactItemize}
-\subsection*{Static Public Attributes}
+\subsection*{Static Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static mutex \hyperlink{classthr_1_1_queue_abadc1f08bfec267edc24baaa442bb451}{lock}
@@ -37,6 +37,8 @@ static mutex \hyperlink{classthr_1_1_queue_abadc1f08bfec267edc24baaa442bb451}{lo
 \subsubsection*{template$<$typename T$>$class thr\-::\-Queue$<$ T $>$}
 
 Producer-\/consumer queue. 
+
+
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classthr_1_1_queue_a5b21c17bdad3f7d88f7a30f92a2bd42d}{\index{thr\-::\-Queue@{thr\-::\-Queue}!Queue@{Queue}}
@@ -56,6 +58,10 @@ Producer-\/consumer queue.
 \item[{T \&}]{out}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classthr_1_1_queue_a1ce03f6aee29d5dc8e4b3a247de063e5}
+
+
+Return {\ttfamily true} if next item in queue was stored in {\ttfamily out}. 
+
 \hypertarget{classthr_1_1_queue_a62768ce373068fa4b3baf574f5fed995}{\index{thr\-::\-Queue@{thr\-::\-Queue}!push@{push}}
 \index{push@{push}!thr::Queue@{thr\-::\-Queue}}
 \subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf thr\-::\-Queue}$<$ T $>$\-::{\bf push} (
@@ -63,6 +69,10 @@ Producer-\/consumer queue.
 \item[{const T \&}]{in}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classthr_1_1_queue_a62768ce373068fa4b3baf574f5fed995}
+
+
+Push a new item into the queue. 
+
 \hypertarget{classthr_1_1_queue_ab095129fe0ba3dc63fa7300ffe2b11b9}{\index{thr\-::\-Queue@{thr\-::\-Queue}!wait@{wait}}
 \index{wait@{wait}!thr::Queue@{thr\-::\-Queue}}
 \subsubsection[{wait}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf thr\-::\-Queue}$<$ T $>$\-::{\bf wait} (
@@ -72,13 +82,17 @@ Producer-\/consumer queue.
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classthr_1_1_queue_ab095129fe0ba3dc63fa7300ffe2b11b9}
 
 
+Block until next item is stored in {\ttfamily out}. 
+
+
+
 \subsection{Member Data Documentation}
 \hypertarget{classthr_1_1_queue_abadc1f08bfec267edc24baaa442bb451}{\index{thr\-::\-Queue@{thr\-::\-Queue}!lock@{lock}}
 \index{lock@{lock}!thr::Queue@{thr\-::\-Queue}}
-\subsubsection[{lock}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ mutex {\bf thr\-::\-Queue}$<$ T $>$\-::{\bf lock}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classthr_1_1_queue_abadc1f08bfec267edc24baaa442bb451}
+\subsubsection[{lock}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ mutex {\bf thr\-::\-Queue}$<$ T $>$\-::{\bf lock}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classthr_1_1_queue_abadc1f08bfec267edc24baaa442bb451}
 \hypertarget{classthr_1_1_queue_aecde97de4091b83a35dcf2ec42cdcd7b}{\index{thr\-::\-Queue@{thr\-::\-Queue}!q@{q}}
 \index{q@{q}!thr::Queue@{thr\-::\-Queue}}
-\subsubsection[{q}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ deque$<$T$>$ {\bf thr\-::\-Queue}$<$ T $>$\-::{\bf q}}}\label{classthr_1_1_queue_aecde97de4091b83a35dcf2ec42cdcd7b}
+\subsubsection[{q}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ deque$<$T$>$ {\bf thr\-::\-Queue}$<$ T $>$\-::{\bf q}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classthr_1_1_queue_aecde97de4091b83a35dcf2ec42cdcd7b}
 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}

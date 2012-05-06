@@ -3,6 +3,11 @@
 }
 
 
+Simple data holder for a button flag and a position.  
+
+
+
+
 {\ttfamily \#include $<$osx.\-hpp$>$}
 
 \subsection*{Public Member Functions}
@@ -10,14 +15,14 @@
 \item 
 \hyperlink{structosx_1_1mouse_1_1_mouse_state_a0df57029fed62314b2cde044a301e560}{Mouse\-State} ()
 \item 
-\hyperlink{structosx_1_1mouse_1_1_mouse_state_a0026830ab2d01f9a5cbcf0decf7940a7}{Mouse\-State} (uint16\-\_\-t \hyperlink{structosx_1_1mouse_1_1_mouse_state_a2463a45ed53f3952c6d9a544a5dd680b}{btn}, cv\-::\-Point \hyperlink{structosx_1_1mouse_1_1_mouse_state_ae5404fd7615addf7c40e15ebb4af7f97}{pos})
+\hyperlink{structosx_1_1mouse_1_1_mouse_state_a94a0908393dad3eac2a6ee377f936c7a}{Mouse\-State} (uint16\-\_\-t \hyperlink{structosx_1_1mouse_1_1_mouse_state_a2463a45ed53f3952c6d9a544a5dd680b}{btn}, C\-G\-Point \hyperlink{structosx_1_1mouse_1_1_mouse_state_a046eeff3d384ad60cf22e3650b5ee0a4}{pos})
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 uint16\-\_\-t \hyperlink{structosx_1_1mouse_1_1_mouse_state_a2463a45ed53f3952c6d9a544a5dd680b}{btn}
-\item 
-cv\-::\-Point \hyperlink{structosx_1_1mouse_1_1_mouse_state_ae5404fd7615addf7c40e15ebb4af7f97}{pos}
+\begin{DoxyCompactList}\small\item\em Can be any O\-R'd combination of the above flags. \end{DoxyCompactList}\item 
+C\-G\-Point \hyperlink{structosx_1_1mouse_1_1_mouse_state_a046eeff3d384ad60cf22e3650b5ee0a4}{pos}
 \end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
@@ -28,10 +33,17 @@ static const uint16\-\_\-t \hyperlink{structosx_1_1mouse_1_1_mouse_state_a23bf52
 \item 
 static const uint16\-\_\-t \hyperlink{structosx_1_1mouse_1_1_mouse_state_a09e8666395882198d1bca0a745f216df}{S\-C\-R\-O\-L\-L} = 0x0004
 \end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{structosx_1_1mouse_1_1_mouse_state_a9b3c0d9ebd3e39c7f45854e31d1e6411}{operator$<$$<$} (ostream \&out, const \hyperlink{structosx_1_1mouse_1_1_mouse_state}{Mouse\-State} \&m)
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Simple data holder for a button flag and a position. 
+
+
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{structosx_1_1mouse_1_1_mouse_state_a0df57029fed62314b2cde044a301e560}{\index{osx\-::mouse\-::\-Mouse\-State@{osx\-::mouse\-::\-Mouse\-State}!Mouse\-State@{Mouse\-State}}
@@ -41,26 +53,41 @@ Simple data holder for a button flag and a position.
 {}
 \end{DoxyParamCaption}
 )}}\label{structosx_1_1mouse_1_1_mouse_state_a0df57029fed62314b2cde044a301e560}
-\hypertarget{structosx_1_1mouse_1_1_mouse_state_a0026830ab2d01f9a5cbcf0decf7940a7}{\index{osx\-::mouse\-::\-Mouse\-State@{osx\-::mouse\-::\-Mouse\-State}!Mouse\-State@{Mouse\-State}}
+\hypertarget{structosx_1_1mouse_1_1_mouse_state_a94a0908393dad3eac2a6ee377f936c7a}{\index{osx\-::mouse\-::\-Mouse\-State@{osx\-::mouse\-::\-Mouse\-State}!Mouse\-State@{Mouse\-State}}
 \index{Mouse\-State@{Mouse\-State}!osx::mouse::MouseState@{osx\-::mouse\-::\-Mouse\-State}}
 \subsubsection[{Mouse\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mouse\-::\-Mouse\-State\-::\-Mouse\-State} (
 \begin{DoxyParamCaption}
 \item[{uint16\-\_\-t}]{btn, }
-\item[{cv\-::\-Point}]{pos}
+\item[{C\-G\-Point}]{pos}
 \end{DoxyParamCaption}
-)}}\label{structosx_1_1mouse_1_1_mouse_state_a0026830ab2d01f9a5cbcf0decf7940a7}
+)}}\label{structosx_1_1mouse_1_1_mouse_state_a94a0908393dad3eac2a6ee377f936c7a}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{structosx_1_1mouse_1_1_mouse_state_a9b3c0d9ebd3e39c7f45854e31d1e6411}{\index{osx\-::mouse\-::\-Mouse\-State@{osx\-::mouse\-::\-Mouse\-State}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!osx::mouse::MouseState@{osx\-::mouse\-::\-Mouse\-State}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf Mouse\-State} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{structosx_1_1mouse_1_1_mouse_state_a9b3c0d9ebd3e39c7f45854e31d1e6411}
 
 
 \subsection{Member Data Documentation}
 \hypertarget{structosx_1_1mouse_1_1_mouse_state_a2463a45ed53f3952c6d9a544a5dd680b}{\index{osx\-::mouse\-::\-Mouse\-State@{osx\-::mouse\-::\-Mouse\-State}!btn@{btn}}
 \index{btn@{btn}!osx::mouse::MouseState@{osx\-::mouse\-::\-Mouse\-State}}
 \subsubsection[{btn}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf osx\-::mouse\-::\-Mouse\-State\-::btn}}}\label{structosx_1_1mouse_1_1_mouse_state_a2463a45ed53f3952c6d9a544a5dd680b}
-Can be any O\-R'd combination of the above flags. \hypertarget{structosx_1_1mouse_1_1_mouse_state_a9490a7acba9726f815fa3246985da50b}{\index{osx\-::mouse\-::\-Mouse\-State@{osx\-::mouse\-::\-Mouse\-State}!L\-E\-F\-T\-\_\-\-D\-O\-W\-N@{L\-E\-F\-T\-\_\-\-D\-O\-W\-N}}
+
+
+Can be any O\-R'd combination of the above flags. 
+
+\hypertarget{structosx_1_1mouse_1_1_mouse_state_a9490a7acba9726f815fa3246985da50b}{\index{osx\-::mouse\-::\-Mouse\-State@{osx\-::mouse\-::\-Mouse\-State}!L\-E\-F\-T\-\_\-\-D\-O\-W\-N@{L\-E\-F\-T\-\_\-\-D\-O\-W\-N}}
 \index{L\-E\-F\-T\-\_\-\-D\-O\-W\-N@{L\-E\-F\-T\-\_\-\-D\-O\-W\-N}!osx::mouse::MouseState@{osx\-::mouse\-::\-Mouse\-State}}
 \subsubsection[{L\-E\-F\-T\-\_\-\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\-\_\-t {\bf mouse\-::\-Mouse\-State\-::\-L\-E\-F\-T\-\_\-\-D\-O\-W\-N} = 0x0001\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{structosx_1_1mouse_1_1_mouse_state_a9490a7acba9726f815fa3246985da50b}
-\hypertarget{structosx_1_1mouse_1_1_mouse_state_ae5404fd7615addf7c40e15ebb4af7f97}{\index{osx\-::mouse\-::\-Mouse\-State@{osx\-::mouse\-::\-Mouse\-State}!pos@{pos}}
+\hypertarget{structosx_1_1mouse_1_1_mouse_state_a046eeff3d384ad60cf22e3650b5ee0a4}{\index{osx\-::mouse\-::\-Mouse\-State@{osx\-::mouse\-::\-Mouse\-State}!pos@{pos}}
 \index{pos@{pos}!osx::mouse::MouseState@{osx\-::mouse\-::\-Mouse\-State}}
-\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Point {\bf osx\-::mouse\-::\-Mouse\-State\-::pos}}}\label{structosx_1_1mouse_1_1_mouse_state_ae5404fd7615addf7c40e15ebb4af7f97}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}C\-G\-Point {\bf osx\-::mouse\-::\-Mouse\-State\-::pos}}}\label{structosx_1_1mouse_1_1_mouse_state_a046eeff3d384ad60cf22e3650b5ee0a4}
 \hypertarget{structosx_1_1mouse_1_1_mouse_state_a23bf52536a66f3ca8f3d1cebb0f401ee}{\index{osx\-::mouse\-::\-Mouse\-State@{osx\-::mouse\-::\-Mouse\-State}!R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N@{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}}
 \index{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N@{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}!osx::mouse::MouseState@{osx\-::mouse\-::\-Mouse\-State}}
 \subsubsection[{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\-\_\-t {\bf mouse\-::\-Mouse\-State\-::\-R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N} = 0x0002\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{structosx_1_1mouse_1_1_mouse_state_a23bf52536a66f3ca8f3d1cebb0f401ee}

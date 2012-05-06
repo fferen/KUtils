@@ -5,7 +5,7 @@
 
 using namespace std;
 
-/*! \brief Implements automatic differentiation.
+/*! Implements automatic differentiation.
  *
  * See: http://www.pvv.ntnu.no/~berland/resources/autodiff-triallecture.pdf
  *
@@ -15,8 +15,8 @@ using namespace std;
 namespace autodiff {
     const double INV_LOG_10 = 1 / log(10);
 
-    /*! \brief Represents the "real" part of a number in member `r` and the
-     * derivative in `d`.
+    /*! Represents the "real" part of a number in member `r` and the derivative
+     * in `d`.
      *
      * Can be converted to and from `double`s as required, so that generic code
      * such as:

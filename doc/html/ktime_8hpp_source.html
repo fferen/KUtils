@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,14 +107,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00012"></a><a class="code" href="namespacektime.html#aacefffdcc0ccc2f45598475b3557d6f2">00012</a>     <span class="keyword">typedef</span> ClockT::duration <a class="code" href="namespacektime.html#aacefffdcc0ccc2f45598475b3557d6f2">TimeDiff</a>;
 <a name="l00013"></a><a class="code" href="namespacektime.html#a038a3d1fb2cb9885396233d6e412773e">00013</a>     <span class="keyword">typedef</span> ClockT::time_point <a class="code" href="namespacektime.html#a038a3d1fb2cb9885396233d6e412773e">TimePoint</a>;
 <a name="l00014"></a>00014 
-<a name="l00016"></a>00016     <span class="keywordtype">float</span> <a class="code" href="namespacektime.html#a89b89374ae2f385f58b64c5a2438a718">toSecs</a>(<span class="keyword">const</span> <a class="code" href="namespacektime.html#aacefffdcc0ccc2f45598475b3557d6f2">TimeDiff</a> &amp;diff);
+<a name="l00016"></a>00016     <span class="keywordtype">float</span> <a class="code" href="namespacektime.html#a89b89374ae2f385f58b64c5a2438a718" title="Convert a TimeDiff to seconds.">toSecs</a>(<span class="keyword">const</span> <a class="code" href="namespacektime.html#aacefffdcc0ccc2f45598475b3557d6f2">TimeDiff</a> &amp;diff);
 <a name="l00017"></a>00017 
-<a name="l00021"></a><a class="code" href="classktime_1_1_running_avg_timer.html">00021</a>     <span class="keyword">class </span><a class="code" href="classktime_1_1_running_avg_timer.html">RunningAvgTimer</a> : queue&lt;TimeDiff&gt; {
+<a name="l00021"></a><a class="code" href="classktime_1_1_running_avg_timer.html">00021</a>     <span class="keyword">class </span><a class="code" href="classktime_1_1_running_avg_timer.html" title="Keep a running average of the time between calls to addTime().">RunningAvgTimer</a> : queue&lt;TimeDiff&gt; {
 <a name="l00022"></a>00022     <span class="keyword">public</span>:
 <a name="l00023"></a><a class="code" href="classktime_1_1_running_avg_timer.html#a6a22c54aaa6acb0a414f1c276a31ee1c">00023</a>         <a class="code" href="namespacektime.html#aacefffdcc0ccc2f45598475b3557d6f2">TimeDiff</a> <a class="code" href="classktime_1_1_running_avg_timer.html#a6a22c54aaa6acb0a414f1c276a31ee1c">sum</a>;
 <a name="l00024"></a><a class="code" href="classktime_1_1_running_avg_timer.html#aebd941b0d88a2ea2a5b9fe48b6466f56">00024</a>         <a class="code" href="namespacektime.html#a038a3d1fb2cb9885396233d6e412773e">TimePoint</a> <a class="code" href="classktime_1_1_running_avg_timer.html#aebd941b0d88a2ea2a5b9fe48b6466f56">lastPoint</a>;
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026         <a class="code" href="classktime_1_1_running_avg_timer.html">RunningAvgTimer</a>(<span class="keywordtype">size_t</span> sz);
+<a name="l00026"></a>00026         <a class="code" href="classktime_1_1_running_avg_timer.html" title="Keep a running average of the time between calls to addTime().">RunningAvgTimer</a>(<span class="keywordtype">size_t</span> sz);
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028         <span class="keywordtype">void</span> addTime();
 <a name="l00029"></a>00029         <a class="code" href="namespacektime.html#aacefffdcc0ccc2f45598475b3557d6f2">TimeDiff</a> avg();
@@ -124,7 +124,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:32 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

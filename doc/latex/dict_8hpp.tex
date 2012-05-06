@@ -3,6 +3,20 @@
 }
 {\ttfamily \#include $<$unordered\-\_\-map$>$}\\*
 {\ttfamily \#include $<$utility$>$}\\*
+Include dependency graph for dict.\-hpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{dict_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{dict_8hpp__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,11 +32,11 @@ namespace \hyperlink{namespacedict}{dict}
 {\footnotesize template$<$typename Key\-Type , typename Val\-Type , typename... Args$>$ }\\Dict$<$ Key\-Type, Val\-Type $>$ \hyperlink{dict_8hpp_acf532dcb9ac916d2ac99b609a3a2422d}{make\-Dict} (Key\-Type key, Val\-Type val, Args...\-args)
 \item 
 {\footnotesize template$<$typename Key\-Type , typename Val\-Type $>$ }\\Dict$<$ Key\-Type, Val\-Type $>$ \hyperlink{dict_8hpp_a952263572be8fc115fb88a93631e6fc3}{make\-Dict} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a {\ttfamily Dict} ({\ttfamily unordered\-\_\-map}). \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Key\-T , typename Val\-T $>$ }\\ostream \& \hyperlink{dict_8hpp_a3c4515d6a24ee85ca1ff76eff687c06b}{operator$<$$<$} (ostream \&out, const Dict$<$ Key\-T, Val\-T $>$ \&seq)
-\item 
+\begin{DoxyCompactList}\small\item\em Print each element of a {\ttfamily Dict}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Iter\-T , typename Elem\-T $>$ }\\Dict$<$ Elem\-T, unsigned $>$ \& \hyperlink{namespacedict_a25d4adabc11b7754dad27d591de51df6}{dict\-::count\-Elems} (const Iter\-T \&start, const Iter\-T \&end, Dict$<$ Elem\-T, unsigned $>$ \&out)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Given a pair of iterators, store a mapping from element to count in {\ttfamily out}, and return {\ttfamily out}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -61,7 +75,11 @@ namespace \hyperlink{namespacedict}{dict}
 {}
 \end{DoxyParamCaption}
 )}}\label{dict_8hpp_a952263572be8fc115fb88a93631e6fc3}
-Construct a {\ttfamily Dict} ({\ttfamily unordered\-\_\-map}). For an empty {\ttfamily Dict}, must specify {\ttfamily Key\-Type} and {\ttfamily Val\-Type}. \hypertarget{dict_8hpp_a3c4515d6a24ee85ca1ff76eff687c06b}{\index{dict.\-hpp@{dict.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+
+
+Construct a {\ttfamily Dict} ({\ttfamily unordered\-\_\-map}). 
+
+For an empty {\ttfamily Dict}, must specify {\ttfamily Key\-Type} and {\ttfamily Val\-Type}. \hypertarget{dict_8hpp_a3c4515d6a24ee85ca1ff76eff687c06b}{\index{dict.\-hpp@{dict.\-hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!dict.hpp@{dict.\-hpp}}
 \subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key\-T , typename Val\-T $>$ ostream\& operator$<$$<$ (
 \begin{DoxyParamCaption}
@@ -69,4 +87,7 @@ Construct a {\ttfamily Dict} ({\ttfamily unordered\-\_\-map}). For an empty {\tt
 \item[{const Dict$<$ Key\-T, Val\-T $>$ \&}]{seq}
 \end{DoxyParamCaption}
 )}}\label{dict_8hpp_a3c4515d6a24ee85ca1ff76eff687c06b}
+
+
 Print each element of a {\ttfamily Dict}. 
+

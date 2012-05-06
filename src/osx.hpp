@@ -9,15 +9,13 @@
 #include <cstdint>
 
 #include <iostream>
+#include <memory>
 
-#include <opencv2/opencv.hpp>
 #include <ApplicationServices/ApplicationServices.h>
-
-#include "io.hpp"
 
 using namespace std;
 
-/*! \brief OSX-specific utilities. */
+/*! OSX-specific utilities. */
 namespace osx {
     /* "Reverse enum" for the enum type `CGColorSpaceModel`, used for display
      * purposes. Starting index in the enum is -1.
@@ -44,7 +42,7 @@ namespace osx {
         "kCGImageAlphaNoneSkipFirst"
     };
 
-    /*! \brief Utilities for modeling the mouse state and controlling the mouse. */
+    /*! Utilities for modeling the mouse state and controlling the mouse. */
     namespace mouse {
         enum MouseButton { LEFT_BUTTON, RIGHT_BUTTON };
 
@@ -56,38 +54,31 @@ namespace osx {
 
             /*! Can be any OR'd combination of the above flags. */
             uint16_t btn;
-            cv::Point pos;
+            CGPoint pos;
 
             MouseState();
-            MouseState(uint16_t btn, cv::Point pos);
-        };
+            MouseState(uint16_t btn, CGPoint pos);
 
-        inline CGPoint cvPtToCGPt(cv::Point pt) {
-            return CGPointMake(pt.x, pt.y);
-        }
+            friend ostream &operator<<(ostream &out, const MouseState &m);
+        };
 
         /*! Move cursor to `pos`. */
         void move(CGPoint pos);
-        void move(cv::Point pos);
 
         /*! Simulate a mouse down event at `pos`. */
         void down(MouseButton button, CGPoint pos);
-        void down(MouseButton button, cv::Point pos);
 
         /*! Simulate a mouse up event at `pos`. */
         void up(MouseButton button, CGPoint pos);
-        void up(MouseButton button, cv::Point pos);
 
         /*! Simulate a mouse click (button down, then up) event at `pos`. */
         void click(MouseButton button, CGPoint pos);
-        void click(MouseButton button, cv::Point pos);
 
         /*! Simulate a mouse drag event at from `startPos` to `endPos`. */
         void drag(MouseButton button, CGPoint startPos, CGPoint endPos);
-        void drag(MouseButton button, cv::Point startPos, cv::Point endPos);
     }
 
-    /*! \brief Functions for extracting the display image. */
+    /*! Functions for extracting the display image. */
     namespace disp {
         enum RGBType {
             COLOR_BGR,
@@ -95,27 +86,19 @@ namespace osx {
             COLOR_RGBA
         };
 
-        /*! Return a `cv::Mat` of the current screen.
-         *
-         * `destType` is passed to `CGImageRefToMat` to acquire the `cv::Mat`.
-         */
-        cv::Mat &getScreen(cv::Mat &out, RGBType destType=COLOR_BGR);
-        cv::Mat getScreen(RGBType destType=COLOR_BGR);
+        struct Image : public shared_ptr<CGImage> {
+            Image(const CGImageRef &imRef);
 
-        /*! Convert a `CGImageRef` to a `cv::Mat`.
-         *
-         * `image` must have 32 bits per pixel; if it doesn't, `invalid_argument`
-         * will be thrown.
-         *
-         * `destType` specifies the pixel format of the resulting `cv::Mat`.
-         */
-        cv::Mat &CGImageRefToMat(
-                const CGImageRef &image,
-                cv::Mat &out,
-                RGBType destType=COLOR_BGR
-                ) throw (invalid_argument);
+            operator CGImageRef() const;
+        };
+
+        /*! Return the current screen. */
+        Image getScreen();
     }
 }
 
-/* Printers */
-ostream &operator<<(ostream &out, const osx::mouse::MouseState &m);
+/*! Print `CGColorSpaceRef` info. */
+ostream &operator<<(ostream &out, const CGColorSpaceRef &colorSpace);
+
+/*! Print `CGImageRef` info. */
+ostream &operator<<(ostream &out, const CGImageRef &imRef);

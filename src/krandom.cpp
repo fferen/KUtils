@@ -40,7 +40,7 @@ vector<unsigned> &krandom::getSampleInds(unsigned popSize, unsigned sampSize, ve
     inds.resize(sampSize);
     if (withReplacement) {
         for (auto &ind : inds) {
-            ind = krandom::randint(0, popSize - 1);
+            ind = unsigned(krandom::randint(0l, long(popSize) - 1));
         }
     } else {
         // code from here:

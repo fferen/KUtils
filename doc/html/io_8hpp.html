@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,6 +98,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for io.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="io_8hpp__incl.png" border="0" usemap="#io_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="io_8hpp__dep__incl.png" border="0" usemap="#io_8hppdep" alt=""/></div>
+<map name="io_8hppdep" id="io_8hppdep">
+<area shape="rect" id="node3" href="argparse_8cpp.html" title="argparse.cpp" alt="" coords="5,80,107,107"/><area shape="rect" id="node5" href="cfinder_8cpp.html" title="cfinder.cpp" alt="" coords="132,80,223,107"/><area shape="rect" id="node7" href="ktime_8cpp.html" title="ktime.cpp" alt="" coords="247,80,329,107"/><area shape="rect" id="node9" href="str_8cpp.html" title="str.cpp" alt="" coords="354,80,419,107"/></map>
+</div>
 </div>
 <p><a href="io_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -109,12 +121,17 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a932f5ab08815fcdc72f2866b0d6e1ee2"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
 <tr class="memitem:a932f5ab08815fcdc72f2866b0d6e1ee2"><td class="memTemplItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="io_8hpp.html#a932f5ab08815fcdc72f2866b0d6e1ee2">operator&lt;&lt;</a> (ostream &amp;out, const pair&lt; T1, T2 &gt; &amp;p)</td></tr>
+<tr class="memdesc:a932f5ab08815fcdc72f2866b0d6e1ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a <code>pair</code>.  <a href="#a932f5ab08815fcdc72f2866b0d6e1ee2"></a><br/></td></tr>
 <tr class="memitem:ad8499487f5202220fead59833138f4ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#ad8499487f5202220fead59833138f4ab">io::print</a> ()</td></tr>
+<tr class="memdesc:ad8499487f5202220fead59833138f4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simply print a newline.  <a href="#ad8499487f5202220fead59833138f4ab"></a><br/></td></tr>
 <tr class="memitem:ab9528b2fe57a002bb153f1b9f8dde743"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:ab9528b2fe57a002bb153f1b9f8dde743"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceio.html#ab9528b2fe57a002bb153f1b9f8dde743">io::print</a> (T value, Args...args)</td></tr>
+<tr class="memdesc:ab9528b2fe57a002bb153f1b9f8dde743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print arguments separated by spaces, then a newline.  <a href="#ab9528b2fe57a002bb153f1b9f8dde743"></a><br/></td></tr>
 <tr class="memitem:ae85db8edfd95c17427c2606360bb97af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceio.html#ae85db8edfd95c17427c2606360bb97af">io::printImm</a> ()</td></tr>
+<tr class="memdesc:ae85db8edfd95c17427c2606360bb97af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call <code>fflush(stdout);</code>.  <a href="#ae85db8edfd95c17427c2606360bb97af"></a><br/></td></tr>
 <tr class="memitem:ade4f05edb2cd007404540f67d416bd4a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:ade4f05edb2cd007404540f67d416bd4a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceio.html#ade4f05edb2cd007404540f67d416bd4a">io::printImm</a> (T value, Args...args)</td></tr>
+<tr class="memdesc:ade4f05edb2cd007404540f67d416bd4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print arguments separated by spaces with no newline (by default values only show up on the screen when a newline is printed).  <a href="#ade4f05edb2cd007404540f67d416bd4a"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="a932f5ab08815fcdc72f2866b0d6e1ee2"></a>
@@ -143,6 +160,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+
 <p>Print a <code>pair</code>. </p>
 
 </div>
@@ -151,7 +169,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:32 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

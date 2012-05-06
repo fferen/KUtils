@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -103,14 +103,79 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7b677ee9cce42c91dcd37d68b7fa04ac"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a7b677ee9cce42c91dcd37d68b7fa04ac">wordWrap</a> (string in, unsigned cols=80)  throw (length_error)</td></tr>
+<tr class="memitem:a19bae57b57856a0060a878cf0530dced"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a19bae57b57856a0060a878cf0530dced">ASCII_LOWERCASE</a> (&quot;abcdefghijklmnopqrstuvwxyz&quot;)</td></tr>
+<tr class="memdesc:a19bae57b57856a0060a878cf0530dced"><td class="mdescLeft">&#160;</td><td class="mdescRight">The letters <code>"abcdefghijklmnopqrstuvwxyz"</code>.  <a href="#a19bae57b57856a0060a878cf0530dced"></a><br/></td></tr>
+<tr class="memitem:a31cfca7b7762c003491b8ef8e76c36bc"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a31cfca7b7762c003491b8ef8e76c36bc">ASCII_UPPERCASE</a> (&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)</td></tr>
+<tr class="memdesc:a31cfca7b7762c003491b8ef8e76c36bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The letters <code>"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</code>.  <a href="#a31cfca7b7762c003491b8ef8e76c36bc"></a><br/></td></tr>
+<tr class="memitem:a70d0301dce2a93813e08c3cc4600e721"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a70d0301dce2a93813e08c3cc4600e721">ASCII_LETTERS</a> (<a class="el" href="namespacestr.html#a19bae57b57856a0060a878cf0530dced">ASCII_LOWERCASE</a>+<a class="el" href="namespacestr.html#a31cfca7b7762c003491b8ef8e76c36bc">ASCII_UPPERCASE</a>)</td></tr>
+<tr class="memdesc:a70d0301dce2a93813e08c3cc4600e721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenation of <code>ASCII_LOWERCASE</code> and <code>ASCII_UPPERCASE</code>.  <a href="#a70d0301dce2a93813e08c3cc4600e721"></a><br/></td></tr>
+<tr class="memitem:a7b677ee9cce42c91dcd37d68b7fa04ac"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a7b677ee9cce42c91dcd37d68b7fa04ac">wordWrap</a> (string in, unsigned cols=80)</td></tr>
+<tr class="memdesc:a7b677ee9cce42c91dcd37d68b7fa04ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new string word-wrapped with <code>cols</code> columns.  <a href="#a7b677ee9cce42c91dcd37d68b7fa04ac"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a51a7257ade189ec55f5d1c9da0f0e8b4"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a51a7257ade189ec55f5d1c9da0f0e8b4">_buf</a> [100]</td></tr>
+<tr class="memdesc:a51a7257ade189ec55f5d1c9da0f0e8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer for the <code>strFmt</code> macro.  <a href="#a51a7257ade189ec55f5d1c9da0f0e8b4"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>String utilities. </p>
 </div><hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a70d0301dce2a93813e08c3cc4600e721"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string <a class="el" href="namespacestr.html#a70d0301dce2a93813e08c3cc4600e721">str::ASCII_LETTERS</a> </td>
+          <td>(</td>
+          <td class="paramtype">ASCII_LOWERCASE+&#160;</td>
+          <td class="paramname"><em>ASCII_UPPERCASE</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Concatenation of <code>ASCII_LOWERCASE</code> and <code>ASCII_UPPERCASE</code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a19bae57b57856a0060a878cf0530dced"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string <a class="el" href="namespacestr.html#a19bae57b57856a0060a878cf0530dced">str::ASCII_LOWERCASE</a> </td>
+          <td>(</td>
+          <td class="paramtype">&quot;abcdefghijklmnopqrstuvwxyz&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The letters <code>"abcdefghijklmnopqrstuvwxyz"</code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a31cfca7b7762c003491b8ef8e76c36bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string <a class="el" href="namespacestr.html#a31cfca7b7762c003491b8ef8e76c36bc">str::ASCII_UPPERCASE</a> </td>
+          <td>(</td>
+          <td class="paramtype">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The letters <code>"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</code>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a7b677ee9cce42c91dcd37d68b7fa04ac"></a>
 <div class="memitem">
 <div class="memproto">
@@ -130,12 +195,19 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw (length_error)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Return a new string word-wrapped with <code>cols</code> columns. If length of word exceeds cols, throw <code>length_error</code>. </p>
+
+<p>Return a new string word-wrapped with <code>cols</code> columns. </p>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">length_error</td><td>Thrown if length of word exceeds <code>cols</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -150,6 +222,7 @@ Variables</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
 <p>Buffer for the <code>strFmt</code> macro. </p>
 
 </div>
@@ -158,7 +231,7 @@ Variables</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

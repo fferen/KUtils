@@ -5,7 +5,7 @@
 
 using namespace std;
 
-/*! \brief Utilities for working with time. */
+/*! Utilities for working with time. */
 namespace ktime {
     typedef chrono::system_clock ClockT;
 

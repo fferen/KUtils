@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -105,116 +105,113 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00009"></a>00009 <span class="preprocessor">#include &lt;iterator&gt;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &lt;utility&gt;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">using namespace </span>std;
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="kmath_8hpp.html">kmath.hpp</a>&quot;</span>
 <a name="l00013"></a>00013 
-<a name="l00015"></a>00015 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SeqT, <span class="keyword">typename</span> OperandT&gt;
-<a name="l00016"></a><a class="code" href="seq_8hpp.html#a21a5aae4d520e12d3c987499aea2c0c4">00016</a> SeqT &amp;<a class="code" href="seq_8hpp.html#a21a5aae4d520e12d3c987499aea2c0c4">operator*=</a>(SeqT &amp;s, <span class="keyword">const</span> OperandT &amp;e) {
-<a name="l00017"></a>00017     <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;elem : s) {
-<a name="l00018"></a>00018         elem *= e;
-<a name="l00019"></a>00019     }
-<a name="l00020"></a>00020     <span class="keywordflow">return</span> s;
-<a name="l00021"></a>00021 }
-<a name="l00022"></a>00022 
-<a name="l00024"></a>00024 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SeqT, <span class="keyword">typename</span> OperandT&gt;
-<a name="l00025"></a><a class="code" href="seq_8hpp.html#acf7f6f44050c057ff8e397070f2c497b">00025</a> SeqT &amp;<a class="code" href="seq_8hpp.html#acf7f6f44050c057ff8e397070f2c497b">operator/=</a>(SeqT &amp;s, <span class="keyword">const</span> OperandT &amp;e) {
-<a name="l00026"></a>00026     <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;elem : s) {
-<a name="l00027"></a>00027         elem /= e;
-<a name="l00028"></a>00028     }
-<a name="l00029"></a>00029     <span class="keywordflow">return</span> s;
-<a name="l00030"></a>00030 }
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> NumT&gt;
-<a name="l00033"></a><a class="code" href="seq_8hpp.html#af8ce44b2c433c861c34f8935288b3843">00033</a> <span class="keyword">inline</span> <span class="keywordtype">short</span> <a class="code" href="seq_8hpp.html#af8ce44b2c433c861c34f8935288b3843">_sign</a>(NumT a) {
-<a name="l00034"></a>00034     <span class="keywordflow">return</span> (<span class="keywordtype">short</span>)((a &gt; NumT(0)) - (a &lt; NumT(0)));
-<a name="l00035"></a>00035 }
-<a name="l00036"></a>00036 
-<a name="l00042"></a><a class="code" href="namespaceseq.html">00042</a> <span class="keyword">namespace </span>seq {
-<a name="l00046"></a><a class="code" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77">00046</a>     <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77">_realI</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">size_t</span> sz) <span class="keywordflow">throw</span> (length_error) {
-<a name="l00047"></a>00047         <span class="keywordflow">if</span> (sz == 0) {
-<a name="l00048"></a>00048             <span class="keywordflow">throw</span> length_error(<span class="stringliteral">&quot;(_realI) `sz` must be != 0&quot;</span>);
-<a name="l00049"></a>00049         }
-<a name="l00050"></a>00050         i %= (int)sz;
-<a name="l00051"></a>00051         <span class="keywordflow">if</span> (i &lt; 0) {
-<a name="l00052"></a>00052             i += (int)sz;
-<a name="l00053"></a>00053         }
-<a name="l00054"></a>00054         <span class="keywordflow">return</span> (<span class="keywordtype">size_t</span>)i;
-<a name="l00055"></a>00055     }
-<a name="l00056"></a>00056 
-<a name="l00060"></a><a class="code" href="namespaceseq.html#ae4290a190db34f394330d88a5de8f2a7">00060</a>     <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="namespaceseq.html#ae4290a190db34f394330d88a5de8f2a7">_realIDist</a>(<span class="keywordtype">size_t</span> leftI, <span class="keywordtype">size_t</span> rightI, <span class="keywordtype">size_t</span> sz) {
-<a name="l00061"></a>00061         <span class="keywordflow">if</span> (rightI &gt;= leftI) {
-<a name="l00062"></a>00062             <span class="keywordflow">return</span> rightI - leftI;
-<a name="l00063"></a>00063         } <span class="keywordflow">else</span> {
-<a name="l00064"></a>00064             <span class="keywordflow">return</span> rightI - leftI + sz;
-<a name="l00065"></a>00065         }
-<a name="l00066"></a>00066     }
-<a name="l00067"></a>00067 
-<a name="l00069"></a>00069     <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SeqT&gt;
-<a name="l00070"></a><a class="code" href="structseq_1_1_elem_view.html">00070</a>     <span class="keyword">struct </span><a class="code" href="structseq_1_1_elem_view.html" title="Provides a reference and an index of an element in a sequence.">ElemView</a> {
-<a name="l00071"></a><a class="code" href="structseq_1_1_elem_view.html#aebd98f7c33ce0c247fe5257178eedb12">00071</a>         <span class="keyword">typename</span> SeqT::reference <a class="code" href="structseq_1_1_elem_view.html#aebd98f7c33ce0c247fe5257178eedb12">e</a>;
-<a name="l00072"></a><a class="code" href="structseq_1_1_elem_view.html#aa6ca1502930c99050f332769f5af1322">00072</a>         <span class="keywordtype">int</span> <a class="code" href="structseq_1_1_elem_view.html#aa6ca1502930c99050f332769f5af1322">i</a>;
-<a name="l00073"></a>00073 
-<a name="l00077"></a><a class="code" href="structseq_1_1_elem_view.html#ad435d6c641e7b7e6123d472d4e41fa68">00077</a>         <a class="code" href="structseq_1_1_elem_view.html" title="Provides a reference and an index of an element in a sequence.">ElemView</a>(<span class="keyword">typename</span> SeqT::iterator itr, <span class="keyword">typename</span> SeqT::iterator begin)
-<a name="l00078"></a>00078         : e(*itr), i(itr - begin) {
-<a name="l00079"></a>00079         }
-<a name="l00080"></a>00080     };
-<a name="l00081"></a>00081 
-<a name="l00085"></a>00085     <span class="keyword">template</span> &lt;<span class="keyword">class</span> SeqT&gt;
-<a name="l00086"></a><a class="code" href="structseq_1_1_wrapped_seq.html">00086</a>     <span class="keyword">struct </span><a class="code" href="structseq_1_1_wrapped_seq.html" title="Sequence wrapper that supports wrap-around indexing - all accessors will accept negative and out-of-b...">WrappedSeq</a> {
-<a name="l00087"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a838d548016ce08b745cb29dbee635437">00087</a>         SeqT &amp;<a class="code" href="structseq_1_1_wrapped_seq.html#a838d548016ce08b745cb29dbee635437">s</a>;
+<a name="l00014"></a>00014 <span class="keyword">using namespace </span>std;
+<a name="l00015"></a>00015 
+<a name="l00017"></a>00017 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SeqT, <span class="keyword">typename</span> OperandT&gt;
+<a name="l00018"></a><a class="code" href="seq_8hpp.html#a21a5aae4d520e12d3c987499aea2c0c4">00018</a> SeqT &amp;<a class="code" href="seq_8hpp.html#a21a5aae4d520e12d3c987499aea2c0c4" title="Multiply each element in a sequence by e.">operator*=</a>(SeqT &amp;s, <span class="keyword">const</span> OperandT &amp;e) {
+<a name="l00019"></a>00019     <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;elem : s) {
+<a name="l00020"></a>00020         elem *= e;
+<a name="l00021"></a>00021     }
+<a name="l00022"></a>00022     <span class="keywordflow">return</span> s;
+<a name="l00023"></a>00023 }
+<a name="l00024"></a>00024 
+<a name="l00026"></a>00026 <span class="keyword">template</span> &lt;<span class="keyword">class</span> SeqT, <span class="keyword">typename</span> OperandT&gt;
+<a name="l00027"></a><a class="code" href="seq_8hpp.html#acf7f6f44050c057ff8e397070f2c497b">00027</a> SeqT &amp;<a class="code" href="seq_8hpp.html#acf7f6f44050c057ff8e397070f2c497b" title="Divide each element in a sequence by e.">operator/=</a>(SeqT &amp;s, <span class="keyword">const</span> OperandT &amp;e) {
+<a name="l00028"></a>00028     <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;elem : s) {
+<a name="l00029"></a>00029         elem /= e;
+<a name="l00030"></a>00030     }
+<a name="l00031"></a>00031     <span class="keywordflow">return</span> s;
+<a name="l00032"></a>00032 }
+<a name="l00033"></a>00033 
+<a name="l00039"></a><a class="code" href="namespaceseq.html">00039</a> <span class="keyword">namespace </span>seq {
+<a name="l00043"></a><a class="code" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77">00043</a>     <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77" title="Get the wrapped index to an array of size sz.">_realI</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">size_t</span> sz) {
+<a name="l00044"></a>00044         <span class="keywordflow">if</span> (sz == 0) {
+<a name="l00045"></a>00045             <span class="keywordflow">throw</span> length_error(<span class="stringliteral">&quot;`sz` must be != 0&quot;</span>);
+<a name="l00046"></a>00046         }
+<a name="l00047"></a>00047         i %= int(sz);
+<a name="l00048"></a>00048         <span class="keywordflow">if</span> (i &lt; 0) {
+<a name="l00049"></a>00049             i += int(sz);
+<a name="l00050"></a>00050         }
+<a name="l00051"></a>00051         <span class="keywordflow">return</span> size_t(i);
+<a name="l00052"></a>00052     }
+<a name="l00053"></a>00053 
+<a name="l00057"></a><a class="code" href="namespaceseq.html#ae4290a190db34f394330d88a5de8f2a7">00057</a>     <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="namespaceseq.html#ae4290a190db34f394330d88a5de8f2a7" title="Get the wrapped distance between left and right indices in an array of size sz.">_realIDist</a>(<span class="keywordtype">size_t</span> leftI, <span class="keywordtype">size_t</span> rightI, <span class="keywordtype">size_t</span> sz) {
+<a name="l00058"></a>00058         <span class="keywordflow">if</span> (rightI &gt;= leftI) {
+<a name="l00059"></a>00059             <span class="keywordflow">return</span> rightI - leftI;
+<a name="l00060"></a>00060         } <span class="keywordflow">else</span> {
+<a name="l00061"></a>00061             <span class="keywordflow">return</span> rightI - leftI + sz;
+<a name="l00062"></a>00062         }
+<a name="l00063"></a>00063     }
+<a name="l00064"></a>00064 
+<a name="l00066"></a>00066     <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SeqT&gt;
+<a name="l00067"></a><a class="code" href="structseq_1_1_elem_view.html">00067</a>     <span class="keyword">struct </span><a class="code" href="structseq_1_1_elem_view.html" title="Provides a reference and an index of an element in a sequence.">ElemView</a> {
+<a name="l00068"></a><a class="code" href="structseq_1_1_elem_view.html#aebd98f7c33ce0c247fe5257178eedb12">00068</a>         <span class="keyword">typename</span> SeqT::reference <a class="code" href="structseq_1_1_elem_view.html#aebd98f7c33ce0c247fe5257178eedb12">e</a>;
+<a name="l00069"></a><a class="code" href="structseq_1_1_elem_view.html#ac33a32152d16f22e2378e1fed6a88442">00069</a>         <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="structseq_1_1_elem_view.html#ac33a32152d16f22e2378e1fed6a88442">i</a>;
+<a name="l00070"></a>00070 
+<a name="l00074"></a><a class="code" href="structseq_1_1_elem_view.html#ad435d6c641e7b7e6123d472d4e41fa68">00074</a>         <a class="code" href="structseq_1_1_elem_view.html" title="Provides a reference and an index of an element in a sequence.">ElemView</a>(<span class="keyword">typename</span> SeqT::iterator itr, <span class="keyword">typename</span> SeqT::iterator begin)
+<a name="l00075"></a>00075         : e(*itr), i(itr - begin) {
+<a name="l00076"></a>00076         }
+<a name="l00077"></a>00077     };
+<a name="l00078"></a>00078 
+<a name="l00082"></a>00082     <span class="keyword">template</span> &lt;<span class="keyword">class</span> SeqT&gt;
+<a name="l00083"></a><a class="code" href="structseq_1_1_wrapped_seq.html">00083</a>     <span class="keyword">struct </span><a class="code" href="structseq_1_1_wrapped_seq.html" title="Sequence wrapper that supports wrap-around indexing - all accessors will accept negative and out-of-b...">WrappedSeq</a> {
+<a name="l00084"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a838d548016ce08b745cb29dbee635437">00084</a>         SeqT &amp;<a class="code" href="structseq_1_1_wrapped_seq.html#a838d548016ce08b745cb29dbee635437">s</a>;
+<a name="l00085"></a>00085 
+<a name="l00086"></a><a class="code" href="structseq_1_1_wrapped_seq.html#aeb07ecb3ae54bc7460405d3f95098bcd">00086</a>         <a class="code" href="structseq_1_1_wrapped_seq.html#aeb07ecb3ae54bc7460405d3f95098bcd">WrappedSeq</a>(SeqT &amp;s) : s(s) {
+<a name="l00087"></a>00087         }
 <a name="l00088"></a>00088 
-<a name="l00089"></a><a class="code" href="structseq_1_1_wrapped_seq.html#aeb07ecb3ae54bc7460405d3f95098bcd">00089</a>         <a class="code" href="structseq_1_1_wrapped_seq.html#aeb07ecb3ae54bc7460405d3f95098bcd">WrappedSeq</a>(SeqT &amp;s) : s(s) {
-<a name="l00090"></a>00090         }
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092         <span class="comment">/* Wrapped accessors */</span>
-<a name="l00093"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a2267a0d93467dc4db6b64a9914a0e265">00093</a>         <span class="keyword">typename</span> SeqT::reference <a class="code" href="structseq_1_1_wrapped_seq.html#a2267a0d93467dc4db6b64a9914a0e265">at</a>(<span class="keywordtype">int</span> i) {
-<a name="l00094"></a>00094             <span class="keywordflow">return</span> this-&gt;s.at(this-&gt;realI(i));
-<a name="l00095"></a>00095         }
-<a name="l00096"></a>00096 
-<a name="l00097"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a09864746e7dfb9e0d1ef6ebc59a9a4e8">00097</a>         <span class="keyword">const</span> <span class="keyword">typename</span> SeqT::reference <a class="code" href="structseq_1_1_wrapped_seq.html#a09864746e7dfb9e0d1ef6ebc59a9a4e8">at</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{
-<a name="l00098"></a>00098             <span class="keywordflow">return</span> this-&gt;s.at(this-&gt;realI(i));
-<a name="l00099"></a>00099         }
-<a name="l00100"></a>00100 
-<a name="l00101"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a7ffd5783fc6d50fad65f89e6e2cc8489">00101</a>         <span class="keyword">typename</span> SeqT::reference <a class="code" href="structseq_1_1_wrapped_seq.html#a7ffd5783fc6d50fad65f89e6e2cc8489">operator[]</a>(<span class="keywordtype">int</span> i) {
-<a name="l00102"></a>00102             <span class="keywordflow">return</span> this-&gt;s[this-&gt;realI(i)];
-<a name="l00103"></a>00103         }
-<a name="l00104"></a>00104 
-<a name="l00105"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a562c969d3a8f3c8aeede89d25747ba64">00105</a>         <span class="keyword">const</span> <span class="keyword">typename</span> SeqT::reference <a class="code" href="structseq_1_1_wrapped_seq.html#a562c969d3a8f3c8aeede89d25747ba64">operator[]</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{
-<a name="l00106"></a>00106             <span class="keywordflow">return</span> this-&gt;s[this-&gt;realI(i)];
-<a name="l00107"></a>00107         }
-<a name="l00108"></a>00108 
-<a name="l00109"></a><a class="code" href="structseq_1_1_wrapped_seq.html#ab892f134a58400cc8a8ae32a2dabb7c4">00109</a>         <span class="keywordtype">size_t</span> <a class="code" href="structseq_1_1_wrapped_seq.html#ab892f134a58400cc8a8ae32a2dabb7c4">size</a>()<span class="keyword"> const </span>{
-<a name="l00110"></a>00110             <span class="keywordflow">return</span> this-&gt;s.size();
-<a name="l00111"></a>00111         }
-<a name="l00112"></a>00112 
-<a name="l00113"></a><a class="code" href="structseq_1_1_wrapped_seq.html#abef397e7335e8705520777284326fe23">00113</a>         <span class="keywordtype">bool</span> <a class="code" href="structseq_1_1_wrapped_seq.html#abef397e7335e8705520777284326fe23">empty</a>()<span class="keyword"> const </span>{
-<a name="l00114"></a>00114             <span class="keywordflow">return</span> this-&gt;s.empty();
-<a name="l00115"></a>00115         }
-<a name="l00116"></a>00116 
-<a name="l00118"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a0259bb6a1a44a68e4dbda5b37750f503">00118</a>         <span class="keywordtype">size_t</span> <a class="code" href="structseq_1_1_wrapped_seq.html#a0259bb6a1a44a68e4dbda5b37750f503">realI</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{
-<a name="l00119"></a>00119             <span class="keywordflow">return</span> <a class="code" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77">_realI</a>(i, this-&gt;s.size());
-<a name="l00120"></a>00120         }
-<a name="l00121"></a>00121 
-<a name="l00125"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a2b929ec2f56c92a9b2269f1853e4cd10">00125</a>         <span class="keywordtype">size_t</span> <a class="code" href="structseq_1_1_wrapped_seq.html#a2b929ec2f56c92a9b2269f1853e4cd10">realIDist</a>(<span class="keywordtype">size_t</span> leftI, <span class="keywordtype">size_t</span> rightI)<span class="keyword"> const </span>{
-<a name="l00126"></a>00126             <span class="keywordflow">return</span> <a class="code" href="namespaceseq.html#ae4290a190db34f394330d88a5de8f2a7">_realIDist</a>(leftI, rightI, this-&gt;s.size());
-<a name="l00127"></a>00127         }
-<a name="l00128"></a>00128     };
+<a name="l00089"></a>00089         <span class="comment">/* Wrapped accessors */</span>
+<a name="l00090"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a2267a0d93467dc4db6b64a9914a0e265">00090</a>         <span class="keyword">typename</span> SeqT::reference <a class="code" href="structseq_1_1_wrapped_seq.html#a2267a0d93467dc4db6b64a9914a0e265">at</a>(<span class="keywordtype">int</span> i) {
+<a name="l00091"></a>00091             <span class="keywordflow">return</span> this-&gt;s.at(this-&gt;realI(i));
+<a name="l00092"></a>00092         }
+<a name="l00093"></a>00093 
+<a name="l00094"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a09864746e7dfb9e0d1ef6ebc59a9a4e8">00094</a>         <span class="keyword">const</span> <span class="keyword">typename</span> SeqT::reference <a class="code" href="structseq_1_1_wrapped_seq.html#a09864746e7dfb9e0d1ef6ebc59a9a4e8">at</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{
+<a name="l00095"></a>00095             <span class="keywordflow">return</span> this-&gt;s.at(this-&gt;realI(i));
+<a name="l00096"></a>00096         }
+<a name="l00097"></a>00097 
+<a name="l00098"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a7ffd5783fc6d50fad65f89e6e2cc8489">00098</a>         <span class="keyword">typename</span> SeqT::reference <a class="code" href="structseq_1_1_wrapped_seq.html#a7ffd5783fc6d50fad65f89e6e2cc8489">operator[]</a>(<span class="keywordtype">int</span> i) {
+<a name="l00099"></a>00099             <span class="keywordflow">return</span> this-&gt;s[this-&gt;realI(i)];
+<a name="l00100"></a>00100         }
+<a name="l00101"></a>00101 
+<a name="l00102"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a562c969d3a8f3c8aeede89d25747ba64">00102</a>         <span class="keyword">const</span> <span class="keyword">typename</span> SeqT::reference <a class="code" href="structseq_1_1_wrapped_seq.html#a562c969d3a8f3c8aeede89d25747ba64">operator[]</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{
+<a name="l00103"></a>00103             <span class="keywordflow">return</span> this-&gt;s[this-&gt;realI(i)];
+<a name="l00104"></a>00104         }
+<a name="l00105"></a>00105 
+<a name="l00106"></a><a class="code" href="structseq_1_1_wrapped_seq.html#ab892f134a58400cc8a8ae32a2dabb7c4">00106</a>         <span class="keywordtype">size_t</span> <a class="code" href="structseq_1_1_wrapped_seq.html#ab892f134a58400cc8a8ae32a2dabb7c4">size</a>()<span class="keyword"> const </span>{
+<a name="l00107"></a>00107             <span class="keywordflow">return</span> this-&gt;s.size();
+<a name="l00108"></a>00108         }
+<a name="l00109"></a>00109 
+<a name="l00110"></a><a class="code" href="structseq_1_1_wrapped_seq.html#abef397e7335e8705520777284326fe23">00110</a>         <span class="keywordtype">bool</span> <a class="code" href="structseq_1_1_wrapped_seq.html#abef397e7335e8705520777284326fe23">empty</a>()<span class="keyword"> const </span>{
+<a name="l00111"></a>00111             <span class="keywordflow">return</span> this-&gt;s.empty();
+<a name="l00112"></a>00112         }
+<a name="l00113"></a>00113 
+<a name="l00115"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a0259bb6a1a44a68e4dbda5b37750f503">00115</a>         <span class="keywordtype">size_t</span> <a class="code" href="structseq_1_1_wrapped_seq.html#a0259bb6a1a44a68e4dbda5b37750f503" title="Return the real, bounded index from a possibly out-of-bounds one.">realI</a>(<span class="keywordtype">int</span> i)<span class="keyword"> const </span>{
+<a name="l00116"></a>00116             <span class="keywordflow">return</span> <a class="code" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77" title="Get the wrapped index to an array of size sz.">_realI</a>(i, this-&gt;s.size());
+<a name="l00117"></a>00117         }
+<a name="l00118"></a>00118 
+<a name="l00122"></a><a class="code" href="structseq_1_1_wrapped_seq.html#a2b929ec2f56c92a9b2269f1853e4cd10">00122</a>         <span class="keywordtype">size_t</span> <a class="code" href="structseq_1_1_wrapped_seq.html#a2b929ec2f56c92a9b2269f1853e4cd10" title="Return the real (wrapped) distance between two indices.">realIDist</a>(<span class="keywordtype">size_t</span> leftI, <span class="keywordtype">size_t</span> rightI)<span class="keyword"> const </span>{
+<a name="l00123"></a>00123             <span class="keywordflow">return</span> <a class="code" href="namespaceseq.html#ae4290a190db34f394330d88a5de8f2a7" title="Get the wrapped distance between left and right indices in an array of size sz.">_realIDist</a>(leftI, rightI, this-&gt;s.size());
+<a name="l00124"></a>00124         }
+<a name="l00125"></a>00125     };
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127     <span class="keyword">template</span> &lt;<span class="keyword">class</span> IterT&gt;
+<a name="l00128"></a>00128     <span class="keyword">using</span> Slice = pair&lt;IterT, IterT&gt;;
 <a name="l00129"></a>00129 
-<a name="l00130"></a>00130     <span class="keyword">template</span> &lt;<span class="keyword">class</span> IterT&gt;
-<a name="l00131"></a>00131     <span class="keyword">using</span> Slice = pair&lt;IterT, IterT&gt;;
-<a name="l00132"></a>00132 
-<a name="l00136"></a>00136     <span class="keyword">template</span> &lt;<span class="keyword">class</span> SeqT&gt;
-<a name="l00137"></a><a class="code" href="namespaceseq.html#a01ecaea35db083541a258a05ac8c1d30">00137</a>     Slice&lt;typename SeqT::iterator&gt; <a class="code" href="namespaceseq.html#a01ecaea35db083541a258a05ac8c1d30">sl</a>(SeqT &amp;in, <span class="keywordtype">int</span> i1, <span class="keywordtype">int</span> i2) <span class="keywordflow">throw</span> (range_error) {
-<a name="l00138"></a>00138         <span class="keywordtype">size_t</span> realI1 = <a class="code" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77">_realI</a>(i1, in.size());
-<a name="l00139"></a>00139         <span class="keywordtype">size_t</span> realI2 = <a class="code" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77">_realI</a>(i2, in.size());
-<a name="l00140"></a>00140         <span class="keywordflow">if</span> (i1 &gt; i2) {
-<a name="l00141"></a>00141             <span class="keywordflow">throw</span> range_error(<span class="stringliteral">&quot;(sl) i1 must be &lt;= i2&quot;</span>);
-<a name="l00142"></a>00142         }
-<a name="l00143"></a>00143         <span class="keywordflow">return</span> Slice&lt;typename SeqT::iterator&gt;(
-<a name="l00144"></a>00144                 in.begin() + (<span class="keyword">typename</span> SeqT::difference_type)realI1,
-<a name="l00145"></a>00145                 in.begin() + (<span class="keyword">typename</span> SeqT::difference_type)realI2
-<a name="l00146"></a>00146                 );
-<a name="l00147"></a>00147     }
-<a name="l00148"></a>00148 
+<a name="l00133"></a>00133     <span class="keyword">template</span> &lt;<span class="keyword">class</span> SeqT&gt;
+<a name="l00134"></a><a class="code" href="namespaceseq.html#a01ecaea35db083541a258a05ac8c1d30">00134</a>     Slice&lt;typename SeqT::iterator&gt; <a class="code" href="namespaceseq.html#a01ecaea35db083541a258a05ac8c1d30" title="Get slice of sequence as a pair of iterators.">sl</a>(SeqT &amp;in, <span class="keywordtype">int</span> i1, <span class="keywordtype">int</span> i2) {
+<a name="l00135"></a>00135         <span class="keywordtype">size_t</span> realI1 = <a class="code" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77" title="Get the wrapped index to an array of size sz.">_realI</a>(i1, in.size());
+<a name="l00136"></a>00136         <span class="keywordtype">size_t</span> realI2 = <a class="code" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77" title="Get the wrapped index to an array of size sz.">_realI</a>(i2, in.size());
+<a name="l00137"></a>00137         <span class="keywordflow">if</span> (i1 &gt; i2) {
+<a name="l00138"></a>00138             <span class="keywordflow">throw</span> range_error(<span class="stringliteral">&quot;i1 must be &lt;= i2&quot;</span>);
+<a name="l00139"></a>00139         }
+<a name="l00140"></a>00140         <span class="keywordflow">return</span> Slice&lt;typename SeqT::iterator&gt;(
+<a name="l00141"></a>00141                 in.begin() + (<span class="keyword">typename</span> SeqT::difference_type)realI1,
+<a name="l00142"></a>00142                 in.begin() + (<span class="keyword">typename</span> SeqT::difference_type)realI2
+<a name="l00143"></a>00143                 );
+<a name="l00144"></a>00144     }
+<a name="l00145"></a>00145 
 <a name="l00150"></a><a class="code" href="namespaceseq_1_1functional.html">00150</a>     <span class="keyword">namespace </span>functional {
 <a name="l00151"></a>00151         <span class="keyword">template</span> &lt;<span class="keyword">class</span> InSeqT, <span class="keyword">class</span> OutSeqT, <span class="keyword">typename</span> _FuncT&gt;
 <a name="l00152"></a><a class="code" href="namespaceseq_1_1functional.html#ad36a538cd982a860de04e7f4af03bc4c">00152</a>         OutSeqT &amp;<a class="code" href="namespaceseq_1_1functional.html#ad36a538cd982a860de04e7f4af03bc4c">map</a>(<span class="keyword">const</span> _FuncT &amp;func, <span class="keyword">const</span> InSeqT &amp;in, OutSeqT &amp;out) {
@@ -379,32 +376,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00323"></a>00323         };
 <a name="l00324"></a>00324 
 <a name="l00337"></a>00337         <span class="keyword">template</span> &lt;<span class="keyword">typename</span> NumT&gt;
-<a name="l00338"></a><a class="code" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59">00338</a>         <a class="code" href="structseq_1_1math_1_1_x_range.html" title="Represent a lazily-evaluated range of numbers.">XRange&lt;NumT&gt;</a> <a class="code" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59">xrange</a>(NumT low, NumT high, NumT step=1, <span class="keywordtype">bool</span> inclusive=<span class="keyword">false</span>) {
+<a name="l00338"></a><a class="code" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59">00338</a>         <a class="code" href="structseq_1_1math_1_1_x_range.html" title="Represent a lazily-evaluated range of numbers.">XRange&lt;NumT&gt;</a> <a class="code" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59" title="Return XRange sequence, similar to Python&#39;s &quot;xrange&quot;.">xrange</a>(NumT low, NumT high, NumT step=1, <span class="keywordtype">bool</span> inclusive=<span class="keyword">false</span>) {
 <a name="l00339"></a>00339             NumT highOff = 0;
 <a name="l00340"></a>00340             <span class="keywordflow">if</span> (inclusive) {
 <a name="l00341"></a>00341                 highOff = (NumT)(abs(step) * 0.5);
 <a name="l00342"></a>00342                 <span class="keywordflow">if</span> (highOff == 0) {
 <a name="l00343"></a>00343                     highOff = 1;
 <a name="l00344"></a>00344                 }
-<a name="l00345"></a>00345                 highOff *= <a class="code" href="seq_8hpp.html#af8ce44b2c433c861c34f8935288b3843">_sign</a>(step);
+<a name="l00345"></a>00345                 highOff *= NumT(<a class="code" href="namespacekmath.html#a1e0f4e049ef1ec26bf84a8aa77f067d1" title="Return 1 if val &gt; 0, -1 if val &lt; 0, or 0 if val == 0.">kmath::sgn</a>(step));
 <a name="l00346"></a>00346             }
 <a name="l00347"></a>00347 
 <a name="l00348"></a>00348             <span class="keywordflow">return</span> <a class="code" href="structseq_1_1math_1_1_x_range.html" title="Represent a lazily-evaluated range of numbers.">XRange&lt;NumT&gt;</a>(low, high + highOff, step);
 <a name="l00349"></a>00349         }
 <a name="l00350"></a>00350 
 <a name="l00351"></a>00351         <span class="keyword">template</span> &lt;<span class="keyword">typename</span> NumT&gt;
-<a name="l00352"></a><a class="code" href="namespaceseq_1_1math.html#a4f2c47e50ba86a80778ccebd31d7fa16">00352</a>         <a class="code" href="structseq_1_1math_1_1_x_range.html" title="Represent a lazily-evaluated range of numbers.">XRange&lt;NumT&gt;</a> <a class="code" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59">xrange</a>(NumT high, <span class="keywordtype">bool</span> inclusive=<span class="keyword">false</span>) {
+<a name="l00352"></a><a class="code" href="namespaceseq_1_1math.html#a4f2c47e50ba86a80778ccebd31d7fa16">00352</a>         <a class="code" href="structseq_1_1math_1_1_x_range.html" title="Represent a lazily-evaluated range of numbers.">XRange&lt;NumT&gt;</a> <a class="code" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59" title="Return XRange sequence, similar to Python&#39;s &quot;xrange&quot;.">xrange</a>(NumT high, <span class="keywordtype">bool</span> inclusive=<span class="keyword">false</span>) {
 <a name="l00353"></a>00353             <span class="keywordflow">return</span> xrange&lt;NumT&gt;(0, high, 1, inclusive);
 <a name="l00354"></a>00354         }
 <a name="l00355"></a>00355 
 <a name="l00358"></a>00358         <span class="keyword">template</span> &lt;<span class="keyword">typename</span> NumT, <span class="keyword">class</span> SeqT&gt;
-<a name="l00359"></a><a class="code" href="namespaceseq_1_1math.html#a6bd86d848fb47f455aff84c38c175ea4">00359</a>         SeqT &amp;<a class="code" href="namespaceseq_1_1math.html#a6bd86d848fb47f455aff84c38c175ea4">range</a>(NumT low, NumT high, SeqT &amp;out, NumT step=1) {
+<a name="l00359"></a><a class="code" href="namespaceseq_1_1math.html#a6bd86d848fb47f455aff84c38c175ea4">00359</a>         SeqT &amp;<a class="code" href="namespaceseq_1_1math.html#a6bd86d848fb47f455aff84c38c175ea4" title="Construct a sequence of numbers from low to high with optional step.">range</a>(NumT low, NumT high, SeqT &amp;out, NumT step=1) {
 <a name="l00360"></a>00360             <span class="keywordflow">if</span> (high &lt;= low) {
 <a name="l00361"></a>00361                 out.clear();
 <a name="l00362"></a>00362                 <span class="keywordflow">return</span> out;
 <a name="l00363"></a>00363             }
 <a name="l00364"></a>00364 
-<a name="l00365"></a>00365             out.resize((<span class="keywordtype">size_t</span>)ceil((<span class="keywordtype">double</span>)(high - low) / step));
+<a name="l00365"></a>00365             out.resize(<span class="keywordtype">size_t</span>(ceil(<span class="keywordtype">double</span>((high - low) / step))));
 <a name="l00366"></a>00366 
 <a name="l00367"></a>00367             NumT curNum = low;
 <a name="l00368"></a>00368             <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; curNum &lt; high; curNum += step, i++) {
@@ -414,12 +411,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00372"></a>00372         }
 <a name="l00373"></a>00373 
 <a name="l00376"></a>00376         <span class="keyword">template</span> &lt;<span class="keyword">typename</span> NumT, <span class="keyword">class</span> SeqT&gt;
-<a name="l00377"></a><a class="code" href="namespaceseq_1_1math.html#ae9b127e8277c6c390b99c4a1195dc087">00377</a>         SeqT &amp;<a class="code" href="namespaceseq_1_1math.html#a6bd86d848fb47f455aff84c38c175ea4">range</a>(NumT high, SeqT &amp;out) {
-<a name="l00378"></a>00378             <a class="code" href="namespaceseq_1_1math.html#a6bd86d848fb47f455aff84c38c175ea4">range</a>((NumT)0, high, out);
+<a name="l00377"></a><a class="code" href="namespaceseq_1_1math.html#ae9b127e8277c6c390b99c4a1195dc087">00377</a>         SeqT &amp;<a class="code" href="namespaceseq_1_1math.html#a6bd86d848fb47f455aff84c38c175ea4" title="Construct a sequence of numbers from low to high with optional step.">range</a>(NumT high, SeqT &amp;out) {
+<a name="l00378"></a>00378             <a class="code" href="namespaceseq_1_1math.html#a6bd86d848fb47f455aff84c38c175ea4" title="Construct a sequence of numbers from low to high with optional step.">range</a>((NumT)0, high, out);
 <a name="l00379"></a>00379         }
 <a name="l00380"></a>00380 
 <a name="l00382"></a>00382         <span class="keyword">template</span> &lt;<span class="keyword">class</span> SeqT&gt;
-<a name="l00383"></a><a class="code" href="namespaceseq_1_1math.html#a27179daf6ca9a8d85434eda531fa134e">00383</a>         <span class="keyword">typename</span> SeqT::value_type <a class="code" href="namespaceseq_1_1math.html#a27179daf6ca9a8d85434eda531fa134e">sum</a>(<span class="keyword">const</span> SeqT &amp;in) {
+<a name="l00383"></a><a class="code" href="namespaceseq_1_1math.html#a27179daf6ca9a8d85434eda531fa134e">00383</a>         <span class="keyword">typename</span> SeqT::value_type <a class="code" href="namespaceseq_1_1math.html#a27179daf6ca9a8d85434eda531fa134e" title="Return the sum of sequence elements.">sum</a>(<span class="keyword">const</span> SeqT &amp;in) {
 <a name="l00384"></a>00384             <span class="keyword">typename</span> SeqT::value_type res;
 <a name="l00385"></a>00385             <span class="keywordflow">for</span> (<span class="keyword">auto</span> elem : in) {
 <a name="l00386"></a>00386                 res += elem;
@@ -428,8 +425,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00389"></a>00389         }
 <a name="l00390"></a>00390 
 <a name="l00392"></a>00392         <span class="keyword">template</span> &lt;<span class="keyword">class</span> SeqT&gt;
-<a name="l00393"></a><a class="code" href="namespaceseq_1_1math.html#ab019165412bf99555adfeaaaa86f319f">00393</a>         <span class="keyword">typename</span> SeqT::value_type <a class="code" href="namespaceseq_1_1math.html#ab019165412bf99555adfeaaaa86f319f">mean</a>(<span class="keyword">const</span> SeqT &amp;in) {
-<a name="l00394"></a>00394             <span class="keywordflow">return</span> <a class="code" href="namespaceseq_1_1math.html#a27179daf6ca9a8d85434eda531fa134e">sum</a>(in) / in.size();
+<a name="l00393"></a><a class="code" href="namespaceseq_1_1math.html#ab019165412bf99555adfeaaaa86f319f">00393</a>         <span class="keyword">typename</span> SeqT::value_type <a class="code" href="namespaceseq_1_1math.html#ab019165412bf99555adfeaaaa86f319f" title="Return the arithmetic mean of sequence elements.">mean</a>(<span class="keyword">const</span> SeqT &amp;in) {
+<a name="l00394"></a>00394             <span class="keywordflow">return</span> <a class="code" href="namespaceseq_1_1math.html#a27179daf6ca9a8d85434eda531fa134e" title="Return the sum of sequence elements.">sum</a>(in) / in.size();
 <a name="l00395"></a>00395         }
 <a name="l00396"></a>00396     }
 <a name="l00397"></a>00397 
@@ -444,13 +441,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00407"></a>00407             flv[i] = i;
 <a name="l00408"></a>00408         }
 <a name="l00409"></a>00409 
-<a name="l00410"></a>00410         <a class="code" href="namespaceio.html#ad8499487f5202220fead59833138f4ab">io::print</a>(flv);
+<a name="l00410"></a>00410         <a class="code" href="namespaceio.html#ad8499487f5202220fead59833138f4ab" title="Simply print a newline.">io::print</a>(flv);
 <a name="l00411"></a>00411 
 <a name="l00412"></a>00412         printf(<span class="stringliteral">&quot;mapped with (x -&gt; x + 1)\n&quot;</span>);
 <a name="l00413"></a>00413 
 <a name="l00414"></a>00414         flv = <a class="code" href="namespaceseq_1_1functional.html#ad36a538cd982a860de04e7f4af03bc4c">functional::map</a>([](<span class="keywordtype">float</span> i) { <span class="keywordflow">return</span> i + 1; }, flv);
 <a name="l00415"></a>00415 
-<a name="l00416"></a>00416         <a class="code" href="namespaceio.html#ad8499487f5202220fead59833138f4ab">io::print</a>(flv);
+<a name="l00416"></a>00416         <a class="code" href="namespaceio.html#ad8499487f5202220fead59833138f4ab" title="Simply print a newline.">io::print</a>(flv);
 <a name="l00417"></a>00417 
 <a name="l00418"></a>00418         printf(<span class="stringliteral">&quot;all &gt; 5?\n&quot;</span>);
 <a name="l00419"></a>00419 
@@ -458,7 +455,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00421"></a>00421 
 <a name="l00422"></a>00422         printf(<span class="stringliteral">&quot;all in last half &gt; 5?\n&quot;</span>);
 <a name="l00423"></a>00423 
-<a name="l00424"></a>00424         printf(<span class="stringliteral">&quot;%d\n&quot;</span>, <a class="code" href="namespaceseq_1_1functional.html#a2ffd96ef955260495f894c6eee90983c">functional::all</a>([](<span class="keywordtype">float</span> i) { <span class="keywordflow">return</span> i &gt; 5; }, <a class="code" href="namespaceseq.html#a01ecaea35db083541a258a05ac8c1d30">sl</a>(flv, flv.size() / 2, flv.size())));
+<a name="l00424"></a>00424         printf(<span class="stringliteral">&quot;%d\n&quot;</span>, <a class="code" href="namespaceseq_1_1functional.html#a2ffd96ef955260495f894c6eee90983c">functional::all</a>([](<span class="keywordtype">float</span> i) { <span class="keywordflow">return</span> i &gt; 5; }, <a class="code" href="namespaceseq.html#a01ecaea35db083541a258a05ac8c1d30" title="Get slice of sequence as a pair of iterators.">sl</a>(flv, flv.size() / 2, flv.size())));
 <a name="l00425"></a>00425 
 <a name="l00426"></a>00426         printf(<span class="stringliteral">&quot;any &gt; 5?\n&quot;</span>);
 <a name="l00427"></a>00427 
@@ -504,7 +501,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:32 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

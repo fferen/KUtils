@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,6 +101,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;cstdio&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for str.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="str_8hpp__incl.png" border="0" usemap="#str_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="str_8hpp__dep__incl.png" border="0" usemap="#str_8hppdep" alt=""/></div>
+<map name="str_8hppdep" id="str_8hppdep">
+<area shape="rect" id="node3" href="argparse_8hpp.html" title="argparse.hpp" alt="" coords="5,80,107,107"/><area shape="rect" id="node5" href="argparse_8cpp.html" title="argparse.cpp" alt="" coords="49,155,151,181"/><area shape="rect" id="node8" href="str_8cpp.html" title="str.cpp" alt="" coords="183,80,248,107"/></map>
+</div>
 </div>
 <p><a href="str_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -111,12 +123,21 @@ Namespaces</h2></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
 <tr class="memitem:ad02d698209df17aef336d5633065c5ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="str_8hpp.html#ad02d698209df17aef336d5633065c5ab">strFmt</a>(fmt,...)&#160;&#160;&#160;(snprintf(<a class="el" href="namespacestr.html#a51a7257ade189ec55f5d1c9da0f0e8b4">str::_buf</a>, 100, fmt, __VA_ARGS__), <a class="el" href="namespacestr.html#a51a7257ade189ec55f5d1c9da0f0e8b4">str::_buf</a>)</td></tr>
+<tr class="memdesc:ad02d698209df17aef336d5633065c5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functional version of <code>snprintf</code>.  <a href="#ad02d698209df17aef336d5633065c5ab"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7b677ee9cce42c91dcd37d68b7fa04ac"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a7b677ee9cce42c91dcd37d68b7fa04ac">str::wordWrap</a> (string in, unsigned cols=80)  throw (length_error)</td></tr>
+<tr class="memitem:a19bae57b57856a0060a878cf0530dced"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a19bae57b57856a0060a878cf0530dced">str::ASCII_LOWERCASE</a> (&quot;abcdefghijklmnopqrstuvwxyz&quot;)</td></tr>
+<tr class="memdesc:a19bae57b57856a0060a878cf0530dced"><td class="mdescLeft">&#160;</td><td class="mdescRight">The letters <code>"abcdefghijklmnopqrstuvwxyz"</code>.  <a href="#a19bae57b57856a0060a878cf0530dced"></a><br/></td></tr>
+<tr class="memitem:a31cfca7b7762c003491b8ef8e76c36bc"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a31cfca7b7762c003491b8ef8e76c36bc">str::ASCII_UPPERCASE</a> (&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)</td></tr>
+<tr class="memdesc:a31cfca7b7762c003491b8ef8e76c36bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The letters <code>"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</code>.  <a href="#a31cfca7b7762c003491b8ef8e76c36bc"></a><br/></td></tr>
+<tr class="memitem:a70d0301dce2a93813e08c3cc4600e721"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a70d0301dce2a93813e08c3cc4600e721">str::ASCII_LETTERS</a> (ASCII_LOWERCASE+ASCII_UPPERCASE)</td></tr>
+<tr class="memdesc:a70d0301dce2a93813e08c3cc4600e721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenation of <code>ASCII_LOWERCASE</code> and <code>ASCII_UPPERCASE</code>.  <a href="#a70d0301dce2a93813e08c3cc4600e721"></a><br/></td></tr>
+<tr class="memitem:a7b677ee9cce42c91dcd37d68b7fa04ac"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a7b677ee9cce42c91dcd37d68b7fa04ac">str::wordWrap</a> (string in, unsigned cols=80)</td></tr>
+<tr class="memdesc:a7b677ee9cce42c91dcd37d68b7fa04ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new string word-wrapped with <code>cols</code> columns.  <a href="#a7b677ee9cce42c91dcd37d68b7fa04ac"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a51a7257ade189ec55f5d1c9da0f0e8b4"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestr.html#a51a7257ade189ec55f5d1c9da0f0e8b4">str::_buf</a> [100]</td></tr>
+<tr class="memdesc:a51a7257ade189ec55f5d1c9da0f0e8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer for the <code>strFmt</code> macro.  <a href="#a51a7257ade189ec55f5d1c9da0f0e8b4"></a><br/></td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
 <a class="anchor" id="ad02d698209df17aef336d5633065c5ab"></a>
@@ -143,7 +164,8 @@ Variables</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Functional version of <code>snprintf</code>.</p>
+
+<p>Functional version of <code>snprintf</code>. </p>
 <p>Yes, macros are evil, but this is so convenient. </p>
 
 </div>
@@ -152,7 +174,7 @@ Variables</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

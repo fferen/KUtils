@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Simple wrapper around <code>&lt;random&gt;</code> with a Python interface.  
+<p>Simple wrapper around <code>&lt;random&gt;</code> with a Python-like interface.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
@@ -113,9 +113,10 @@ Functions</h2></td></tr>
 <tr class="memitem:abac374525fd029faa58cb9c43cab41eb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekrandom.html#abac374525fd029faa58cb9c43cab41eb">shuffle</a> (IterType start, IterType end)</td></tr>
 <tr class="memitem:a3cf920703fa6e180b1aa4d4c86799626"><td class="memTemplParams" colspan="2">template&lt;class SeqType &gt; </td></tr>
 <tr class="memitem:a3cf920703fa6e180b1aa4d4c86799626"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekrandom.html#a3cf920703fa6e180b1aa4d4c86799626">shuffle</a> (SeqType &amp;seq)</td></tr>
-<tr class="memitem:a59c038687d5825d1b6b8f26cf91dee20"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename U, typename...Args &gt; class SeqType, typename ItemType &gt; </td></tr>
-<tr class="memitem:a59c038687d5825d1b6b8f26cf91dee20"><td class="memTemplItemLeft" align="right" valign="top">ItemType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekrandom.html#a59c038687d5825d1b6b8f26cf91dee20">choice</a> (const SeqType&lt; ItemType &gt; &amp;seq)</td></tr>
+<tr class="memitem:ae031164eba3b0311cbae22aed8894898"><td class="memTemplParams" colspan="2">template&lt;class SeqType &gt; </td></tr>
+<tr class="memitem:ae031164eba3b0311cbae22aed8894898"><td class="memTemplItemLeft" align="right" valign="top">SeqType::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekrandom.html#ae031164eba3b0311cbae22aed8894898">choice</a> (const SeqType &amp;seq)</td></tr>
 <tr class="memitem:a50015c42a5cb2ab60017b00abbb4ffde"><td class="memItemLeft" align="right" valign="top">vector&lt; unsigned &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekrandom.html#a50015c42a5cb2ab60017b00abbb4ffde">getSampleInds</a> (unsigned popSize, unsigned sampSize, vector&lt; unsigned &gt; &amp;inds, bool withReplacement=true)</td></tr>
+<tr class="memdesc:a50015c42a5cb2ab60017b00abbb4ffde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store <code>sampSize</code> random numbers in range [0, <code>popSize</code>) in <code>inds</code>, with or without replacement.  <a href="#a50015c42a5cb2ab60017b00abbb4ffde"></a><br/></td></tr>
 <tr class="memitem:aa1ecb85e031f5505020d74732acd846a"><td class="memItemLeft" align="right" valign="top">vector&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekrandom.html#aa1ecb85e031f5505020d74732acd846a">getSampleInds</a> (unsigned popSize, unsigned sampSize, bool withReplacement=true)</td></tr>
 <tr class="memitem:a924f7dd5ed9785fd396615b9995e47da"><td class="memTemplParams" colspan="2">template&lt;typename SeqType &gt; </td></tr>
 <tr class="memitem:a924f7dd5ed9785fd396615b9995e47da"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekrandom.html#a924f7dd5ed9785fd396615b9995e47da">sample</a> (const SeqType &amp;seq, unsigned sampSize, SeqType &amp;out, bool withReplacement=true)</td></tr>
@@ -126,18 +127,20 @@ Variables</h2></td></tr>
 <tr class="memitem:a5c40b80390a0425475af691519056f21"><td class="memItemLeft" align="right" valign="top">random_device&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekrandom.html#a5c40b80390a0425475af691519056f21">engine</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Simple wrapper around <code>&lt;random&gt;</code> with a Python interface. </p>
+<div class="textblock"><p>Simple wrapper around <code>&lt;random&gt;</code> with a Python-like interface. </p>
+<p>For any functions undocumented here see the Python documentation:</p>
+<p><a href="http://docs.python.org/library/random.html">http://docs.python.org/library/random.html</a> </p>
 </div><hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a59c038687d5825d1b6b8f26cf91dee20"></a>
+<a class="anchor" id="ae031164eba3b0311cbae22aed8894898"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;template&lt; typename U, typename...Args &gt; class SeqType, typename ItemType &gt; </div>
+template&lt;class SeqType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">ItemType <a class="el" href="namespacekrandom.html#a59c038687d5825d1b6b8f26cf91dee20">krandom::choice</a> </td>
+          <td class="memname">SeqType::value_type <a class="el" href="namespacekrandom.html#ae031164eba3b0311cbae22aed8894898">krandom::choice</a> </td>
           <td>(</td>
-          <td class="paramtype">const SeqType&lt; ItemType &gt; &amp;&#160;</td>
+          <td class="paramtype">const SeqType &amp;&#160;</td>
           <td class="paramname"><em>seq</em></td><td>)</td>
           <td></td>
         </tr>
@@ -183,6 +186,7 @@ template&lt;template&lt; typename U, typename...Args &gt; class SeqType, typenam
       </table>
 </div>
 <div class="memdoc">
+
 <p>Store <code>sampSize</code> random numbers in range [0, <code>popSize</code>) in <code>inds</code>, with or without replacement. </p>
 
 </div>
@@ -513,7 +517,7 @@ template&lt;class SeqType &gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

@@ -9,6 +9,8 @@
 #include <iterator>
 #include <utility>
 
+#include "kmath.hpp"
+
 using namespace std;
 
 /*! Multiply each element in a sequence by `e`. */
@@ -29,12 +31,7 @@ SeqT &operator/=(SeqT &s, const OperandT &e) {
     return s;
 }
 
-template <typename NumT>
-inline short _sign(NumT a) {
-    return (short)((a > NumT(0)) - (a < NumT(0)));
-}
-
-/*! \brief Useful generic sequence operations and structures.
+/*! Generic sequence operations and structures.
  *
  * NB: "sequence" here means "container" in the rest of C++. I just chose
  * "sequence" because "seq" in variable names looks better than "ctr".
@@ -43,15 +40,15 @@ namespace seq {
     /*! Get the wrapped index to an array of size `sz`. Throw `length_error`
      * if `sz` == 0.
      */
-    inline size_t _realI(int i, size_t sz) throw (length_error) {
+    inline size_t _realI(int i, size_t sz) {
         if (sz == 0) {
-            throw length_error("(_realI) `sz` must be != 0");
+            throw length_error("`sz` must be != 0");
         }
-        i %= (int)sz;
+        i %= int(sz);
         if (i < 0) {
-            i += (int)sz;
+            i += int(sz);
         }
-        return (size_t)i;
+        return size_t(i);
     }
 
     /*! Get the wrapped distance between left and right indices in an array of
@@ -65,11 +62,11 @@ namespace seq {
         }
     }
 
-    /*! \brief Provides a reference and an index of an element in a sequence. */
+    /*! Provides a reference and an index of an element in a sequence. */
     template <typename SeqT>
     struct ElemView {
         typename SeqT::reference e;
-        int i;
+        long int i;
 
         /*! `itr` is the iterator to the desired element, `begin` is the
          * starting iterator of the sequence.
@@ -79,7 +76,7 @@ namespace seq {
         }
     };
 
-    /*! \brief Sequence wrapper that supports wrap-around indexing - all
+    /*! Sequence wrapper that supports wrap-around indexing - all
      * accessors will accept negative and out-of-bound indices and wrap around.
      */
     template <class SeqT>
@@ -134,11 +131,11 @@ namespace seq {
      * `i1` > `i2`.
      */
     template <class SeqT>
-    Slice<typename SeqT::iterator> sl(SeqT &in, int i1, int i2) throw (range_error) {
+    Slice<typename SeqT::iterator> sl(SeqT &in, int i1, int i2) {
         size_t realI1 = _realI(i1, in.size());
         size_t realI2 = _realI(i2, in.size());
         if (i1 > i2) {
-            throw range_error("(sl) i1 must be <= i2");
+            throw range_error("i1 must be <= i2");
         }
         return Slice<typename SeqT::iterator>(
                 in.begin() + (typename SeqT::difference_type)realI1,
@@ -146,7 +143,10 @@ namespace seq {
                 );
     }
 
-    /*! \brief Functions commonly used in functional programming. */
+    /*! Functions commonly used in functional programming.
+     *
+     * These all should be fairly self-explanatory.
+     */
     namespace functional {
         template <class InSeqT, class OutSeqT, typename _FuncT>
         OutSeqT &map(const _FuncT &func, const InSeqT &in, OutSeqT &out) {
@@ -225,9 +225,9 @@ namespace seq {
         }
     }
 
-    /*! \brief Mathematical operations and structures. */
+    /*! Mathematical operations on sequences, and sequence structures. */
     namespace math {
-        /*! \brief Lazy iterator used for XRange(), usually not necessary to use
+        /*! Lazy iterator used for XRange(), usually not necessary to use
          * directly.
          *
          * `this->step == 0` means that it's the end of a range.
@@ -285,7 +285,7 @@ namespace seq {
             }
         };
 
-        /*! \brief Represent a lazily-evaluated range of numbers.
+        /*! Represent a lazily-evaluated range of numbers.
          *
          * Analogous to Python's "xrange" objects, returned by the function
          * `xrange`. Typically only exists to provide iterators via `begin()`
@@ -342,7 +342,7 @@ namespace seq {
                 if (highOff == 0) {
                     highOff = 1;
                 }
-                highOff *= _sign(step);
+                highOff *= NumT(kmath::sgn(step));
             }
 
             return XRange<NumT>(low, high + highOff, step);
@@ -362,7 +362,7 @@ namespace seq {
                 return out;
             }
 
-            out.resize((size_t)ceil((double)(high - low) / step));
+            out.resize(size_t(ceil(double((high - low) / step))));
 
             NumT curNum = low;
             for (size_t i = 0; curNum < high; curNum += step, i++) {

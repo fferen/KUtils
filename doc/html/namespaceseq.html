@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Useful generic sequence operations and structures.  
+<p>Generic sequence operations and structures.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="namespaces"></a>
@@ -107,7 +107,7 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceseq_1_1functional"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceseq_1_1functional.html">functional</a></td></tr>
 <tr class="memdesc:namespaceseq_1_1functional"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions commonly used in functional programming. <br/></td></tr>
 <tr class="memitem:namespaceseq_1_1math"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceseq_1_1math.html">math</a></td></tr>
-<tr class="memdesc:namespaceseq_1_1math"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mathematical operations and structures. <br/></td></tr>
+<tr class="memdesc:namespaceseq_1_1math"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mathematical operations on sequences, and sequence structures. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structseq_1_1_elem_view.html">ElemView</a></td></tr>
@@ -116,13 +116,16 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence wrapper that supports wrap-around indexing - all accessors will accept negative and out-of-bound indices and wrap around.  <a href="structseq_1_1_wrapped_seq.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9f008982bf05fc256d4b035890744c77"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77">_realI</a> (int i, size_t sz)  throw (length_error)</td></tr>
+<tr class="memitem:a9f008982bf05fc256d4b035890744c77"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceseq.html#a9f008982bf05fc256d4b035890744c77">_realI</a> (int i, size_t sz)</td></tr>
+<tr class="memdesc:a9f008982bf05fc256d4b035890744c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the wrapped index to an array of size <code>sz</code>.  <a href="#a9f008982bf05fc256d4b035890744c77"></a><br/></td></tr>
 <tr class="memitem:ae4290a190db34f394330d88a5de8f2a7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceseq.html#ae4290a190db34f394330d88a5de8f2a7">_realIDist</a> (size_t leftI, size_t rightI, size_t sz)</td></tr>
+<tr class="memdesc:ae4290a190db34f394330d88a5de8f2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the wrapped distance between left and right indices in an array of size <code>sz</code>.  <a href="#ae4290a190db34f394330d88a5de8f2a7"></a><br/></td></tr>
 <tr class="memitem:a01ecaea35db083541a258a05ac8c1d30"><td class="memTemplParams" colspan="2">template&lt;class SeqT &gt; </td></tr>
-<tr class="memitem:a01ecaea35db083541a258a05ac8c1d30"><td class="memTemplItemLeft" align="right" valign="top">Slice&lt; typename SeqT::iterator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceseq.html#a01ecaea35db083541a258a05ac8c1d30">sl</a> (SeqT &amp;in, int i1, int i2)  throw (range_error)</td></tr>
+<tr class="memitem:a01ecaea35db083541a258a05ac8c1d30"><td class="memTemplItemLeft" align="right" valign="top">Slice&lt; typename SeqT::iterator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceseq.html#a01ecaea35db083541a258a05ac8c1d30">sl</a> (SeqT &amp;in, int i1, int i2)</td></tr>
+<tr class="memdesc:a01ecaea35db083541a258a05ac8c1d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get slice of sequence as a pair of iterators.  <a href="#a01ecaea35db083541a258a05ac8c1d30"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Useful generic sequence operations and structures. </p>
+<div class="textblock"><p>Generic sequence operations and structures. </p>
 <p>NB: "sequence" here means "container" in the rest of C++. I just chose "sequence" because "seq" in variable names looks better than "ctr". </p>
 </div><hr/><h2>Function Documentation</h2>
 <a class="anchor" id="a9f008982bf05fc256d4b035890744c77"></a>
@@ -144,12 +147,14 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw (length_error)<code> [inline]</code></td>
+          <td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the wrapped index to an array of size <code>sz</code>. Throw <code>length_error</code> if <code>sz</code> == 0. </p>
+
+<p>Get the wrapped index to an array of size <code>sz</code>. </p>
+<p>Throw <code>length_error</code> if <code>sz</code> == 0. </p>
 
 </div>
 </div>
@@ -183,7 +188,9 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get the wrapped distance between left and right indices in an array of size <code>sz</code>. For example, <code>_realIDist(3, 0, 4)</code> == 1. </p>
+
+<p>Get the wrapped distance between left and right indices in an array of size <code>sz</code>. </p>
+<p>For example, <code>_realIDist(3, 0, 4)</code> == 1. </p>
 
 </div>
 </div>
@@ -214,12 +221,14 @@ template&lt;class SeqT &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw (range_error)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Get slice of sequence as a pair of iterators. Throw <code>range_error</code> if <code>i1</code> &gt; <code>i2</code>. </p>
+
+<p>Get slice of sequence as a pair of iterators. </p>
+<p>Throw <code>range_error</code> if <code>i1</code> &gt; <code>i2</code>. </p>
 
 </div>
 </div>
@@ -227,7 +236,7 @@ template&lt;class SeqT &gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

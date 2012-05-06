@@ -14,7 +14,7 @@ ostream &operator<<(ostream &out, const pair<T1, T2> &p) {
     return out;
 }
 
-/*! \brief Convenience functions for printing values. */
+/*! Convenience functions for printing values. */
 namespace io {
     /*! Simply print a newline.
      *

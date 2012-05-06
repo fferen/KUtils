@@ -12,9 +12,9 @@
 
 using namespace std;
 
-/*! \brief Command-line argument parser with a focus on brevity. */
+/*! Command-line argument parser with a focus on brevity. */
 namespace argparse {
-    /*! \brief Holds the result of parsing arguments. */
+    /*! Holds the result of parsing arguments. */
     struct ArgHolder {
         /*! Mapping from option string (eg. "-h") to its arguments. */
         Dict<string, vector<string>> optToArgs;
@@ -24,11 +24,19 @@ namespace argparse {
 
     /*! Create a usage string.
      *
+     * @param progName
+     *      Name of the program as run on the command line. Typically `argv[0]`
+     *      is passed.
+     * @param desc
+     *      Description of the program.
+     * @param posArgs
+     *      String representing the positional arguments.
+     * @param optToHelp
+     *      Mapping from option to help dialog.
      * @param cols
-     * Maximum number of columns - strings longer than this will be wrapped.
-     *
+     *      Maximum number of columns - strings longer than this will be wrapped.
      * @param helpCols
-     * Number of columns that the option help should take up.
+     *      Number of columns that the option help should take up.
      *
      * Example:
      *
@@ -44,7 +52,7 @@ namespace argparse {
      *
      * generates this help string:
      *
-     *      testprog [options] arg1 arg2 arg3
+     *      Usage: testprog [options] arg1 arg2 arg3
      *
      *      This is a description of the program.
      *
@@ -58,34 +66,30 @@ namespace argparse {
             const string &desc,
             const string &posArgs=string(),
             const Dict<string, string> &optToHelp=Dict<string, string>(),
-            int cols=80,
-            int helpCols=60
+            unsigned cols=80,
+            unsigned helpCols=60
             );
 
     /*! Return an ArgHolder object holding the parsed arguments.
      *
      * @param argc,argv
-     * The arguments to main().
-     *
+     *      The arguments to main().
      * @param optToChker
-     * Should map an option string (anything beginning with `optChar`) to a
-     * checker function that takes a vector of argument strings and returns the
-     * number of arguments read. The function should also throw an
-     * `invalid_argument` exception if any arguments are invalid. For example, a
-     * simple help option checker:
+     *      Should map an option string (anything beginning with `optChar`) to a
+     *      checker function that takes a vector of argument strings and returns
+     *      the number of arguments read. The function should also throw an
+     *      `invalid_argument` exception if any arguments are invalid. For
+     *      example, a simple help option checker:
      *
-     *      makeDict(string("-h"), [](vector<string> args) { return 0; })
-     *
+     *          makeDict(string("-h"), [](vector<string> args) { return 0; })
      * @param optChar
-     * Signifies the start of an option.
-     *
+     *      Signifies the start of an option.
      * @param genHelpChker
-     * If `true`, checks "-h" and "--help" options automatically.
+     *      If `true`, checks "-h" and "--help" options automatically.
      *
-     *
-     * If a checker throws an `invalid_argument` exception, it will be thrown
-     * from this function as well. An `invalid_argument` exception will also be
-     * thrown if an unknown option is encountered, .
+     * @throws invalid_argument
+     *      Thrown if unknown option is encountered, as well as if a checker throws
+     *      an `invalid_argument` exception.
      */
     template <class FuncType> 
     ArgHolder parse(
@@ -94,7 +98,7 @@ namespace argparse {
             const Dict<string, FuncType> &optToChker,
             char optChar='-',
             bool genHelpChker=true
-            ) throw (invalid_argument) {
+            ) {
         ArgHolder holder{Dict<string, vector<string>>(), vector<string>(), string()};
 
         vector<string> curArgs;
@@ -130,8 +134,6 @@ namespace argparse {
             try {
                 nargs = optToChker.at(curOpt)(curArgs);
             } catch (out_of_range &err) {
-                stringstream errStrm;
-                errStrm << "unknown option " << curOpt;
                 throw invalid_argument(strFmt("unknown option %s", curOpt));
             }
             
@@ -154,91 +156,4 @@ namespace argparse {
             const char optChar='-',
             bool genHelpChker=true
             );
-
-#ifdef _ARGPARSE_TEST
-
-#include <cstdlib>
-#include <cstdio>
-
-#include "io.hpp"
-
-    bool isNum(string s) {
-        for (auto c : s) {
-            if (c < 48 or c > 57) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    unsigned aChk(vector<string> args) {
-        if (args.empty()) {
-            throw "-a must have >= 1 arguments";
-        }
-        for (auto s : args) {
-            if (not isNum(s)) {
-                throw "arguments to -a must be numbers";
-            }
-        }
-        return args.size();
-    }
-
-    unsigned hChk(vector<string> args) {
-        return 0;
-    }
-
-    /*! To test: in your `main()` function, call `test()` with argc and argv and
-     * return its return value.
-     *
-     * It simulates a command that has a help dialog "-h" and sums numbers
-     * passed to it with the "-a" option. It also prints additional positional
-     * arguments.
-     */
-
-    int test(int argc, const char *argv[]) {
-        auto holder = parse(
-                argc,
-                argv,
-                makeDict(
-                    string("-h"), hChk,
-                    string("-a"), aChk
-                    )
-                 );
-
-        if (not holder.err.empty()) {
-            printf("err: %s\n", holder.err.c_str());
-            return 1;
-        }
-
-        if (holder.optToArgs.count("-h")) {
-            print(makeUsageString(
-                    argv[0],
-                    "Test program for argparse. Lorem ipsum dolor sit amet, "
-                    "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut "
-                    "labore et dolore magna aliqua.",
-                    "arg1 arg2 arg3",
-                    makeDict(
-                        string("-h"), string("print a wonderfully detailed and amazingly stupendous help message"),
-                        string("-a"), string("add some numbers")
-                        )
-                    ));
-            return 1;
-        }
-
-        int sum = 0;
-        for (auto arg : holder.optToArgs["-a"]) {
-            sum += atoi(arg.c_str());
-        }
-
-        if (sum) {
-            printf("summed to %d\n", sum);
-        }
-
-        for (size_t i = 0; i < holder.posArgs.size(); i++) {
-            printf("pos arg %zu: %s\n", i, holder.posArgs[i].c_str());
-        }
-
-        return 0;
-    }
-#endif
 }

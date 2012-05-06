@@ -5,7 +5,7 @@ using namespace ktime;
 
 float ktime::toSecs(const TimeDiff &diff) {
     auto ns = chrono::duration_cast<chrono::nanoseconds>(diff).count();
-    return (float)ns / 1e9f;
+    return float(ns) / 1e9f;
 }
 
 ktime::RunningAvgTimer::RunningAvgTimer(size_t sz)

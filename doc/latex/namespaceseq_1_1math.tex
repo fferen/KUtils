@@ -3,7 +3,7 @@
 }
 
 
-Mathematical operations and structures.  
+Mathematical operations on sequences, and sequence structures.  
 
 
 \subsection*{Classes}
@@ -17,21 +17,21 @@ struct \hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename Num\-T $>$ }\\\hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}$<$ Num\-T $>$ \hyperlink{namespaceseq_1_1math_abfe793e999a374a4d5e6b1ef3f268b59}{xrange} (Num\-T low, Num\-T high, Num\-T step=1, bool inclusive=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Return {\ttfamily \hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}} sequence, similar to Python's \char`\"{}xrange\char`\"{}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Num\-T $>$ }\\\hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}$<$ Num\-T $>$ \hyperlink{namespaceseq_1_1math_a4f2c47e50ba86a80778ccebd31d7fa16}{xrange} (Num\-T high, bool inclusive=false)
 \item 
 {\footnotesize template$<$typename Num\-T , class Seq\-T $>$ }\\Seq\-T \& \hyperlink{namespaceseq_1_1math_a6bd86d848fb47f455aff84c38c175ea4}{range} (Num\-T low, Num\-T high, Seq\-T \&out, Num\-T step=1)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a sequence of numbers from low to high with optional step. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Num\-T , class Seq\-T $>$ }\\Seq\-T \& \hyperlink{namespaceseq_1_1math_ae9b127e8277c6c390b99c4a1195dc087}{range} (Num\-T high, Seq\-T \&out)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a sequence of numbers from 0 to high with step=1. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Seq\-T $>$ }\\Seq\-T\-::value\-\_\-type \hyperlink{namespaceseq_1_1math_a27179daf6ca9a8d85434eda531fa134e}{sum} (const Seq\-T \&in)
-\item 
+\begin{DoxyCompactList}\small\item\em Return the sum of sequence elements. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Seq\-T $>$ }\\Seq\-T\-::value\-\_\-type \hyperlink{namespaceseq_1_1math_ab019165412bf99555adfeaaaa86f319f}{mean} (const Seq\-T \&in)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return the arithmetic mean of sequence elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Mathematical operations and structures. 
+Mathematical operations on sequences, and sequence structures. 
 
 \subsection{Function Documentation}
 \hypertarget{namespaceseq_1_1math_ab019165412bf99555adfeaaaa86f319f}{\index{seq\-::math@{seq\-::math}!mean@{mean}}
@@ -41,7 +41,11 @@ Mathematical operations and structures.
 \item[{const Seq\-T \&}]{in}
 \end{DoxyParamCaption}
 )}}\label{namespaceseq_1_1math_ab019165412bf99555adfeaaaa86f319f}
-Return the arithmetic mean of sequence elements. \hypertarget{namespaceseq_1_1math_a6bd86d848fb47f455aff84c38c175ea4}{\index{seq\-::math@{seq\-::math}!range@{range}}
+
+
+Return the arithmetic mean of sequence elements. 
+
+\hypertarget{namespaceseq_1_1math_a6bd86d848fb47f455aff84c38c175ea4}{\index{seq\-::math@{seq\-::math}!range@{range}}
 \index{range@{range}!seq::math@{seq\-::math}}
 \subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T , class Seq\-T $>$ Seq\-T\& {\bf seq\-::math\-::range} (
 \begin{DoxyParamCaption}
@@ -51,7 +55,11 @@ Return the arithmetic mean of sequence elements. \hypertarget{namespaceseq_1_1ma
 \item[{Num\-T}]{step = {\ttfamily 1}}
 \end{DoxyParamCaption}
 )}}\label{namespaceseq_1_1math_a6bd86d848fb47f455aff84c38c175ea4}
-Construct a sequence of numbers from low to high with optional step. \hypertarget{namespaceseq_1_1math_ae9b127e8277c6c390b99c4a1195dc087}{\index{seq\-::math@{seq\-::math}!range@{range}}
+
+
+Construct a sequence of numbers from low to high with optional step. 
+
+\hypertarget{namespaceseq_1_1math_ae9b127e8277c6c390b99c4a1195dc087}{\index{seq\-::math@{seq\-::math}!range@{range}}
 \index{range@{range}!seq::math@{seq\-::math}}
 \subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T , class Seq\-T $>$ Seq\-T\& {\bf seq\-::math\-::range} (
 \begin{DoxyParamCaption}
@@ -59,14 +67,22 @@ Construct a sequence of numbers from low to high with optional step. \hypertarge
 \item[{Seq\-T \&}]{out}
 \end{DoxyParamCaption}
 )}}\label{namespaceseq_1_1math_ae9b127e8277c6c390b99c4a1195dc087}
-Construct a sequence of numbers from 0 to high with step=1. \hypertarget{namespaceseq_1_1math_a27179daf6ca9a8d85434eda531fa134e}{\index{seq\-::math@{seq\-::math}!sum@{sum}}
+
+
+Construct a sequence of numbers from 0 to high with step=1. 
+
+\hypertarget{namespaceseq_1_1math_a27179daf6ca9a8d85434eda531fa134e}{\index{seq\-::math@{seq\-::math}!sum@{sum}}
 \index{sum@{sum}!seq::math@{seq\-::math}}
 \subsubsection[{sum}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ Seq\-T\-::value\-\_\-type {\bf seq\-::math\-::sum} (
 \begin{DoxyParamCaption}
 \item[{const Seq\-T \&}]{in}
 \end{DoxyParamCaption}
 )}}\label{namespaceseq_1_1math_a27179daf6ca9a8d85434eda531fa134e}
-Return the sum of sequence elements. \hypertarget{namespaceseq_1_1math_abfe793e999a374a4d5e6b1ef3f268b59}{\index{seq\-::math@{seq\-::math}!xrange@{xrange}}
+
+
+Return the sum of sequence elements. 
+
+\hypertarget{namespaceseq_1_1math_abfe793e999a374a4d5e6b1ef3f268b59}{\index{seq\-::math@{seq\-::math}!xrange@{xrange}}
 \index{xrange@{xrange}!seq::math@{seq\-::math}}
 \subsubsection[{xrange}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T $>$ {\bf X\-Range}$<$Num\-T$>$ {\bf seq\-::math\-::xrange} (
 \begin{DoxyParamCaption}
@@ -76,7 +92,9 @@ Return the sum of sequence elements. \hypertarget{namespaceseq_1_1math_abfe793e9
 \item[{bool}]{inclusive = {\ttfamily false}}
 \end{DoxyParamCaption}
 )}}\label{namespaceseq_1_1math_abfe793e999a374a4d5e6b1ef3f268b59}
-Return {\ttfamily \hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}} sequence, similar to Python's \char`\"{}xrange\char`\"{}.
+
+
+Return {\ttfamily \hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}} sequence, similar to Python's \char`\"{}xrange\char`\"{}. 
 
 Suggested usage\-: \begin{DoxyVerb} for (auto i : xrange(10)) {
      printf("%d\n", i);

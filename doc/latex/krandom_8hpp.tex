@@ -3,11 +3,25 @@
 }
 {\ttfamily \#include $<$random$>$}\\*
 {\ttfamily \#include $<$algorithm$>$}\\*
+Include dependency graph for krandom.\-hpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{krandom_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{krandom_8hpp__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \hyperlink{namespacekrandom}{krandom}
-\begin{DoxyCompactList}\small\item\em Simple wrapper around {\ttfamily $<$random$>$} with a Python interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Simple wrapper around {\ttfamily $<$random$>$} with a Python-\/like interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,10 +41,10 @@ double \hyperlink{namespacekrandom_ae89a756b3d067650aa9712efe6e930e2}{krandom\-:
 \item 
 {\footnotesize template$<$class Seq\-Type $>$ }\\void \hyperlink{namespacekrandom_a3cf920703fa6e180b1aa4d4c86799626}{krandom\-::shuffle} (Seq\-Type \&seq)
 \item 
-{\footnotesize template$<$template$<$ typename U, typename...\-Args $>$ class Seq\-Type, typename Item\-Type $>$ }\\Item\-Type \hyperlink{namespacekrandom_a59c038687d5825d1b6b8f26cf91dee20}{krandom\-::choice} (const Seq\-Type$<$ Item\-Type $>$ \&seq)
+{\footnotesize template$<$class Seq\-Type $>$ }\\Seq\-Type\-::value\-\_\-type \hyperlink{namespacekrandom_ae031164eba3b0311cbae22aed8894898}{krandom\-::choice} (const Seq\-Type \&seq)
 \item 
 vector$<$ unsigned $>$ \& \hyperlink{namespacekrandom_a50015c42a5cb2ab60017b00abbb4ffde}{krandom\-::get\-Sample\-Inds} (unsigned pop\-Size, unsigned samp\-Size, vector$<$ unsigned $>$ \&inds, bool with\-Replacement=true)
-\item 
+\begin{DoxyCompactList}\small\item\em Store {\ttfamily samp\-Size} random numbers in range \mbox{[}0, {\ttfamily pop\-Size}) in {\ttfamily inds}, with or without replacement. \end{DoxyCompactList}\item 
 vector$<$ unsigned $>$ \hyperlink{namespacekrandom_aa1ecb85e031f5505020d74732acd846a}{krandom\-::get\-Sample\-Inds} (unsigned pop\-Size, unsigned samp\-Size, bool with\-Replacement=true)
 \item 
 {\footnotesize template$<$typename Seq\-Type $>$ }\\void \hyperlink{namespacekrandom_a924f7dd5ed9785fd396615b9995e47da}{krandom\-::sample} (const Seq\-Type \&seq, unsigned samp\-Size, Seq\-Type \&out, bool with\-Replacement=true)

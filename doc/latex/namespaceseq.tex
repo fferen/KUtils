@@ -3,7 +3,7 @@
 }
 
 
-Useful generic sequence operations and structures.  
+Generic sequence operations and structures.  
 
 
 \subsection*{Namespaces}
@@ -12,7 +12,7 @@ Useful generic sequence operations and structures.
 namespace \hyperlink{namespaceseq_1_1functional}{functional}
 \begin{DoxyCompactList}\small\item\em Functions commonly used in functional programming. \end{DoxyCompactList}\item 
 namespace \hyperlink{namespaceseq_1_1math}{math}
-\begin{DoxyCompactList}\small\item\em Mathematical operations and structures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Mathematical operations on sequences, and sequence structures. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,16 +23,16 @@ struct \hyperlink{structseq_1_1_wrapped_seq}{Wrapped\-Seq}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-size\-\_\-t \hyperlink{namespaceseq_a9f008982bf05fc256d4b035890744c77}{\-\_\-real\-I} (int i, size\-\_\-t sz)  throw (length\-\_\-error)
-\item 
+size\-\_\-t \hyperlink{namespaceseq_a9f008982bf05fc256d4b035890744c77}{\-\_\-real\-I} (int i, size\-\_\-t sz)
+\begin{DoxyCompactList}\small\item\em Get the wrapped index to an array of size {\ttfamily sz}. \end{DoxyCompactList}\item 
 size\-\_\-t \hyperlink{namespaceseq_ae4290a190db34f394330d88a5de8f2a7}{\-\_\-real\-I\-Dist} (size\-\_\-t left\-I, size\-\_\-t right\-I, size\-\_\-t sz)
-\item 
-{\footnotesize template$<$class Seq\-T $>$ }\\Slice$<$ typename Seq\-T\-::iterator $>$ \hyperlink{namespaceseq_a01ecaea35db083541a258a05ac8c1d30}{sl} (Seq\-T \&in, int i1, int i2)  throw (range\-\_\-error)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the wrapped distance between left and right indices in an array of size {\ttfamily sz}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Seq\-T $>$ }\\Slice$<$ typename Seq\-T\-::iterator $>$ \hyperlink{namespaceseq_a01ecaea35db083541a258a05ac8c1d30}{sl} (Seq\-T \&in, int i1, int i2)
+\begin{DoxyCompactList}\small\item\em Get slice of sequence as a pair of iterators. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Useful generic sequence operations and structures. N\-B\-: \char`\"{}sequence\char`\"{} here means \char`\"{}container\char`\"{} in the rest of C++. I just chose \char`\"{}sequence\char`\"{} because \char`\"{}seq\char`\"{} in variable names looks better than \char`\"{}ctr\char`\"{}. 
+Generic sequence operations and structures. N\-B\-: \char`\"{}sequence\char`\"{} here means \char`\"{}container\char`\"{} in the rest of C++. I just chose \char`\"{}sequence\char`\"{} because \char`\"{}seq\char`\"{} in variable names looks better than \char`\"{}ctr\char`\"{}. 
 
 \subsection{Function Documentation}
 \hypertarget{namespaceseq_a9f008982bf05fc256d4b035890744c77}{\index{seq@{seq}!\-\_\-real\-I@{\-\_\-real\-I}}
@@ -42,8 +42,12 @@ Useful generic sequence operations and structures. N\-B\-: \char`\"{}sequence\ch
 \item[{int}]{i, }
 \item[{size\-\_\-t}]{sz}
 \end{DoxyParamCaption}
-)  throw (length\-\_\-error)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespaceseq_a9f008982bf05fc256d4b035890744c77}
-Get the wrapped index to an array of size {\ttfamily sz}. Throw {\ttfamily length\-\_\-error} if {\ttfamily sz} == 0. \hypertarget{namespaceseq_ae4290a190db34f394330d88a5de8f2a7}{\index{seq@{seq}!\-\_\-real\-I\-Dist@{\-\_\-real\-I\-Dist}}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespaceseq_a9f008982bf05fc256d4b035890744c77}
+
+
+Get the wrapped index to an array of size {\ttfamily sz}. 
+
+Throw {\ttfamily length\-\_\-error} if {\ttfamily sz} == 0. \hypertarget{namespaceseq_ae4290a190db34f394330d88a5de8f2a7}{\index{seq@{seq}!\-\_\-real\-I\-Dist@{\-\_\-real\-I\-Dist}}
 \index{\-\_\-real\-I\-Dist@{\-\_\-real\-I\-Dist}!seq@{seq}}
 \subsubsection[{\-\_\-real\-I\-Dist}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf seq\-::\-\_\-real\-I\-Dist} (
 \begin{DoxyParamCaption}
@@ -52,7 +56,11 @@ Get the wrapped index to an array of size {\ttfamily sz}. Throw {\ttfamily lengt
 \item[{size\-\_\-t}]{sz}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespaceseq_ae4290a190db34f394330d88a5de8f2a7}
-Get the wrapped distance between left and right indices in an array of size {\ttfamily sz}. For example, {\ttfamily \-\_\-real\-I\-Dist(3, 0, 4)} == 1. \hypertarget{namespaceseq_a01ecaea35db083541a258a05ac8c1d30}{\index{seq@{seq}!sl@{sl}}
+
+
+Get the wrapped distance between left and right indices in an array of size {\ttfamily sz}. 
+
+For example, {\ttfamily \-\_\-real\-I\-Dist(3, 0, 4)} == 1. \hypertarget{namespaceseq_a01ecaea35db083541a258a05ac8c1d30}{\index{seq@{seq}!sl@{sl}}
 \index{sl@{sl}!seq@{seq}}
 \subsubsection[{sl}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ Slice$<$typename Seq\-T\-::iterator$>$ {\bf seq\-::sl} (
 \begin{DoxyParamCaption}
@@ -60,5 +68,9 @@ Get the wrapped distance between left and right indices in an array of size {\tt
 \item[{int}]{i1, }
 \item[{int}]{i2}
 \end{DoxyParamCaption}
-)  throw (range\-\_\-error)}}\label{namespaceseq_a01ecaea35db083541a258a05ac8c1d30}
-Get slice of sequence as a pair of iterators. Throw {\ttfamily range\-\_\-error} if {\ttfamily i1} $>$ {\ttfamily i2}. 
+)}}\label{namespaceseq_a01ecaea35db083541a258a05ac8c1d30}
+
+
+Get slice of sequence as a pair of iterators. 
+
+Throw {\ttfamily range\-\_\-error} if {\ttfamily i1} $>$ {\ttfamily i2}. 

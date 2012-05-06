@@ -3,6 +3,11 @@
 }
 
 
+Get the number of bytes of a type at compile-\/time.  
+
+
+
+
 {\ttfamily \#include $<$cvutils.\-hpp$>$}
 
 \subsection*{Static Public Attributes}
@@ -15,7 +20,7 @@ static const int \hyperlink{structcvutils_1_1___data_depth___fixed_abecf0b84192c
 \subsection{Detailed Description}
 \subsubsection*{template$<$typename T$>$struct cvutils\-::\-\_\-\-Data\-Depth\-\_\-\-Fixed$<$ T $>$}
 
-Get the number of bytes of a type at compile-\/time.
+Get the number of bytes of a type at compile-\/time. 
 
 This is done with {\ttfamily cv\-::\-Data\-Depth$<$$>$}, but for some reason {\ttfamily cv\-::\-Data\-Depth$<$uchar$>$\-::value} == 0, so we override it here with 1. 
 

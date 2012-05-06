@@ -5,7 +5,12 @@
 
 using namespace std;
 
-/*! \brief Simple wrapper around `<random>` with a Python interface. */
+/*! Simple wrapper around `<random>` with a Python-like interface.
+ *
+ * For any functions undocumented here see the Python documentation:
+ *
+ * http://docs.python.org/library/random.html
+ */
 namespace krandom {
     extern random_device engine;
 
@@ -32,11 +37,8 @@ namespace krandom {
         shuffle(seq.begin(), seq.end());
     }
 
-    template <
-        template <typename U, typename... Args> class SeqType,
-        typename ItemType
-        >
-    ItemType choice(const SeqType<ItemType> &seq) {
+    template <class SeqType>
+    typename SeqType::value_type choice(const SeqType &seq) {
         return seq[randint(0, seq.size() - 1)];
     }
 

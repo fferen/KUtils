@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Mathematical operations and structures.  
+<p>Mathematical operations on sequences, and sequence structures.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
@@ -117,19 +117,24 @@ Classes</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:abfe793e999a374a4d5e6b1ef3f268b59"><td class="memTemplParams" colspan="2">template&lt;typename NumT &gt; </td></tr>
 <tr class="memitem:abfe793e999a374a4d5e6b1ef3f268b59"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structseq_1_1math_1_1_x_range.html">XRange</a>&lt; NumT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59">xrange</a> (NumT low, NumT high, NumT step=1, bool inclusive=false)</td></tr>
+<tr class="memdesc:abfe793e999a374a4d5e6b1ef3f268b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code><a class="el" href="structseq_1_1math_1_1_x_range.html" title="Represent a lazily-evaluated range of numbers.">XRange</a></code> sequence, similar to Python's "xrange".  <a href="#abfe793e999a374a4d5e6b1ef3f268b59"></a><br/></td></tr>
 <tr class="memitem:a4f2c47e50ba86a80778ccebd31d7fa16"><td class="memTemplParams" colspan="2">template&lt;typename NumT &gt; </td></tr>
 <tr class="memitem:a4f2c47e50ba86a80778ccebd31d7fa16"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structseq_1_1math_1_1_x_range.html">XRange</a>&lt; NumT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceseq_1_1math.html#a4f2c47e50ba86a80778ccebd31d7fa16">xrange</a> (NumT high, bool inclusive=false)</td></tr>
 <tr class="memitem:a6bd86d848fb47f455aff84c38c175ea4"><td class="memTemplParams" colspan="2">template&lt;typename NumT , class SeqT &gt; </td></tr>
 <tr class="memitem:a6bd86d848fb47f455aff84c38c175ea4"><td class="memTemplItemLeft" align="right" valign="top">SeqT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceseq_1_1math.html#a6bd86d848fb47f455aff84c38c175ea4">range</a> (NumT low, NumT high, SeqT &amp;out, NumT step=1)</td></tr>
+<tr class="memdesc:a6bd86d848fb47f455aff84c38c175ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a sequence of numbers from low to high with optional step.  <a href="#a6bd86d848fb47f455aff84c38c175ea4"></a><br/></td></tr>
 <tr class="memitem:ae9b127e8277c6c390b99c4a1195dc087"><td class="memTemplParams" colspan="2">template&lt;typename NumT , class SeqT &gt; </td></tr>
 <tr class="memitem:ae9b127e8277c6c390b99c4a1195dc087"><td class="memTemplItemLeft" align="right" valign="top">SeqT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceseq_1_1math.html#ae9b127e8277c6c390b99c4a1195dc087">range</a> (NumT high, SeqT &amp;out)</td></tr>
+<tr class="memdesc:ae9b127e8277c6c390b99c4a1195dc087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a sequence of numbers from 0 to high with step=1.  <a href="#ae9b127e8277c6c390b99c4a1195dc087"></a><br/></td></tr>
 <tr class="memitem:a27179daf6ca9a8d85434eda531fa134e"><td class="memTemplParams" colspan="2">template&lt;class SeqT &gt; </td></tr>
 <tr class="memitem:a27179daf6ca9a8d85434eda531fa134e"><td class="memTemplItemLeft" align="right" valign="top">SeqT::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceseq_1_1math.html#a27179daf6ca9a8d85434eda531fa134e">sum</a> (const SeqT &amp;in)</td></tr>
+<tr class="memdesc:a27179daf6ca9a8d85434eda531fa134e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the sum of sequence elements.  <a href="#a27179daf6ca9a8d85434eda531fa134e"></a><br/></td></tr>
 <tr class="memitem:ab019165412bf99555adfeaaaa86f319f"><td class="memTemplParams" colspan="2">template&lt;class SeqT &gt; </td></tr>
 <tr class="memitem:ab019165412bf99555adfeaaaa86f319f"><td class="memTemplItemLeft" align="right" valign="top">SeqT::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceseq_1_1math.html#ab019165412bf99555adfeaaaa86f319f">mean</a> (const SeqT &amp;in)</td></tr>
+<tr class="memdesc:ab019165412bf99555adfeaaaa86f319f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the arithmetic mean of sequence elements.  <a href="#ab019165412bf99555adfeaaaa86f319f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Mathematical operations and structures. </p>
+<div class="textblock"><p>Mathematical operations on sequences, and sequence structures. </p>
 </div><hr/><h2>Function Documentation</h2>
 <a class="anchor" id="ab019165412bf99555adfeaaaa86f319f"></a>
 <div class="memitem">
@@ -147,6 +152,7 @@ template&lt;class SeqT &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+
 <p>Return the arithmetic mean of sequence elements. </p>
 
 </div>
@@ -189,6 +195,7 @@ template&lt;typename NumT , class SeqT &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+
 <p>Construct a sequence of numbers from low to high with optional step. </p>
 
 </div>
@@ -219,6 +226,7 @@ template&lt;typename NumT , class SeqT &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+
 <p>Construct a sequence of numbers from 0 to high with step=1. </p>
 
 </div>
@@ -239,6 +247,7 @@ template&lt;class SeqT &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+
 <p>Return the sum of sequence elements. </p>
 
 </div>
@@ -281,7 +290,8 @@ template&lt;typename NumT &gt; </div>
       </table>
 </div>
 <div class="memdoc">
-<p>Return <code><a class="el" href="structseq_1_1math_1_1_x_range.html" title="Represent a lazily-evaluated range of numbers.">XRange</a></code> sequence, similar to Python's "xrange".</p>
+
+<p>Return <code><a class="el" href="structseq_1_1math_1_1_x_range.html" title="Represent a lazily-evaluated range of numbers.">XRange</a></code> sequence, similar to Python's "xrange". </p>
 <p>Suggested usage: </p>
 <div class="fragment"><pre class="fragment"> for (auto i : xrange(10)) {
      printf("%d\n", i);
@@ -322,7 +332,7 @@ template&lt;typename NumT &gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

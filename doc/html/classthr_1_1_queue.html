@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,8 +99,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">thr::Queue&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
@@ -117,13 +117,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5b21c17bdad3f7d88f7a30f92a2bd42d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthr_1_1_queue.html#a5b21c17bdad3f7d88f7a30f92a2bd42d">Queue</a> ()</td></tr>
 <tr class="memitem:a1ce03f6aee29d5dc8e4b3a247de063e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthr_1_1_queue.html#a1ce03f6aee29d5dc8e4b3a247de063e5">poll</a> (T &amp;out)</td></tr>
+<tr class="memdesc:a1ce03f6aee29d5dc8e4b3a247de063e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if next item in queue was stored in <code>out</code>.  <a href="#a1ce03f6aee29d5dc8e4b3a247de063e5"></a><br/></td></tr>
 <tr class="memitem:ab095129fe0ba3dc63fa7300ffe2b11b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthr_1_1_queue.html#ab095129fe0ba3dc63fa7300ffe2b11b9">wait</a> (T &amp;out)</td></tr>
+<tr class="memdesc:ab095129fe0ba3dc63fa7300ffe2b11b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block until next item is stored in <code>out</code>.  <a href="#ab095129fe0ba3dc63fa7300ffe2b11b9"></a><br/></td></tr>
 <tr class="memitem:a62768ce373068fa4b3baf574f5fed995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthr_1_1_queue.html#a62768ce373068fa4b3baf574f5fed995">push</a> (const T &amp;in)</td></tr>
-<tr><td colspan="2"><h2><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
+<tr class="memdesc:a62768ce373068fa4b3baf574f5fed995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a new item into the queue.  <a href="#a62768ce373068fa4b3baf574f5fed995"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:aecde97de4091b83a35dcf2ec42cdcd7b"><td class="memItemLeft" align="right" valign="top">deque&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthr_1_1_queue.html#aecde97de4091b83a35dcf2ec42cdcd7b">q</a></td></tr>
-<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
+<tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
 <tr class="memitem:abadc1f08bfec267edc24baaa442bb451"><td class="memItemLeft" align="right" valign="top">static mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classthr_1_1_queue.html#abadc1f08bfec267edc24baaa442bb451">lock</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -168,6 +171,8 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
+<p>Return <code>true</code> if next item in queue was stored in <code>out</code>. </p>
+
 </div>
 </div>
 <a class="anchor" id="a62768ce373068fa4b3baf574f5fed995"></a>
@@ -186,6 +191,8 @@ template&lt;typename T &gt; </div>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Push a new item into the queue. </p>
 
 </div>
 </div>
@@ -206,6 +213,8 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
+<p>Block until next item is stored in <code>out</code>. </p>
+
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
@@ -216,7 +225,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">mutex <a class="el" href="classthr_1_1_queue.html">thr::Queue</a>&lt; T &gt;::<a class="el" href="classthr_1_1_queue.html#abadc1f08bfec267edc24baaa442bb451">lock</a><code> [static]</code></td>
+          <td class="memname">mutex <a class="el" href="classthr_1_1_queue.html">thr::Queue</a>&lt; T &gt;::<a class="el" href="classthr_1_1_queue.html#abadc1f08bfec267edc24baaa442bb451">lock</a><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -231,7 +240,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">deque&lt;T&gt; <a class="el" href="classthr_1_1_queue.html">thr::Queue</a>&lt; T &gt;::<a class="el" href="classthr_1_1_queue.html#aecde97de4091b83a35dcf2ec42cdcd7b">q</a></td>
+          <td class="memname">deque&lt;T&gt; <a class="el" href="classthr_1_1_queue.html">thr::Queue</a>&lt; T &gt;::<a class="el" href="classthr_1_1_queue.html#aecde97de4091b83a35dcf2ec42cdcd7b">q</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -246,7 +255,7 @@ template&lt;typename T &gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 5 2012 18:23:00 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

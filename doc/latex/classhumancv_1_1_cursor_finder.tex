@@ -1,0 +1,190 @@
+\hypertarget{classhumancv_1_1_cursor_finder}{\section{humancv\-:\-:Cursor\-Finder Class Reference}
+\label{classhumancv_1_1_cursor_finder}\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}}
+}
+
+
+Framework for tracking hand gestures.  
+
+
+
+
+{\ttfamily \#include $<$cfinder.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classhumancv_1_1_cursor_finder_a3ff8b8961e65f437484cc61bfb28dee1}{Cursor\-Finder} (const cv\-::\-Rect \&\hyperlink{classhumancv_1_1_cursor_finder_ac24299e06cd5d271dac727a80bebc5c3}{mouse\-Rect}, const cv\-::\-Rect \&\hyperlink{classhumancv_1_1_cursor_finder_a8a6474e4cf616789f7b14085e83261c8}{screen\-Rect}, const cv\-::\-Cascade\-Classifier \&\hyperlink{classhumancv_1_1_cursor_finder_a5dd2e09ff9ca7e0667d0267d571a31ff}{cascade}, float \hyperlink{classhumancv_1_1_cursor_finder_ad7607c9dd807d16db9cda9cea42e8dcb}{add\-Chance}=0.\-1, float \hyperlink{classhumancv_1_1_cursor_finder_aefec5ff071032bfce5d46c4cdedf3f10}{min\-Ctr\-Prop}=0.\-05, float \hyperlink{classhumancv_1_1_cursor_finder_a647e0325a998393648793c069524454d}{hand\-Size\-Prop}=1, float \hyperlink{classhumancv_1_1_cursor_finder_a816167296fd52528605710cccd3336b8}{k\-Hand\-Height\-Prop}=0.\-25, float \hyperlink{classhumancv_1_1_cursor_finder_a8703da65435e5707559fe59180634b40}{min\-Finger\-Dist\-Prop}=0.\-15)
+\item 
+void \hyperlink{classhumancv_1_1_cursor_finder_af2069456a8a2ec608e5d5cdd109d5396}{mouse\-State\-From\-Contour} (const \hyperlink{namespacehumancv_ac3621cda88df26d2718f6bd5ec4de1dd}{Contour} \&ctr, const cv\-::\-Size \&hand\-Size, const cv\-::\-Size \&window\-Size, \hyperlink{structmouse_1_1_state}{mouse\-::\-State} \&out) const 
+\begin{DoxyCompactList}\small\item\em $<$\-T\-O\-D\-O$>$ \end{DoxyCompactList}\item 
+void \hyperlink{classhumancv_1_1_cursor_finder_a2767654c55943ef9d7e516a9f08dcb8a}{train} (const vector$<$ cv\-::\-Mat\-\_\-$<$ cv\-::\-Vec3b $>$$>$ \&neg\-Frames)
+\begin{DoxyCompactList}\small\item\em $<$\-T\-O\-D\-O$>$ \end{DoxyCompactList}\item 
+bool \hyperlink{classhumancv_1_1_cursor_finder_a144b895a360b63699c3b36ac00aa04de}{get\-Mouse\-State} (const cv\-::\-Mat\-\_\-$<$ cv\-::\-Vec3b $>$ \&frame, \hyperlink{structmouse_1_1_state}{mouse\-::\-State} \&out, cv\-::\-Mat\-\_\-$<$ uchar $>$ $\ast$skin\-Mask=N\-U\-L\-L, cv\-::\-Mat\-\_\-$<$ uchar $>$ $\ast$without\-Face\-And\-Small=N\-U\-L\-L, cv\-::\-Mat\-\_\-$<$ uchar $>$ $\ast$with\-Highest\-Ctr=N\-U\-L\-L, bool $\ast$found\-Face=N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em Return true if new mouse state was stored in {\ttfamily out} (ie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Cascade\-Classifier \hyperlink{classhumancv_1_1_cursor_finder_a5dd2e09ff9ca7e0667d0267d571a31ff}{cascade}
+\item 
+float \hyperlink{classhumancv_1_1_cursor_finder_ad7607c9dd807d16db9cda9cea42e8dcb}{add\-Chance}
+\item 
+float \hyperlink{classhumancv_1_1_cursor_finder_aefec5ff071032bfce5d46c4cdedf3f10}{min\-Ctr\-Prop}
+\item 
+float \hyperlink{classhumancv_1_1_cursor_finder_a647e0325a998393648793c069524454d}{hand\-Size\-Prop}
+\item 
+float \hyperlink{classhumancv_1_1_cursor_finder_a816167296fd52528605710cccd3336b8}{k\-Hand\-Height\-Prop}
+\item 
+float \hyperlink{classhumancv_1_1_cursor_finder_a8703da65435e5707559fe59180634b40}{min\-Finger\-Dist\-Prop}
+\item 
+Cv\-Boost \hyperlink{classhumancv_1_1_cursor_finder_ae280f7953be6afdbd23469443cadfb4b}{boost}
+\item 
+cv\-::\-Sparse\-Mat\-\_\-$<$ float $>$ \hyperlink{classhumancv_1_1_cursor_finder_acfdb3b111ce4b2780e5a9f9fddf59e97}{px\-To\-Prediction}
+\item 
+float \hyperlink{classhumancv_1_1_cursor_finder_a77b21640a4c7c1f24da2e39c9ae1a4a7}{thres}
+\item 
+cv\-::\-Kalman\-Filter \hyperlink{classhumancv_1_1_cursor_finder_af55f31c83c5a619205455801ead7ec73}{k\-Filter}
+\item 
+cv\-::\-Rect \hyperlink{classhumancv_1_1_cursor_finder_a8a6474e4cf616789f7b14085e83261c8}{screen\-Rect}
+\item 
+cv\-::\-Rect \hyperlink{classhumancv_1_1_cursor_finder_ac24299e06cd5d271dac727a80bebc5c3}{mouse\-Rect}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Framework for tracking hand gestures. 
+
+It has two phases, training and runtime.
+
+\subsubsection*{Training}
+
+A sequence of frames, each containing a face, is gathered from a video source.
+
+This sequence is passed to {\ttfamily \hyperlink{classhumancv_1_1_cursor_finder_a2767654c55943ef9d7e516a9f08dcb8a}{train()}}, faces are detected, and an Adaboost classifier is trained with the face pixels as the positive class and all other pixels as the negative class. The assumption is that no other objects containing skin, besides the faces, are present in the frames.
+
+\subsubsection*{Runtime}
+
+$<$\-T\-O\-D\-O$>$ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classhumancv_1_1_cursor_finder_a3ff8b8961e65f437484cc61bfb28dee1}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!Cursor\-Finder@{Cursor\-Finder}}
+\index{Cursor\-Finder@{Cursor\-Finder}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{Cursor\-Finder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cursor\-Finder\-::\-Cursor\-Finder} (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Rect \&}]{mouse\-Rect, }
+\item[{const cv\-::\-Rect \&}]{screen\-Rect, }
+\item[{const cv\-::\-Cascade\-Classifier \&}]{cascade, }
+\item[{float}]{add\-Chance = {\ttfamily 0.1}, }
+\item[{float}]{min\-Ctr\-Prop = {\ttfamily 0.05}, }
+\item[{float}]{hand\-Size\-Prop = {\ttfamily 1}, }
+\item[{float}]{k\-Hand\-Height\-Prop = {\ttfamily 0.25}, }
+\item[{float}]{min\-Finger\-Dist\-Prop = {\ttfamily 0.15}}
+\end{DoxyParamCaption}
+)}}\label{classhumancv_1_1_cursor_finder_a3ff8b8961e65f437484cc61bfb28dee1}
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\-Rect} & Rectangle in frame defining hand borders. \\
+\hline
+{\em screen\-Rect} & Rectangle defining the screen -\/ where points in {\ttfamily mouse\-Rect} get projected to. \\
+\hline
+{\em cascade} & {\ttfamily cv\-::\-Cascade\-Classifier} for detecting faces. \\
+\hline
+{\em add\-Chance} & Probability that pixel gets added to training samples -\/ used to reduce training time. \\
+\hline
+{\em min\-Ctr\-Prop} & Minimum area of contour relative to face (as a proportion). \\
+\hline
+{\em hand\-Size\-Prop} & Estimated size of hand relative to face (as a proportion). \\
+\hline
+{\em k\-Hand\-Height\-Prop} & Multiplied by hand height to get k for k-\/curvature. \\
+\hline
+{\em min\-Finger\-Dist\-Prop} & Multiplied by hand height to get minimum distance between fingers. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classhumancv_1_1_cursor_finder_a144b895a360b63699c3b36ac00aa04de}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!get\-Mouse\-State@{get\-Mouse\-State}}
+\index{get\-Mouse\-State@{get\-Mouse\-State}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{get\-Mouse\-State}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf Cursor\-Finder\-::get\-Mouse\-State} (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat\-\_\-$<$ cv\-::\-Vec3b $>$ \&}]{frame, }
+\item[{{\bf mouse\-::\-State} \&}]{out, }
+\item[{cv\-::\-Mat\-\_\-$<$ uchar $>$ $\ast$}]{skin\-Mask = {\ttfamily NULL}, }
+\item[{cv\-::\-Mat\-\_\-$<$ uchar $>$ $\ast$}]{without\-Face\-And\-Small = {\ttfamily NULL}, }
+\item[{cv\-::\-Mat\-\_\-$<$ uchar $>$ $\ast$}]{with\-Highest\-Ctr = {\ttfamily NULL}, }
+\item[{bool $\ast$}]{found\-Face = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{classhumancv_1_1_cursor_finder_a144b895a360b63699c3b36ac00aa04de}
+
+
+Return true if new mouse state was stored in {\ttfamily out} (ie. 
+
+hand was found). \hypertarget{classhumancv_1_1_cursor_finder_af2069456a8a2ec608e5d5cdd109d5396}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!mouse\-State\-From\-Contour@{mouse\-State\-From\-Contour}}
+\index{mouse\-State\-From\-Contour@{mouse\-State\-From\-Contour}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{mouse\-State\-From\-Contour}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Cursor\-Finder\-::mouse\-State\-From\-Contour} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Contour} \&}]{ctr, }
+\item[{const cv\-::\-Size \&}]{hand\-Size, }
+\item[{const cv\-::\-Size \&}]{window\-Size, }
+\item[{{\bf mouse\-::\-State} \&}]{out}
+\end{DoxyParamCaption}
+) const}}\label{classhumancv_1_1_cursor_finder_af2069456a8a2ec608e5d5cdd109d5396}
+
+
+$<$\-T\-O\-D\-O$>$ 
+
+\hypertarget{classhumancv_1_1_cursor_finder_a2767654c55943ef9d7e516a9f08dcb8a}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!train@{train}}
+\index{train@{train}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{train}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf Cursor\-Finder\-::train} (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ cv\-::\-Mat\-\_\-$<$ cv\-::\-Vec3b $>$$>$ \&}]{neg\-Frames}
+\end{DoxyParamCaption}
+)}}\label{classhumancv_1_1_cursor_finder_a2767654c55943ef9d7e516a9f08dcb8a}
+
+
+$<$\-T\-O\-D\-O$>$ 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classhumancv_1_1_cursor_finder_ad7607c9dd807d16db9cda9cea42e8dcb}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!add\-Chance@{add\-Chance}}
+\index{add\-Chance@{add\-Chance}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{add\-Chance}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf humancv\-::\-Cursor\-Finder\-::add\-Chance}}}\label{classhumancv_1_1_cursor_finder_ad7607c9dd807d16db9cda9cea42e8dcb}
+\hypertarget{classhumancv_1_1_cursor_finder_ae280f7953be6afdbd23469443cadfb4b}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!boost@{boost}}
+\index{boost@{boost}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{boost}]{\setlength{\rightskip}{0pt plus 5cm}Cv\-Boost {\bf humancv\-::\-Cursor\-Finder\-::boost}}}\label{classhumancv_1_1_cursor_finder_ae280f7953be6afdbd23469443cadfb4b}
+\hypertarget{classhumancv_1_1_cursor_finder_a5dd2e09ff9ca7e0667d0267d571a31ff}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!cascade@{cascade}}
+\index{cascade@{cascade}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{cascade}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Cascade\-Classifier {\bf humancv\-::\-Cursor\-Finder\-::cascade}}}\label{classhumancv_1_1_cursor_finder_a5dd2e09ff9ca7e0667d0267d571a31ff}
+\hypertarget{classhumancv_1_1_cursor_finder_a647e0325a998393648793c069524454d}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!hand\-Size\-Prop@{hand\-Size\-Prop}}
+\index{hand\-Size\-Prop@{hand\-Size\-Prop}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{hand\-Size\-Prop}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf humancv\-::\-Cursor\-Finder\-::hand\-Size\-Prop}}}\label{classhumancv_1_1_cursor_finder_a647e0325a998393648793c069524454d}
+\hypertarget{classhumancv_1_1_cursor_finder_af55f31c83c5a619205455801ead7ec73}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!k\-Filter@{k\-Filter}}
+\index{k\-Filter@{k\-Filter}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{k\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Kalman\-Filter {\bf humancv\-::\-Cursor\-Finder\-::k\-Filter}}}\label{classhumancv_1_1_cursor_finder_af55f31c83c5a619205455801ead7ec73}
+\hypertarget{classhumancv_1_1_cursor_finder_a816167296fd52528605710cccd3336b8}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!k\-Hand\-Height\-Prop@{k\-Hand\-Height\-Prop}}
+\index{k\-Hand\-Height\-Prop@{k\-Hand\-Height\-Prop}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{k\-Hand\-Height\-Prop}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf humancv\-::\-Cursor\-Finder\-::k\-Hand\-Height\-Prop}}}\label{classhumancv_1_1_cursor_finder_a816167296fd52528605710cccd3336b8}
+\hypertarget{classhumancv_1_1_cursor_finder_aefec5ff071032bfce5d46c4cdedf3f10}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!min\-Ctr\-Prop@{min\-Ctr\-Prop}}
+\index{min\-Ctr\-Prop@{min\-Ctr\-Prop}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{min\-Ctr\-Prop}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf humancv\-::\-Cursor\-Finder\-::min\-Ctr\-Prop}}}\label{classhumancv_1_1_cursor_finder_aefec5ff071032bfce5d46c4cdedf3f10}
+\hypertarget{classhumancv_1_1_cursor_finder_a8703da65435e5707559fe59180634b40}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!min\-Finger\-Dist\-Prop@{min\-Finger\-Dist\-Prop}}
+\index{min\-Finger\-Dist\-Prop@{min\-Finger\-Dist\-Prop}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{min\-Finger\-Dist\-Prop}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf humancv\-::\-Cursor\-Finder\-::min\-Finger\-Dist\-Prop}}}\label{classhumancv_1_1_cursor_finder_a8703da65435e5707559fe59180634b40}
+\hypertarget{classhumancv_1_1_cursor_finder_ac24299e06cd5d271dac727a80bebc5c3}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!mouse\-Rect@{mouse\-Rect}}
+\index{mouse\-Rect@{mouse\-Rect}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{mouse\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Rect {\bf humancv\-::\-Cursor\-Finder\-::mouse\-Rect}}}\label{classhumancv_1_1_cursor_finder_ac24299e06cd5d271dac727a80bebc5c3}
+\hypertarget{classhumancv_1_1_cursor_finder_acfdb3b111ce4b2780e5a9f9fddf59e97}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!px\-To\-Prediction@{px\-To\-Prediction}}
+\index{px\-To\-Prediction@{px\-To\-Prediction}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{px\-To\-Prediction}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Sparse\-Mat\-\_\-$<$float$>$ {\bf humancv\-::\-Cursor\-Finder\-::px\-To\-Prediction}}}\label{classhumancv_1_1_cursor_finder_acfdb3b111ce4b2780e5a9f9fddf59e97}
+\hypertarget{classhumancv_1_1_cursor_finder_a8a6474e4cf616789f7b14085e83261c8}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!screen\-Rect@{screen\-Rect}}
+\index{screen\-Rect@{screen\-Rect}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{screen\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Rect {\bf humancv\-::\-Cursor\-Finder\-::screen\-Rect}}}\label{classhumancv_1_1_cursor_finder_a8a6474e4cf616789f7b14085e83261c8}
+\hypertarget{classhumancv_1_1_cursor_finder_a77b21640a4c7c1f24da2e39c9ae1a4a7}{\index{humancv\-::\-Cursor\-Finder@{humancv\-::\-Cursor\-Finder}!thres@{thres}}
+\index{thres@{thres}!humancv::CursorFinder@{humancv\-::\-Cursor\-Finder}}
+\subsubsection[{thres}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf humancv\-::\-Cursor\-Finder\-::thres}}}\label{classhumancv_1_1_cursor_finder_a77b21640a4c7c1f24da2e39c9ae1a4a7}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cfinder_8hpp}{cfinder.\-hpp}\item 
+\hyperlink{cfinder_8cpp}{cfinder.\-cpp}\end{DoxyCompactItemize}

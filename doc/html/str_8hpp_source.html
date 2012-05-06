@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,15 +104,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00012"></a>00012 <span class="keyword">using namespace </span>std;
 <a name="l00013"></a>00013 
 <a name="l00015"></a><a class="code" href="namespacestr.html">00015</a> <span class="keyword">namespace </span>str {
-<a name="l00017"></a>00017     <span class="keyword">extern</span> <span class="keywordtype">char</span> <a class="code" href="namespacestr.html#a51a7257ade189ec55f5d1c9da0f0e8b4">_buf</a>[100];
+<a name="l00017"></a>00017     <span class="keyword">extern</span> <span class="keywordtype">char</span> <a class="code" href="namespacestr.html#a51a7257ade189ec55f5d1c9da0f0e8b4" title="Buffer for the strFmt macro.">_buf</a>[100];
 <a name="l00018"></a>00018 
-<a name="l00022"></a>00022     <span class="keywordtype">string</span> <a class="code" href="namespacestr.html#a7b677ee9cce42c91dcd37d68b7fa04ac">wordWrap</a>(<span class="keywordtype">string</span> in, <span class="keywordtype">unsigned</span> cols=80) <span class="keywordflow">throw</span> (length_error);
-<a name="l00023"></a>00023 }
+<a name="l00020"></a>00020     <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="namespacestr.html#a19bae57b57856a0060a878cf0530dced" title="The letters &quot;abcdefghijklmnopqrstuvwxyz&quot;.">ASCII_LOWERCASE</a>(<span class="stringliteral">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>);
+<a name="l00021"></a>00021 
+<a name="l00023"></a>00023     <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="namespacestr.html#a31cfca7b7762c003491b8ef8e76c36bc" title="The letters &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;.">ASCII_UPPERCASE</a>(<span class="stringliteral">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>);
+<a name="l00024"></a>00024 
+<a name="l00026"></a>00026     <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="namespacestr.html#a70d0301dce2a93813e08c3cc4600e721" title="Concatenation of ASCII_LOWERCASE and ASCII_UPPERCASE.">ASCII_LETTERS</a>(ASCII_LOWERCASE + ASCII_UPPERCASE);
+<a name="l00027"></a>00027 
+<a name="l00033"></a>00033     <span class="keywordtype">string</span> <a class="code" href="namespacestr.html#a7b677ee9cce42c91dcd37d68b7fa04ac" title="Return a new string word-wrapped with cols columns.">wordWrap</a>(<span class="keywordtype">string</span> in, <span class="keywordtype">unsigned</span> cols=80);
+<a name="l00034"></a>00034 }
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:32 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

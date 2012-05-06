@@ -11,13 +11,24 @@
 
 using namespace std;
 
-/*! \brief String utilities. */
+/*! String utilities. */
 namespace str {
     /*! Buffer for the `strFmt` macro. */
     extern char _buf[100];
 
-    /*! Return a new string word-wrapped with `cols` columns. If length of word
-     * exceeds cols, throw `length_error`.
+    /*! The letters `"abcdefghijklmnopqrstuvwxyz"`. */
+    const string ASCII_LOWERCASE("abcdefghijklmnopqrstuvwxyz");
+
+    /*! The letters `"ABCDEFGHIJKLMNOPQRSTUVWXYZ"`. */
+    const string ASCII_UPPERCASE("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
+    /*! Concatenation of `ASCII_LOWERCASE` and `ASCII_UPPERCASE`. */
+    const string ASCII_LETTERS(ASCII_LOWERCASE + ASCII_UPPERCASE);
+
+    /*! Return a new string word-wrapped with `cols` columns.
+     *
+     * @throws length_error
+     * Thrown if length of word exceeds `cols`.
      */
-    string wordWrap(string in, unsigned cols=80) throw (length_error);
+    string wordWrap(string in, unsigned cols=80);
 }

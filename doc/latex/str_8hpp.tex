@@ -3,6 +3,20 @@
 }
 {\ttfamily \#include $<$cstdio$>$}\\*
 {\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for str.\-hpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{str_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{str_8hpp__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -12,17 +26,23 @@ namespace \hyperlink{namespacestr}{str}
 \begin{DoxyCompactItemize}
 \item 
 \#define \hyperlink{str_8hpp_ad02d698209df17aef336d5633065c5ab}{str\-Fmt}(fmt,...)~(snprintf(\hyperlink{namespacestr_a51a7257ade189ec55f5d1c9da0f0e8b4}{str\-::\-\_\-buf}, 100, fmt, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-), \hyperlink{namespacestr_a51a7257ade189ec55f5d1c9da0f0e8b4}{str\-::\-\_\-buf})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Functional version of {\ttfamily snprintf}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-string \hyperlink{namespacestr_a7b677ee9cce42c91dcd37d68b7fa04ac}{str\-::word\-Wrap} (string in, unsigned cols=80)  throw (length\-\_\-error)
-\end{DoxyCompactItemize}
+const string \hyperlink{namespacestr_a19bae57b57856a0060a878cf0530dced}{str\-::\-A\-S\-C\-I\-I\-\_\-\-L\-O\-W\-E\-R\-C\-A\-S\-E} (\char`\"{}abcdefghijklmnopqrstuvwxyz\char`\"{})
+\begin{DoxyCompactList}\small\item\em The letters {\ttfamily \char`\"{}abcdefghijklmnopqrstuvwxyz\char`\"{}}. \end{DoxyCompactList}\item 
+const string \hyperlink{namespacestr_a31cfca7b7762c003491b8ef8e76c36bc}{str\-::\-A\-S\-C\-I\-I\-\_\-\-U\-P\-P\-E\-R\-C\-A\-S\-E} (\char`\"{}A\-B\-C\-D\-E\-F\-G\-H\-I\-J\-K\-L\-M\-N\-O\-P\-Q\-R\-S\-T\-U\-V\-W\-X\-Y\-Z\char`\"{})
+\begin{DoxyCompactList}\small\item\em The letters {\ttfamily \char`\"{}\-A\-B\-C\-D\-E\-F\-G\-H\-I\-J\-K\-L\-M\-N\-O\-P\-Q\-R\-S\-T\-U\-V\-W\-X\-Y\-Z\char`\"{}}. \end{DoxyCompactList}\item 
+const string \hyperlink{namespacestr_a70d0301dce2a93813e08c3cc4600e721}{str\-::\-A\-S\-C\-I\-I\-\_\-\-L\-E\-T\-T\-E\-R\-S} (A\-S\-C\-I\-I\-\_\-\-L\-O\-W\-E\-R\-C\-A\-S\-E+A\-S\-C\-I\-I\-\_\-\-U\-P\-P\-E\-R\-C\-A\-S\-E)
+\begin{DoxyCompactList}\small\item\em Concatenation of {\ttfamily A\-S\-C\-I\-I\-\_\-\-L\-O\-W\-E\-R\-C\-A\-S\-E} and {\ttfamily A\-S\-C\-I\-I\-\_\-\-U\-P\-P\-E\-R\-C\-A\-S\-E}. \end{DoxyCompactList}\item 
+string \hyperlink{namespacestr_a7b677ee9cce42c91dcd37d68b7fa04ac}{str\-::word\-Wrap} (string in, unsigned cols=80)
+\begin{DoxyCompactList}\small\item\em Return a new string word-\/wrapped with {\ttfamily cols} columns. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 char \hyperlink{namespacestr_a51a7257ade189ec55f5d1c9da0f0e8b4}{str\-::\-\_\-buf} \mbox{[}100\mbox{]}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Buffer for the {\ttfamily str\-Fmt} macro. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Define Documentation}
@@ -34,6 +54,8 @@ char \hyperlink{namespacestr_a51a7257ade189ec55f5d1c9da0f0e8b4}{str\-::\-\_\-buf
 \item[{}]{...}
 \end{DoxyParamCaption}
 )~(snprintf({\bf str\-::\-\_\-buf}, 100, fmt, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-), {\bf str\-::\-\_\-buf})}}\label{str_8hpp_ad02d698209df17aef336d5633065c5ab}
-Functional version of {\ttfamily snprintf}.
+
+
+Functional version of {\ttfamily snprintf}. 
 
 Yes, macros are evil, but this is so convenient. 

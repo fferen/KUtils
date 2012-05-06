@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,20 +107,23 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the result of parsing arguments.  <a href="structargparse_1_1_arg_holder.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9178c3eba71719d6bed428a94e42010e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargparse.html#a9178c3eba71719d6bed428a94e42010e">makeUsageString</a> (const string &amp;progName, const string &amp;desc, const string &amp;posArgs=string(), const Dict&lt; string, string &gt; &amp;optToHelp=Dict&lt; string, string &gt;(), int cols=80, int helpCols=60)</td></tr>
+<tr class="memitem:a336ebbf4216b617d79a43d8211600118"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargparse.html#a336ebbf4216b617d79a43d8211600118">makeUsageString</a> (const string &amp;progName, const string &amp;desc, const string &amp;posArgs=string(), const Dict&lt; string, string &gt; &amp;optToHelp=Dict&lt; string, string &gt;(), unsigned cols=80, unsigned helpCols=60)</td></tr>
+<tr class="memdesc:a336ebbf4216b617d79a43d8211600118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a usage string.  <a href="#a336ebbf4216b617d79a43d8211600118"></a><br/></td></tr>
 <tr class="memitem:a6a82e35cb0ec90fbe4a17db4ae3539d4"><td class="memTemplParams" colspan="2">template&lt;class FuncType &gt; </td></tr>
-<tr class="memitem:a6a82e35cb0ec90fbe4a17db4ae3539d4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structargparse_1_1_arg_holder.html">ArgHolder</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargparse.html#a6a82e35cb0ec90fbe4a17db4ae3539d4">parse</a> (int argc, const char *argv[], const Dict&lt; string, FuncType &gt; &amp;optToChker, char optChar='-', bool genHelpChker=true)  throw (invalid_argument)</td></tr>
+<tr class="memitem:a6a82e35cb0ec90fbe4a17db4ae3539d4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structargparse_1_1_arg_holder.html">ArgHolder</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceargparse.html#a6a82e35cb0ec90fbe4a17db4ae3539d4">parse</a> (int argc, const char *argv[], const Dict&lt; string, FuncType &gt; &amp;optToChker, char optChar='-', bool genHelpChker=true)</td></tr>
+<tr class="memdesc:a6a82e35cb0ec90fbe4a17db4ae3539d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an <a class="el" href="structargparse_1_1_arg_holder.html" title="Holds the result of parsing arguments.">ArgHolder</a> object holding the parsed arguments.  <a href="#a6a82e35cb0ec90fbe4a17db4ae3539d4"></a><br/></td></tr>
 <tr class="memitem:a6cfba06102a610840779069dfda1b98d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structargparse_1_1_arg_holder.html">ArgHolder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceargparse.html#a6cfba06102a610840779069dfda1b98d">parse</a> (int argc, const char *argv[], const char optChar='-', bool genHelpChker=true)</td></tr>
+<tr class="memdesc:a6cfba06102a610840779069dfda1b98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">For programs that take no options.  <a href="#a6cfba06102a610840779069dfda1b98d"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Command-line argument parser with a focus on brevity. </p>
 </div><hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a9178c3eba71719d6bed428a94e42010e"></a>
+<a class="anchor" id="a336ebbf4216b617d79a43d8211600118"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">string <a class="el" href="namespaceargparse.html#a9178c3eba71719d6bed428a94e42010e">argparse::makeUsageString</a> </td>
+          <td class="memname">string <a class="el" href="namespaceargparse.html#a336ebbf4216b617d79a43d8211600118">argparse::makeUsageString</a> </td>
           <td>(</td>
           <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>progName</em>, </td>
@@ -146,13 +149,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned&#160;</td>
           <td class="paramname"><em>cols</em> = <code>80</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">unsigned&#160;</td>
           <td class="paramname"><em>helpCols</em> = <code>60</code>&#160;</td>
         </tr>
         <tr>
@@ -163,10 +166,15 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Create a usage string.</p>
+
+<p>Create a usage string. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">cols</td><td>Maximum number of columns - strings longer than this will be wrapped.</td></tr>
+    <tr><td class="paramname">progName</td><td>Name of the program as run on the command line. Typically <code>argv[0]</code> is passed. </td></tr>
+    <tr><td class="paramname">desc</td><td>Description of the program. </td></tr>
+    <tr><td class="paramname">posArgs</td><td>String representing the positional arguments. </td></tr>
+    <tr><td class="paramname">optToHelp</td><td>Mapping from option to help dialog. </td></tr>
+    <tr><td class="paramname">cols</td><td>Maximum number of columns - strings longer than this will be wrapped. </td></tr>
     <tr><td class="paramname">helpCols</td><td>Number of columns that the option help should take up.</td></tr>
   </table>
   </dd>
@@ -181,7 +189,7 @@ Functions</h2></td></tr>
              string("-a"), string("add some numbers")
              )
          )</pre></div><p> generates this help string: </p>
-<div class="fragment"><pre class="fragment"> testprog [options] arg1 arg2 arg3
+<div class="fragment"><pre class="fragment"> Usage: testprog [options] arg1 arg2 arg3
 
  This is a description of the program.
 
@@ -229,22 +237,29 @@ template&lt;class FuncType &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw (invalid_argument)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Return an <a class="el" href="structargparse_1_1_arg_holder.html" title="Holds the result of parsing arguments.">ArgHolder</a> object holding the parsed arguments.</p>
+
+<p>Return an <a class="el" href="structargparse_1_1_arg_holder.html" title="Holds the result of parsing arguments.">ArgHolder</a> object holding the parsed arguments. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">argc,argv</td><td>The arguments to main().</td></tr>
-    <tr><td class="paramname">optToChker</td><td>Should map an option string (anything beginning with <code>optChar</code>) to a checker function that takes a vector of argument strings and returns the number of arguments read. The function should also throw an <code>invalid_argument</code> exception if any arguments are invalid. For example, a simple help option checker: <div class="fragment"><pre class="fragment"> makeDict(string("-h"), [](vector&lt;string&gt; args) { return 0; })</pre></div> </td></tr>
-    <tr><td class="paramname">optChar</td><td>Signifies the start of an option.</td></tr>
+    <tr><td class="paramname">argc,argv</td><td>The arguments to main(). </td></tr>
+    <tr><td class="paramname">optToChker</td><td>Should map an option string (anything beginning with <code>optChar</code>) to a checker function that takes a vector of argument strings and returns the number of arguments read. The function should also throw an <code>invalid_argument</code> exception if any arguments are invalid. For example, a simple help option checker: <div class="fragment"><pre class="fragment">makeDict(string("-h"), [](vector&lt;string&gt; args) { return 0; })
+</pre></div> </td></tr>
+    <tr><td class="paramname">optChar</td><td>Signifies the start of an option. </td></tr>
     <tr><td class="paramname">genHelpChker</td><td>If <code>true</code>, checks "-h" and "--help" options automatically.</td></tr>
   </table>
   </dd>
 </dl>
-<p>If a checker throws an <code>invalid_argument</code> exception, it will be thrown from this function as well. An <code>invalid_argument</code> exception will also be thrown if an unknown option is encountered, . </p>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">invalid_argument</td><td>Thrown if unknown option is encountered, as well as if a checker throws an <code>invalid_argument</code> exception. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -284,8 +299,9 @@ template&lt;class FuncType &gt; </div>
       </table>
 </div>
 <div class="memdoc">
-<p>For programs that take no options.</p>
-<p>See <a class="el" href="namespaceargparse.html#a6a82e35cb0ec90fbe4a17db4ae3539d4">parse()</a> above. </p>
+
+<p>For programs that take no options. </p>
+<p>See <a class="el" href="namespaceargparse.html#a6a82e35cb0ec90fbe4a17db4ae3539d4" title="Return an ArgHolder object holding the parsed arguments.">parse()</a> above. </p>
 
 </div>
 </div>
@@ -293,7 +309,7 @@ template&lt;class FuncType &gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

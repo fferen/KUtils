@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -97,6 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -107,6 +108,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Functions for extracting the display image.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosx_1_1disp_1_1_image.html">Image</a></td></tr>
 <tr><td colspan="2"><h2><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a63adf9b0b0b0365ec428dd44fc30c659"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659">RGBType</a> { <a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659ab96ecb2ad3c69bf9019d7ed4253603b1">COLOR_BGR</a>, 
@@ -115,9 +119,8 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a31a48e8be1c4213af1131efca04b11dd"><td class="memItemLeft" align="right" valign="top">cv::Mat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1disp.html#a31a48e8be1c4213af1131efca04b11dd">getScreen</a> (cv::Mat &amp;out, <a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659">RGBType</a> destType=<a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659ab96ecb2ad3c69bf9019d7ed4253603b1">COLOR_BGR</a>)</td></tr>
-<tr class="memitem:a5b5e52b79f7873787fa3f399c9ba6e73"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1disp.html#a5b5e52b79f7873787fa3f399c9ba6e73">getScreen</a> (<a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659">RGBType</a> destType=<a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659ab96ecb2ad3c69bf9019d7ed4253603b1">COLOR_BGR</a>)</td></tr>
-<tr class="memitem:ab6b57a138594670c726dc3de6425c01e"><td class="memItemLeft" align="right" valign="top">cv::Mat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1disp.html#ab6b57a138594670c726dc3de6425c01e">CGImageRefToMat</a> (const CGImageRef &amp;image, cv::Mat &amp;out, <a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659">RGBType</a> destType=<a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659ab96ecb2ad3c69bf9019d7ed4253603b1">COLOR_BGR</a>)  throw (invalid_argument)</td></tr>
+<tr class="memitem:a8e0f791a8c9413d16403b6b793864cb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structosx_1_1disp_1_1_image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1disp.html#a8e0f791a8c9413d16403b6b793864cb7">getScreen</a> ()</td></tr>
+<tr class="memdesc:a8e0f791a8c9413d16403b6b793864cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current screen.  <a href="#a8e0f791a8c9413d16403b6b793864cb7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Functions for extracting the display image. </p>
@@ -146,85 +149,21 @@ Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="ab6b57a138594670c726dc3de6425c01e"></a>
+<a class="anchor" id="a8e0f791a8c9413d16403b6b793864cb7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cv::Mat &amp; <a class="el" href="namespaceosx_1_1disp.html#ab6b57a138594670c726dc3de6425c01e">osx::disp::CGImageRefToMat</a> </td>
+          <td class="memname"><a class="el" href="structosx_1_1disp_1_1_image.html">disp::Image</a> <a class="el" href="namespaceosx_1_1disp.html#a8e0f791a8c9413d16403b6b793864cb7">osx::disp::getScreen</a> </td>
           <td>(</td>
-          <td class="paramtype">const CGImageRef &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">cv::Mat &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659">disp::RGBType</a>&#160;</td>
-          <td class="paramname"><em>destType</em> = <code>COLOR_BGR</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw (invalid_argument)</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Convert a <code>CGImageRef</code> to a <code>cv::Mat</code>.</p>
-<p><code>image</code> must have 32 bits per pixel; if it doesn't, <code>invalid_argument</code> will be thrown.</p>
-<p><code>destType</code> specifies the pixel format of the resulting <code>cv::Mat</code>. </p>
 
-</div>
-</div>
-<a class="anchor" id="a31a48e8be1c4213af1131efca04b11dd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cv::Mat &amp; <a class="el" href="namespaceosx_1_1disp.html#a31a48e8be1c4213af1131efca04b11dd">osx::disp::getScreen</a> </td>
-          <td>(</td>
-          <td class="paramtype">cv::Mat &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659">disp::RGBType</a>&#160;</td>
-          <td class="paramname"><em>destType</em> = <code>COLOR_BGR</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Return a <code>cv::Mat</code> of the current screen.</p>
-<p><code>destType</code> is passed to <code>CGImageRefToMat</code> to acquire the <code>cv::Mat</code>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a5b5e52b79f7873787fa3f399c9ba6e73"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cv::Mat <a class="el" href="namespaceosx_1_1disp.html#a31a48e8be1c4213af1131efca04b11dd">osx::disp::getScreen</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659">disp::RGBType</a>&#160;</td>
-          <td class="paramname"><em>destType</em> = <code>COLOR_BGR</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Return the current screen. </p>
 
 </div>
 </div>
@@ -232,7 +171,7 @@ Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

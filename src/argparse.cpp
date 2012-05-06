@@ -1,5 +1,6 @@
 #include <cctype>
 
+#include <stdexcept>
 #include <string>
 #include <sstream>
 #include <iostream>
@@ -18,8 +19,8 @@ string argparse::makeUsageString(
         const string &desc,
         const string &posArgs,
         const Dict<string, string> &optToHelp,
-        int cols,
-        int helpCols
+        unsigned cols,
+        unsigned helpCols
         ) {
     const string helpSpaces(cols - helpCols, ' ');
 
@@ -29,7 +30,7 @@ string argparse::makeUsageString(
         usage << " [options]";
     }
     usage << " " << posArgs << endl << endl;
-    usage << str::wordWrap(desc, 80);
+    usage << str::wordWrap(desc, cols);
 
     if (optToHelp.empty()) {
         return usage.str();
@@ -61,7 +62,7 @@ ArgHolder argparse::parse(
         char optChar,
         bool genHelpChker
         ) {
-    ArgHolder holder{Dict<string, vector<string>>(), vector<string>(), string()};
+    ArgHolder holder{Dict<string, vector<string>>(), vector<string>()};
 
     int i = 1;
 
@@ -80,10 +81,7 @@ ArgHolder argparse::parse(
         }
 
         // option (begins with `optChar`)
-        stringstream errStrm;
-        errStrm << "unknown option " << argv[i];
-        holder.err = errStrm.str();
-        return holder;
+        throw invalid_argument(strFmt("unknown option %s", argv[i]));
     }
 
     return holder;

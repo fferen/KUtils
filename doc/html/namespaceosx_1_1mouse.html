@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,6 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosx_1_1mouse_1_1_mouse_state.html">MouseState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple data holder for a button flag and a position.  <a href="structosx_1_1mouse_1_1_mouse_state.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a025e93cf6af5808e4c8c2525fc668499"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">MouseButton</a> { <a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499aba5b540b1c997fb283ad354d66d6b5c8">LEFT_BUTTON</a>, 
@@ -118,17 +119,16 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5beb2ba12cce052099603ac3002ec47f"><td class="memItemLeft" align="right" valign="top">CGPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a5beb2ba12cce052099603ac3002ec47f">cvPtToCGPt</a> (cv::Point pt)</td></tr>
 <tr class="memitem:a96fc2b2983c0d9ee610ca9404ccc0506"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a96fc2b2983c0d9ee610ca9404ccc0506">move</a> (CGPoint pos)</td></tr>
-<tr class="memitem:a1671ac54e08642dea10d41ef9423c8d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a1671ac54e08642dea10d41ef9423c8d0">move</a> (cv::Point pos)</td></tr>
+<tr class="memdesc:a96fc2b2983c0d9ee610ca9404ccc0506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move cursor to <code>pos</code>.  <a href="#a96fc2b2983c0d9ee610ca9404ccc0506"></a><br/></td></tr>
 <tr class="memitem:af6a13b95720ba5d280a64dc3c169c4ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#af6a13b95720ba5d280a64dc3c169c4ab">down</a> (<a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">MouseButton</a> button, CGPoint pos)</td></tr>
-<tr class="memitem:a707436c4ace9b3509137a0e84b395a4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a707436c4ace9b3509137a0e84b395a4e">down</a> (<a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">MouseButton</a> button, cv::Point pos)</td></tr>
+<tr class="memdesc:af6a13b95720ba5d280a64dc3c169c4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse down event at <code>pos</code>.  <a href="#af6a13b95720ba5d280a64dc3c169c4ab"></a><br/></td></tr>
 <tr class="memitem:a653d01ba6a07d9a07581934e80cd5138"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a653d01ba6a07d9a07581934e80cd5138">up</a> (<a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">MouseButton</a> button, CGPoint pos)</td></tr>
-<tr class="memitem:aceec473053347deae91c85d33560e2fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#aceec473053347deae91c85d33560e2fd">up</a> (<a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">MouseButton</a> button, cv::Point pos)</td></tr>
+<tr class="memdesc:a653d01ba6a07d9a07581934e80cd5138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse up event at <code>pos</code>.  <a href="#a653d01ba6a07d9a07581934e80cd5138"></a><br/></td></tr>
 <tr class="memitem:af0b3d4b3af410086362a3faaff78d3b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#af0b3d4b3af410086362a3faaff78d3b6">click</a> (<a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">MouseButton</a> button, CGPoint pos)</td></tr>
-<tr class="memitem:a4fb0394a644317eab05c06aed13e3d10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a4fb0394a644317eab05c06aed13e3d10">click</a> (<a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">MouseButton</a> button, cv::Point pos)</td></tr>
+<tr class="memdesc:af0b3d4b3af410086362a3faaff78d3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse click (button down, then up) event at <code>pos</code>.  <a href="#af0b3d4b3af410086362a3faaff78d3b6"></a><br/></td></tr>
 <tr class="memitem:ac87df58c78bf4f2ed44eb74a272a155e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#ac87df58c78bf4f2ed44eb74a272a155e">drag</a> (<a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">MouseButton</a> button, CGPoint startPos, CGPoint endPos)</td></tr>
-<tr class="memitem:ab88258b91b67cdf7b5949bc9664f2a85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#ab88258b91b67cdf7b5949bc9664f2a85">drag</a> (<a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">MouseButton</a> button, cv::Point startPos, cv::Point endPos)</td></tr>
+<tr class="memdesc:ac87df58c78bf4f2ed44eb74a272a155e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse drag event at from <code>startPos</code> to <code>endPos</code>.  <a href="#ac87df58c78bf4f2ed44eb74a272a155e"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Utilities for modeling the mouse state and controlling the mouse. </p>
@@ -162,7 +162,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void <a class="el" href="namespaceosx_1_1mouse.html#af0b3d4b3af410086362a3faaff78d3b6">osx::mouse::click</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">mouse::MouseButton</a>&#160;</td>
+          <td class="paramtype">mouse::MouseButton&#160;</td>
           <td class="paramname"><em>button</em>, </td>
         </tr>
         <tr>
@@ -179,51 +179,8 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
 <p>Simulate a mouse click (button down, then up) event at <code>pos</code>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4fb0394a644317eab05c06aed13e3d10"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="namespaceosx_1_1mouse.html#af0b3d4b3af410086362a3faaff78d3b6">osx::mouse::click</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">mouse::MouseButton</a>&#160;</td>
-          <td class="paramname"><em>button</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cv::Point&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5beb2ba12cce052099603ac3002ec47f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CGPoint <a class="el" href="namespaceosx_1_1mouse.html#a5beb2ba12cce052099603ac3002ec47f">osx::mouse::cvPtToCGPt</a> </td>
-          <td>(</td>
-          <td class="paramtype">cv::Point&#160;</td>
-          <td class="paramname"><em>pt</em></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
 
 </div>
 </div>
@@ -234,7 +191,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void <a class="el" href="namespaceosx_1_1mouse.html#af6a13b95720ba5d280a64dc3c169c4ab">osx::mouse::down</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">mouse::MouseButton</a>&#160;</td>
+          <td class="paramtype">mouse::MouseButton&#160;</td>
           <td class="paramname"><em>button</em>, </td>
         </tr>
         <tr>
@@ -251,34 +208,8 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Simulate a mouse down event at <code>pos</code>. </p>
 
-</div>
-</div>
-<a class="anchor" id="a707436c4ace9b3509137a0e84b395a4e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="namespaceosx_1_1mouse.html#af6a13b95720ba5d280a64dc3c169c4ab">osx::mouse::down</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">mouse::MouseButton</a>&#160;</td>
-          <td class="paramname"><em>button</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cv::Point&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Simulate a mouse down event at <code>pos</code>. </p>
 
 </div>
 </div>
@@ -289,7 +220,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void <a class="el" href="namespaceosx_1_1mouse.html#ac87df58c78bf4f2ed44eb74a272a155e">osx::mouse::drag</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">mouse::MouseButton</a>&#160;</td>
+          <td class="paramtype">mouse::MouseButton&#160;</td>
           <td class="paramname"><em>button</em>, </td>
         </tr>
         <tr>
@@ -312,40 +243,8 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Simulate a mouse drag event at from <code>startPos</code> to <code>endPos</code>. </p>
 
-</div>
-</div>
-<a class="anchor" id="ab88258b91b67cdf7b5949bc9664f2a85"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="namespaceosx_1_1mouse.html#ac87df58c78bf4f2ed44eb74a272a155e">osx::mouse::drag</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">mouse::MouseButton</a>&#160;</td>
-          <td class="paramname"><em>button</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cv::Point&#160;</td>
-          <td class="paramname"><em>startPos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cv::Point&#160;</td>
-          <td class="paramname"><em>endPos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Simulate a mouse drag event at from <code>startPos</code> to <code>endPos</code>. </p>
 
 </div>
 </div>
@@ -363,24 +262,8 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Move cursor to <code>pos</code>. </p>
 
-</div>
-</div>
-<a class="anchor" id="a1671ac54e08642dea10d41ef9423c8d0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="namespaceosx_1_1mouse.html#a96fc2b2983c0d9ee610ca9404ccc0506">osx::mouse::move</a> </td>
-          <td>(</td>
-          <td class="paramtype">cv::Point&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Move cursor to <code>pos</code>. </p>
 
 </div>
 </div>
@@ -391,7 +274,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void <a class="el" href="namespaceosx_1_1mouse.html#a653d01ba6a07d9a07581934e80cd5138">osx::mouse::up</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">mouse::MouseButton</a>&#160;</td>
+          <td class="paramtype">mouse::MouseButton&#160;</td>
           <td class="paramname"><em>button</em>, </td>
         </tr>
         <tr>
@@ -408,34 +291,8 @@ Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Simulate a mouse up event at <code>pos</code>. </p>
 
-</div>
-</div>
-<a class="anchor" id="aceec473053347deae91c85d33560e2fd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="namespaceosx_1_1mouse.html#a653d01ba6a07d9a07581934e80cd5138">osx::mouse::up</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">mouse::MouseButton</a>&#160;</td>
-          <td class="paramname"><em>button</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cv::Point&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Simulate a mouse up event at <code>pos</code>. </p>
 
 </div>
 </div>
@@ -443,7 +300,7 @@ Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 4 2012 17:51:37 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
