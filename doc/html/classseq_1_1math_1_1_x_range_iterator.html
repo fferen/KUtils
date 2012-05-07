@@ -146,44 +146,14 @@ class seq::math::XRangeIterator&lt; NumT &gt;</h3>
 <p>Lazy iterator used for XRange(), usually not necessary to use directly. </p>
 <p><code>this-&gt;step == 0</code> means that it's the end of a range. </p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="aff997a44dcd04a95ae2e0255d9cdaf43"></a>
+<a class="anchor" id="a18b93b3a4ea6128dedb3668b35814bf0"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename NumT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef ptrdiff_t <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::<a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#aff997a44dcd04a95ae2e0255d9cdaf43">difference_type</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="afa575aa34d0b2740ccfbd9ca512309a0"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename NumT&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef forward_iterator_tag <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::<a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#afa575aa34d0b2740ccfbd9ca512309a0">iterator_category</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a594e9803c20ec88fc489fc70e61b13a2"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename NumT&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef NumT* <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::<a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#a594e9803c20ec88fc489fc70e61b13a2">pointer</a></td>
+          <td class="memname">typedef NumT <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::<a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#a18b93b3a4ea6128dedb3668b35814bf0">value_type</a></td>
         </tr>
       </table>
 </div>
@@ -206,14 +176,44 @@ template&lt;typename NumT&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a18b93b3a4ea6128dedb3668b35814bf0"></a>
+<a class="anchor" id="a594e9803c20ec88fc489fc70e61b13a2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename NumT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef NumT <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::<a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#a18b93b3a4ea6128dedb3668b35814bf0">value_type</a></td>
+          <td class="memname">typedef NumT* <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::<a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#a594e9803c20ec88fc489fc70e61b13a2">pointer</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afa575aa34d0b2740ccfbd9ca512309a0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef forward_iterator_tag <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::<a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#afa575aa34d0b2740ccfbd9ca512309a0">iterator_category</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff997a44dcd04a95ae2e0255d9cdaf43"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ptrdiff_t <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::<a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#aff997a44dcd04a95ae2e0255d9cdaf43">difference_type</a></td>
         </tr>
       </table>
 </div>
@@ -291,27 +291,6 @@ template&lt;typename OtherNumT &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a883f1df0c26af59f698f27baec0e9ce4"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename NumT&gt; </div>
-<div class="memtemplate">
-template&lt;typename OtherNumT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::operator!= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">XRangeIterator</a>&lt; OtherNumT &gt; &amp;&#160;</td>
-          <td class="paramname"><em>it</em></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a1d2dd554ef5b57918368118e40f0d5b5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -348,25 +327,6 @@ template&lt;typename NumT&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="af564e5e69dfa23d36c1258db91c91610"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename NumT&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#aff997a44dcd04a95ae2e0255d9cdaf43">difference_type</a> <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">XRangeIterator</a>&lt; NumT &gt; &amp;&#160;</td>
-          <td class="paramname"><em>it</em></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="abc9809b474c95cf6084e653fc6e0f949"></a>
 <div class="memitem">
 <div class="memproto">
@@ -388,15 +348,20 @@ template&lt;typename OtherNumT &gt; </div>
 
 </div>
 </div>
-<hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a73d7e94422117d0f2eff60edb9cb4273"></a>
+<a class="anchor" id="a883f1df0c26af59f698f27baec0e9ce4"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename NumT&gt; </div>
+<div class="memtemplate">
+template&lt;typename OtherNumT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">NumT <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::<a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#a73d7e94422117d0f2eff60edb9cb4273">step</a></td>
+          <td class="memname">bool <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">XRangeIterator</a>&lt; OtherNumT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -404,6 +369,26 @@ template&lt;typename NumT&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="af564e5e69dfa23d36c1258db91c91610"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#aff997a44dcd04a95ae2e0255d9cdaf43">difference_type</a> <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">XRangeIterator</a>&lt; NumT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="aab232a017c574d7190828cc2633aad4a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -419,6 +404,21 @@ template&lt;typename NumT&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a73d7e94422117d0f2eff60edb9cb4273"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">NumT <a class="el" href="classseq_1_1math_1_1_x_range_iterator.html">seq::math::XRangeIterator</a>&lt; NumT &gt;::<a class="el" href="classseq_1_1math_1_1_x_range_iterator.html#a73d7e94422117d0f2eff60edb9cb4273">step</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="seq_8hpp_source.html">seq.hpp</a></li>
 </ul>
@@ -426,7 +426,7 @@ template&lt;typename NumT&gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 22:14:18 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

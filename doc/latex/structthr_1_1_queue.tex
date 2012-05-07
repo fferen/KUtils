@@ -62,17 +62,6 @@ Producer-\/consumer queue.
 
 Return {\ttfamily true} if next item in queue was stored in {\ttfamily out} or {\ttfamily false} if there was no item. 
 
-\hypertarget{structthr_1_1_queue_a62768ce373068fa4b3baf574f5fed995}{\index{thr\-::\-Queue@{thr\-::\-Queue}!push@{push}}
-\index{push@{push}!thr::Queue@{thr\-::\-Queue}}
-\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf thr\-::\-Queue}$<$ T $>$\-::{\bf push} (
-\begin{DoxyParamCaption}
-\item[{const T \&}]{in}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structthr_1_1_queue_a62768ce373068fa4b3baf574f5fed995}
-
-
-Push a new item into the queue. 
-
 \hypertarget{structthr_1_1_queue_ab095129fe0ba3dc63fa7300ffe2b11b9}{\index{thr\-::\-Queue@{thr\-::\-Queue}!wait@{wait}}
 \index{wait@{wait}!thr::Queue@{thr\-::\-Queue}}
 \subsubsection[{wait}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf thr\-::\-Queue}$<$ T $>$\-::{\bf wait} (
@@ -83,6 +72,17 @@ Push a new item into the queue.
 
 
 Block until next item is stored in {\ttfamily out}. 
+
+\hypertarget{structthr_1_1_queue_a62768ce373068fa4b3baf574f5fed995}{\index{thr\-::\-Queue@{thr\-::\-Queue}!push@{push}}
+\index{push@{push}!thr::Queue@{thr\-::\-Queue}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf thr\-::\-Queue}$<$ T $>$\-::{\bf push} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structthr_1_1_queue_a62768ce373068fa4b3baf574f5fed995}
+
+
+Push a new item into the queue. 
 
 
 

@@ -1,3 +1,29 @@
+/*
+Copyright (c) 2012, Kevin Han
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
 /* Here's a useful link to the pixel formats of graphics contexts:
  *
  * http://developer.apple.com/library/ios/#documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_context/dq_context.html#//apple_ref/doc/uid/TP30001066-CH203-BCIBHHBB
@@ -10,14 +36,16 @@
 #include <ApplicationServices/ApplicationServices.h>
 
 #include "osx.hpp"
+#include "mouse.hpp"
 
 using namespace std;
-using namespace osx;
+// to avoid name conflicts
+namespace ms = mouse;
 
-static void _mouseAction(mouse::MouseButton button, CGPoint pos, CGEventType lEvtType, CGEventType rEvtType) {
+static void _mouseAction(mouse::Button button, CGPoint pos, CGEventType lEvtType, CGEventType rEvtType) {
     CGEventRef evt = CGEventCreateMouseEvent(
             nullptr,
-            button == mouse::LEFT_BUTTON ? lEvtType : rEvtType,
+            button == ms::LEFT_BUTTON ? lEvtType : rEvtType,
             pos,
             0
             );
@@ -27,41 +55,24 @@ static void _mouseAction(mouse::MouseButton button, CGPoint pos, CGEventType lEv
 
 /* Namespace `mouse` */
 
-const uint16_t mouse::MouseState::LEFT_DOWN     = 0x0001;
-const uint16_t mouse::MouseState::RIGHT_DOWN    = 0x0002;
-const uint16_t mouse::MouseState::SCROLL        = 0x0004;
-
-mouse::MouseState::MouseState()
-        : btn(0), pos(CGPointMake(-1, -1)) {
+void osx::mouse::move(CGPoint pos) {
+    _mouseAction(ms::LEFT_BUTTON, pos, kCGEventMouseMoved, kCGEventMouseMoved);
 }
 
-mouse::MouseState::MouseState(uint16_t btn, CGPoint pos)
-        : btn(btn), pos(pos) {
-}
-
-ostream &operator<<(ostream &out, const mouse::MouseState &m) {
-    out << "<MouseState btn=" << m.btn << " pos=(" << m.pos.x << ", " << m.pos.y << ")>";
-    return out;
-}
-
-void mouse::move(CGPoint pos) {
-    _mouseAction(mouse::LEFT_BUTTON, pos, kCGEventMouseMoved, kCGEventMouseMoved);
-}
-
-void mouse::down(mouse::MouseButton button, CGPoint pos) {
+void osx::mouse::down(ms::Button button, CGPoint pos) {
     _mouseAction(button, pos, kCGEventLeftMouseDown, kCGEventRightMouseDown);
 }
 
-void mouse::up(mouse::MouseButton button, CGPoint pos) {
+void osx::mouse::up(ms::Button button, CGPoint pos) {
     _mouseAction(button, pos, kCGEventLeftMouseUp, kCGEventRightMouseUp);
 }
 
-void mouse::click(mouse::MouseButton button, CGPoint pos) {
+void osx::mouse::click(ms::Button button, CGPoint pos) {
     _mouseAction(button, pos, kCGEventLeftMouseDown, kCGEventRightMouseDown);
     _mouseAction(button, pos, kCGEventLeftMouseUp, kCGEventRightMouseUp);
 }
 
-void mouse::drag(mouse::MouseButton button, CGPoint startPos, CGPoint endPos) {
+void osx::mouse::drag(ms::Button button, CGPoint startPos, CGPoint endPos) {
     _mouseAction(button, startPos, kCGEventLeftMouseDown, kCGEventRightMouseDown);
     _mouseAction(button, endPos, kCGEventMouseMoved, kCGEventMouseMoved);
     _mouseAction(button, endPos, kCGEventLeftMouseUp, kCGEventRightMouseUp);
@@ -81,14 +92,14 @@ osx::disp::Image::operator CGImageRef() const {
     return this->get();
 }
 
-disp::Image osx::disp::getScreen() {
+osx::disp::Image osx::disp::getScreen() {
     return CGDisplayCreateImage(CGMainDisplayID());
 }
 
 /* Printers */
 
 ostream &operator<<(ostream &out, const CGColorSpaceRef &colorSpace) {
-    out << "<CGColorSpace model=" << COLOR_SPACE_MODEL_NAMES[CGColorSpaceGetModel(colorSpace) + 1] << ">";
+    out << "<CGColorSpace model=" << osx::COLOR_SPACE_MODEL_NAMES[CGColorSpaceGetModel(colorSpace) + 1] << ">";
     return out;
 }
 
@@ -97,7 +108,7 @@ ostream &operator<<(ostream &out, const CGImageRef &imRef) {
     auto bpc = CGImageGetBitsPerComponent(imRef);
     out << "<CGImageRef size=(" << CGImageGetWidth(imRef) << ", " << CGImageGetHeight(imRef) << ") bitsPerComponent="
         << bpc << " chans=" << CGImageGetBitsPerPixel(imRef) / bpc << " colorSpace=" << colorSpace
-        << " alphaInfo=" << ALPHA_INFO_NAMES[CGImageGetAlphaInfo(imRef)] << ">";
+        << " alphaInfo=" << osx::ALPHA_INFO_NAMES[CGImageGetAlphaInfo(imRef)] << ">";
     return out;
 }
 

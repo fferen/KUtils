@@ -21,18 +21,18 @@ Simple data holder for a button flag and a position.
 \begin{DoxyCompactItemize}
 \item 
 uint16\-\_\-t \hyperlink{structmouse_1_1_state_a27fa449d068a08894434d44c160f0f00}{btn}
-\begin{DoxyCompactList}\small\item\em Can be any O\-R'd combination of the above flags. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Can be any {\ttfamily O\-R}'d combination of the below flags, or {\ttfamily 0} if no buttons down. \end{DoxyCompactList}\item 
 \hyperlink{namespacekmath_afaf3fde3b20c9932e144eb48e736cad9}{kmath\-::\-Point\-I} \hyperlink{structmouse_1_1_state_ae4c6bba70a3c69992f7624bfc908b2c0}{pos}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Mouse position in integer coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static const uint16\-\_\-t \hyperlink{structmouse_1_1_state_a4f5eca97c989f6e8eceee194e2121fe8}{L\-E\-F\-T\-\_\-\-D\-O\-W\-N} = 0x0001
-\item 
+\begin{DoxyCompactList}\small\item\em Flag indicating left mouse button is down. \end{DoxyCompactList}\item 
 static const uint16\-\_\-t \hyperlink{structmouse_1_1_state_ae07e315484a778beb62c47202be2808f}{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N} = 0x0002
-\item 
-static const uint16\-\_\-t \hyperlink{structmouse_1_1_state_a1b6e0054161b8a9dd801529566f34228}{S\-C\-R\-O\-L\-L} = 0x0004
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flag indicating right mouse button is down. \end{DoxyCompactList}\item 
+static const uint16\-\_\-t \hyperlink{structmouse_1_1_state_ad6aff6557abd8a018d1c57d9fd224d85}{M\-I\-D\-D\-L\-E\-\_\-\-D\-O\-W\-N} = 0x0004
+\begin{DoxyCompactList}\small\item\em Flag indicating middle mouse button is down. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -75,25 +75,41 @@ Simple data holder for a button flag and a position.
 
 
 \subsection{Member Data Documentation}
+\hypertarget{structmouse_1_1_state_a4f5eca97c989f6e8eceee194e2121fe8}{\index{mouse\-::\-State@{mouse\-::\-State}!L\-E\-F\-T\-\_\-\-D\-O\-W\-N@{L\-E\-F\-T\-\_\-\-D\-O\-W\-N}}
+\index{L\-E\-F\-T\-\_\-\-D\-O\-W\-N@{L\-E\-F\-T\-\_\-\-D\-O\-W\-N}!mouse::State@{mouse\-::\-State}}
+\subsubsection[{L\-E\-F\-T\-\_\-\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\-\_\-t {\bf State\-::\-L\-E\-F\-T\-\_\-\-D\-O\-W\-N} = 0x0001\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{structmouse_1_1_state_a4f5eca97c989f6e8eceee194e2121fe8}
+
+
+Flag indicating left mouse button is down. 
+
+\hypertarget{structmouse_1_1_state_ae07e315484a778beb62c47202be2808f}{\index{mouse\-::\-State@{mouse\-::\-State}!R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N@{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}}
+\index{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N@{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}!mouse::State@{mouse\-::\-State}}
+\subsubsection[{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\-\_\-t {\bf State\-::\-R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N} = 0x0002\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{structmouse_1_1_state_ae07e315484a778beb62c47202be2808f}
+
+
+Flag indicating right mouse button is down. 
+
+\hypertarget{structmouse_1_1_state_ad6aff6557abd8a018d1c57d9fd224d85}{\index{mouse\-::\-State@{mouse\-::\-State}!M\-I\-D\-D\-L\-E\-\_\-\-D\-O\-W\-N@{M\-I\-D\-D\-L\-E\-\_\-\-D\-O\-W\-N}}
+\index{M\-I\-D\-D\-L\-E\-\_\-\-D\-O\-W\-N@{M\-I\-D\-D\-L\-E\-\_\-\-D\-O\-W\-N}!mouse::State@{mouse\-::\-State}}
+\subsubsection[{M\-I\-D\-D\-L\-E\-\_\-\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\-\_\-t {\bf State\-::\-M\-I\-D\-D\-L\-E\-\_\-\-D\-O\-W\-N} = 0x0004\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{structmouse_1_1_state_ad6aff6557abd8a018d1c57d9fd224d85}
+
+
+Flag indicating middle mouse button is down. 
+
 \hypertarget{structmouse_1_1_state_a27fa449d068a08894434d44c160f0f00}{\index{mouse\-::\-State@{mouse\-::\-State}!btn@{btn}}
 \index{btn@{btn}!mouse::State@{mouse\-::\-State}}
 \subsubsection[{btn}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf mouse\-::\-State\-::btn}}}\label{structmouse_1_1_state_a27fa449d068a08894434d44c160f0f00}
 
 
-Can be any O\-R'd combination of the above flags. 
+Can be any {\ttfamily O\-R}'d combination of the below flags, or {\ttfamily 0} if no buttons down. 
 
-\hypertarget{structmouse_1_1_state_a4f5eca97c989f6e8eceee194e2121fe8}{\index{mouse\-::\-State@{mouse\-::\-State}!L\-E\-F\-T\-\_\-\-D\-O\-W\-N@{L\-E\-F\-T\-\_\-\-D\-O\-W\-N}}
-\index{L\-E\-F\-T\-\_\-\-D\-O\-W\-N@{L\-E\-F\-T\-\_\-\-D\-O\-W\-N}!mouse::State@{mouse\-::\-State}}
-\subsubsection[{L\-E\-F\-T\-\_\-\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\-\_\-t {\bf State\-::\-L\-E\-F\-T\-\_\-\-D\-O\-W\-N} = 0x0001\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{structmouse_1_1_state_a4f5eca97c989f6e8eceee194e2121fe8}
 \hypertarget{structmouse_1_1_state_ae4c6bba70a3c69992f7624bfc908b2c0}{\index{mouse\-::\-State@{mouse\-::\-State}!pos@{pos}}
 \index{pos@{pos}!mouse::State@{mouse\-::\-State}}
 \subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf kmath\-::\-Point\-I} {\bf mouse\-::\-State\-::pos}}}\label{structmouse_1_1_state_ae4c6bba70a3c69992f7624bfc908b2c0}
-\hypertarget{structmouse_1_1_state_ae07e315484a778beb62c47202be2808f}{\index{mouse\-::\-State@{mouse\-::\-State}!R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N@{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}}
-\index{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N@{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}!mouse::State@{mouse\-::\-State}}
-\subsubsection[{R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\-\_\-t {\bf State\-::\-R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N} = 0x0002\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{structmouse_1_1_state_ae07e315484a778beb62c47202be2808f}
-\hypertarget{structmouse_1_1_state_a1b6e0054161b8a9dd801529566f34228}{\index{mouse\-::\-State@{mouse\-::\-State}!S\-C\-R\-O\-L\-L@{S\-C\-R\-O\-L\-L}}
-\index{S\-C\-R\-O\-L\-L@{S\-C\-R\-O\-L\-L}!mouse::State@{mouse\-::\-State}}
-\subsubsection[{S\-C\-R\-O\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\-\_\-t {\bf State\-::\-S\-C\-R\-O\-L\-L} = 0x0004\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{structmouse_1_1_state_a1b6e0054161b8a9dd801529566f34228}
+
+
+Mouse position in integer coordinates. 
+
 
 
 The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}

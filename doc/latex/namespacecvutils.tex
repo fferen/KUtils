@@ -23,6 +23,7 @@ struct \hyperlink{structcvutils_1_1___data_depth___fixed_3_01uchar_01_4}{\-\_\-\
 struct \hyperlink{structcvutils_1_1_video_reader}{Video\-Reader}
 \begin{DoxyCompactList}\small\item\em Represents a video input source (either a video file or camera). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
+{\bf }\par
 \begin{DoxyCompactItemize}
 \item 
 enum \hyperlink{namespacecvutils_a955c1d8733f727414da8a357b938ced7}{X\-Loc} \{ \hyperlink{namespacecvutils_a955c1d8733f727414da8a357b938ced7a6a9a0a917be940c0641d145580dcf0f7}{F\-I\-X\-\_\-\-C\-E\-N\-T\-E\-R\-\_\-\-X}, 
@@ -34,18 +35,15 @@ enum \hyperlink{namespacecvutils_a0a32f5be1c20397001a2cdc59bacec81}{Y\-Loc} \{ \
 \hyperlink{namespacecvutils_a0a32f5be1c20397001a2cdc59bacec81a1ef7dcf2027f67cb73fe3c2b8283e680}{F\-I\-X\-\_\-\-T\-O\-P}, 
 \hyperlink{namespacecvutils_a0a32f5be1c20397001a2cdc59bacec81a3f77fa48f399deb5768cbcf63d1f9eae}{F\-I\-X\-\_\-\-B\-O\-T\-T\-O\-M}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Specifies positions for affixing {\ttfamily cv\-::\-Rect}s or {\ttfamily cv\-::\-Size}s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{namespacecvutils_aa292da4b50c7692374fdde56afdd6baf}{wait\-For\-Keypress} ()
 \begin{DoxyCompactList}\small\item\em Block until a key is pressed. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\cv\-::\-Point \hyperlink{namespacecvutils_a828567eec14cbe1369c315d025f108ba}{to\-C\-V\-Pt} (\hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$ T $>$ pt)
-\begin{DoxyCompactList}\small\item\em Convert a {\ttfamily \hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$T$>$} to a {\ttfamily cv\-::\-Point}. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\\hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$ T $>$ \hyperlink{namespacecvutils_ab27154874f930e865580b2b3c6afead5}{to\-C\-G\-Pt} (cv\-::\-Point pt)
-\begin{DoxyCompactList}\small\item\em Convert a {\ttfamily cv\-::\-Point} to a {\ttfamily \hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$T$>$}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename \-\_\-\-Func\-T $>$ }\\void \hyperlink{namespacecvutils_a9a51cd204369adbf1321482a67c101dc}{apply\-Binary\-Op} (const \-\_\-\-Func\-T \&func, cv\-::\-Mat\-\_\-$<$ T1 $>$ \&m1, cv\-::\-Mat\-\_\-$<$ T2 $>$ \&m2)
-\begin{DoxyCompactList}\small\item\em For each pixel in {\ttfamily m1} and {\ttfamily m2}, call\-: \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em For each pixel in {\ttfamily m1} and {\ttfamily m2}, call {\ttfamily func} like so\-: \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename \-\_\-\-Func\-T $>$ }\\void \hyperlink{namespacecvutils_a624390fc5d29f7ca9f2342f6ae7849be}{apply\-Binary\-Op} (const \-\_\-\-Func\-T \&func, const cv\-::\-Mat\-\_\-$<$ T1 $>$ \&m1, cv\-::\-Mat\-\_\-$<$ T2 $>$ \&m2)
 \begin{DoxyCompactList}\small\item\em Partly const version of \hyperlink{namespacecvutils_a9a51cd204369adbf1321482a67c101dc}{apply\-Binary\-Op()}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename \-\_\-\-Func\-T $>$ }\\void \hyperlink{namespacecvutils_a18bf9198d170d4f95ebeda01c4c66b48}{apply\-Binary\-Op} (const \-\_\-\-Func\-T \&func, cv\-::\-Mat\-\_\-$<$ T1 $>$ \&m1, const cv\-::\-Mat\-\_\-$<$ T2 $>$ \&m2)
@@ -53,23 +51,21 @@ void \hyperlink{namespacecvutils_aa292da4b50c7692374fdde56afdd6baf}{wait\-For\-K
 {\footnotesize template$<$typename T1 , typename T2 , typename \-\_\-\-Func\-T $>$ }\\void \hyperlink{namespacecvutils_a7de5d736aac8827c278399e59cdb62ce}{apply\-Binary\-Op} (const \-\_\-\-Func\-T \&func, const cv\-::\-Mat\-\_\-$<$ T1 $>$ \&m1, const cv\-::\-Mat\-\_\-$<$ T2 $>$ \&m2)
 \begin{DoxyCompactList}\small\item\em Const version of \hyperlink{namespacecvutils_a9a51cd204369adbf1321482a67c101dc}{apply\-Binary\-Op()}. \end{DoxyCompactList}\item 
 cv\-::\-Scalar \hyperlink{namespacecvutils_abcad4782a40d57854115ea2dcdab401b}{rand\-Color} ()
-\begin{DoxyCompactList}\small\item\em Return a random R\-G\-B color as a cv\-::\-Scalar. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Return a random R\-G\-B color. \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_a683e21d8e2c62e903c76ae0279e4a94d}{draw\-Polygon} (cv\-::\-Mat \&im, const vector$<$ cv\-::\-Point $>$ \&pts, const cv\-::\-Scalar \&color=cv\-::\-Scalar(255, 255, 255), int thickness=1, int line\-Type=8, bool convex=true)
 \begin{DoxyCompactList}\small\item\em Draw the outline of a closed polygon specified by {\ttfamily pts} on {\ttfamily im}. \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_ada4f02293fd7783beff2240b94d625a7}{expand\-Mat} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest, cv\-::\-Size new\-Size, cv\-::\-Point offset, cv\-::\-Scalar fill\-Val=cv\-::\-Scalar())
 \begin{DoxyCompactList}\small\item\em Pad {\ttfamily src} to a larger size and store in {\ttfamily dest}, filling extra space with {\ttfamily fill\-Val}. \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_a128502dc926237b41ee2598574a4b409}{expand\-Mat} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest, cv\-::\-Size new\-Size, cv\-::\-Scalar fill\-Val=cv\-::\-Scalar(), \hyperlink{namespacecvutils_a955c1d8733f727414da8a357b938ced7}{X\-Loc} x\-Flag=\hyperlink{namespacecvutils_a955c1d8733f727414da8a357b938ced7a6a9a0a917be940c0641d145580dcf0f7}{F\-I\-X\-\_\-\-C\-E\-N\-T\-E\-R\-\_\-\-X}, \hyperlink{namespacecvutils_a0a32f5be1c20397001a2cdc59bacec81}{Y\-Loc} y\-Flag=\hyperlink{namespacecvutils_a0a32f5be1c20397001a2cdc59bacec81ad6382055c3ad3cb882f8f123e3b64f38}{F\-I\-X\-\_\-\-C\-E\-N\-T\-E\-R\-\_\-\-Y})
-\item 
+\begin{DoxyCompactList}\small\item\em Pad {\ttfamily src} to a larger size and store in {\ttfamily dest}, filling extra space with {\ttfamily fill\-Val}. \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_afce5aa1e29332624c3f7cbabcbe19f69}{cvt\-B\-G\-R2\-R\-G} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest)
 \begin{DoxyCompactList}\small\item\em Convert a matrix from B\-G\-R color space to rg chromaticity space, with the 3rd channel unused. \end{DoxyCompactList}\item 
-void \hyperlink{namespacecvutils_aa787df79b1daecd591a52fd071ac5618}{face\-Detect\-Scaled} (const cv\-::\-Mat \&src, float scale, vector$<$ cv\-::\-Rect $>$ \&out)
-\begin{DoxyCompactList}\small\item\em Scale {\ttfamily src} (not in place) and find {\ttfamily cv\-::\-Rect}s containing faces, then scale the {\ttfamily cv\-::\-Rect}s back to original size. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class In\-Seq\-T , template$<$ class T=\-In\-Seq\-T, typename...\-Args $>$ class Out\-Seq\-T, class Dist\-Func\-T $>$ }\\void \hyperlink{namespacecvutils_acbbf9e8cbd6decade9a79781d981d085}{cluster} (const In\-Seq\-T \&items, const Dist\-Func\-T \&get\-Dist, float max\-Dist, Out\-Seq\-T$<$ In\-Seq\-T $>$ \&clusters)
 \begin{DoxyCompactList}\small\item\em Generic naive clustering algorithm ({\ttfamily O(n$^\wedge$2)} worst case). \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}{matwrite} (const char $\ast$file\-Name, const cv\-::\-Mat \&m)
-\begin{DoxyCompactList}\small\item\em Save cv\-::\-Mat in file. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Save Mat in file. \end{DoxyCompactList}\item 
 cv\-::\-Mat \hyperlink{namespacecvutils_ad6c54561b8064273ce92dc34fd8d5c06}{matread} (const char $\ast$file\-Name)
-\begin{DoxyCompactList}\small\item\em Read cv\-::\-Mat from file saved with {\ttfamily \hyperlink{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}{matwrite()}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Read Mat from file saved with {\ttfamily \hyperlink{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}{matwrite()}}. \end{DoxyCompactList}\item 
 double \hyperlink{namespacecvutils_a5a05bf26e8f5d1309e36ba3596618c7e}{integral\-Mat\-Sum} (const cv\-::\-Mat \&integral\-Mat, cv\-::\-Rect roi)
 \begin{DoxyCompactList}\small\item\em Return the sum of all pixels within {\ttfamily roi} using an integral image. \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_adaaa279a13adf2231b2985a5313ef446}{erodilate} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest, unsigned times)
@@ -108,6 +104,10 @@ Specifies positions for affixing {\ttfamily cv\-::\-Rect}s or {\ttfamily cv\-::\
 \hypertarget{namespacecvutils_a0a32f5be1c20397001a2cdc59bacec81}{\index{cvutils@{cvutils}!Y\-Loc@{Y\-Loc}}
 \index{Y\-Loc@{Y\-Loc}!cvutils@{cvutils}}
 \subsubsection[{Y\-Loc}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf cvutils\-::\-Y\-Loc}}}\label{namespacecvutils_a0a32f5be1c20397001a2cdc59bacec81}
+
+
+Specifies positions for affixing {\ttfamily cv\-::\-Rect}s or {\ttfamily cv\-::\-Size}s. 
+
 \begin{Desc}
 \item[Enumerator\-: ]\par
 \begin{description}
@@ -123,7 +123,18 @@ Specifies positions for affixing {\ttfamily cv\-::\-Rect}s or {\ttfamily cv\-::\
 
 
 \subsection{Function Documentation}
-\hypertarget{namespacecvutils_a9a51cd204369adbf1321482a67c101dc}{\index{cvutils@{cvutils}!apply\-Binary\-Op@{apply\-Binary\-Op}}
+\hypertarget{namespacecvutils_aa292da4b50c7692374fdde56afdd6baf}{\index{cvutils@{cvutils}!wait\-For\-Keypress@{wait\-For\-Keypress}}
+\index{wait\-For\-Keypress@{wait\-For\-Keypress}!cvutils@{cvutils}}
+\subsubsection[{wait\-For\-Keypress}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::wait\-For\-Keypress} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacecvutils_aa292da4b50c7692374fdde56afdd6baf}
+
+
+Block until a key is pressed. 
+
+Focus must be in an Open\-C\-V window. \hypertarget{namespacecvutils_a9a51cd204369adbf1321482a67c101dc}{\index{cvutils@{cvutils}!apply\-Binary\-Op@{apply\-Binary\-Op}}
 \index{apply\-Binary\-Op@{apply\-Binary\-Op}!cvutils@{cvutils}}
 \subsubsection[{apply\-Binary\-Op}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename \-\_\-\-Func\-T $>$ void {\bf cvutils\-::apply\-Binary\-Op} (
 \begin{DoxyParamCaption}
@@ -134,7 +145,7 @@ Specifies positions for affixing {\ttfamily cv\-::\-Rect}s or {\ttfamily cv\-::\
 )}}\label{namespacecvutils_a9a51cd204369adbf1321482a67c101dc}
 
 
-For each pixel in {\ttfamily m1} and {\ttfamily m2}, call\-: 
+For each pixel in {\ttfamily m1} and {\ttfamily m2}, call {\ttfamily func} like so\-: 
 
 \begin{DoxyVerb} func(int row, int col, T1 *ptr (pointer to element in m1), T2 *ptr (pointer to element in m2))\end{DoxyVerb}
  
@@ -181,60 +192,18 @@ Partly const version of \hyperlink{namespacecvutils_a9a51cd204369adbf1321482a67c
 
 Const version of \hyperlink{namespacecvutils_a9a51cd204369adbf1321482a67c101dc}{apply\-Binary\-Op()}. 
 
-\hypertarget{namespacecvutils_a68b814f0c27087d28d1723ba68681858}{\index{cvutils@{cvutils}!bin\-Mask\-To\-G\-C\-Mask@{bin\-Mask\-To\-G\-C\-Mask}}
-\index{bin\-Mask\-To\-G\-C\-Mask@{bin\-Mask\-To\-G\-C\-Mask}!cvutils@{cvutils}}
-\subsubsection[{bin\-Mask\-To\-G\-C\-Mask}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::bin\-Mask\-To\-G\-C\-Mask} (
+\hypertarget{namespacecvutils_abcad4782a40d57854115ea2dcdab401b}{\index{cvutils@{cvutils}!rand\-Color@{rand\-Color}}
+\index{rand\-Color@{rand\-Color}!cvutils@{cvutils}}
+\subsubsection[{rand\-Color}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Scalar {\bf cvutils\-::rand\-Color} (
 \begin{DoxyParamCaption}
-\item[{const cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{mask, }
-\item[{cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{out}
+{}
 \end{DoxyParamCaption}
-)}}\label{namespacecvutils_a68b814f0c27087d28d1723ba68681858}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespacecvutils_abcad4782a40d57854115ea2dcdab401b}
 
 
-Convert a binary mask (non-\/zero == on) to a Grab\-Cut mask, using this pixel mapping\-: 
+Return a random R\-G\-B color. 
 
-nonzero -\/$>$ {\ttfamily G\-C\-\_\-\-P\-R\-\_\-\-F\-G\-D} zero -\/$>$ {\ttfamily G\-C\-\_\-\-P\-R\-\_\-\-B\-G\-D} \hypertarget{namespacecvutils_acbbf9e8cbd6decade9a79781d981d085}{\index{cvutils@{cvutils}!cluster@{cluster}}
-\index{cluster@{cluster}!cvutils@{cvutils}}
-\subsubsection[{cluster}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class In\-Seq\-T , template$<$ class T=\-In\-Seq\-T, typename...\-Args $>$ class Out\-Seq\-T, class Dist\-Func\-T $>$ void {\bf cvutils\-::cluster} (
-\begin{DoxyParamCaption}
-\item[{const In\-Seq\-T \&}]{items, }
-\item[{const Dist\-Func\-T \&}]{get\-Dist, }
-\item[{float}]{max\-Dist, }
-\item[{Out\-Seq\-T$<$ In\-Seq\-T $>$ \&}]{clusters}
-\end{DoxyParamCaption}
-)}}\label{namespacecvutils_acbbf9e8cbd6decade9a79781d981d085}
-
-
-Generic naive clustering algorithm ({\ttfamily O(n$^\wedge$2)} worst case). 
-
-An item is added to the cluster if it is within {\ttfamily max\-Dist} from all other items in the cluster.
-
-{\ttfamily get\-Dist} should take two items and return their distance. \hypertarget{namespacecvutils_afce5aa1e29332624c3f7cbabcbe19f69}{\index{cvutils@{cvutils}!cvt\-B\-G\-R2\-R\-G@{cvt\-B\-G\-R2\-R\-G}}
-\index{cvt\-B\-G\-R2\-R\-G@{cvt\-B\-G\-R2\-R\-G}!cvutils@{cvutils}}
-\subsubsection[{cvt\-B\-G\-R2\-R\-G}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::cvt\-B\-G\-R2\-R\-G} (
-\begin{DoxyParamCaption}
-\item[{const cv\-::\-Mat \&}]{src, }
-\item[{cv\-::\-Mat \&}]{dest}
-\end{DoxyParamCaption}
-)}}\label{namespacecvutils_afce5aa1e29332624c3f7cbabcbe19f69}
-
-
-Convert a matrix from B\-G\-R color space to rg chromaticity space, with the 3rd channel unused. 
-
-\hypertarget{namespacecvutils_a940f4f576e232256718ac607138d1a03}{\index{cvutils@{cvutils}!dilerode@{dilerode}}
-\index{dilerode@{dilerode}!cvutils@{cvutils}}
-\subsubsection[{dilerode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::dilerode} (
-\begin{DoxyParamCaption}
-\item[{const cv\-::\-Mat \&}]{src, }
-\item[{cv\-::\-Mat \&}]{dest, }
-\item[{unsigned}]{times}
-\end{DoxyParamCaption}
-)}}\label{namespacecvutils_a940f4f576e232256718ac607138d1a03}
-
-
-Call default {\ttfamily dilate()} {\ttfamily times} times, then default {\ttfamily erode()} {\ttfamily times} times. 
-
-This is useful to fill in small gaps while preserving area. \hypertarget{namespacecvutils_a683e21d8e2c62e903c76ae0279e4a94d}{\index{cvutils@{cvutils}!draw\-Polygon@{draw\-Polygon}}
+\hypertarget{namespacecvutils_a683e21d8e2c62e903c76ae0279e4a94d}{\index{cvutils@{cvutils}!draw\-Polygon@{draw\-Polygon}}
 \index{draw\-Polygon@{draw\-Polygon}!cvutils@{cvutils}}
 \subsubsection[{draw\-Polygon}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::draw\-Polygon} (
 \begin{DoxyParamCaption}
@@ -250,20 +219,7 @@ This is useful to fill in small gaps while preserving area. \hypertarget{namespa
 
 Draw the outline of a closed polygon specified by {\ttfamily pts} on {\ttfamily im}. 
 
-If {\ttfamily thickness} $<$ 0, draw a filled polygon. This uses {\ttfamily fill\-Convex\-Poly} if {\ttfamily convex} is true, else {\ttfamily fill\-Poly} (the flag {\ttfamily convex} is only examined if {\ttfamily thickness} $<$ 0). \hypertarget{namespacecvutils_adaaa279a13adf2231b2985a5313ef446}{\index{cvutils@{cvutils}!erodilate@{erodilate}}
-\index{erodilate@{erodilate}!cvutils@{cvutils}}
-\subsubsection[{erodilate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::erodilate} (
-\begin{DoxyParamCaption}
-\item[{const cv\-::\-Mat \&}]{src, }
-\item[{cv\-::\-Mat \&}]{dest, }
-\item[{unsigned}]{times}
-\end{DoxyParamCaption}
-)}}\label{namespacecvutils_adaaa279a13adf2231b2985a5313ef446}
-
-
-Call default {\ttfamily erode()} {\ttfamily times} times, then default {\ttfamily dilate()} {\ttfamily times} times. 
-
-This is useful to remove small areas of noise while preserving area. \hypertarget{namespacecvutils_ada4f02293fd7783beff2240b94d625a7}{\index{cvutils@{cvutils}!expand\-Mat@{expand\-Mat}}
+If {\ttfamily thickness} $<$ 0, draw a filled polygon. This uses {\ttfamily fill\-Convex\-Poly} if {\ttfamily convex} is true, else {\ttfamily fill\-Poly} (the flag {\ttfamily convex} is only examined if {\ttfamily thickness} $<$ 0). \hypertarget{namespacecvutils_ada4f02293fd7783beff2240b94d625a7}{\index{cvutils@{cvutils}!expand\-Mat@{expand\-Mat}}
 \index{expand\-Mat@{expand\-Mat}!cvutils@{cvutils}}
 \subsubsection[{expand\-Mat}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::expand\-Mat} (
 \begin{DoxyParamCaption}
@@ -280,9 +236,7 @@ Pad {\ttfamily src} to a larger size and store in {\ttfamily dest}, filling extr
 
 This is O(1) as no data is copied.
 
-The first version takes a point {\ttfamily offset} where the top-\/left of {\ttfamily src} will go.
-
-The second version takes location flags to affix {\ttfamily src} in a certain position. \hypertarget{namespacecvutils_a128502dc926237b41ee2598574a4b409}{\index{cvutils@{cvutils}!expand\-Mat@{expand\-Mat}}
+This version takes a point {\ttfamily offset} where the top-\/left of {\ttfamily src} will go. \hypertarget{namespacecvutils_a128502dc926237b41ee2598574a4b409}{\index{cvutils@{cvutils}!expand\-Mat@{expand\-Mat}}
 \index{expand\-Mat@{expand\-Mat}!cvutils@{cvutils}}
 \subsubsection[{expand\-Mat}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::expand\-Mat} (
 \begin{DoxyParamCaption}
@@ -294,39 +248,64 @@ The second version takes location flags to affix {\ttfamily src} in a certain po
 \item[{Y\-Loc}]{y\-Flag = {\ttfamily FIX\-\_\-CENTER\-\_\-Y}}
 \end{DoxyParamCaption}
 )}}\label{namespacecvutils_a128502dc926237b41ee2598574a4b409}
-\hypertarget{namespacecvutils_aa787df79b1daecd591a52fd071ac5618}{\index{cvutils@{cvutils}!face\-Detect\-Scaled@{face\-Detect\-Scaled}}
-\index{face\-Detect\-Scaled@{face\-Detect\-Scaled}!cvutils@{cvutils}}
-\subsubsection[{face\-Detect\-Scaled}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::face\-Detect\-Scaled} (
+
+
+Pad {\ttfamily src} to a larger size and store in {\ttfamily dest}, filling extra space with {\ttfamily fill\-Val}. 
+
+This is O(1) as no data is copied.
+
+This version takes location flags to affix {\ttfamily src} in a certain position. \hypertarget{namespacecvutils_afce5aa1e29332624c3f7cbabcbe19f69}{\index{cvutils@{cvutils}!cvt\-B\-G\-R2\-R\-G@{cvt\-B\-G\-R2\-R\-G}}
+\index{cvt\-B\-G\-R2\-R\-G@{cvt\-B\-G\-R2\-R\-G}!cvutils@{cvutils}}
+\subsubsection[{cvt\-B\-G\-R2\-R\-G}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::cvt\-B\-G\-R2\-R\-G} (
 \begin{DoxyParamCaption}
 \item[{const cv\-::\-Mat \&}]{src, }
-\item[{float}]{scale, }
-\item[{vector$<$ cv\-::\-Rect $>$ \&}]{out}
+\item[{cv\-::\-Mat \&}]{dest}
 \end{DoxyParamCaption}
-)}}\label{namespacecvutils_aa787df79b1daecd591a52fd071ac5618}
+)}}\label{namespacecvutils_afce5aa1e29332624c3f7cbabcbe19f69}
 
 
-Scale {\ttfamily src} (not in place) and find {\ttfamily cv\-::\-Rect}s containing faces, then scale the {\ttfamily cv\-::\-Rect}s back to original size. 
+Convert a matrix from B\-G\-R color space to rg chromaticity space, with the 3rd channel unused. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em src} & Input 8-\/bit grayscale image. \\
-\hline
-{\em out} & Output vector of {\ttfamily cv\-::\-Rect}s bounding faces. \\
-\hline
-\end{DoxyParams}
-\hypertarget{namespacecvutils_a2a38c5f1b76d38eb5385bf0bd709a5ed}{\index{cvutils@{cvutils}!gc\-Mask\-To\-Bin\-Mask@{gc\-Mask\-To\-Bin\-Mask}}
-\index{gc\-Mask\-To\-Bin\-Mask@{gc\-Mask\-To\-Bin\-Mask}!cvutils@{cvutils}}
-\subsubsection[{gc\-Mask\-To\-Bin\-Mask}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::gc\-Mask\-To\-Bin\-Mask} (
+\hypertarget{namespacecvutils_acbbf9e8cbd6decade9a79781d981d085}{\index{cvutils@{cvutils}!cluster@{cluster}}
+\index{cluster@{cluster}!cvutils@{cvutils}}
+\subsubsection[{cluster}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class In\-Seq\-T , template$<$ class T=\-In\-Seq\-T, typename...\-Args $>$ class Out\-Seq\-T, class Dist\-Func\-T $>$ void {\bf cvutils\-::cluster} (
 \begin{DoxyParamCaption}
-\item[{const cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{mask, }
-\item[{cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{out}
+\item[{const In\-Seq\-T \&}]{items, }
+\item[{const Dist\-Func\-T \&}]{get\-Dist, }
+\item[{float}]{max\-Dist, }
+\item[{Out\-Seq\-T$<$ In\-Seq\-T $>$ \&}]{clusters}
 \end{DoxyParamCaption}
-)}}\label{namespacecvutils_a2a38c5f1b76d38eb5385bf0bd709a5ed}
+)}}\label{namespacecvutils_acbbf9e8cbd6decade9a79781d981d085}
 
 
-Convert a Grab\-Cut mask to a binary mask, using this pixel mapping\-: 
+Generic naive clustering algorithm ({\ttfamily O(n$^\wedge$2)} worst case). 
 
-\{{\ttfamily G\-C\-\_\-\-P\-R\-\_\-\-B\-G\-D}, {\ttfamily G\-C\-\_\-\-B\-G\-D}\} -\/$>$ 0 \{{\ttfamily G\-C\-\_\-\-P\-R\-\_\-\-F\-G\-D}, {\ttfamily G\-C\-\_\-\-F\-G\-D}\} -\/$>$ 255 \hypertarget{namespacecvutils_a5a05bf26e8f5d1309e36ba3596618c7e}{\index{cvutils@{cvutils}!integral\-Mat\-Sum@{integral\-Mat\-Sum}}
+An item is added to the cluster if it is within {\ttfamily max\-Dist} from all other items in the cluster.
+
+{\ttfamily get\-Dist} should take two items and return their distance. \hypertarget{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}{\index{cvutils@{cvutils}!matwrite@{matwrite}}
+\index{matwrite@{matwrite}!cvutils@{cvutils}}
+\subsubsection[{matwrite}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::matwrite} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\-Name, }
+\item[{const cv\-::\-Mat \&}]{m}
+\end{DoxyParamCaption}
+)}}\label{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}
+
+
+Save Mat in file. 
+
+\hypertarget{namespacecvutils_ad6c54561b8064273ce92dc34fd8d5c06}{\index{cvutils@{cvutils}!matread@{matread}}
+\index{matread@{matread}!cvutils@{cvutils}}
+\subsubsection[{matread}]{\setlength{\rightskip}{0pt plus 5cm}Mat {\bf cvutils\-::matread} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{namespacecvutils_ad6c54561b8064273ce92dc34fd8d5c06}
+
+
+Read Mat from file saved with {\ttfamily \hyperlink{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}{matwrite()}}. 
+
+\hypertarget{namespacecvutils_a5a05bf26e8f5d1309e36ba3596618c7e}{\index{cvutils@{cvutils}!integral\-Mat\-Sum@{integral\-Mat\-Sum}}
 \index{integral\-Mat\-Sum@{integral\-Mat\-Sum}!cvutils@{cvutils}}
 \subsubsection[{integral\-Mat\-Sum}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf cvutils\-::integral\-Mat\-Sum} (
 \begin{DoxyParamCaption}
@@ -348,71 +327,58 @@ Return the sum of all pixels within {\ttfamily roi} using an integral image.
 {\em invalid\-\_\-argument} & Thrown if type of {\ttfamily integral\-Mat} is not supported. \\
 \hline
 \end{DoxyExceptions}
-\hypertarget{namespacecvutils_ad6c54561b8064273ce92dc34fd8d5c06}{\index{cvutils@{cvutils}!matread@{matread}}
-\index{matread@{matread}!cvutils@{cvutils}}
-\subsubsection[{matread}]{\setlength{\rightskip}{0pt plus 5cm}Mat {\bf cvutils\-::matread} (
+\hypertarget{namespacecvutils_adaaa279a13adf2231b2985a5313ef446}{\index{cvutils@{cvutils}!erodilate@{erodilate}}
+\index{erodilate@{erodilate}!cvutils@{cvutils}}
+\subsubsection[{erodilate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::erodilate} (
 \begin{DoxyParamCaption}
-\item[{const char $\ast$}]{file\-Name}
+\item[{const cv\-::\-Mat \&}]{src, }
+\item[{cv\-::\-Mat \&}]{dest, }
+\item[{unsigned}]{times}
 \end{DoxyParamCaption}
-)}}\label{namespacecvutils_ad6c54561b8064273ce92dc34fd8d5c06}
+)}}\label{namespacecvutils_adaaa279a13adf2231b2985a5313ef446}
 
 
-Read cv\-::\-Mat from file saved with {\ttfamily \hyperlink{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}{matwrite()}}. 
+Call default {\ttfamily erode()} {\ttfamily times} times, then default {\ttfamily dilate()} {\ttfamily times} times. 
 
-\hypertarget{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}{\index{cvutils@{cvutils}!matwrite@{matwrite}}
-\index{matwrite@{matwrite}!cvutils@{cvutils}}
-\subsubsection[{matwrite}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::matwrite} (
+This is useful to remove small areas of noise while preserving area. \hypertarget{namespacecvutils_a940f4f576e232256718ac607138d1a03}{\index{cvutils@{cvutils}!dilerode@{dilerode}}
+\index{dilerode@{dilerode}!cvutils@{cvutils}}
+\subsubsection[{dilerode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::dilerode} (
 \begin{DoxyParamCaption}
-\item[{const char $\ast$}]{file\-Name, }
-\item[{const cv\-::\-Mat \&}]{m}
+\item[{const cv\-::\-Mat \&}]{src, }
+\item[{cv\-::\-Mat \&}]{dest, }
+\item[{unsigned}]{times}
 \end{DoxyParamCaption}
-)}}\label{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}
+)}}\label{namespacecvutils_a940f4f576e232256718ac607138d1a03}
 
 
-Save cv\-::\-Mat in file. 
+Call default {\ttfamily dilate()} {\ttfamily times} times, then default {\ttfamily erode()} {\ttfamily times} times. 
 
-\hypertarget{namespacecvutils_abcad4782a40d57854115ea2dcdab401b}{\index{cvutils@{cvutils}!rand\-Color@{rand\-Color}}
-\index{rand\-Color@{rand\-Color}!cvutils@{cvutils}}
-\subsubsection[{rand\-Color}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Scalar {\bf cvutils\-::rand\-Color} (
+This is useful to fill in small gaps while preserving area. \hypertarget{namespacecvutils_a68b814f0c27087d28d1723ba68681858}{\index{cvutils@{cvutils}!bin\-Mask\-To\-G\-C\-Mask@{bin\-Mask\-To\-G\-C\-Mask}}
+\index{bin\-Mask\-To\-G\-C\-Mask@{bin\-Mask\-To\-G\-C\-Mask}!cvutils@{cvutils}}
+\subsubsection[{bin\-Mask\-To\-G\-C\-Mask}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::bin\-Mask\-To\-G\-C\-Mask} (
 \begin{DoxyParamCaption}
-{}
+\item[{const cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{mask, }
+\item[{cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{out}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespacecvutils_abcad4782a40d57854115ea2dcdab401b}
+)}}\label{namespacecvutils_a68b814f0c27087d28d1723ba68681858}
 
 
-Return a random R\-G\-B color as a cv\-::\-Scalar. 
+Convert a binary mask (non-\/zero == on) to a Grab\-Cut mask, using this pixel mapping\-: 
 
-\hypertarget{namespacecvutils_ab27154874f930e865580b2b3c6afead5}{\index{cvutils@{cvutils}!to\-C\-G\-Pt@{to\-C\-G\-Pt}}
-\index{to\-C\-G\-Pt@{to\-C\-G\-Pt}!cvutils@{cvutils}}
-\subsubsection[{to\-C\-G\-Pt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf kmath\-::\-Point}$<$T$>$ {\bf cvutils\-::to\-C\-G\-Pt} (
+nonzero -\/$>$ {\ttfamily G\-C\-\_\-\-P\-R\-\_\-\-F\-G\-D}
+
+zero -\/$>$ {\ttfamily G\-C\-\_\-\-P\-R\-\_\-\-B\-G\-D} \hypertarget{namespacecvutils_a2a38c5f1b76d38eb5385bf0bd709a5ed}{\index{cvutils@{cvutils}!gc\-Mask\-To\-Bin\-Mask@{gc\-Mask\-To\-Bin\-Mask}}
+\index{gc\-Mask\-To\-Bin\-Mask@{gc\-Mask\-To\-Bin\-Mask}!cvutils@{cvutils}}
+\subsubsection[{gc\-Mask\-To\-Bin\-Mask}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::gc\-Mask\-To\-Bin\-Mask} (
 \begin{DoxyParamCaption}
-\item[{cv\-::\-Point}]{pt}
+\item[{const cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{mask, }
+\item[{cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{out}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespacecvutils_ab27154874f930e865580b2b3c6afead5}
+)}}\label{namespacecvutils_a2a38c5f1b76d38eb5385bf0bd709a5ed}
 
 
-Convert a {\ttfamily cv\-::\-Point} to a {\ttfamily \hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$T$>$}. 
+Convert a Grab\-Cut mask to a binary mask, using this pixel mapping\-: 
 
-\hypertarget{namespacecvutils_a828567eec14cbe1369c315d025f108ba}{\index{cvutils@{cvutils}!to\-C\-V\-Pt@{to\-C\-V\-Pt}}
-\index{to\-C\-V\-Pt@{to\-C\-V\-Pt}!cvutils@{cvutils}}
-\subsubsection[{to\-C\-V\-Pt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ cv\-::\-Point {\bf cvutils\-::to\-C\-V\-Pt} (
-\begin{DoxyParamCaption}
-\item[{{\bf kmath\-::\-Point}$<$ T $>$}]{pt}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{namespacecvutils_a828567eec14cbe1369c315d025f108ba}
+\{{\ttfamily G\-C\-\_\-\-P\-R\-\_\-\-B\-G\-D}, {\ttfamily G\-C\-\_\-\-B\-G\-D}\} -\/$>$ 0
 
-
-Convert a {\ttfamily \hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$T$>$} to a {\ttfamily cv\-::\-Point}. 
-
-\hypertarget{namespacecvutils_aa292da4b50c7692374fdde56afdd6baf}{\index{cvutils@{cvutils}!wait\-For\-Keypress@{wait\-For\-Keypress}}
-\index{wait\-For\-Keypress@{wait\-For\-Keypress}!cvutils@{cvutils}}
-\subsubsection[{wait\-For\-Keypress}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::wait\-For\-Keypress} (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{namespacecvutils_aa292da4b50c7692374fdde56afdd6baf}
-
-
-Block until a key is pressed. 
-
-Focus must be in an Open\-C\-V window. 
+\{{\ttfamily G\-C\-\_\-\-P\-R\-\_\-\-F\-G\-D}, {\ttfamily G\-C\-\_\-\-F\-G\-D}\} -\/$>$ 255 

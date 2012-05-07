@@ -44,9 +44,14 @@ Represents a video input source (either a video file or camera).
 
 Construct from either a device id (int) or filename. 
 
-Throw {\ttfamily invalid\-\_\-argument} if unable to open input source.
+Specify {\ttfamily size} to manually set the size of the returned frames.
 
-Specify {\ttfamily size} to set the size of the returned frames. 
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & Thrown if unable to open input source. \\
+\hline
+\end{DoxyExceptions}
+
 
 \subsection{Member Function Documentation}
 \hypertarget{structcvutils_1_1_video_reader_aeefc2060b91297a48c465324eb1ad628}{\index{cvutils\-::\-Video\-Reader@{cvutils\-::\-Video\-Reader}!operator$>$$>$@{operator$>$$>$}}

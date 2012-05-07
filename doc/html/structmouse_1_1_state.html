@@ -121,13 +121,17 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a27fa449d068a08894434d44c160f0f00"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmouse_1_1_state.html#a27fa449d068a08894434d44c160f0f00">btn</a></td></tr>
-<tr class="memdesc:a27fa449d068a08894434d44c160f0f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can be any OR'd combination of the above flags.  <a href="#a27fa449d068a08894434d44c160f0f00"></a><br/></td></tr>
+<tr class="memdesc:a27fa449d068a08894434d44c160f0f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can be any <code>OR</code>'d combination of the below flags, or <code>0</code> if no buttons down.  <a href="#a27fa449d068a08894434d44c160f0f00"></a><br/></td></tr>
 <tr class="memitem:ae4c6bba70a3c69992f7624bfc908b2c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekmath.html#afaf3fde3b20c9932e144eb48e736cad9">kmath::PointI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmouse_1_1_state.html#ae4c6bba70a3c69992f7624bfc908b2c0">pos</a></td></tr>
+<tr class="memdesc:ae4c6bba70a3c69992f7624bfc908b2c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse position in integer coordinates.  <a href="#ae4c6bba70a3c69992f7624bfc908b2c0"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a4f5eca97c989f6e8eceee194e2121fe8"><td class="memItemLeft" align="right" valign="top">static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmouse_1_1_state.html#a4f5eca97c989f6e8eceee194e2121fe8">LEFT_DOWN</a> = 0x0001</td></tr>
+<tr class="memdesc:a4f5eca97c989f6e8eceee194e2121fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating left mouse button is down.  <a href="#a4f5eca97c989f6e8eceee194e2121fe8"></a><br/></td></tr>
 <tr class="memitem:ae07e315484a778beb62c47202be2808f"><td class="memItemLeft" align="right" valign="top">static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmouse_1_1_state.html#ae07e315484a778beb62c47202be2808f">RIGHT_DOWN</a> = 0x0002</td></tr>
-<tr class="memitem:a1b6e0054161b8a9dd801529566f34228"><td class="memItemLeft" align="right" valign="top">static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmouse_1_1_state.html#a1b6e0054161b8a9dd801529566f34228">SCROLL</a> = 0x0004</td></tr>
+<tr class="memdesc:ae07e315484a778beb62c47202be2808f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating right mouse button is down.  <a href="#ae07e315484a778beb62c47202be2808f"></a><br/></td></tr>
+<tr class="memitem:ad6aff6557abd8a018d1c57d9fd224d85"><td class="memItemLeft" align="right" valign="top">static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmouse_1_1_state.html#ad6aff6557abd8a018d1c57d9fd224d85">MIDDLE_DOWN</a> = 0x0004</td></tr>
+<tr class="memdesc:ad6aff6557abd8a018d1c57d9fd224d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating middle mouse button is down.  <a href="#ad6aff6557abd8a018d1c57d9fd224d85"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a8c73b18ef2e5fc88aa180424b78bba09"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmouse_1_1_state.html#a8c73b18ef2e5fc88aa180424b78bba09">operator&lt;&lt;</a> (ostream &amp;out, const <a class="el" href="structmouse_1_1_state.html">State</a> &amp;m)</td></tr>
@@ -207,21 +211,6 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a27fa449d068a08894434d44c160f0f00"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t <a class="el" href="structmouse_1_1_state.html#a27fa449d068a08894434d44c160f0f00">mouse::State::btn</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Can be any OR'd combination of the above flags. </p>
-
-</div>
-</div>
 <a class="anchor" id="a4f5eca97c989f6e8eceee194e2121fe8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -233,18 +222,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="ae4c6bba70a3c69992f7624bfc908b2c0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacekmath.html#afaf3fde3b20c9932e144eb48e736cad9">kmath::PointI</a> <a class="el" href="structmouse_1_1_state.html#ae4c6bba70a3c69992f7624bfc908b2c0">mouse::State::pos</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Flag indicating left mouse button is down. </p>
 
 </div>
 </div>
@@ -259,18 +237,52 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Flag indicating right mouse button is down. </p>
+
 </div>
 </div>
-<a class="anchor" id="a1b6e0054161b8a9dd801529566f34228"></a>
+<a class="anchor" id="ad6aff6557abd8a018d1c57d9fd224d85"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const uint16_t <a class="el" href="structmouse_1_1_state.html#a1b6e0054161b8a9dd801529566f34228">State::SCROLL</a> = 0x0004<code> [static]</code></td>
+          <td class="memname">const uint16_t <a class="el" href="structmouse_1_1_state.html#ad6aff6557abd8a018d1c57d9fd224d85">State::MIDDLE_DOWN</a> = 0x0004<code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Flag indicating middle mouse button is down. </p>
+
+</div>
+</div>
+<a class="anchor" id="a27fa449d068a08894434d44c160f0f00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t <a class="el" href="structmouse_1_1_state.html#a27fa449d068a08894434d44c160f0f00">mouse::State::btn</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Can be any <code>OR</code>'d combination of the below flags, or <code>0</code> if no buttons down. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae4c6bba70a3c69992f7624bfc908b2c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacekmath.html#afaf3fde3b20c9932e144eb48e736cad9">kmath::PointI</a> <a class="el" href="structmouse_1_1_state.html#ae4c6bba70a3c69992f7624bfc908b2c0">mouse::State::pos</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Mouse position in integer coordinates. </p>
 
 </div>
 </div>
@@ -282,7 +294,7 @@ Friends</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 22:14:18 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

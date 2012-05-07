@@ -13,7 +13,8 @@ Include dependency graph for kmath.\-hpp\-:\nopagebreak
 \includegraphics[width=350pt]{kmath_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -65,13 +66,13 @@ double \hyperlink{namespacekmath_ac9d0f66e32f84c22626883c171893f48}{kmath\-::nor
 unsigned \hyperlink{namespacekmath_abfda38c9ce9a9d07af7f93a731d8fe51}{kmath\-::factorial} (unsigned n)
 \begin{DoxyCompactList}\small\item\em Return {\ttfamily n!}. \end{DoxyCompactList}\item 
 unsigned \hyperlink{namespacekmath_a53519d2ec30d9df038dbe8ceaead1a9c}{kmath\-::combinations} (unsigned n, unsigned k)
-\begin{DoxyCompactList}\small\item\em Return {\ttfamily n}C{\ttfamily k} (n choose k). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Return $_{\mbox{n}}$ C$_{\mbox{k}}$  (n choose k). \end{DoxyCompactList}\item 
 float \hyperlink{namespacekmath_aa18b5fc52315b0ca7717a52bdf152ee6}{kmath\-::fround} (float val, float scale=1.\-0, \hyperlink{namespacekmath_a1e00ae34fe8ed9548870fc759ea82609}{Round\-Type} action=R\-O\-U\-N\-D)
 \begin{DoxyCompactList}\small\item\em Round val to nearest multiple of scale. \end{DoxyCompactList}\item 
 int \hyperlink{namespacekmath_a32d7d4c091092ac7e21d7beb15daaf1a}{kmath\-::iround} (float val)
 \begin{DoxyCompactList}\small\item\em Specialization of {\ttfamily fround} that rounds float to nearest integer. \end{DoxyCompactList}\item 
-float \hyperlink{namespacekmath_af21fdb579807bd7054875a2369e15941}{kmath\-::interval\-Project} (float val, const Interval \&domain, const Interval \&range, const function$<$ float(float)$>$ \&func=\mbox{[}$\,$\mbox{]}(float x)\{return x;\}, const Interval \&func\-Domain=Interval(0, 1), const Interval \&func\-Range=Interval(0, 1))
-\begin{DoxyCompactList}\small\item\em Project a value within {\ttfamily domain} to a new \hyperlink{structkmath_1_1_interval}{Interval} {\ttfamily range} using {\ttfamily func}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+float \hyperlink{namespacekmath_a1792feb5272baa371047829dc4a30264}{kmath\-::interval\-Project} (float val, const Interval \&domain, const Interval \&range, const function$<$ float(float)$>$ \&func=\mbox{[}$\,$\mbox{]}(float x)\{return x;\}, const Interval \&func\-Domain=Interval(0, 1), const Interval \&func\-Range=Interval(0, 1), bool bound=true)
+\begin{DoxyCompactList}\small\item\em Project a value within {\ttfamily domain} to a new interval {\ttfamily range} using {\ttfamily func}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 

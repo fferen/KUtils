@@ -5,7 +5,10 @@
 {\ttfamily \#include $<$iostream$>$}\\*
 {\ttfamily \#include $<$memory$>$}\\*
 {\ttfamily \#include $<$Application\-Services/\-Application\-Services.\-h$>$}\\*
-Include dependency graph for osx.\-hpp\-:\nopagebreak
+{\ttfamily \#include \char`\"{}mouse.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}kmath.\-hpp\char`\"{}}\\*
+Include dependency graph for osx.\-hpp\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,17 +25,15 @@ This graph shows which files directly or indirectly include this file\-:\nopageb
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structosx_1_1mouse_1_1_mouse_state}{osx\-::mouse\-::\-Mouse\-State}
-\begin{DoxyCompactList}\small\item\em Simple data holder for a button flag and a position. \end{DoxyCompactList}\item 
 struct \hyperlink{structosx_1_1disp_1_1_image}{osx\-::disp\-::\-Image}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Memory-\/managed wrapper aronud {\ttfamily C\-G\-Image\-Ref} using a {\ttfamily shared\-\_\-ptr}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \hyperlink{namespaceosx}{osx}
 \begin{DoxyCompactList}\small\item\em O\-S\-X-\/specific utilities. \end{DoxyCompactList}\item 
 namespace \hyperlink{namespaceosx_1_1mouse}{osx\-::mouse}
-\begin{DoxyCompactList}\small\item\em Utilities for modeling the mouse state and controlling the mouse. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Utilities for controlling the mouse. \end{DoxyCompactList}\item 
 namespace \hyperlink{namespaceosx_1_1disp}{osx\-::disp}
 \begin{DoxyCompactList}\small\item\em Functions for extracting the display image. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Defines}
@@ -43,10 +44,6 @@ namespace \hyperlink{namespaceosx_1_1disp}{osx\-::disp}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499}{osx\-::mouse\-::\-Mouse\-Button} \{ \hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499aba5b540b1c997fb283ad354d66d6b5c8}{osx\-::mouse\-::\-L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}, 
-\hyperlink{namespaceosx_1_1mouse_a025e93cf6af5808e4c8c2525fc668499a8f8087d9c68a22fe0ab65e0995e6649b}{osx\-::mouse\-::\-R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}
- \}
-\item 
 enum \hyperlink{namespaceosx_1_1disp_a63adf9b0b0b0365ec428dd44fc30c659}{osx\-::disp\-::\-R\-G\-B\-Type} \{ \hyperlink{namespaceosx_1_1disp_a63adf9b0b0b0365ec428dd44fc30c659ab96ecb2ad3c69bf9019d7ed4253603b1}{osx\-::disp\-::\-C\-O\-L\-O\-R\-\_\-\-B\-G\-R}, 
 \hyperlink{namespaceosx_1_1disp_a63adf9b0b0b0365ec428dd44fc30c659a307b3e319b6708774c7672d7efc04d0d}{osx\-::disp\-::\-C\-O\-L\-O\-R\-\_\-\-A\-R\-G\-B}, 
 \hyperlink{namespaceosx_1_1disp_a63adf9b0b0b0365ec428dd44fc30c659aefca227dbfbf6803b1248aceeaa187b7}{osx\-::disp\-::\-C\-O\-L\-O\-R\-\_\-\-R\-G\-B\-A}
@@ -55,17 +52,21 @@ enum \hyperlink{namespaceosx_1_1disp_a63adf9b0b0b0365ec428dd44fc30c659}{osx\-::d
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename T $>$ }\\C\-G\-Point \hyperlink{namespaceosx_abf7318d332d5e87088a270877f3da1ee}{osx\-::to\-C\-G\-Pt} (\hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$ T $>$ pt)
+\item 
+\hyperlink{namespacekmath_ad80aa80b21a1aeadbd484a0fc56f4e95}{kmath\-::\-Point\-F} \hyperlink{namespaceosx_a37f829bcbe1e218b01dafeb711bd9d42}{osx\-::to\-Pt} (C\-G\-Point pt)
+\item 
 void \hyperlink{namespaceosx_1_1mouse_a96fc2b2983c0d9ee610ca9404ccc0506}{osx\-::mouse\-::move} (C\-G\-Point pos)
 \begin{DoxyCompactList}\small\item\em Move cursor to {\ttfamily pos}. \end{DoxyCompactList}\item 
-void \hyperlink{namespaceosx_1_1mouse_af6a13b95720ba5d280a64dc3c169c4ab}{osx\-::mouse\-::down} (Mouse\-Button button, C\-G\-Point pos)
+void \hyperlink{namespaceosx_1_1mouse_a8a25c1e4fda52095a4e113b2832777da}{osx\-::mouse\-::down} (\hyperlink{namespacemouse_af85c842f9410a5f81fe933360fb19bc4}{ms\-::\-Button} button, C\-G\-Point pos)
 \begin{DoxyCompactList}\small\item\em Simulate a mouse down event at {\ttfamily pos}. \end{DoxyCompactList}\item 
-void \hyperlink{namespaceosx_1_1mouse_a653d01ba6a07d9a07581934e80cd5138}{osx\-::mouse\-::up} (Mouse\-Button button, C\-G\-Point pos)
+void \hyperlink{namespaceosx_1_1mouse_a40b06e2da73d0ee062a669cdbcd6e4ef}{osx\-::mouse\-::up} (\hyperlink{namespacemouse_af85c842f9410a5f81fe933360fb19bc4}{ms\-::\-Button} button, C\-G\-Point pos)
 \begin{DoxyCompactList}\small\item\em Simulate a mouse up event at {\ttfamily pos}. \end{DoxyCompactList}\item 
-void \hyperlink{namespaceosx_1_1mouse_af0b3d4b3af410086362a3faaff78d3b6}{osx\-::mouse\-::click} (Mouse\-Button button, C\-G\-Point pos)
+void \hyperlink{namespaceosx_1_1mouse_a127098ef29a5e3b824fdc2376e89f557}{osx\-::mouse\-::click} (\hyperlink{namespacemouse_af85c842f9410a5f81fe933360fb19bc4}{ms\-::\-Button} button, C\-G\-Point pos)
 \begin{DoxyCompactList}\small\item\em Simulate a mouse click (button down, then up) event at {\ttfamily pos}. \end{DoxyCompactList}\item 
-void \hyperlink{namespaceosx_1_1mouse_ac87df58c78bf4f2ed44eb74a272a155e}{osx\-::mouse\-::drag} (Mouse\-Button button, C\-G\-Point start\-Pos, C\-G\-Point end\-Pos)
+void \hyperlink{namespaceosx_1_1mouse_a49c625169ee20a981c56b3accf095605}{osx\-::mouse\-::drag} (\hyperlink{namespacemouse_af85c842f9410a5f81fe933360fb19bc4}{ms\-::\-Button} button, C\-G\-Point start\-Pos, C\-G\-Point end\-Pos)
 \begin{DoxyCompactList}\small\item\em Simulate a mouse drag event at from {\ttfamily start\-Pos} to {\ttfamily end\-Pos}. \end{DoxyCompactList}\item 
-Image \hyperlink{namespaceosx_1_1disp_a8e0f791a8c9413d16403b6b793864cb7}{osx\-::disp\-::get\-Screen} ()
+Image \hyperlink{namespaceosx_1_1disp_a7d7872e070a2742dc7408ef1e56f7960}{osx\-::disp\-::get\-Screen} ()
 \begin{DoxyCompactList}\small\item\em Return the current screen. \end{DoxyCompactList}\item 
 ostream \& \hyperlink{osx_8hpp_ae35a0729fcf841f08cc4c1cd53038f97}{operator$<$$<$} (ostream \&out, const C\-G\-Color\-Space\-Ref \&color\-Space)
 \begin{DoxyCompactList}\small\item\em Print {\ttfamily C\-G\-Color\-Space\-Ref} info. \end{DoxyCompactList}\item 

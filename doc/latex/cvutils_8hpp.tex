@@ -18,7 +18,7 @@ This graph shows which files directly or indirectly include this file\-:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=232pt]{cvutils_8hpp__dep__incl}
+\includegraphics[width=241pt]{cvutils_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \subsection*{Classes}
@@ -40,6 +40,7 @@ namespace \hyperlink{namespacecvutils_1_1geom}{cvutils\-::geom}
 namespace \hyperlink{namespacecvutils_1_1transform}{cvutils\-::transform}
 \begin{DoxyCompactList}\small\item\em Functions related to affine transformations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Enumerations}
+{\bf }\par
 \begin{DoxyCompactItemize}
 \item 
 enum \hyperlink{namespacecvutils_a955c1d8733f727414da8a357b938ced7}{cvutils\-::\-X\-Loc} \{ \hyperlink{namespacecvutils_a955c1d8733f727414da8a357b938ced7a6a9a0a917be940c0641d145580dcf0f7}{cvutils\-::\-F\-I\-X\-\_\-\-C\-E\-N\-T\-E\-R\-\_\-\-X}, 
@@ -51,18 +52,15 @@ enum \hyperlink{namespacecvutils_a0a32f5be1c20397001a2cdc59bacec81}{cvutils\-::\
 \hyperlink{namespacecvutils_a0a32f5be1c20397001a2cdc59bacec81a1ef7dcf2027f67cb73fe3c2b8283e680}{cvutils\-::\-F\-I\-X\-\_\-\-T\-O\-P}, 
 \hyperlink{namespacecvutils_a0a32f5be1c20397001a2cdc59bacec81a3f77fa48f399deb5768cbcf63d1f9eae}{cvutils\-::\-F\-I\-X\-\_\-\-B\-O\-T\-T\-O\-M}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Specifies positions for affixing {\ttfamily cv\-::\-Rect}s or {\ttfamily cv\-::\-Size}s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{namespacecvutils_aa292da4b50c7692374fdde56afdd6baf}{cvutils\-::wait\-For\-Keypress} ()
 \begin{DoxyCompactList}\small\item\em Block until a key is pressed. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\cv\-::\-Point \hyperlink{namespacecvutils_a828567eec14cbe1369c315d025f108ba}{cvutils\-::to\-C\-V\-Pt} (\hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$ T $>$ pt)
-\begin{DoxyCompactList}\small\item\em Convert a {\ttfamily \hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$T$>$} to a {\ttfamily cv\-::\-Point}. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\\hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$ T $>$ \hyperlink{namespacecvutils_ab27154874f930e865580b2b3c6afead5}{cvutils\-::to\-C\-G\-Pt} (cv\-::\-Point pt)
-\begin{DoxyCompactList}\small\item\em Convert a {\ttfamily cv\-::\-Point} to a {\ttfamily \hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$T$>$}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename \-\_\-\-Func\-T $>$ }\\void \hyperlink{namespacecvutils_a9a51cd204369adbf1321482a67c101dc}{cvutils\-::apply\-Binary\-Op} (const \-\_\-\-Func\-T \&func, cv\-::\-Mat\-\_\-$<$ T1 $>$ \&m1, cv\-::\-Mat\-\_\-$<$ T2 $>$ \&m2)
-\begin{DoxyCompactList}\small\item\em For each pixel in {\ttfamily m1} and {\ttfamily m2}, call\-: \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em For each pixel in {\ttfamily m1} and {\ttfamily m2}, call {\ttfamily func} like so\-: \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename \-\_\-\-Func\-T $>$ }\\void \hyperlink{namespacecvutils_a624390fc5d29f7ca9f2342f6ae7849be}{cvutils\-::apply\-Binary\-Op} (const \-\_\-\-Func\-T \&func, const cv\-::\-Mat\-\_\-$<$ T1 $>$ \&m1, cv\-::\-Mat\-\_\-$<$ T2 $>$ \&m2)
 \begin{DoxyCompactList}\small\item\em Partly const version of \hyperlink{namespacecvutils_a9a51cd204369adbf1321482a67c101dc}{apply\-Binary\-Op()}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename \-\_\-\-Func\-T $>$ }\\void \hyperlink{namespacecvutils_a18bf9198d170d4f95ebeda01c4c66b48}{cvutils\-::apply\-Binary\-Op} (const \-\_\-\-Func\-T \&func, cv\-::\-Mat\-\_\-$<$ T1 $>$ \&m1, const cv\-::\-Mat\-\_\-$<$ T2 $>$ \&m2)
@@ -70,23 +68,21 @@ void \hyperlink{namespacecvutils_aa292da4b50c7692374fdde56afdd6baf}{cvutils\-::w
 {\footnotesize template$<$typename T1 , typename T2 , typename \-\_\-\-Func\-T $>$ }\\void \hyperlink{namespacecvutils_a7de5d736aac8827c278399e59cdb62ce}{cvutils\-::apply\-Binary\-Op} (const \-\_\-\-Func\-T \&func, const cv\-::\-Mat\-\_\-$<$ T1 $>$ \&m1, const cv\-::\-Mat\-\_\-$<$ T2 $>$ \&m2)
 \begin{DoxyCompactList}\small\item\em Const version of \hyperlink{namespacecvutils_a9a51cd204369adbf1321482a67c101dc}{apply\-Binary\-Op()}. \end{DoxyCompactList}\item 
 cv\-::\-Scalar \hyperlink{namespacecvutils_abcad4782a40d57854115ea2dcdab401b}{cvutils\-::rand\-Color} ()
-\begin{DoxyCompactList}\small\item\em Return a random R\-G\-B color as a cv\-::\-Scalar. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Return a random R\-G\-B color. \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_a683e21d8e2c62e903c76ae0279e4a94d}{cvutils\-::draw\-Polygon} (cv\-::\-Mat \&im, const vector$<$ cv\-::\-Point $>$ \&pts, const cv\-::\-Scalar \&color=cv\-::\-Scalar(255, 255, 255), int thickness=1, int line\-Type=8, bool convex=true)
 \begin{DoxyCompactList}\small\item\em Draw the outline of a closed polygon specified by {\ttfamily pts} on {\ttfamily im}. \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_ada4f02293fd7783beff2240b94d625a7}{cvutils\-::expand\-Mat} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest, cv\-::\-Size new\-Size, cv\-::\-Point offset, cv\-::\-Scalar fill\-Val=cv\-::\-Scalar())
 \begin{DoxyCompactList}\small\item\em Pad {\ttfamily src} to a larger size and store in {\ttfamily dest}, filling extra space with {\ttfamily fill\-Val}. \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_a128502dc926237b41ee2598574a4b409}{cvutils\-::expand\-Mat} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest, cv\-::\-Size new\-Size, cv\-::\-Scalar fill\-Val=cv\-::\-Scalar(), X\-Loc x\-Flag=F\-I\-X\-\_\-\-C\-E\-N\-T\-E\-R\-\_\-\-X, Y\-Loc y\-Flag=F\-I\-X\-\_\-\-C\-E\-N\-T\-E\-R\-\_\-\-Y)
-\item 
+\begin{DoxyCompactList}\small\item\em Pad {\ttfamily src} to a larger size and store in {\ttfamily dest}, filling extra space with {\ttfamily fill\-Val}. \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_afce5aa1e29332624c3f7cbabcbe19f69}{cvutils\-::cvt\-B\-G\-R2\-R\-G} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest)
 \begin{DoxyCompactList}\small\item\em Convert a matrix from B\-G\-R color space to rg chromaticity space, with the 3rd channel unused. \end{DoxyCompactList}\item 
-void \hyperlink{namespacecvutils_aa787df79b1daecd591a52fd071ac5618}{cvutils\-::face\-Detect\-Scaled} (const cv\-::\-Mat \&src, float scale, vector$<$ cv\-::\-Rect $>$ \&out)
-\begin{DoxyCompactList}\small\item\em Scale {\ttfamily src} (not in place) and find {\ttfamily cv\-::\-Rect}s containing faces, then scale the {\ttfamily cv\-::\-Rect}s back to original size. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class In\-Seq\-T , template$<$ class T=\-In\-Seq\-T, typename...\-Args $>$ class Out\-Seq\-T, class Dist\-Func\-T $>$ }\\void \hyperlink{namespacecvutils_acbbf9e8cbd6decade9a79781d981d085}{cvutils\-::cluster} (const In\-Seq\-T \&items, const Dist\-Func\-T \&get\-Dist, float max\-Dist, Out\-Seq\-T$<$ In\-Seq\-T $>$ \&clusters)
 \begin{DoxyCompactList}\small\item\em Generic naive clustering algorithm ({\ttfamily O(n$^\wedge$2)} worst case). \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}{cvutils\-::matwrite} (const char $\ast$file\-Name, const cv\-::\-Mat \&m)
-\begin{DoxyCompactList}\small\item\em Save cv\-::\-Mat in file. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Save Mat in file. \end{DoxyCompactList}\item 
 cv\-::\-Mat \hyperlink{namespacecvutils_ad6c54561b8064273ce92dc34fd8d5c06}{cvutils\-::matread} (const char $\ast$file\-Name)
-\begin{DoxyCompactList}\small\item\em Read cv\-::\-Mat from file saved with {\ttfamily \hyperlink{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}{matwrite()}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Read Mat from file saved with {\ttfamily \hyperlink{namespacecvutils_a065c3fe57f6f80cd6a4ba369f3f5a635}{matwrite()}}. \end{DoxyCompactList}\item 
 double \hyperlink{namespacecvutils_a5a05bf26e8f5d1309e36ba3596618c7e}{cvutils\-::integral\-Mat\-Sum} (const cv\-::\-Mat \&integral\-Mat, cv\-::\-Rect roi)
 \begin{DoxyCompactList}\small\item\em Return the sum of all pixels within {\ttfamily roi} using an integral image. \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_adaaa279a13adf2231b2985a5313ef446}{cvutils\-::erodilate} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest, unsigned times)
@@ -97,31 +93,33 @@ void \hyperlink{namespacecvutils_a68b814f0c27087d28d1723ba68681858}{cvutils\-::b
 \begin{DoxyCompactList}\small\item\em Convert a binary mask (non-\/zero == on) to a Grab\-Cut mask, using this pixel mapping\-: \end{DoxyCompactList}\item 
 void \hyperlink{namespacecvutils_a2a38c5f1b76d38eb5385bf0bd709a5ed}{cvutils\-::gc\-Mask\-To\-Bin\-Mask} (const cv\-::\-Mat\-\_\-$<$ uchar $>$ \&mask, cv\-::\-Mat\-\_\-$<$ uchar $>$ \&out)
 \begin{DoxyCompactList}\small\item\em Convert a Grab\-Cut mask to a binary mask, using this pixel mapping\-: \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\cv\-::\-Point \hyperlink{namespacecvutils_1_1geom_a6b778c479475cf621f6adbe05de4bbb1}{cvutils\-::geom\-::to\-C\-V\-Pt} (\hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$ T $>$ pt)
+\begin{DoxyCompactList}\small\item\em Convert a {\ttfamily \hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$T$>$} to a {\ttfamily cv\-::\-Point}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$ T $>$ \hyperlink{namespacecvutils_1_1geom_af5531da4d19355a400306b5a55bb71c2}{cvutils\-::geom\-::to\-Pt} (cv\-::\-Point pt)
+\begin{DoxyCompactList}\small\item\em Convert a {\ttfamily cv\-::\-Point} to a {\ttfamily \hyperlink{structkmath_1_1_point}{kmath\-::\-Point}$<$T$>$}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\cv\-::\-Point\-\_\-$<$ T $>$ \hyperlink{namespacecvutils_1_1geom_a6a1ce8e52ffaec2a0b1f4a05a2e9a52a}{cvutils\-::geom\-::midpoint} (cv\-::\-Point\-\_\-$<$ T $>$ a, cv\-::\-Point\-\_\-$<$ T $>$ b)
 \begin{DoxyCompactList}\small\item\em Return the midpoint (duh). \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\float \hyperlink{namespacecvutils_1_1geom_a8d1d619355d2606b616341a63c0fee97}{cvutils\-::geom\-::pt\-Norm\-Sqrd} (const cv\-::\-Point\-\_\-$<$ T $>$ \&p)
 \begin{DoxyCompactList}\small\item\em Return the magnitude of {\ttfamily p}, squared. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Elem\-T , int cn$>$ }\\float \hyperlink{namespacecvutils_1_1geom_ab5fea22f416b23e22a2391595b06a91c}{cvutils\-::geom\-::vec\-Norm\-Sqrd} (const cv\-::\-Vec$<$ Elem\-T, cn $>$ \&v)
 \begin{DoxyCompactList}\small\item\em Return the magnitude of {\ttfamily v}, squared. \end{DoxyCompactList}\item 
-float \hyperlink{namespacecvutils_1_1geom_a74f28d175b207918e4fc60149e147dba}{cvutils\-::geom\-::vec\-Angle} (const cv\-::\-Vec2i a, const cv\-::\-Vec2i b)
+float \hyperlink{namespacecvutils_1_1geom_addc2fddd5dde5606004afeda56a54f14}{cvutils\-::geom\-::vec\-Angle} (const cv\-::\-Vec2i \&a, const cv\-::\-Vec2i \&b)
 \begin{DoxyCompactList}\small\item\em Return the angle from vector {\ttfamily a} to vector {\ttfamily b}, in radians from -\/π to π, C\-C\-W positive. \end{DoxyCompactList}\item 
-float \hyperlink{namespacecvutils_1_1geom_a10c135020f2ced905d4623ca2e2c4c3b}{cvutils\-::geom\-::pt\-Angle} (const cv\-::\-Point a, const cv\-::\-Point b, const cv\-::\-Point c)
+float \hyperlink{namespacecvutils_1_1geom_a9107a51cad42bd43fb4792f0a0561e58}{cvutils\-::geom\-::pt\-Angle} (const cv\-::\-Point \&a, const cv\-::\-Point \&b, const cv\-::\-Point \&c)
 \begin{DoxyCompactList}\small\item\em Return the angle from the vector {\ttfamily (a -\/ b)} to the vector {\ttfamily (c -\/ b)}, in radians from -\/π to π, C\-C\-W positive. \end{DoxyCompactList}\item 
-void \hyperlink{namespacecvutils_1_1geom_a1b829e402bd979136775e9761ff659aa}{cvutils\-::geom\-::k\-Curvatures} (const vector$<$ cv\-::\-Point $>$ \&pts, unsigned k, vector$<$ float $>$ \&out)
-\begin{DoxyCompactList}\small\item\em Store the list of k-\/curvatures in radians, C\-C\-W positive. \end{DoxyCompactList}\item 
-cv\-::\-Point \hyperlink{namespacecvutils_1_1geom_adadfb4fb4b44aeb7dbaf595c3abc6b28}{cvutils\-::geom\-::bound\-Pt\-In\-Rect} (cv\-::\-Point pt, cv\-::\-Rect r)
+cv\-::\-Point \hyperlink{namespacecvutils_1_1geom_ab040ea663623480d3fa5fa29b63eefe2}{cvutils\-::geom\-::clamp\-Pt} (cv\-::\-Point pt, const cv\-::\-Rect \&r)
 \begin{DoxyCompactList}\small\item\em Clamp {\ttfamily pt} inside {\ttfamily r}. \end{DoxyCompactList}\item 
 cv\-::\-Point \hyperlink{namespacecvutils_1_1geom_a1da30c1609f24123ac40bc9aaa6672d3}{cvutils\-::geom\-::get\-Offset\-From\-Loc\-Flags} (cv\-::\-Size small, cv\-::\-Size big, X\-Loc x\-Flag=F\-I\-X\-\_\-\-C\-E\-N\-T\-E\-R\-\_\-\-X, Y\-Loc y\-Flag=F\-I\-X\-\_\-\-C\-E\-N\-T\-E\-R\-\_\-\-Y)
-\begin{DoxyCompactList}\small\item\em Return the top-\/left offset in {\ttfamily big} of cv\-::\-Size {\ttfamily small} given location flags. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Return the top-\/left offset in {\ttfamily big} of {\ttfamily small} given location flags. \end{DoxyCompactList}\item 
 cv\-::\-Rect \hyperlink{namespacecvutils_1_1geom_a37b965db77db29c0e9f62c38206a550e}{cvutils\-::geom\-::get\-Avg\-Rect} (const cv\-::\-Rect \&a, const cv\-::\-Rect \&b)
 \begin{DoxyCompactList}\small\item\em Return the cv\-::\-Rect with the average bounds of both input rects. \end{DoxyCompactList}\item 
 cv\-::\-Rect \hyperlink{namespacecvutils_1_1geom_aaf8548b1ef8624ce216d00300e1d01f0}{cvutils\-::geom\-::get\-Avg\-Rect} (const vector$<$ cv\-::\-Rect $>$ \&rects)
 \begin{DoxyCompactList}\small\item\em Return the cv\-::\-Rect with the average bounds of all input rects. \end{DoxyCompactList}\item 
 cv\-::\-Rect \hyperlink{namespacecvutils_1_1geom_aa2774038078f935bc0c5b1324c4d38bb}{cvutils\-::geom\-::expand\-Rect} (const cv\-::\-Rect \&r, const cv\-::\-Size \&s)
-\begin{DoxyCompactList}\small\item\em Expand {\ttfamily cv\-::\-Rect} by a certain {\ttfamily cv\-::\-Size} on all sides while preserving the center. \end{DoxyCompactList}\item 
-cv\-::\-Mat \& \hyperlink{namespacecvutils_1_1transform_a4ce309a7263b6b2cb9492e67d8752695}{cvutils\-::transform\-::get\-Rotated\-R\-O\-I} (const cv\-::\-Mat \&src, cv\-::\-Rotated\-Rect \&r, cv\-::\-Mat \&dest)
+\begin{DoxyCompactList}\small\item\em Expand Rect by a certain size on all sides while preserving the center. \end{DoxyCompactList}\item 
+cv\-::\-Mat \& \hyperlink{namespacecvutils_1_1transform_a74e90c5a7806491a108fad30703cae2c}{cvutils\-::transform\-::get\-Rotated\-R\-O\-I} (const cv\-::\-Mat \&src, const cv\-::\-Rotated\-Rect \&r, cv\-::\-Mat \&dest)
 \begin{DoxyCompactList}\small\item\em Store part of {\ttfamily src} in {\ttfamily dest} with the R\-O\-I specified by {\ttfamily r}, and return {\ttfamily dest}. \end{DoxyCompactList}\item 
-cv\-::\-Mat \& \hyperlink{namespacecvutils_1_1transform_a8e3ddc3efa023809e71b2ed45b5fe325}{cvutils\-::transform\-::rotozoom\-Mat} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest, float angle, float scale=1.\-0, cv\-::\-Mat $\ast$trans\-Mat=N\-U\-L\-L)
+void \hyperlink{namespacecvutils_1_1transform_ac254c72298a9cd69aac2bde803739757}{cvutils\-::transform\-::rotozoom\-Mat} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest, float angle, float scale=1.\-0, cv\-::\-Mat $\ast$trans\-Mat=N\-U\-L\-L)
 \begin{DoxyCompactList}\small\item\em Scale and rotate {\ttfamily src} and store in {\ttfamily dest} (must not be the same). \end{DoxyCompactList}\item 
 cv\-::\-Size2f \hyperlink{namespacecvutils_1_1transform_a4ba17f552aeae6ddce6ca2da28936f42}{cvutils\-::transform\-::rotate\-Size} (cv\-::\-Size2f s, float angle)
 \begin{DoxyCompactList}\small\item\em Return the size bounding the given size rotated by {\ttfamily angle}, given in degrees. \end{DoxyCompactList}\item 
@@ -152,38 +150,6 @@ bool \hyperlink{cvutils_8hpp_ae01f9dafc21bb8ddab20628380a09547}{operator!=} (con
 
 
 \subsection{Function Documentation}
-\hypertarget{cvutils_8hpp_ae01f9dafc21bb8ddab20628380a09547}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator!=@{operator!=}}
-\index{operator!=@{operator!=}!cvutils.hpp@{cvutils.\-hpp}}
-\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator!= (
-\begin{DoxyParamCaption}
-\item[{const cv\-::\-Size2f \&}]{a, }
-\item[{const cv\-::\-Size2f \&}]{b}
-\end{DoxyParamCaption}
-)}}\label{cvutils_8hpp_ae01f9dafc21bb8ddab20628380a09547}
-\hypertarget{cvutils_8hpp_a7da9a1c417dc019d61a71e6a1a0b0bca}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$\ast$@{operator$\ast$}}
-\index{operator$\ast$@{operator$\ast$}!cvutils.hpp@{cvutils.\-hpp}}
-\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Size2f operator$\ast$ (
-\begin{DoxyParamCaption}
-\item[{const cv\-::\-Size2f \&}]{s, }
-\item[{float}]{a}
-\end{DoxyParamCaption}
-)}}\label{cvutils_8hpp_a7da9a1c417dc019d61a71e6a1a0b0bca}
-\hypertarget{cvutils_8hpp_a67a540d977f82b8c23e06225ced19b36}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$\ast$@{operator$\ast$}}
-\index{operator$\ast$@{operator$\ast$}!cvutils.hpp@{cvutils.\-hpp}}
-\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Size2f operator$\ast$ (
-\begin{DoxyParamCaption}
-\item[{float}]{a, }
-\item[{const cv\-::\-Size2f \&}]{s}
-\end{DoxyParamCaption}
-)}}\label{cvutils_8hpp_a67a540d977f82b8c23e06225ced19b36}
-\hypertarget{cvutils_8hpp_ad0324d28d9e4d0699b6e02bca1e17fff}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator/@{operator/}}
-\index{operator/@{operator/}!cvutils.hpp@{cvutils.\-hpp}}
-\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Size2f operator/ (
-\begin{DoxyParamCaption}
-\item[{const cv\-::\-Size2f \&}]{s, }
-\item[{float}]{a}
-\end{DoxyParamCaption}
-)}}\label{cvutils_8hpp_ad0324d28d9e4d0699b6e02bca1e17fff}
 \hypertarget{cvutils_8hpp_a0b14696e4e43f7a2a1e707fa208b4ea6}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!cvutils.hpp@{cvutils.\-hpp}}
 \subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
@@ -232,6 +198,30 @@ bool \hyperlink{cvutils_8hpp_ae01f9dafc21bb8ddab20628380a09547}{operator!=} (con
 \item[{const cv\-::\-Vec$<$ T, cn $>$}]{v}
 \end{DoxyParamCaption}
 )}}\label{cvutils_8hpp_a2a8d9a7b33a01731771e3ef6a6fbfa7f}
+\hypertarget{cvutils_8hpp_a7da9a1c417dc019d61a71e6a1a0b0bca}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cvutils.hpp@{cvutils.\-hpp}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Size2f operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Size2f \&}]{s, }
+\item[{float}]{a}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_a7da9a1c417dc019d61a71e6a1a0b0bca}
+\hypertarget{cvutils_8hpp_a67a540d977f82b8c23e06225ced19b36}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cvutils.hpp@{cvutils.\-hpp}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Size2f operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{float}]{a, }
+\item[{const cv\-::\-Size2f \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_a67a540d977f82b8c23e06225ced19b36}
+\hypertarget{cvutils_8hpp_ad0324d28d9e4d0699b6e02bca1e17fff}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator/@{operator/}}
+\index{operator/@{operator/}!cvutils.hpp@{cvutils.\-hpp}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Size2f operator/ (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Size2f \&}]{s, }
+\item[{float}]{a}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_ad0324d28d9e4d0699b6e02bca1e17fff}
 \hypertarget{cvutils_8hpp_a604bd29f4a423624445b4641ae1f9eec}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator==@{operator==}}
 \index{operator==@{operator==}!cvutils.hpp@{cvutils.\-hpp}}
 \subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool operator== (
@@ -240,3 +230,11 @@ bool \hyperlink{cvutils_8hpp_ae01f9dafc21bb8ddab20628380a09547}{operator!=} (con
 \item[{const cv\-::\-Size2f \&}]{b}
 \end{DoxyParamCaption}
 )}}\label{cvutils_8hpp_a604bd29f4a423624445b4641ae1f9eec}
+\hypertarget{cvutils_8hpp_ae01f9dafc21bb8ddab20628380a09547}{\index{cvutils.\-hpp@{cvutils.\-hpp}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!cvutils.hpp@{cvutils.\-hpp}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Size2f \&}]{a, }
+\item[{const cv\-::\-Size2f \&}]{b}
+\end{DoxyParamCaption}
+)}}\label{cvutils_8hpp_ae01f9dafc21bb8ddab20628380a09547}

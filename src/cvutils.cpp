@@ -1,3 +1,29 @@
+/*
+Copyright (c) 2012, Kevin Han
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
 #include <cstdint>
 
 #include <algorithm>
@@ -69,22 +95,6 @@ void cvutils::expandMat(const Mat &src, Mat &dest, Size newSize, Scalar fillVal,
     cvutils::expandMat(src, dest, newSize, geom::getOffsetFromLocFlags(src.size(), newSize, xFlag, yFlag), fillVal);
 }
 
-void cvutils::faceDetectScaled(const Mat &src, float scale, vector<Rect> &out) {
-    Mat scaled;
-    static CascadeClassifier cascade("/Users/kevinhan/Documents/pure/haarcascades/haarcascade_frontalface_alt.xml");
-
-    resize(src, scaled, Size(), scale, scale);
-
-    cascade.detectMultiScale(scaled, out);
-
-    for (auto &rect : out) {
-        rect.x = int(float(rect.x) / scale);
-        rect.y = int(float(rect.y) / scale);
-        rect.width = int(float(rect.width) / scale);
-        rect.height = int(float(rect.height) / scale);
-    }
-}
-
 void cvutils::matwrite(const char *fileName, const Mat &m) {
     CvMat cvM = CvMat(m);
     cvSave(fileName, &cvM);
@@ -148,7 +158,7 @@ void cvutils::gcMaskToBinMask(const Mat_<uchar> &mask, Mat_<uchar> &out) {
 
 /*** namespace `geom` ***/
 
-float geom::vecAngle(const Vec2i a, const Vec2i b) {
+float geom::vecAngle(const Vec2i &a, const Vec2i &b) {
     float dp = float(a.dot(b));
     float cross = float(b[1] * a[0] - b[0] * a[1]);
     dp /= sqrt(float((vecNormSqrd(a) * vecNormSqrd(b)))); // get cos(angle)
@@ -156,31 +166,11 @@ float geom::vecAngle(const Vec2i a, const Vec2i b) {
     return acos(dp) * float(kmath::sgn(cross));
 }
 
-float geom::ptAngle(const Point a, const Point b, const Point c) {
+float geom::ptAngle(const Point &a, const Point &b, const Point &c) {
     return vecAngle((a - b), (c - b));
 }
 
-void geom::kCurvatures(const vector<Point> &pts, unsigned k, vector<float> &out) {
-    out.resize(max<size_t>(pts.size() - 2 * k, 0));
-
-    Point off1, off2;
-    for (unsigned i = 2 * k; i < pts.size(); i++) {
-        off1 = pts[i - 2 * k] - pts[i - k];
-        off2 = pts[i] - pts[i - k];
-
-        float dp = float(off1.dot(off2));
-        dp /= sqrt(float((ptNormSqrd(off1) * ptNormSqrd(off2)))); // get cos(angle)
-
-        float angle = acos(dp);
-        if (off2.y * off1.x - off2.x * off1.y < 0) {
-            // cross product is negative
-            angle = -angle;
-        }
-        out[i - 2 * k] = angle;
-    }
-}
-
-Point geom::boundPtInRect(Point pt, Rect r) {
+Point geom::clampPt(Point pt, const Rect &r) {
     pt.x = int(kmath::Interval(float(r.x), float(r.x + r.width)).closest(float(pt.x)));
     pt.y = int(kmath::Interval(float(r.y), float(r.y + r.height)).closest(float(pt.y)));
     return pt;
@@ -255,7 +245,7 @@ void cvutils::cvtBGR2RG(const Mat &src, Mat &dest) {
 
 /*** namespace `transform` ***/
 
-Mat &cvutils::transform::getRotatedROI(const Mat &src, RotatedRect &r, Mat &dest) {
+Mat &cvutils::transform::getRotatedROI(const Mat &src, const RotatedRect &r, Mat &dest) {
     Mat transMat;
     transform::rotozoomMat(src, dest, r.angle, 1.0, &transMat);
     Point newPt = transform::warpAffinePt(transMat, r.center);
@@ -263,7 +253,7 @@ Mat &cvutils::transform::getRotatedROI(const Mat &src, RotatedRect &r, Mat &dest
     return dest;
 }
 
-Mat &cvutils::transform::rotozoomMat(const Mat &src, Mat &dest, float angle, float scale, Mat *transMat) {
+void cvutils::transform::rotozoomMat(const Mat &src, Mat &dest, float angle, float scale, Mat *transMat) {
     Size2f newSize = rotateSize(src.size() * scale, angle);
 
     Mat tempTransMat;
@@ -280,7 +270,6 @@ Mat &cvutils::transform::rotozoomMat(const Mat &src, Mat &dest, float angle, flo
     transMat->at<double>(1, 2) += (newSize.height - float(src.rows)) / 2.0f;
 
     warpAffine(src, dest, *transMat, newSize);
-    return dest;
 }
 
 Point2f cvutils::transform::warpAffinePt(const Mat_<float> &transMat, Point2f pt) {

@@ -1,5 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$cfinder_8cpp.html" title="cfinder.cpp" alt="" coords="5,155,96,181"/>
-<area shape="rect" id="node5" href="$cfinder_8hpp.html" title="cfinder.hpp" alt="" coords="47,80,137,107"/>
-<area shape="rect" id="node8" href="$mouse_8cpp.html" title="mouse.cpp" alt="" coords="161,80,252,107"/>
+<area shape="rect" id="node3" href="$humancv_8cpp.html" title="humancv.cpp" alt="" coords="5,155,107,181"/>
+<area shape="rect" id="node5" href="$humancv_8hpp.html" title="humancv.hpp" alt="" coords="50,80,152,107"/>
+<area shape="rect" id="node8" href="$mouse_8cpp.html" title="mouse.cpp" alt="" coords="177,80,268,107"/>
+<area shape="rect" id="node10" href="$osx_8hpp.html" title="osx.hpp" alt="" coords="343,80,415,107"/>
+<area shape="rect" id="node12" href="$osx_8cpp.html" title="osx.cpp" alt="" coords="269,155,341,181"/>
+<area shape="rect" id="node14" href="$osx__cv_8cpp.html" title="osx_cv.cpp" alt="" coords="373,229,467,256"/>
+<area shape="rect" id="node16" href="$osx__cv_8hpp.html" title="osx_cv.hpp" alt="" coords="416,155,509,181"/>
 </map>

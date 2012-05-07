@@ -48,36 +48,6 @@ Simple wrapper around {\ttfamily $<$random$>$} with a Python-\/like interface. F
 \href{http://docs.python.org/library/random.html}{\tt http\-://docs.\-python.\-org/library/random.\-html} 
 
 \subsection{Function Documentation}
-\hypertarget{namespacekrandom_ae031164eba3b0311cbae22aed8894898}{\index{krandom@{krandom}!choice@{choice}}
-\index{choice@{choice}!krandom@{krandom}}
-\subsubsection[{choice}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-Type $>$ Seq\-Type\-::value\-\_\-type {\bf krandom\-::choice} (
-\begin{DoxyParamCaption}
-\item[{const Seq\-Type \&}]{seq}
-\end{DoxyParamCaption}
-)}}\label{namespacekrandom_ae031164eba3b0311cbae22aed8894898}
-\hypertarget{namespacekrandom_a50015c42a5cb2ab60017b00abbb4ffde}{\index{krandom@{krandom}!get\-Sample\-Inds@{get\-Sample\-Inds}}
-\index{get\-Sample\-Inds@{get\-Sample\-Inds}!krandom@{krandom}}
-\subsubsection[{get\-Sample\-Inds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ unsigned $>$ \& {\bf krandom\-::get\-Sample\-Inds} (
-\begin{DoxyParamCaption}
-\item[{unsigned}]{pop\-Size, }
-\item[{unsigned}]{samp\-Size, }
-\item[{vector$<$ unsigned $>$ \&}]{inds, }
-\item[{bool}]{with\-Replacement = {\ttfamily true}}
-\end{DoxyParamCaption}
-)}}\label{namespacekrandom_a50015c42a5cb2ab60017b00abbb4ffde}
-
-
-Store {\ttfamily samp\-Size} random numbers in range \mbox{[}0, {\ttfamily pop\-Size}) in {\ttfamily inds}, with or without replacement. 
-
-\hypertarget{namespacekrandom_aa1ecb85e031f5505020d74732acd846a}{\index{krandom@{krandom}!get\-Sample\-Inds@{get\-Sample\-Inds}}
-\index{get\-Sample\-Inds@{get\-Sample\-Inds}!krandom@{krandom}}
-\subsubsection[{get\-Sample\-Inds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned$>$ {\bf krandom\-::get\-Sample\-Inds} (
-\begin{DoxyParamCaption}
-\item[{unsigned}]{pop\-Size, }
-\item[{unsigned}]{samp\-Size, }
-\item[{bool}]{with\-Replacement = {\ttfamily true}}
-\end{DoxyParamCaption}
-)}}\label{namespacekrandom_aa1ecb85e031f5505020d74732acd846a}
 \hypertarget{namespacekrandom_a32b7337c1131ea0fbbd6b5f20aac2002}{\index{krandom@{krandom}!randint@{randint}}
 \index{randint@{randint}!krandom@{krandom}}
 \subsubsection[{randint}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf krandom\-::randint} (
@@ -109,6 +79,67 @@ Store {\ttfamily samp\-Size} random numbers in range \mbox{[}0, {\ttfamily pop\-
 {}
 \end{DoxyParamCaption}
 )}}\label{namespacekrandom_a6a320147afafc7e81429b1a1ab4ec2e0}
+\hypertarget{namespacekrandom_aa5f77704c3bf39731c986b7d27caf0fe}{\index{krandom@{krandom}!uniform@{uniform}}
+\index{uniform@{uniform}!krandom@{krandom}}
+\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf krandom\-::uniform} (
+\begin{DoxyParamCaption}
+\item[{float}]{low, }
+\item[{float}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_aa5f77704c3bf39731c986b7d27caf0fe}
+\hypertarget{namespacekrandom_ae89a756b3d067650aa9712efe6e930e2}{\index{krandom@{krandom}!uniform@{uniform}}
+\index{uniform@{uniform}!krandom@{krandom}}
+\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf krandom\-::uniform} (
+\begin{DoxyParamCaption}
+\item[{double}]{low, }
+\item[{double}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_ae89a756b3d067650aa9712efe6e930e2}
+\hypertarget{namespacekrandom_abac374525fd029faa58cb9c43cab41eb}{\index{krandom@{krandom}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!krandom@{krandom}}
+\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Iter\-Type $>$ void {\bf krandom\-::shuffle} (
+\begin{DoxyParamCaption}
+\item[{Iter\-Type}]{start, }
+\item[{Iter\-Type}]{end}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_abac374525fd029faa58cb9c43cab41eb}
+\hypertarget{namespacekrandom_a3cf920703fa6e180b1aa4d4c86799626}{\index{krandom@{krandom}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!krandom@{krandom}}
+\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-Type $>$ void {\bf krandom\-::shuffle} (
+\begin{DoxyParamCaption}
+\item[{Seq\-Type \&}]{seq}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_a3cf920703fa6e180b1aa4d4c86799626}
+\hypertarget{namespacekrandom_ae031164eba3b0311cbae22aed8894898}{\index{krandom@{krandom}!choice@{choice}}
+\index{choice@{choice}!krandom@{krandom}}
+\subsubsection[{choice}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-Type $>$ Seq\-Type\-::value\-\_\-type {\bf krandom\-::choice} (
+\begin{DoxyParamCaption}
+\item[{const Seq\-Type \&}]{seq}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_ae031164eba3b0311cbae22aed8894898}
+\hypertarget{namespacekrandom_a50015c42a5cb2ab60017b00abbb4ffde}{\index{krandom@{krandom}!get\-Sample\-Inds@{get\-Sample\-Inds}}
+\index{get\-Sample\-Inds@{get\-Sample\-Inds}!krandom@{krandom}}
+\subsubsection[{get\-Sample\-Inds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ unsigned $>$ \& {\bf krandom\-::get\-Sample\-Inds} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pop\-Size, }
+\item[{unsigned}]{samp\-Size, }
+\item[{vector$<$ unsigned $>$ \&}]{inds, }
+\item[{bool}]{with\-Replacement = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_a50015c42a5cb2ab60017b00abbb4ffde}
+
+
+Store {\ttfamily samp\-Size} random numbers in range \mbox{[}0, {\ttfamily pop\-Size}) in {\ttfamily inds}, with or without replacement. 
+
+\hypertarget{namespacekrandom_aa1ecb85e031f5505020d74732acd846a}{\index{krandom@{krandom}!get\-Sample\-Inds@{get\-Sample\-Inds}}
+\index{get\-Sample\-Inds@{get\-Sample\-Inds}!krandom@{krandom}}
+\subsubsection[{get\-Sample\-Inds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned$>$ {\bf krandom\-::get\-Sample\-Inds} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pop\-Size, }
+\item[{unsigned}]{samp\-Size, }
+\item[{bool}]{with\-Replacement = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_aa1ecb85e031f5505020d74732acd846a}
 \hypertarget{namespacekrandom_a924f7dd5ed9785fd396615b9995e47da}{\index{krandom@{krandom}!sample@{sample}}
 \index{sample@{sample}!krandom@{krandom}}
 \subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Seq\-Type $>$ void {\bf krandom\-::sample} (
@@ -128,37 +159,6 @@ Store {\ttfamily samp\-Size} random numbers in range \mbox{[}0, {\ttfamily pop\-
 \item[{bool}]{with\-Replacement = {\ttfamily true}}
 \end{DoxyParamCaption}
 )}}\label{namespacekrandom_a59cee8cdbf9ac39cc5d3762935dbdfb7}
-\hypertarget{namespacekrandom_abac374525fd029faa58cb9c43cab41eb}{\index{krandom@{krandom}!shuffle@{shuffle}}
-\index{shuffle@{shuffle}!krandom@{krandom}}
-\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Iter\-Type $>$ void {\bf krandom\-::shuffle} (
-\begin{DoxyParamCaption}
-\item[{Iter\-Type}]{start, }
-\item[{Iter\-Type}]{end}
-\end{DoxyParamCaption}
-)}}\label{namespacekrandom_abac374525fd029faa58cb9c43cab41eb}
-\hypertarget{namespacekrandom_a3cf920703fa6e180b1aa4d4c86799626}{\index{krandom@{krandom}!shuffle@{shuffle}}
-\index{shuffle@{shuffle}!krandom@{krandom}}
-\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-Type $>$ void {\bf krandom\-::shuffle} (
-\begin{DoxyParamCaption}
-\item[{Seq\-Type \&}]{seq}
-\end{DoxyParamCaption}
-)}}\label{namespacekrandom_a3cf920703fa6e180b1aa4d4c86799626}
-\hypertarget{namespacekrandom_aa5f77704c3bf39731c986b7d27caf0fe}{\index{krandom@{krandom}!uniform@{uniform}}
-\index{uniform@{uniform}!krandom@{krandom}}
-\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf krandom\-::uniform} (
-\begin{DoxyParamCaption}
-\item[{float}]{low, }
-\item[{float}]{high}
-\end{DoxyParamCaption}
-)}}\label{namespacekrandom_aa5f77704c3bf39731c986b7d27caf0fe}
-\hypertarget{namespacekrandom_ae89a756b3d067650aa9712efe6e930e2}{\index{krandom@{krandom}!uniform@{uniform}}
-\index{uniform@{uniform}!krandom@{krandom}}
-\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf krandom\-::uniform} (
-\begin{DoxyParamCaption}
-\item[{double}]{low, }
-\item[{double}]{high}
-\end{DoxyParamCaption}
-)}}\label{namespacekrandom_ae89a756b3d067650aa9712efe6e930e2}
 
 
 \subsection{Variable Documentation}

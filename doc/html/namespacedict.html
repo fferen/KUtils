@@ -102,36 +102,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a25d4adabc11b7754dad27d591de51df6"><td class="memTemplParams" colspan="2">template&lt;typename IterT , typename ElemT &gt; </td></tr>
-<tr class="memitem:a25d4adabc11b7754dad27d591de51df6"><td class="memTemplItemLeft" align="right" valign="top">Dict&lt; ElemT, unsigned &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#a25d4adabc11b7754dad27d591de51df6">countElems</a> (const IterT &amp;start, const IterT &amp;end, Dict&lt; ElemT, unsigned &gt; &amp;out)</td></tr>
-<tr class="memdesc:a25d4adabc11b7754dad27d591de51df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a pair of iterators, store a mapping from element to count in <code>out</code>, and return <code>out</code>.  <a href="#a25d4adabc11b7754dad27d591de51df6"></a><br/></td></tr>
+<tr class="memitem:a25162c2329cb972f58b47a93f589d035"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType &gt; </td></tr>
+<tr class="memitem:a25162c2329cb972f58b47a93f589d035"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#a25162c2329cb972f58b47a93f589d035">_makeDictIP</a> (Dict&lt; KeyType, ValType &gt; &amp;d, KeyType key, ValType val)</td></tr>
+<tr class="memitem:aedf2cd76600afc0853ea6de895316ff9"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType , typename... Args&gt; </td></tr>
+<tr class="memitem:aedf2cd76600afc0853ea6de895316ff9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#aedf2cd76600afc0853ea6de895316ff9">_makeDictIP</a> (Dict&lt; KeyType, ValType &gt; &amp;d, KeyType key, ValType val, Args...args)</td></tr>
+<tr class="memitem:a60d2673f89ed278333138def4ba2a751"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType , typename... Args&gt; </td></tr>
+<tr class="memitem:a60d2673f89ed278333138def4ba2a751"><td class="memTemplItemLeft" align="right" valign="top">Dict&lt; KeyType, ValType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#a60d2673f89ed278333138def4ba2a751">makeDict</a> (KeyType key, ValType val, Args...args)</td></tr>
+<tr class="memdesc:a60d2673f89ed278333138def4ba2a751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <code>Dict</code> (<code>unordered_map</code>) with any number of key/value pairs.  <a href="#a60d2673f89ed278333138def4ba2a751"></a><br/></td></tr>
+<tr class="memitem:a17c1d6c185319ab58f9854244fdc7b75"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType &gt; </td></tr>
+<tr class="memitem:a17c1d6c185319ab58f9854244fdc7b75"><td class="memTemplItemLeft" align="right" valign="top">Dict&lt; KeyType, ValType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#a17c1d6c185319ab58f9854244fdc7b75">makeDict</a> ()</td></tr>
+<tr class="memdesc:a17c1d6c185319ab58f9854244fdc7b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty <code>Dict</code> (<code>unordered_map</code>).  <a href="#a17c1d6c185319ab58f9854244fdc7b75"></a><br/></td></tr>
+<tr class="memitem:a0a95e9cde2e3b78db4cbacd7ec00934f"><td class="memTemplParams" colspan="2">template&lt;typename IterT &gt; </td></tr>
+<tr class="memitem:a0a95e9cde2e3b78db4cbacd7ec00934f"><td class="memTemplItemLeft" align="right" valign="top">Dict&lt; typename <br class="typebreak"/>
+IterT::value_type, unsigned &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#a0a95e9cde2e3b78db4cbacd7ec00934f">countElems</a> (const IterT &amp;start, const IterT &amp;end)</td></tr>
+<tr class="memdesc:a0a95e9cde2e3b78db4cbacd7ec00934f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a pair of iterators, return a mapping from element to count.  <a href="#a0a95e9cde2e3b78db4cbacd7ec00934f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Utilities for working with <code>Dict</code>s (<code>unordered_map</code>s). </p>
 </div><hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a25d4adabc11b7754dad27d591de51df6"></a>
+<a class="anchor" id="a25162c2329cb972f58b47a93f589d035"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename IterT , typename ElemT &gt; </div>
+template&lt;typename KeyType , typename ValType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">Dict&lt;ElemT, unsigned&gt;&amp; <a class="el" href="namespacedict.html#a25d4adabc11b7754dad27d591de51df6">dict::countElems</a> </td>
+          <td class="memname">void <a class="el" href="namespacedict.html#a25162c2329cb972f58b47a93f589d035">dict::_makeDictIP</a> </td>
           <td>(</td>
-          <td class="paramtype">const IterT &amp;&#160;</td>
-          <td class="paramname"><em>start</em>, </td>
+          <td class="paramtype">Dict&lt; KeyType, ValType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const IterT &amp;&#160;</td>
-          <td class="paramname"><em>end</em>, </td>
+          <td class="paramtype">KeyType&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Dict&lt; ElemT, unsigned &gt; &amp;&#160;</td>
-          <td class="paramname"><em>out</em>&#160;</td>
+          <td class="paramtype">ValType&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -142,7 +153,135 @@ template&lt;typename IterT , typename ElemT &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Given a pair of iterators, store a mapping from element to count in <code>out</code>, and return <code>out</code>. </p>
+</div>
+</div>
+<a class="anchor" id="aedf2cd76600afc0853ea6de895316ff9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KeyType , typename ValType , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="namespacedict.html#a25162c2329cb972f58b47a93f589d035">dict::_makeDictIP</a> </td>
+          <td>(</td>
+          <td class="paramtype">Dict&lt; KeyType, ValType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KeyType&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValType&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a60d2673f89ed278333138def4ba2a751"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KeyType , typename ValType , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Dict&lt;KeyType, ValType&gt; <a class="el" href="namespacedict.html#a60d2673f89ed278333138def4ba2a751">dict::makeDict</a> </td>
+          <td>(</td>
+          <td class="paramtype">KeyType&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ValType&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construct a <code>Dict</code> (<code>unordered_map</code>) with any number of key/value pairs. </p>
+
+</div>
+</div>
+<a class="anchor" id="a17c1d6c185319ab58f9854244fdc7b75"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KeyType , typename ValType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Dict&lt;KeyType, ValType&gt; <a class="el" href="namespacedict.html#a60d2673f89ed278333138def4ba2a751">dict::makeDict</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construct an empty <code>Dict</code> (<code>unordered_map</code>). </p>
+<p>Must specify <code>KeyType</code> and <code>ValType</code> as template parameters. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0a95e9cde2e3b78db4cbacd7ec00934f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IterT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Dict&lt;typename IterT::value_type, unsigned&gt; <a class="el" href="namespacedict.html#a0a95e9cde2e3b78db4cbacd7ec00934f">dict::countElems</a> </td>
+          <td>(</td>
+          <td class="paramtype">const IterT &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IterT &amp;&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Given a pair of iterators, return a mapping from element to count. </p>
 
 </div>
 </div>
@@ -150,7 +289,7 @@ template&lt;typename IterT , typename ElemT &gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 22:14:18 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

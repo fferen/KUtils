@@ -104,10 +104,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;memory&gt;</code><br/>
 <code>#include &lt;ApplicationServices/ApplicationServices.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="mouse_8hpp_source.html">mouse.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="kmath_8hpp_source.html">kmath.hpp</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for osx.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="osx_8hpp__incl.png" border="0" usemap="#osx_8hpp" alt=""/></div>
+<map name="osx_8hpp" id="osx_8hpp">
+<area shape="rect" id="node11" href="mouse_8hpp.html" title="mouse.hpp" alt="" coords="431,80,522,107"/><area shape="rect" id="node15" href="kmath_8hpp.html" title="kmath.hpp" alt="" coords="475,155,560,181"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -121,15 +125,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosx_1_1mouse_1_1_mouse_state.html">osx::mouse::MouseState</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple data holder for a button flag and a position.  <a href="structosx_1_1mouse_1_1_mouse_state.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosx_1_1disp_1_1_image.html">osx::disp::Image</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory-managed wrapper aronud <code>CGImageRef</code> using a <code>shared_ptr</code>.  <a href="structosx_1_1disp_1_1_image.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceosx"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx.html">osx</a></td></tr>
 <tr class="memdesc:namespaceosx"><td class="mdescLeft">&#160;</td><td class="mdescRight">OSX-specific utilities. <br/></td></tr>
 <tr class="memitem:namespaceosx_1_1mouse"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html">osx::mouse</a></td></tr>
-<tr class="memdesc:namespaceosx_1_1mouse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilities for modeling the mouse state and controlling the mouse. <br/></td></tr>
+<tr class="memdesc:namespaceosx_1_1mouse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilities for controlling the mouse. <br/></td></tr>
 <tr class="memitem:namespaceosx_1_1disp"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1disp.html">osx::disp</a></td></tr>
 <tr class="memdesc:namespaceosx_1_1disp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions for extracting the display image. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
@@ -137,27 +140,27 @@ Defines</h2></td></tr>
 <tr class="memitem:ac041cfa66801dc389105798b67525f1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="osx_8hpp.html#ac041cfa66801dc389105798b67525f1e">UNUSED_VAR</a></td></tr>
 <tr><td colspan="2"><h2><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a025e93cf6af5808e4c8c2525fc668499"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499">osx::mouse::MouseButton</a> { <a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499aba5b540b1c997fb283ad354d66d6b5c8">osx::mouse::LEFT_BUTTON</a>, 
-<a class="el" href="namespaceosx_1_1mouse.html#a025e93cf6af5808e4c8c2525fc668499a8f8087d9c68a22fe0ab65e0995e6649b">osx::mouse::RIGHT_BUTTON</a>
- }</td></tr>
 <tr class="memitem:a63adf9b0b0b0365ec428dd44fc30c659"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659">osx::disp::RGBType</a> { <a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659ab96ecb2ad3c69bf9019d7ed4253603b1">osx::disp::COLOR_BGR</a>, 
 <a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659a307b3e319b6708774c7672d7efc04d0d">osx::disp::COLOR_ARGB</a>, 
 <a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659aefca227dbfbf6803b1248aceeaa187b7">osx::disp::COLOR_RGBA</a>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:abf7318d332d5e87088a270877f3da1ee"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:abf7318d332d5e87088a270877f3da1ee"><td class="memTemplItemLeft" align="right" valign="top">CGPoint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceosx.html#abf7318d332d5e87088a270877f3da1ee">osx::toCGPt</a> (<a class="el" href="structkmath_1_1_point.html">kmath::Point</a>&lt; T &gt; pt)</td></tr>
+<tr class="memitem:a37f829bcbe1e218b01dafeb711bd9d42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacekmath.html#ad80aa80b21a1aeadbd484a0fc56f4e95">kmath::PointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx.html#a37f829bcbe1e218b01dafeb711bd9d42">osx::toPt</a> (CGPoint pt)</td></tr>
 <tr class="memitem:a96fc2b2983c0d9ee610ca9404ccc0506"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a96fc2b2983c0d9ee610ca9404ccc0506">osx::mouse::move</a> (CGPoint pos)</td></tr>
 <tr class="memdesc:a96fc2b2983c0d9ee610ca9404ccc0506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move cursor to <code>pos</code>.  <a href="#a96fc2b2983c0d9ee610ca9404ccc0506"></a><br/></td></tr>
-<tr class="memitem:af6a13b95720ba5d280a64dc3c169c4ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#af6a13b95720ba5d280a64dc3c169c4ab">osx::mouse::down</a> (MouseButton button, CGPoint pos)</td></tr>
-<tr class="memdesc:af6a13b95720ba5d280a64dc3c169c4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse down event at <code>pos</code>.  <a href="#af6a13b95720ba5d280a64dc3c169c4ab"></a><br/></td></tr>
-<tr class="memitem:a653d01ba6a07d9a07581934e80cd5138"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a653d01ba6a07d9a07581934e80cd5138">osx::mouse::up</a> (MouseButton button, CGPoint pos)</td></tr>
-<tr class="memdesc:a653d01ba6a07d9a07581934e80cd5138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse up event at <code>pos</code>.  <a href="#a653d01ba6a07d9a07581934e80cd5138"></a><br/></td></tr>
-<tr class="memitem:af0b3d4b3af410086362a3faaff78d3b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#af0b3d4b3af410086362a3faaff78d3b6">osx::mouse::click</a> (MouseButton button, CGPoint pos)</td></tr>
-<tr class="memdesc:af0b3d4b3af410086362a3faaff78d3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse click (button down, then up) event at <code>pos</code>.  <a href="#af0b3d4b3af410086362a3faaff78d3b6"></a><br/></td></tr>
-<tr class="memitem:ac87df58c78bf4f2ed44eb74a272a155e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#ac87df58c78bf4f2ed44eb74a272a155e">osx::mouse::drag</a> (MouseButton button, CGPoint startPos, CGPoint endPos)</td></tr>
-<tr class="memdesc:ac87df58c78bf4f2ed44eb74a272a155e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse drag event at from <code>startPos</code> to <code>endPos</code>.  <a href="#ac87df58c78bf4f2ed44eb74a272a155e"></a><br/></td></tr>
-<tr class="memitem:a8e0f791a8c9413d16403b6b793864cb7"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1disp.html#a8e0f791a8c9413d16403b6b793864cb7">osx::disp::getScreen</a> ()</td></tr>
-<tr class="memdesc:a8e0f791a8c9413d16403b6b793864cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current screen.  <a href="#a8e0f791a8c9413d16403b6b793864cb7"></a><br/></td></tr>
+<tr class="memitem:a8a25c1e4fda52095a4e113b2832777da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a8a25c1e4fda52095a4e113b2832777da">osx::mouse::down</a> (<a class="el" href="namespacemouse.html#af85c842f9410a5f81fe933360fb19bc4">ms::Button</a> button, CGPoint pos)</td></tr>
+<tr class="memdesc:a8a25c1e4fda52095a4e113b2832777da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse down event at <code>pos</code>.  <a href="#a8a25c1e4fda52095a4e113b2832777da"></a><br/></td></tr>
+<tr class="memitem:a40b06e2da73d0ee062a669cdbcd6e4ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a40b06e2da73d0ee062a669cdbcd6e4ef">osx::mouse::up</a> (<a class="el" href="namespacemouse.html#af85c842f9410a5f81fe933360fb19bc4">ms::Button</a> button, CGPoint pos)</td></tr>
+<tr class="memdesc:a40b06e2da73d0ee062a669cdbcd6e4ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse up event at <code>pos</code>.  <a href="#a40b06e2da73d0ee062a669cdbcd6e4ef"></a><br/></td></tr>
+<tr class="memitem:a127098ef29a5e3b824fdc2376e89f557"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a127098ef29a5e3b824fdc2376e89f557">osx::mouse::click</a> (<a class="el" href="namespacemouse.html#af85c842f9410a5f81fe933360fb19bc4">ms::Button</a> button, CGPoint pos)</td></tr>
+<tr class="memdesc:a127098ef29a5e3b824fdc2376e89f557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse click (button down, then up) event at <code>pos</code>.  <a href="#a127098ef29a5e3b824fdc2376e89f557"></a><br/></td></tr>
+<tr class="memitem:a49c625169ee20a981c56b3accf095605"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1mouse.html#a49c625169ee20a981c56b3accf095605">osx::mouse::drag</a> (<a class="el" href="namespacemouse.html#af85c842f9410a5f81fe933360fb19bc4">ms::Button</a> button, CGPoint startPos, CGPoint endPos)</td></tr>
+<tr class="memdesc:a49c625169ee20a981c56b3accf095605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate a mouse drag event at from <code>startPos</code> to <code>endPos</code>.  <a href="#a49c625169ee20a981c56b3accf095605"></a><br/></td></tr>
+<tr class="memitem:a7d7872e070a2742dc7408ef1e56f7960"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx_1_1disp.html#a7d7872e070a2742dc7408ef1e56f7960">osx::disp::getScreen</a> ()</td></tr>
+<tr class="memdesc:a7d7872e070a2742dc7408ef1e56f7960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current screen.  <a href="#a7d7872e070a2742dc7408ef1e56f7960"></a><br/></td></tr>
 <tr class="memitem:ae35a0729fcf841f08cc4c1cd53038f97"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="osx_8hpp.html#ae35a0729fcf841f08cc4c1cd53038f97">operator&lt;&lt;</a> (ostream &amp;out, const CGColorSpaceRef &amp;colorSpace)</td></tr>
 <tr class="memdesc:ae35a0729fcf841f08cc4c1cd53038f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print <code>CGColorSpaceRef</code> info.  <a href="#ae35a0729fcf841f08cc4c1cd53038f97"></a><br/></td></tr>
 <tr class="memitem:ac2540fce1dc9490db082314832db4a6a"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="osx_8hpp.html#ac2540fce1dc9490db082314832db4a6a">operator&lt;&lt;</a> (ostream &amp;out, const CGImageRef &amp;imRef)</td></tr>
@@ -240,7 +243,7 @@ Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 22:14:18 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

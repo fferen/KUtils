@@ -1,3 +1,29 @@
+/*
+Copyright (c) 2012, Kevin Han
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
 #pragma once
 
 #include <iostream>
@@ -29,6 +55,11 @@ namespace kmath {
 
         Point(T x, T y)
                 :x(x), y(y) {
+        }
+
+        template <typename U>
+        operator Point<U>() {
+            return Point<U>(this->x, this->y);
         }
 
         friend ostream &operator<<(ostream &out, Point p) {
@@ -103,7 +134,7 @@ namespace kmath {
     /*! Return `n!`. */
     unsigned factorial(unsigned n);
 
-    /*! Return `n`C`k` (n choose k).
+    /*! Return <sub>n</sub>C<sub>k</sub> (n choose k).
      *
      * @throws range_error
      * Thrown if k > n.
@@ -124,11 +155,11 @@ namespace kmath {
     /*! Specialization of `fround` that rounds float to nearest integer. */
     int iround(float val);
 
-    /*! Project a value within `domain` to a new Interval `range` using `func`.
+    /*! Project a value within `domain` to a new interval `range` using `func`.
      *
      * The value is mapped, using `domain`, onto the function's domain, then the
-     * function is called. The result is mapped back, using `funcRange`, onto
-     * the output range.
+     * function is called on that value. The result is mapped back, using
+     * `funcRange`, onto the output range.
      *
      * With the default arguments, the behavior is to project the value linearly
      * from `domain` to `range`.
@@ -145,10 +176,12 @@ namespace kmath {
      *      Domain of `func`.
      * @param funcRange
      *      Range of `func`.
+     * @param bound
+     *      If `true`, `val` is first bounded to the closest point in domain.
      *
      * @throws range_error
-     * Thrown if `val` is not within `domain` or if `func` returns something outside of
-     * `funcRange`.
+     * Thrown if bound is `false` and `val` is not within `domain`, or `func`
+     * returns something outside of `funcRange`.
      */
     float intervalProject(
             float val,
@@ -156,6 +189,7 @@ namespace kmath {
             const Interval &range,
             const function<float(float)> &func=[](float x) { return x; },
             const Interval &funcDomain=Interval(0, 1),
-            const Interval &funcRange=Interval(0, 1)
+            const Interval &funcRange=Interval(0, 1),
+            bool bound=true
             );
 }

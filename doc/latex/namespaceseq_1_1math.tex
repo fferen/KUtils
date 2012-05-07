@@ -34,17 +34,31 @@ struct \hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}
 Mathematical operations on sequences, and sequence structures. 
 
 \subsection{Function Documentation}
-\hypertarget{namespaceseq_1_1math_ab019165412bf99555adfeaaaa86f319f}{\index{seq\-::math@{seq\-::math}!mean@{mean}}
-\index{mean@{mean}!seq::math@{seq\-::math}}
-\subsubsection[{mean}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ Seq\-T\-::value\-\_\-type {\bf seq\-::math\-::mean} (
+\hypertarget{namespaceseq_1_1math_abfe793e999a374a4d5e6b1ef3f268b59}{\index{seq\-::math@{seq\-::math}!xrange@{xrange}}
+\index{xrange@{xrange}!seq::math@{seq\-::math}}
+\subsubsection[{xrange}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T $>$ {\bf X\-Range}$<$Num\-T$>$ {\bf seq\-::math\-::xrange} (
 \begin{DoxyParamCaption}
-\item[{const Seq\-T \&}]{in}
+\item[{Num\-T}]{low, }
+\item[{Num\-T}]{high, }
+\item[{Num\-T}]{step = {\ttfamily 1}, }
+\item[{bool}]{inclusive = {\ttfamily false}}
 \end{DoxyParamCaption}
-)}}\label{namespaceseq_1_1math_ab019165412bf99555adfeaaaa86f319f}
+)}}\label{namespaceseq_1_1math_abfe793e999a374a4d5e6b1ef3f268b59}
 
 
-Return the arithmetic mean of sequence elements. 
+Return {\ttfamily \hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}} sequence, similar to Python's \char`\"{}xrange\char`\"{}. 
 
+Suggested usage\-: \begin{DoxyVerb} for (auto i : xrange(10)) {
+     printf("%d\n", i);
+ }\end{DoxyVerb}
+ Unlike the Python version, this can also accept floats/doubles, and can include the endpoint of the range by specifying {\ttfamily inclusive} = {\ttfamily true}. \hypertarget{namespaceseq_1_1math_a4f2c47e50ba86a80778ccebd31d7fa16}{\index{seq\-::math@{seq\-::math}!xrange@{xrange}}
+\index{xrange@{xrange}!seq::math@{seq\-::math}}
+\subsubsection[{xrange}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T $>$ {\bf X\-Range}$<$Num\-T$>$ {\bf seq\-::math\-::xrange} (
+\begin{DoxyParamCaption}
+\item[{Num\-T}]{high, }
+\item[{bool}]{inclusive = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{namespaceseq_1_1math_a4f2c47e50ba86a80778ccebd31d7fa16}
 \hypertarget{namespaceseq_1_1math_a6bd86d848fb47f455aff84c38c175ea4}{\index{seq\-::math@{seq\-::math}!range@{range}}
 \index{range@{range}!seq::math@{seq\-::math}}
 \subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T , class Seq\-T $>$ Seq\-T\& {\bf seq\-::math\-::range} (
@@ -82,28 +96,14 @@ Construct a sequence of numbers from 0 to high with step=1.
 
 Return the sum of sequence elements. 
 
-\hypertarget{namespaceseq_1_1math_abfe793e999a374a4d5e6b1ef3f268b59}{\index{seq\-::math@{seq\-::math}!xrange@{xrange}}
-\index{xrange@{xrange}!seq::math@{seq\-::math}}
-\subsubsection[{xrange}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T $>$ {\bf X\-Range}$<$Num\-T$>$ {\bf seq\-::math\-::xrange} (
+\hypertarget{namespaceseq_1_1math_ab019165412bf99555adfeaaaa86f319f}{\index{seq\-::math@{seq\-::math}!mean@{mean}}
+\index{mean@{mean}!seq::math@{seq\-::math}}
+\subsubsection[{mean}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-T $>$ Seq\-T\-::value\-\_\-type {\bf seq\-::math\-::mean} (
 \begin{DoxyParamCaption}
-\item[{Num\-T}]{low, }
-\item[{Num\-T}]{high, }
-\item[{Num\-T}]{step = {\ttfamily 1}, }
-\item[{bool}]{inclusive = {\ttfamily false}}
+\item[{const Seq\-T \&}]{in}
 \end{DoxyParamCaption}
-)}}\label{namespaceseq_1_1math_abfe793e999a374a4d5e6b1ef3f268b59}
+)}}\label{namespaceseq_1_1math_ab019165412bf99555adfeaaaa86f319f}
 
 
-Return {\ttfamily \hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}} sequence, similar to Python's \char`\"{}xrange\char`\"{}. 
+Return the arithmetic mean of sequence elements. 
 
-Suggested usage\-: \begin{DoxyVerb} for (auto i : xrange(10)) {
-     printf("%d\n", i);
- }\end{DoxyVerb}
- Unlike the Python version, this can also accept floats/doubles, and can include the endpoint of the range by specifying {\ttfamily inclusive} = {\ttfamily true}. \hypertarget{namespaceseq_1_1math_a4f2c47e50ba86a80778ccebd31d7fa16}{\index{seq\-::math@{seq\-::math}!xrange@{xrange}}
-\index{xrange@{xrange}!seq::math@{seq\-::math}}
-\subsubsection[{xrange}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Num\-T $>$ {\bf X\-Range}$<$Num\-T$>$ {\bf seq\-::math\-::xrange} (
-\begin{DoxyParamCaption}
-\item[{Num\-T}]{high, }
-\item[{bool}]{inclusive = {\ttfamily false}}
-\end{DoxyParamCaption}
-)}}\label{namespaceseq_1_1math_a4f2c47e50ba86a80778ccebd31d7fa16}

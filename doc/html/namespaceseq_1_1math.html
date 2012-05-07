@@ -136,24 +136,79 @@ Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Mathematical operations on sequences, and sequence structures. </p>
 </div><hr/><h2>Function Documentation</h2>
-<a class="anchor" id="ab019165412bf99555adfeaaaa86f319f"></a>
+<a class="anchor" id="abfe793e999a374a4d5e6b1ef3f268b59"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class SeqT &gt; </div>
+template&lt;typename NumT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">SeqT::value_type <a class="el" href="namespaceseq_1_1math.html#ab019165412bf99555adfeaaaa86f319f">seq::math::mean</a> </td>
+          <td class="memname"><a class="el" href="structseq_1_1math_1_1_x_range.html">XRange</a>&lt;NumT&gt; <a class="el" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59">seq::math::xrange</a> </td>
           <td>(</td>
-          <td class="paramtype">const SeqT &amp;&#160;</td>
-          <td class="paramname"><em>in</em></td><td>)</td>
+          <td class="paramtype">NumT&#160;</td>
+          <td class="paramname"><em>low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">NumT&#160;</td>
+          <td class="paramname"><em>high</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NumT&#160;</td>
+          <td class="paramname"><em>step</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>inclusive</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Return the arithmetic mean of sequence elements. </p>
+<p>Return <code><a class="el" href="structseq_1_1math_1_1_x_range.html" title="Represent a lazily-evaluated range of numbers.">XRange</a></code> sequence, similar to Python's "xrange". </p>
+<p>Suggested usage: </p>
+<div class="fragment"><pre class="fragment"> for (auto i : xrange(10)) {
+     printf("%d\n", i);
+ }</pre></div><p> Unlike the Python version, this can also accept floats/doubles, and can include the endpoint of the range by specifying <code>inclusive</code> = <code>true</code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4f2c47e50ba86a80778ccebd31d7fa16"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structseq_1_1math_1_1_x_range.html">XRange</a>&lt;NumT&gt; <a class="el" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59">seq::math::xrange</a> </td>
+          <td>(</td>
+          <td class="paramtype">NumT&#160;</td>
+          <td class="paramname"><em>high</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>inclusive</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -252,79 +307,24 @@ template&lt;class SeqT &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="abfe793e999a374a4d5e6b1ef3f268b59"></a>
+<a class="anchor" id="ab019165412bf99555adfeaaaa86f319f"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename NumT &gt; </div>
+template&lt;class SeqT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structseq_1_1math_1_1_x_range.html">XRange</a>&lt;NumT&gt; <a class="el" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59">seq::math::xrange</a> </td>
+          <td class="memname">SeqT::value_type <a class="el" href="namespaceseq_1_1math.html#ab019165412bf99555adfeaaaa86f319f">seq::math::mean</a> </td>
           <td>(</td>
-          <td class="paramtype">NumT&#160;</td>
-          <td class="paramname"><em>low</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const SeqT &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">NumT&#160;</td>
-          <td class="paramname"><em>high</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">NumT&#160;</td>
-          <td class="paramname"><em>step</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>inclusive</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Return <code><a class="el" href="structseq_1_1math_1_1_x_range.html" title="Represent a lazily-evaluated range of numbers.">XRange</a></code> sequence, similar to Python's "xrange". </p>
-<p>Suggested usage: </p>
-<div class="fragment"><pre class="fragment"> for (auto i : xrange(10)) {
-     printf("%d\n", i);
- }</pre></div><p> Unlike the Python version, this can also accept floats/doubles, and can include the endpoint of the range by specifying <code>inclusive</code> = <code>true</code>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4f2c47e50ba86a80778ccebd31d7fa16"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename NumT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structseq_1_1math_1_1_x_range.html">XRange</a>&lt;NumT&gt; <a class="el" href="namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59">seq::math::xrange</a> </td>
-          <td>(</td>
-          <td class="paramtype">NumT&#160;</td>
-          <td class="paramname"><em>high</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>inclusive</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Return the arithmetic mean of sequence elements. </p>
 
 </div>
 </div>
@@ -332,7 +332,7 @@ template&lt;typename NumT &gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 22:14:18 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

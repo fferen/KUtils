@@ -14,9 +14,9 @@ struct \hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-string \hyperlink{namespaceargparse_a336ebbf4216b617d79a43d8211600118}{make\-Usage\-String} (const string \&prog\-Name, const string \&desc, const string \&pos\-Args=string(), const Dict$<$ string, string $>$ \&opt\-To\-Help=Dict$<$ string, string $>$(), unsigned cols=80, unsigned help\-Cols=60)
+string \hyperlink{namespaceargparse_a0ee3e8ca883816181b45c15a9ad0b6ed}{make\-Usage\-String} (const string \&prog\-Name, const string \&desc, const string \&pos\-Args=string(), const dict\-::\-Dict$<$ string, string $>$ \&opt\-To\-Help=dict\-::\-Dict$<$ string, string $>$(), unsigned cols=80, unsigned help\-Cols=60)
 \begin{DoxyCompactList}\small\item\em Create a usage string. \end{DoxyCompactList}\item 
-{\footnotesize template$<$class Func\-Type $>$ }\\\hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} \hyperlink{namespaceargparse_a6a82e35cb0ec90fbe4a17db4ae3539d4}{parse} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const Dict$<$ string, Func\-Type $>$ \&opt\-To\-Chker, char opt\-Char='-\/', bool gen\-Help\-Chker=true)
+{\footnotesize template$<$class Func\-Type $>$ }\\\hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} \hyperlink{namespaceargparse_a4b1b6c03b45175acd13d1620f328e4aa}{parse} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const dict\-::\-Dict$<$ string, Func\-Type $>$ \&opt\-To\-Chker, char opt\-Char='-\/', bool gen\-Help\-Chker=true)
 \begin{DoxyCompactList}\small\item\em Return an \hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} object holding the parsed arguments. \end{DoxyCompactList}\item 
 \hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} \hyperlink{namespaceargparse_a6cfba06102a610840779069dfda1b98d}{parse} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const char opt\-Char='-\/', bool gen\-Help\-Chker=true)
 \begin{DoxyCompactList}\small\item\em For programs that take no options. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -26,18 +26,18 @@ string \hyperlink{namespaceargparse_a336ebbf4216b617d79a43d8211600118}{make\-Usa
 Command-\/line argument parser with a focus on brevity. 
 
 \subsection{Function Documentation}
-\hypertarget{namespaceargparse_a336ebbf4216b617d79a43d8211600118}{\index{argparse@{argparse}!make\-Usage\-String@{make\-Usage\-String}}
+\hypertarget{namespaceargparse_a0ee3e8ca883816181b45c15a9ad0b6ed}{\index{argparse@{argparse}!make\-Usage\-String@{make\-Usage\-String}}
 \index{make\-Usage\-String@{make\-Usage\-String}!argparse@{argparse}}
 \subsubsection[{make\-Usage\-String}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf argparse\-::make\-Usage\-String} (
 \begin{DoxyParamCaption}
 \item[{const string \&}]{prog\-Name, }
 \item[{const string \&}]{desc, }
 \item[{const string \&}]{pos\-Args = {\ttfamily string()}, }
-\item[{const Dict$<$ string, string $>$ \&}]{opt\-To\-Help = {\ttfamily Dict$<$string,~string$>$()}, }
+\item[{const dict\-::\-Dict$<$ string, string $>$ \&}]{opt\-To\-Help = {\ttfamily dict\-:\-:Dict$<$string,~string$>$()}, }
 \item[{unsigned}]{cols = {\ttfamily 80}, }
 \item[{unsigned}]{help\-Cols = {\ttfamily 60}}
 \end{DoxyParamCaption}
-)}}\label{namespaceargparse_a336ebbf4216b617d79a43d8211600118}
+)}}\label{namespaceargparse_a0ee3e8ca883816181b45c15a9ad0b6ed}
 
 
 Create a usage string. 
@@ -73,17 +73,17 @@ Example\-: \begin{DoxyVerb} makeUsageString(
  Options:
  -a                  add some numbers
  -h                  print a help message\end{DoxyVerb}
- \hypertarget{namespaceargparse_a6a82e35cb0ec90fbe4a17db4ae3539d4}{\index{argparse@{argparse}!parse@{parse}}
+ \hypertarget{namespaceargparse_a4b1b6c03b45175acd13d1620f328e4aa}{\index{argparse@{argparse}!parse@{parse}}
 \index{parse@{parse}!argparse@{argparse}}
 \subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Func\-Type $>$ {\bf Arg\-Holder} {\bf argparse\-::parse} (
 \begin{DoxyParamCaption}
 \item[{int}]{argc, }
 \item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}, }
-\item[{const Dict$<$ string, Func\-Type $>$ \&}]{opt\-To\-Chker, }
+\item[{const dict\-::\-Dict$<$ string, Func\-Type $>$ \&}]{opt\-To\-Chker, }
 \item[{char}]{opt\-Char = {\ttfamily '-\/'}, }
 \item[{bool}]{gen\-Help\-Chker = {\ttfamily true}}
 \end{DoxyParamCaption}
-)}}\label{namespaceargparse_a6a82e35cb0ec90fbe4a17db4ae3539d4}
+)}}\label{namespaceargparse_a4b1b6c03b45175acd13d1620f328e4aa}
 
 
 Return an \hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} object holding the parsed arguments. 
@@ -120,4 +120,4 @@ Return an \hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} object holding 
 
 For programs that take no options. 
 
-See \hyperlink{namespaceargparse_a6a82e35cb0ec90fbe4a17db4ae3539d4}{parse()} above. 
+See \hyperlink{namespaceargparse_a4b1b6c03b45175acd13d1620f328e4aa}{parse()} above. 

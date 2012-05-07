@@ -108,10 +108,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4ce309a7263b6b2cb9492e67d8752695"><td class="memItemLeft" align="right" valign="top">cv::Mat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils_1_1transform.html#a4ce309a7263b6b2cb9492e67d8752695">getRotatedROI</a> (const cv::Mat &amp;src, cv::RotatedRect &amp;r, cv::Mat &amp;dest)</td></tr>
-<tr class="memdesc:a4ce309a7263b6b2cb9492e67d8752695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store part of <code>src</code> in <code>dest</code> with the ROI specified by <code>r</code>, and return <code>dest</code>.  <a href="#a4ce309a7263b6b2cb9492e67d8752695"></a><br/></td></tr>
-<tr class="memitem:a8e3ddc3efa023809e71b2ed45b5fe325"><td class="memItemLeft" align="right" valign="top">cv::Mat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils_1_1transform.html#a8e3ddc3efa023809e71b2ed45b5fe325">rotozoomMat</a> (const cv::Mat &amp;src, cv::Mat &amp;dest, float angle, float scale=1.0, cv::Mat *transMat=NULL)</td></tr>
-<tr class="memdesc:a8e3ddc3efa023809e71b2ed45b5fe325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale and rotate <code>src</code> and store in <code>dest</code> (must not be the same).  <a href="#a8e3ddc3efa023809e71b2ed45b5fe325"></a><br/></td></tr>
+<tr class="memitem:a74e90c5a7806491a108fad30703cae2c"><td class="memItemLeft" align="right" valign="top">cv::Mat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils_1_1transform.html#a74e90c5a7806491a108fad30703cae2c">getRotatedROI</a> (const cv::Mat &amp;src, const cv::RotatedRect &amp;r, cv::Mat &amp;dest)</td></tr>
+<tr class="memdesc:a74e90c5a7806491a108fad30703cae2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store part of <code>src</code> in <code>dest</code> with the ROI specified by <code>r</code>, and return <code>dest</code>.  <a href="#a74e90c5a7806491a108fad30703cae2c"></a><br/></td></tr>
+<tr class="memitem:ac254c72298a9cd69aac2bde803739757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils_1_1transform.html#ac254c72298a9cd69aac2bde803739757">rotozoomMat</a> (const cv::Mat &amp;src, cv::Mat &amp;dest, float angle, float scale=1.0, cv::Mat *transMat=NULL)</td></tr>
+<tr class="memdesc:ac254c72298a9cd69aac2bde803739757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale and rotate <code>src</code> and store in <code>dest</code> (must not be the same).  <a href="#ac254c72298a9cd69aac2bde803739757"></a><br/></td></tr>
 <tr class="memitem:a4ba17f552aeae6ddce6ca2da28936f42"><td class="memItemLeft" align="right" valign="top">cv::Size2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils_1_1transform.html#a4ba17f552aeae6ddce6ca2da28936f42">rotateSize</a> (cv::Size2f s, float angle)</td></tr>
 <tr class="memdesc:a4ba17f552aeae6ddce6ca2da28936f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size bounding the given size rotated by <code>angle</code>, given in degrees.  <a href="#a4ba17f552aeae6ddce6ca2da28936f42"></a><br/></td></tr>
 <tr class="memitem:a0b54497d842a62c5f538004ac93ba5ff"><td class="memItemLeft" align="right" valign="top">cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils_1_1transform.html#a0b54497d842a62c5f538004ac93ba5ff">warpAffinePt</a> (const cv::Mat_&lt; float &gt; &amp;transMat, cv::Point2f pt)</td></tr>
@@ -120,12 +120,12 @@ Functions</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Functions related to affine transformations. </p>
 </div><hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a4ce309a7263b6b2cb9492e67d8752695"></a>
+<a class="anchor" id="a74e90c5a7806491a108fad30703cae2c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cv::Mat&amp; <a class="el" href="namespacecvutils_1_1transform.html#a4ce309a7263b6b2cb9492e67d8752695">cvutils::transform::getRotatedROI</a> </td>
+          <td class="memname">cv::Mat&amp; <a class="el" href="namespacecvutils_1_1transform.html#a74e90c5a7806491a108fad30703cae2c">cvutils::transform::getRotatedROI</a> </td>
           <td>(</td>
           <td class="paramtype">const cv::Mat &amp;&#160;</td>
           <td class="paramname"><em>src</em>, </td>
@@ -133,7 +133,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">cv::RotatedRect &amp;&#160;</td>
+          <td class="paramtype">const cv::RotatedRect &amp;&#160;</td>
           <td class="paramname"><em>r</em>, </td>
         </tr>
         <tr>
@@ -155,42 +155,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4ba17f552aeae6ddce6ca2da28936f42"></a>
+<a class="anchor" id="ac254c72298a9cd69aac2bde803739757"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cv::Size2f <a class="el" href="namespacecvutils_1_1transform.html#a4ba17f552aeae6ddce6ca2da28936f42">cvutils::transform::rotateSize</a> </td>
-          <td>(</td>
-          <td class="paramtype">cv::Size2f&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>angle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Return the size bounding the given size rotated by <code>angle</code>, given in degrees. </p>
-<p>It will always have a width and height &gt;= those of the given size. </p>
-
-</div>
-</div>
-<a class="anchor" id="a8e3ddc3efa023809e71b2ed45b5fe325"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cv::Mat&amp; <a class="el" href="namespacecvutils_1_1transform.html#a8e3ddc3efa023809e71b2ed45b5fe325">cvutils::transform::rotozoomMat</a> </td>
+          <td class="memname">void <a class="el" href="namespacecvutils_1_1transform.html#ac254c72298a9cd69aac2bde803739757">cvutils::transform::rotozoomMat</a> </td>
           <td>(</td>
           <td class="paramtype">const cv::Mat &amp;&#160;</td>
           <td class="paramname"><em>src</em>, </td>
@@ -230,8 +200,38 @@ Functions</h2></td></tr>
 
 <p>Scale and rotate <code>src</code> and store in <code>dest</code> (must not be the same). </p>
 <p><code>angle</code> is in degrees CCW.</p>
-<p>If <code>transformMat</code> is provided, store the 2x3 transformation matrix in it. Provide NULL if not needed.</p>
-<p>Return <code>dest</code>. </p>
+<p>If <code>transMat</code> is provided, store the 2x3 transformation matrix in it. Provide <code>NULL</code> if not needed.</p>
+<p>Extra space in <code>dest</code> will be filled to 0. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4ba17f552aeae6ddce6ca2da28936f42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Size2f <a class="el" href="namespacecvutils_1_1transform.html#a4ba17f552aeae6ddce6ca2da28936f42">cvutils::transform::rotateSize</a> </td>
+          <td>(</td>
+          <td class="paramtype">cv::Size2f&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return the size bounding the given size rotated by <code>angle</code>, given in degrees. </p>
+<p>It will always have a width and height &gt;= those of the given size. </p>
 
 </div>
 </div>
@@ -268,7 +268,7 @@ Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 22:14:18 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

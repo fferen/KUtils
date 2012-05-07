@@ -97,7 +97,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">dict.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;unordered_map&gt;</code><br/>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;unordered_map&gt;</code><br/>
 <code>#include &lt;utility&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for dict.hpp:</div>
@@ -120,156 +121,26 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacedict"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilities for working with <code>Dict</code>s (<code>unordered_map</code>s). <br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aad450cc243fecdc56252ec17b2c7f242"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType &gt; </td></tr>
-<tr class="memitem:aad450cc243fecdc56252ec17b2c7f242"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="dict_8hpp.html#aad450cc243fecdc56252ec17b2c7f242">_makeDictIP</a> (Dict&lt; KeyType, ValType &gt; &amp;d, KeyType key, ValType val)</td></tr>
-<tr class="memitem:a63c4edeb75c1a98c92321da3c0feb818"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType , typename... Args&gt; </td></tr>
-<tr class="memitem:a63c4edeb75c1a98c92321da3c0feb818"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="dict_8hpp.html#a63c4edeb75c1a98c92321da3c0feb818">_makeDictIP</a> (Dict&lt; KeyType, ValType &gt; &amp;d, KeyType key, ValType val, Args...args)</td></tr>
-<tr class="memitem:acf532dcb9ac916d2ac99b609a3a2422d"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType , typename... Args&gt; </td></tr>
-<tr class="memitem:acf532dcb9ac916d2ac99b609a3a2422d"><td class="memTemplItemLeft" align="right" valign="top">Dict&lt; KeyType, ValType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="dict_8hpp.html#acf532dcb9ac916d2ac99b609a3a2422d">makeDict</a> (KeyType key, ValType val, Args...args)</td></tr>
-<tr class="memitem:a952263572be8fc115fb88a93631e6fc3"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType &gt; </td></tr>
-<tr class="memitem:a952263572be8fc115fb88a93631e6fc3"><td class="memTemplItemLeft" align="right" valign="top">Dict&lt; KeyType, ValType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="dict_8hpp.html#a952263572be8fc115fb88a93631e6fc3">makeDict</a> ()</td></tr>
-<tr class="memdesc:a952263572be8fc115fb88a93631e6fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <code>Dict</code> (<code>unordered_map</code>).  <a href="#a952263572be8fc115fb88a93631e6fc3"></a><br/></td></tr>
-<tr class="memitem:a3c4515d6a24ee85ca1ff76eff687c06b"><td class="memTemplParams" colspan="2">template&lt;typename KeyT , typename ValT &gt; </td></tr>
-<tr class="memitem:a3c4515d6a24ee85ca1ff76eff687c06b"><td class="memTemplItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="dict_8hpp.html#a3c4515d6a24ee85ca1ff76eff687c06b">operator&lt;&lt;</a> (ostream &amp;out, const Dict&lt; KeyT, ValT &gt; &amp;seq)</td></tr>
-<tr class="memdesc:a3c4515d6a24ee85ca1ff76eff687c06b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print each element of a <code>Dict</code>.  <a href="#a3c4515d6a24ee85ca1ff76eff687c06b"></a><br/></td></tr>
-<tr class="memitem:a25d4adabc11b7754dad27d591de51df6"><td class="memTemplParams" colspan="2">template&lt;typename IterT , typename ElemT &gt; </td></tr>
-<tr class="memitem:a25d4adabc11b7754dad27d591de51df6"><td class="memTemplItemLeft" align="right" valign="top">Dict&lt; ElemT, unsigned &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#a25d4adabc11b7754dad27d591de51df6">dict::countElems</a> (const IterT &amp;start, const IterT &amp;end, Dict&lt; ElemT, unsigned &gt; &amp;out)</td></tr>
-<tr class="memdesc:a25d4adabc11b7754dad27d591de51df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a pair of iterators, store a mapping from element to count in <code>out</code>, and return <code>out</code>.  <a href="#a25d4adabc11b7754dad27d591de51df6"></a><br/></td></tr>
+<tr class="memitem:a25162c2329cb972f58b47a93f589d035"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType &gt; </td></tr>
+<tr class="memitem:a25162c2329cb972f58b47a93f589d035"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#a25162c2329cb972f58b47a93f589d035">dict::_makeDictIP</a> (Dict&lt; KeyType, ValType &gt; &amp;d, KeyType key, ValType val)</td></tr>
+<tr class="memitem:aedf2cd76600afc0853ea6de895316ff9"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType , typename... Args&gt; </td></tr>
+<tr class="memitem:aedf2cd76600afc0853ea6de895316ff9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#aedf2cd76600afc0853ea6de895316ff9">dict::_makeDictIP</a> (Dict&lt; KeyType, ValType &gt; &amp;d, KeyType key, ValType val, Args...args)</td></tr>
+<tr class="memitem:a60d2673f89ed278333138def4ba2a751"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType , typename... Args&gt; </td></tr>
+<tr class="memitem:a60d2673f89ed278333138def4ba2a751"><td class="memTemplItemLeft" align="right" valign="top">Dict&lt; KeyType, ValType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#a60d2673f89ed278333138def4ba2a751">dict::makeDict</a> (KeyType key, ValType val, Args...args)</td></tr>
+<tr class="memdesc:a60d2673f89ed278333138def4ba2a751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <code>Dict</code> (<code>unordered_map</code>) with any number of key/value pairs.  <a href="#a60d2673f89ed278333138def4ba2a751"></a><br/></td></tr>
+<tr class="memitem:a17c1d6c185319ab58f9854244fdc7b75"><td class="memTemplParams" colspan="2">template&lt;typename KeyType , typename ValType &gt; </td></tr>
+<tr class="memitem:a17c1d6c185319ab58f9854244fdc7b75"><td class="memTemplItemLeft" align="right" valign="top">Dict&lt; KeyType, ValType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#a17c1d6c185319ab58f9854244fdc7b75">dict::makeDict</a> ()</td></tr>
+<tr class="memdesc:a17c1d6c185319ab58f9854244fdc7b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty <code>Dict</code> (<code>unordered_map</code>).  <a href="#a17c1d6c185319ab58f9854244fdc7b75"></a><br/></td></tr>
+<tr class="memitem:a0a95e9cde2e3b78db4cbacd7ec00934f"><td class="memTemplParams" colspan="2">template&lt;typename IterT &gt; </td></tr>
+<tr class="memitem:a0a95e9cde2e3b78db4cbacd7ec00934f"><td class="memTemplItemLeft" align="right" valign="top">Dict&lt; typename <br class="typebreak"/>
+IterT::value_type, unsigned &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedict.html#a0a95e9cde2e3b78db4cbacd7ec00934f">dict::countElems</a> (const IterT &amp;start, const IterT &amp;end)</td></tr>
+<tr class="memdesc:a0a95e9cde2e3b78db4cbacd7ec00934f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a pair of iterators, return a mapping from element to count.  <a href="#a0a95e9cde2e3b78db4cbacd7ec00934f"></a><br/></td></tr>
+<tr class="memitem:afa4840217c1fc9020b975165915b732d"><td class="memTemplParams" colspan="2">template&lt;typename KeyT , typename ValT &gt; </td></tr>
+<tr class="memitem:afa4840217c1fc9020b975165915b732d"><td class="memTemplItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="dict_8hpp.html#afa4840217c1fc9020b975165915b732d">operator&lt;&lt;</a> (ostream &amp;out, const dict::Dict&lt; KeyT, ValT &gt; &amp;d)</td></tr>
+<tr class="memdesc:afa4840217c1fc9020b975165915b732d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print each element of a <code>Dict</code>.  <a href="#afa4840217c1fc9020b975165915b732d"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="aad450cc243fecdc56252ec17b2c7f242"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename KeyType , typename ValType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="dict_8hpp.html#a63c4edeb75c1a98c92321da3c0feb818">_makeDictIP</a> </td>
-          <td>(</td>
-          <td class="paramtype">Dict&lt; KeyType, ValType &gt; &amp;&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">KeyType&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ValType&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a63c4edeb75c1a98c92321da3c0feb818"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename KeyType , typename ValType , typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="dict_8hpp.html#a63c4edeb75c1a98c92321da3c0feb818">_makeDictIP</a> </td>
-          <td>(</td>
-          <td class="paramtype">Dict&lt; KeyType, ValType &gt; &amp;&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">KeyType&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ValType&#160;</td>
-          <td class="paramname"><em>val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="acf532dcb9ac916d2ac99b609a3a2422d"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename KeyType , typename ValType , typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">Dict&lt;KeyType, ValType&gt; <a class="el" href="dict_8hpp.html#a952263572be8fc115fb88a93631e6fc3">makeDict</a> </td>
-          <td>(</td>
-          <td class="paramtype">KeyType&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ValType&#160;</td>
-          <td class="paramname"><em>val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a952263572be8fc115fb88a93631e6fc3"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename KeyType , typename ValType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">Dict&lt;KeyType, ValType&gt; <a class="el" href="dict_8hpp.html#a952263572be8fc115fb88a93631e6fc3">makeDict</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Construct a <code>Dict</code> (<code>unordered_map</code>). </p>
-<p>For an empty <code>Dict</code>, must specify <code>KeyType</code> and <code>ValType</code>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a3c4515d6a24ee85ca1ff76eff687c06b"></a>
+<a class="anchor" id="afa4840217c1fc9020b975165915b732d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -284,8 +155,8 @@ template&lt;typename KeyT , typename ValT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Dict&lt; KeyT, ValT &gt; &amp;&#160;</td>
-          <td class="paramname"><em>seq</em>&#160;</td>
+          <td class="paramtype">const dict::Dict&lt; KeyT, ValT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -304,7 +175,7 @@ template&lt;typename KeyT , typename ValT &gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 6 2012 15:14:32 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 22:14:17 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

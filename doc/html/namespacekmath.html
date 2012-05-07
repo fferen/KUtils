@@ -141,13 +141,13 @@ Functions</h2></td></tr>
 <tr class="memitem:abfda38c9ce9a9d07af7f93a731d8fe51"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekmath.html#abfda38c9ce9a9d07af7f93a731d8fe51">factorial</a> (unsigned n)</td></tr>
 <tr class="memdesc:abfda38c9ce9a9d07af7f93a731d8fe51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>n!</code>.  <a href="#abfda38c9ce9a9d07af7f93a731d8fe51"></a><br/></td></tr>
 <tr class="memitem:a53519d2ec30d9df038dbe8ceaead1a9c"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekmath.html#a53519d2ec30d9df038dbe8ceaead1a9c">combinations</a> (unsigned n, unsigned k)</td></tr>
-<tr class="memdesc:a53519d2ec30d9df038dbe8ceaead1a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>n</code>C<code>k</code> (n choose k).  <a href="#a53519d2ec30d9df038dbe8ceaead1a9c"></a><br/></td></tr>
+<tr class="memdesc:a53519d2ec30d9df038dbe8ceaead1a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <sub>n</sub>C<sub>k</sub> (n choose k).  <a href="#a53519d2ec30d9df038dbe8ceaead1a9c"></a><br/></td></tr>
 <tr class="memitem:aa18b5fc52315b0ca7717a52bdf152ee6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekmath.html#aa18b5fc52315b0ca7717a52bdf152ee6">fround</a> (float val, float scale=1.0, <a class="el" href="namespacekmath.html#a1e00ae34fe8ed9548870fc759ea82609">RoundType</a> action=<a class="el" href="namespacekmath.html#a1e00ae34fe8ed9548870fc759ea82609ae04658d947a7879a4502f837c286f1ac">ROUND</a>)</td></tr>
 <tr class="memdesc:aa18b5fc52315b0ca7717a52bdf152ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Round val to nearest multiple of scale.  <a href="#aa18b5fc52315b0ca7717a52bdf152ee6"></a><br/></td></tr>
 <tr class="memitem:a32d7d4c091092ac7e21d7beb15daaf1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekmath.html#a32d7d4c091092ac7e21d7beb15daaf1a">iround</a> (float val)</td></tr>
 <tr class="memdesc:a32d7d4c091092ac7e21d7beb15daaf1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <code>fround</code> that rounds float to nearest integer.  <a href="#a32d7d4c091092ac7e21d7beb15daaf1a"></a><br/></td></tr>
-<tr class="memitem:af21fdb579807bd7054875a2369e15941"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekmath.html#af21fdb579807bd7054875a2369e15941">intervalProject</a> (float val, const <a class="el" href="structkmath_1_1_interval.html">Interval</a> &amp;domain, const <a class="el" href="structkmath_1_1_interval.html">Interval</a> &amp;range, const function&lt; float(float)&gt; &amp;func=[](float x){return x;}, const <a class="el" href="structkmath_1_1_interval.html">Interval</a> &amp;funcDomain=<a class="el" href="structkmath_1_1_interval.html">Interval</a>(0, 1), const <a class="el" href="structkmath_1_1_interval.html">Interval</a> &amp;funcRange=<a class="el" href="structkmath_1_1_interval.html">Interval</a>(0, 1))</td></tr>
-<tr class="memdesc:af21fdb579807bd7054875a2369e15941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project a value within <code>domain</code> to a new <a class="el" href="structkmath_1_1_interval.html" title="Represents an interval of real numbers.">Interval</a> <code>range</code> using <code>func</code>.  <a href="#af21fdb579807bd7054875a2369e15941"></a><br/></td></tr>
+<tr class="memitem:a1792feb5272baa371047829dc4a30264"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekmath.html#a1792feb5272baa371047829dc4a30264">intervalProject</a> (float val, const <a class="el" href="structkmath_1_1_interval.html">Interval</a> &amp;domain, const <a class="el" href="structkmath_1_1_interval.html">Interval</a> &amp;range, const function&lt; float(float)&gt; &amp;func=[](float x){return x;}, const <a class="el" href="structkmath_1_1_interval.html">Interval</a> &amp;funcDomain=<a class="el" href="structkmath_1_1_interval.html">Interval</a>(0, 1), const <a class="el" href="structkmath_1_1_interval.html">Interval</a> &amp;funcRange=<a class="el" href="structkmath_1_1_interval.html">Interval</a>(0, 1), bool bound=true)</td></tr>
+<tr class="memdesc:a1792feb5272baa371047829dc4a30264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project a value within <code>domain</code> to a new interval <code>range</code> using <code>func</code>.  <a href="#a1792feb5272baa371047829dc4a30264"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a1224c45abb03af2a5136e24f09d9b4c3"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekmath.html#a1224c45abb03af2a5136e24f09d9b4c3">PI</a> = 3.141592654</td></tr>
@@ -156,12 +156,12 @@ Variables</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Miscellaneous mathematical functions. </p>
 </div><hr/><h2>Typedef Documentation</h2>
-<a class="anchor" id="aad2e627ee7da1b98c2c516f20ed5b7e3"></a>
+<a class="anchor" id="afaf3fde3b20c9932e144eb48e736cad9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structkmath_1_1_point.html">Point</a>&lt;double&gt; <a class="el" href="namespacekmath.html#aad2e627ee7da1b98c2c516f20ed5b7e3">kmath::PointD</a></td>
+          <td class="memname">typedef <a class="el" href="structkmath_1_1_point.html">Point</a>&lt;int&gt; <a class="el" href="namespacekmath.html#afaf3fde3b20c9932e144eb48e736cad9">kmath::PointI</a></td>
         </tr>
       </table>
 </div>
@@ -182,12 +182,12 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afaf3fde3b20c9932e144eb48e736cad9"></a>
+<a class="anchor" id="aad2e627ee7da1b98c2c516f20ed5b7e3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structkmath_1_1_point.html">Point</a>&lt;int&gt; <a class="el" href="namespacekmath.html#afaf3fde3b20c9932e144eb48e736cad9">kmath::PointI</a></td>
+          <td class="memname">typedef <a class="el" href="structkmath_1_1_point.html">Point</a>&lt;double&gt; <a class="el" href="namespacekmath.html#aad2e627ee7da1b98c2c516f20ed5b7e3">kmath::PointD</a></td>
         </tr>
       </table>
 </div>
@@ -222,195 +222,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a53519d2ec30d9df038dbe8ceaead1a9c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned <a class="el" href="namespacekmath.html#a53519d2ec30d9df038dbe8ceaead1a9c">kmath::combinations</a> </td>
-          <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>k</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Return <code>n</code>C<code>k</code> (n choose k). </p>
-<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">range_error</td><td>Thrown if k &gt; n. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="abfda38c9ce9a9d07af7f93a731d8fe51"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned <a class="el" href="namespacekmath.html#abfda38c9ce9a9d07af7f93a731d8fe51">kmath::factorial</a> </td>
-          <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Return <code>n!</code>. </p>
-
-</div>
-</div>
-<a class="anchor" id="aa18b5fc52315b0ca7717a52bdf152ee6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float <a class="el" href="namespacekmath.html#aa18b5fc52315b0ca7717a52bdf152ee6">kmath::fround</a> </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>scale</em> = <code>1.0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacekmath.html#a1e00ae34fe8ed9548870fc759ea82609">RoundType</a>&#160;</td>
-          <td class="paramname"><em>action</em> = <code>ROUND</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Round val to nearest multiple of scale. </p>
-<p><code>action</code> is one of: ROUND, FLOOR, CEIL.</p>
-<p>Rounds up on ties.</p>
-<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">invalid_argument</td><td>Thrown if <code>action</code> is invalid. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="af21fdb579807bd7054875a2369e15941"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float <a class="el" href="namespacekmath.html#af21fdb579807bd7054875a2369e15941">kmath::intervalProject</a> </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Interval &amp;&#160;</td>
-          <td class="paramname"><em>domain</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Interval &amp;&#160;</td>
-          <td class="paramname"><em>range</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Project a value within <code>domain</code> to a new <a class="el" href="structkmath_1_1_interval.html" title="Represents an interval of real numbers.">Interval</a> <code>range</code> using <code>func</code>. </p>
-<p>The value is mapped, using <code>domain</code>, onto the function's domain, then the function is called. The result is mapped back, using <code>funcRange</code>, onto the output range.</p>
-<p>With the default arguments, the behavior is to project the value linearly from <code>domain</code> to <code>range</code>.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">val</td><td>The value to map. </td></tr>
-    <tr><td class="paramname">domain</td><td>Domain of <code>val</code>. </td></tr>
-    <tr><td class="paramname">range</td><td>Range of output. </td></tr>
-    <tr><td class="paramname">func</td><td>Called on the result of mapping <code>val</code> onto <code>funcDomain</code>. </td></tr>
-    <tr><td class="paramname">funcDomain</td><td>Domain of <code>func</code>. </td></tr>
-    <tr><td class="paramname">funcRange</td><td>Range of <code>func</code>.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">range_error</td><td>Thrown if <code>val</code> is not within <code>domain</code> or if <code>func</code> returns something outside of <code>funcRange</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a32d7d4c091092ac7e21d7beb15daaf1a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="namespacekmath.html#a32d7d4c091092ac7e21d7beb15daaf1a">kmath::iround</a> </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Specialization of <code>fround</code> that rounds float to nearest integer. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac9d0f66e32f84c22626883c171893f48"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="namespacekmath.html#ac9d0f66e32f84c22626883c171893f48">kmath::normalCDF</a> </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Return the cumulative density of a Gaussian distribution with mean = 0, variance = 1. </p>
-
-</div>
-</div>
 <a class="anchor" id="a1e0f4e049ef1ec26bf84a8aa77f067d1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -495,6 +306,196 @@ template&lt;&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ac9d0f66e32f84c22626883c171893f48"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="namespacekmath.html#ac9d0f66e32f84c22626883c171893f48">kmath::normalCDF</a> </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return the cumulative density of a Gaussian distribution with mean = 0, variance = 1. </p>
+
+</div>
+</div>
+<a class="anchor" id="abfda38c9ce9a9d07af7f93a731d8fe51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="namespacekmath.html#abfda38c9ce9a9d07af7f93a731d8fe51">kmath::factorial</a> </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return <code>n!</code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a53519d2ec30d9df038dbe8ceaead1a9c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="namespacekmath.html#a53519d2ec30d9df038dbe8ceaead1a9c">kmath::combinations</a> </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return <sub>n</sub>C<sub>k</sub> (n choose k). </p>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">range_error</td><td>Thrown if k &gt; n. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa18b5fc52315b0ca7717a52bdf152ee6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="namespacekmath.html#aa18b5fc52315b0ca7717a52bdf152ee6">kmath::fround</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacekmath.html#a1e00ae34fe8ed9548870fc759ea82609">RoundType</a>&#160;</td>
+          <td class="paramname"><em>action</em> = <code>ROUND</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Round val to nearest multiple of scale. </p>
+<p><code>action</code> is one of: ROUND, FLOOR, CEIL.</p>
+<p>Rounds up on ties.</p>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">invalid_argument</td><td>Thrown if <code>action</code> is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a32d7d4c091092ac7e21d7beb15daaf1a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="namespacekmath.html#a32d7d4c091092ac7e21d7beb15daaf1a">kmath::iround</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Specialization of <code>fround</code> that rounds float to nearest integer. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1792feb5272baa371047829dc4a30264"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="namespacekmath.html#a1792feb5272baa371047829dc4a30264">kmath::intervalProject</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Interval &amp;&#160;</td>
+          <td class="paramname"><em>domain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Interval &amp;&#160;</td>
+          <td class="paramname"><em>range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Project a value within <code>domain</code> to a new interval <code>range</code> using <code>func</code>. </p>
+<p>The value is mapped, using <code>domain</code>, onto the function's domain, then the function is called on that value. The result is mapped back, using <code>funcRange</code>, onto the output range.</p>
+<p>With the default arguments, the behavior is to project the value linearly from <code>domain</code> to <code>range</code>.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>The value to map. </td></tr>
+    <tr><td class="paramname">domain</td><td>Domain of <code>val</code>. </td></tr>
+    <tr><td class="paramname">range</td><td>Range of output. </td></tr>
+    <tr><td class="paramname">func</td><td>Called on the result of mapping <code>val</code> onto <code>funcDomain</code>. </td></tr>
+    <tr><td class="paramname">funcDomain</td><td>Domain of <code>func</code>. </td></tr>
+    <tr><td class="paramname">funcRange</td><td>Range of <code>func</code>. </td></tr>
+    <tr><td class="paramname">bound</td><td>If <code>true</code>, <code>val</code> is first bounded to the closest point in domain.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt><b>Exceptions:</b></dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">range_error</td><td>Thrown if bound is <code>false</code> and <code>val</code> is not within <code>domain</code>, or <code>func</code> returns something outside of <code>funcRange</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/><h2>Variable Documentation</h2>
 <a class="anchor" id="a1224c45abb03af2a5136e24f09d9b4c3"></a>
 <div class="memitem">
@@ -515,7 +516,7 @@ template&lt;&gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 22:14:18 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

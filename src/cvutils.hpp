@@ -1,3 +1,29 @@
+/*
+Copyright (c) 2012, Kevin Han
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+    Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
 #pragma once
 
 #include <iostream>
@@ -13,9 +39,11 @@ using namespace std;
 
 /*! OpenCV utilities. */
 namespace cvutils {
+    //@{
     /*! Specifies positions for affixing `cv::Rect`s or `cv::Size`s. */
     enum XLoc { FIX_CENTER_X, FIX_LEFT, FIX_RIGHT };
     enum YLoc { FIX_CENTER_Y, FIX_TOP, FIX_BOTTOM };
+    //@}
 
     /*! Get the number of bytes of a type at compile-time.
      *
@@ -40,9 +68,10 @@ namespace cvutils {
 
         /*! Construct from either a device id (int) or filename.
          *
-         * Throw `invalid_argument` if unable to open input source.
+         * Specify `size` to manually set the size of the returned frames.
          *
-         * Specify `size` to set the size of the returned frames.
+         * @throw invalid_argument
+         * Thrown if unable to open input source.
          */
         template <typename T>
         VideoReader(T input, cv::Size size=cv::Size(0, 0)):
@@ -70,19 +99,7 @@ namespace cvutils {
     /*! Block until a key is pressed. Focus must be in an OpenCV window. */
     void waitForKeypress();
 
-    /*! Convert a `kmath::Point<T>` to a `cv::Point`. */
-    template <typename T>
-    inline cv::Point toCVPt(kmath::Point<T> pt) {
-        return cv::Point(pt.x, pt.y);
-    }
-
-    /*! Convert a `cv::Point` to a `kmath::Point<T>`. */
-    template <typename T>
-    inline kmath::Point<T> toCGPt(cv::Point pt) {
-        return kmath::Point<T>(pt.x, pt.y);
-    }
-
-    /*! For each pixel in `m1` and `m2`, call:
+    /*! For each pixel in `m1` and `m2`, call `func` like so:
      *
      *      func(int row, int col, T1 *ptr (pointer to element in m1), T2 *ptr (pointer to element in m2))
      *
@@ -148,7 +165,7 @@ namespace cvutils {
         applyBinaryOp(func, temp1, temp2);
     }
 
-    /*! Return a random RGB color as a cv::Scalar. */
+    /*! Return a random RGB color. */
     inline cv::Scalar randColor() {
         return cv::Scalar(
                 krandom::randint(0, 255),
@@ -176,27 +193,21 @@ namespace cvutils {
     /*! Pad `src` to a larger size and store in `dest`, filling extra space with
      * `fillVal`. This is O(1) as no data is copied.
      *
-     * The first version takes a point `offset` where the top-left of `src` will go.
-     *
-     * The second version takes location flags to affix `src` in a certain position.
+     * This version takes a point `offset` where the top-left of `src` will go.
      */
     void expandMat(const cv::Mat &src, cv::Mat &dest, cv::Size newSize, cv::Point offset, cv::Scalar fillVal=cv::Scalar());
+
+    /*! Pad `src` to a larger size and store in `dest`, filling extra space with
+     * `fillVal`. This is O(1) as no data is copied.
+     *
+     * This version takes location flags to affix `src` in a certain position.
+     */
     void expandMat(const cv::Mat &src, cv::Mat &dest, cv::Size newSize, cv::Scalar fillVal=cv::Scalar(), XLoc xFlag=FIX_CENTER_X, YLoc yFlag=FIX_CENTER_Y);
 
     /*! Convert a matrix from BGR color space to rg chromaticity space, with the
      * 3rd channel unused.
      */
     void cvtBGR2RG(const cv::Mat &src, cv::Mat &dest);
-
-    /*! Scale `src` (not in place) and find `cv::Rect`s containing faces, then
-     * scale the `cv::Rect`s back to original size.
-     *
-     * @param src
-     *      Input 8-bit grayscale image.
-     * @param out
-     *      Output vector of `cv::Rect`s bounding faces.
-     */
-    void faceDetectScaled(const cv::Mat &src, float scale, vector<cv::Rect> &out);
 
     /*! Generic naive clustering algorithm (`O(n^2)` worst case). An item is
      * added to the cluster if it is within `maxDist` from all other items in
@@ -234,10 +245,10 @@ namespace cvutils {
         }
     }
 
-    /*! Save cv::Mat in file. */
+    /*! Save Mat in file. */
     void matwrite(const char *fileName, const cv::Mat &m);
 
-    /*! Read cv::Mat from file saved with `matwrite()`. */
+    /*! Read Mat from file saved with `matwrite()`. */
     cv::Mat matread(const char *fileName);
 
     /*! Return the sum of all pixels within `roi` using an integral image.
@@ -268,6 +279,7 @@ namespace cvutils {
      * pixel mapping:
      *
      * nonzero -> `GC_PR_FGD`
+     *
      * zero -> `GC_PR_BGD`
      */
     void binMaskToGCMask(const cv::Mat_<uchar> &mask, cv::Mat_<uchar> &out);
@@ -275,12 +287,25 @@ namespace cvutils {
     /*! Convert a GrabCut mask to a binary mask, using this pixel mapping:
      *
      * {`GC_PR_BGD`, `GC_BGD`} -> 0
+     *
      * {`GC_PR_FGD`, `GC_FGD`} -> 255
      */
     void gcMaskToBinMask(const cv::Mat_<uchar> &mask, cv::Mat_<uchar> &out);
 
     /*! Operations on `cv::Point`s, `cv::Vec`s, and `cv::Rect`s. */
     namespace geom {
+        /*! Convert a `kmath::Point<T>` to a `cv::Point`. */
+        template <typename T>
+        inline cv::Point toCVPt(kmath::Point<T> pt) {
+            return cv::Point(pt.x, pt.y);
+        }
+
+        /*! Convert a `cv::Point` to a `kmath::Point<T>`. */
+        template <typename T>
+        inline kmath::Point<T> toPt(cv::Point pt) {
+            return kmath::Point<T>(pt.x, pt.y);
+        }
+
         /*! Return the midpoint (duh). */
         template <typename T>
         inline cv::Point_<T> midpoint(cv::Point_<T> a, cv::Point_<T> b) {
@@ -308,21 +333,17 @@ namespace cvutils {
         /*! Return the angle from vector `a` to vector `b`, in radians from -π to π, CCW
          * positive.
          */
-        float vecAngle(const cv::Vec2i a, const cv::Vec2i b);
+        float vecAngle(const cv::Vec2i &a, const cv::Vec2i &b);
 
         /*! Return the angle from the vector `(a - b)` to the vector `(c - b)`, in
          * radians from -π to π, CCW positive.
          */
-        float ptAngle(const cv::Point a, const cv::Point b, const cv::Point c);
-
-        /*! Store the list of k-curvatures in radians, CCW positive. */
-        void kCurvatures(const vector<cv::Point> &pts, unsigned k, vector<float> &out);
+        float ptAngle(const cv::Point &a, const cv::Point &b, const cv::Point &c);
 
         /*! Clamp `pt` inside `r`. */
-        cv::Point boundPtInRect(cv::Point pt, cv::Rect r);
+        cv::Point clampPt(cv::Point pt, const cv::Rect &r);
 
-        /*! Return the top-left offset in `big` of cv::Size `small` given
-         * location flags.
+        /*! Return the top-left offset in `big` of `small` given location flags.
          *
          * @throws invalid_argument
          * Thrown if `xFlag` or `yFlag` is invalid.
@@ -340,8 +361,8 @@ namespace cvutils {
         /*! Return the cv::Rect with the average bounds of all input rects. */
         cv::Rect getAvgRect(const vector<cv::Rect> &rects);
 
-        /*! Expand `cv::Rect` by a certain `cv::Size` on all sides while
-         * preserving the center.
+        /*! Expand Rect by a certain size on all sides while preserving the
+         * center.
          */
         cv::Rect expandRect(const cv::Rect &r, const cv::Size &s);
     }
@@ -351,17 +372,18 @@ namespace cvutils {
         /*! Store part of `src` in `dest` with the ROI specified by `r`, and
          * return `dest`.
          */
-        cv::Mat &getRotatedROI(const cv::Mat &src, cv::RotatedRect &r, cv::Mat &dest);
+        cv::Mat &getRotatedROI(const cv::Mat &src, const cv::RotatedRect &r, cv::Mat &dest);
 
         /*! Scale and rotate `src` and store in `dest` (must not be the same).
+         *
          * `angle` is in degrees CCW.
          *
-         * If `transformMat` is provided, store the 2x3 transformation matrix in
-         * it. Provide NULL if not needed.
+         * If `transMat` is provided, store the 2x3 transformation matrix in it.
+         * Provide `NULL` if not needed.
          *
-         * Return `dest`.
+         * Extra space in `dest` will be filled to 0.
          */
-        cv::Mat &rotozoomMat(const cv::Mat &src, cv::Mat &dest, float angle, float scale=1.0, cv::Mat *transMat=NULL);
+        void rotozoomMat(const cv::Mat &src, cv::Mat &dest, float angle, float scale=1.0, cv::Mat *transMat=NULL);
 
         /*! Return the size bounding the given size rotated by `angle`, given in
          * degrees.

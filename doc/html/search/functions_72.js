@@ -7,6 +7,6 @@ var searchData=
   ['reali',['realI',['../structseq_1_1_wrapped_seq.html#a0259bb6a1a44a68e4dbda5b37750f503',1,'seq::WrappedSeq']]],
   ['realidist',['realIDist',['../structseq_1_1_wrapped_seq.html#a2b929ec2f56c92a9b2269f1853e4cd10',1,'seq::WrappedSeq']]],
   ['rotatesize',['rotateSize',['../namespacecvutils_1_1transform.html#a4ba17f552aeae6ddce6ca2da28936f42',1,'cvutils::transform']]],
-  ['rotozoommat',['rotozoomMat',['../namespacecvutils_1_1transform.html#a8e3ddc3efa023809e71b2ed45b5fe325',1,'cvutils::transform']]],
+  ['rotozoommat',['rotozoomMat',['../namespacecvutils_1_1transform.html#ac254c72298a9cd69aac2bde803739757',1,'cvutils::transform']]],
   ['runningavgtimer',['RunningAvgTimer',['../classktime_1_1_running_avg_timer.html#acda9a0be9b8d32ef75c4e47b618298a6',1,'ktime::RunningAvgTimer']]]
 ];

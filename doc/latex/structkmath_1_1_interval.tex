@@ -62,6 +62,17 @@ Represents an interval of real numbers.
 
 
 \subsection{Member Function Documentation}
+\hypertarget{structkmath_1_1_interval_af196d10186744c7f3adc855e7343bb1e}{\index{kmath\-::\-Interval@{kmath\-::\-Interval}!contains@{contains}}
+\index{contains@{contains}!kmath::Interval@{kmath\-::\-Interval}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf kmath\-::\-Interval\-::contains} (
+\begin{DoxyParamCaption}
+\item[{float}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structkmath_1_1_interval_af196d10186744c7f3adc855e7343bb1e}
+
+
+Return true if interval contains {\ttfamily n}. 
+
 \hypertarget{structkmath_1_1_interval_af6b38235f08105530f09dbdc2a4cb10c}{\index{kmath\-::\-Interval@{kmath\-::\-Interval}!closest@{closest}}
 \index{closest@{closest}!kmath::Interval@{kmath\-::\-Interval}}
 \subsubsection[{closest}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf kmath\-::\-Interval\-::closest} (
@@ -78,32 +89,21 @@ Return the closest value in the interval to the given one.
 {\em invalid\-\_\-argument} & Thrown if no closest value exists (interval is open on that side). \\
 \hline
 \end{DoxyExceptions}
-\hypertarget{structkmath_1_1_interval_af196d10186744c7f3adc855e7343bb1e}{\index{kmath\-::\-Interval@{kmath\-::\-Interval}!contains@{contains}}
-\index{contains@{contains}!kmath::Interval@{kmath\-::\-Interval}}
-\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf kmath\-::\-Interval\-::contains} (
-\begin{DoxyParamCaption}
-\item[{float}]{n}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structkmath_1_1_interval_af196d10186744c7f3adc855e7343bb1e}
-
-
-Return true if interval contains {\ttfamily n}. 
-
 
 
 \subsection{Member Data Documentation}
+\hypertarget{structkmath_1_1_interval_ad575587eae91b8bce8f5ab4578f96d2b}{\index{kmath\-::\-Interval@{kmath\-::\-Interval}!low@{low}}
+\index{low@{low}!kmath::Interval@{kmath\-::\-Interval}}
+\subsubsection[{low}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf kmath\-::\-Interval\-::low}}}\label{structkmath_1_1_interval_ad575587eae91b8bce8f5ab4578f96d2b}
+\hypertarget{structkmath_1_1_interval_ab89c246d6c21a786d5f09f837ff6d104}{\index{kmath\-::\-Interval@{kmath\-::\-Interval}!high@{high}}
+\index{high@{high}!kmath::Interval@{kmath\-::\-Interval}}
+\subsubsection[{high}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf kmath\-::\-Interval\-::high}}}\label{structkmath_1_1_interval_ab89c246d6c21a786d5f09f837ff6d104}
 \hypertarget{structkmath_1_1_interval_a8301dbeccf9a042992eeb8bc4873fe83}{\index{kmath\-::\-Interval@{kmath\-::\-Interval}!close\-Left@{close\-Left}}
 \index{close\-Left@{close\-Left}!kmath::Interval@{kmath\-::\-Interval}}
 \subsubsection[{close\-Left}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf kmath\-::\-Interval\-::close\-Left}}}\label{structkmath_1_1_interval_a8301dbeccf9a042992eeb8bc4873fe83}
 \hypertarget{structkmath_1_1_interval_aa4962a6e38a17ff02321589ba9a4f990}{\index{kmath\-::\-Interval@{kmath\-::\-Interval}!close\-Right@{close\-Right}}
 \index{close\-Right@{close\-Right}!kmath::Interval@{kmath\-::\-Interval}}
 \subsubsection[{close\-Right}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf kmath\-::\-Interval\-::close\-Right}}}\label{structkmath_1_1_interval_aa4962a6e38a17ff02321589ba9a4f990}
-\hypertarget{structkmath_1_1_interval_ab89c246d6c21a786d5f09f837ff6d104}{\index{kmath\-::\-Interval@{kmath\-::\-Interval}!high@{high}}
-\index{high@{high}!kmath::Interval@{kmath\-::\-Interval}}
-\subsubsection[{high}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf kmath\-::\-Interval\-::high}}}\label{structkmath_1_1_interval_ab89c246d6c21a786d5f09f837ff6d104}
-\hypertarget{structkmath_1_1_interval_ad575587eae91b8bce8f5ab4578f96d2b}{\index{kmath\-::\-Interval@{kmath\-::\-Interval}!low@{low}}
-\index{low@{low}!kmath::Interval@{kmath\-::\-Interval}}
-\subsubsection[{low}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf kmath\-::\-Interval\-::low}}}\label{structkmath_1_1_interval_ad575587eae91b8bce8f5ab4578f96d2b}
 \hypertarget{structkmath_1_1_interval_a2988525850f7d1fb59b26efb1ee2b253}{\index{kmath\-::\-Interval@{kmath\-::\-Interval}!size@{size}}
 \index{size@{size}!kmath::Interval@{kmath\-::\-Interval}}
 \subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf kmath\-::\-Interval\-::size}}}\label{structkmath_1_1_interval_a2988525850f7d1fb59b26efb1ee2b253}

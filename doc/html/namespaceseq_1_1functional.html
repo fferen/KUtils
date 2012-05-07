@@ -129,110 +129,58 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Functions commonly used in functional programming. </p>
 <p>These all should be fairly self-explanatory. </p>
 </div><hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a2ffd96ef955260495f894c6eee90983c"></a>
+<a class="anchor" id="ad36a538cd982a860de04e7f4af03bc4c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class SeqT , typename _FuncT &gt; </div>
+template&lt;class InSeqT , class OutSeqT , typename _FuncT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="namespaceseq_1_1functional.html#a2ffd96ef955260495f894c6eee90983c">seq::functional::all</a> </td>
+          <td class="memname">OutSeqT&amp; <a class="el" href="namespaceseq_1_1functional.html#ad36a538cd982a860de04e7f4af03bc4c">seq::functional::map</a> </td>
           <td>(</td>
           <td class="paramtype">const _FuncT &amp;&#160;</td>
-          <td class="paramname"><em>test</em>, </td>
+          <td class="paramname"><em>func</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SeqT &amp;&#160;</td>
+          <td class="paramtype">const InSeqT &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutSeqT &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab95c352080a36fe07cb04fe95b95caf8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class InSeqT , class OutSeqT  = InSeqT, typename _FuncT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">OutSeqT <a class="el" href="namespaceseq_1_1functional.html#ad36a538cd982a860de04e7f4af03bc4c">seq::functional::map</a> </td>
+          <td>(</td>
+          <td class="paramtype">const _FuncT &amp;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const InSeqT &amp;&#160;</td>
           <td class="paramname"><em>in</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6758cc8e1072ff3e3c0c32f121c879f4"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class IterT , typename _FuncT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="namespaceseq_1_1functional.html#a2ffd96ef955260495f894c6eee90983c">seq::functional::all</a> </td>
-          <td>(</td>
-          <td class="paramtype">const _FuncT &amp;&#160;</td>
-          <td class="paramname"><em>test</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Slice&lt; IterT &gt; &amp;&#160;</td>
-          <td class="paramname"><em>its</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aadc273f6584110ccd147c612a2c315ab"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class SeqT , typename _FuncT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="namespaceseq_1_1functional.html#aadc273f6584110ccd147c612a2c315ab">seq::functional::any</a> </td>
-          <td>(</td>
-          <td class="paramtype">const _FuncT &amp;&#160;</td>
-          <td class="paramname"><em>test</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const SeqT &amp;&#160;</td>
-          <td class="paramname"><em>in</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af131c7ae7d3ef6731a5e1fb71a8177aa"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class IterT , typename _FuncT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="namespaceseq_1_1functional.html#aadc273f6584110ccd147c612a2c315ab">seq::functional::any</a> </td>
-          <td>(</td>
-          <td class="paramtype">const _FuncT &amp;&#160;</td>
-          <td class="paramname"><em>test</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Slice&lt; IterT &gt; &amp;&#160;</td>
-          <td class="paramname"><em>its</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -309,29 +257,23 @@ template&lt;class InSeqT , class OutSeqT  = InSeqT, typename _FuncT &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad36a538cd982a860de04e7f4af03bc4c"></a>
+<a class="anchor" id="aadc273f6584110ccd147c612a2c315ab"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class InSeqT , class OutSeqT , typename _FuncT &gt; </div>
+template&lt;class SeqT , typename _FuncT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">OutSeqT&amp; <a class="el" href="namespaceseq_1_1functional.html#ad36a538cd982a860de04e7f4af03bc4c">seq::functional::map</a> </td>
+          <td class="memname">bool <a class="el" href="namespaceseq_1_1functional.html#aadc273f6584110ccd147c612a2c315ab">seq::functional::any</a> </td>
           <td>(</td>
           <td class="paramtype">const _FuncT &amp;&#160;</td>
-          <td class="paramname"><em>func</em>, </td>
+          <td class="paramname"><em>test</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const InSeqT &amp;&#160;</td>
-          <td class="paramname"><em>in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">OutSeqT &amp;&#160;</td>
-          <td class="paramname"><em>out</em>&#160;</td>
+          <td class="paramtype">const SeqT &amp;&#160;</td>
+          <td class="paramname"><em>in</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -344,23 +286,81 @@ template&lt;class InSeqT , class OutSeqT , typename _FuncT &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ab95c352080a36fe07cb04fe95b95caf8"></a>
+<a class="anchor" id="af131c7ae7d3ef6731a5e1fb71a8177aa"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class InSeqT , class OutSeqT  = InSeqT, typename _FuncT &gt; </div>
+template&lt;class IterT , typename _FuncT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">OutSeqT <a class="el" href="namespaceseq_1_1functional.html#ad36a538cd982a860de04e7f4af03bc4c">seq::functional::map</a> </td>
+          <td class="memname">bool <a class="el" href="namespaceseq_1_1functional.html#aadc273f6584110ccd147c612a2c315ab">seq::functional::any</a> </td>
           <td>(</td>
           <td class="paramtype">const _FuncT &amp;&#160;</td>
-          <td class="paramname"><em>func</em>, </td>
+          <td class="paramname"><em>test</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const InSeqT &amp;&#160;</td>
+          <td class="paramtype">const Slice&lt; IterT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>its</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2ffd96ef955260495f894c6eee90983c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class SeqT , typename _FuncT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="namespaceseq_1_1functional.html#a2ffd96ef955260495f894c6eee90983c">seq::functional::all</a> </td>
+          <td>(</td>
+          <td class="paramtype">const _FuncT &amp;&#160;</td>
+          <td class="paramname"><em>test</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SeqT &amp;&#160;</td>
           <td class="paramname"><em>in</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6758cc8e1072ff3e3c0c32f121c879f4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class IterT , typename _FuncT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="namespaceseq_1_1functional.html#a2ffd96ef955260495f894c6eee90983c">seq::functional::all</a> </td>
+          <td>(</td>
+          <td class="paramtype">const _FuncT &amp;&#160;</td>
+          <td class="paramname"><em>test</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Slice&lt; IterT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>its</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -377,7 +377,7 @@ template&lt;class InSeqT , class OutSeqT  = InSeqT, typename _FuncT &gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 6 2012 15:14:33 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 22:14:18 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
