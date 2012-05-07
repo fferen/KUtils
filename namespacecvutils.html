@@ -113,6 +113,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcvutils_1_1___data_depth___fixed.html">_DataDepth_Fixed</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of bytes of a type at compile-time.  <a href="structcvutils_1_1___data_depth___fixed.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcvutils_1_1___data_depth___fixed_3_01uchar_01_4.html">_DataDepth_Fixed&lt; uchar &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialize for <code>uchar</code> since <code>cv::DataDepth&lt;uchar&gt;</code> reports 0 instead of 1.  <a href="structcvutils_1_1___data_depth___fixed_3_01uchar_01_4.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcvutils_1_1_video_reader.html">VideoReader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a video input source (either a video file or camera).  <a href="structcvutils_1_1_video_reader.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="enum-members"></a>
@@ -152,11 +153,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ada4f02293fd7783beff2240b94d625a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pad <code>src</code> to a larger size and store in <code>dest</code>, filling extra space with <code>fillVal</code>.  <a href="#ada4f02293fd7783beff2240b94d625a7"></a><br/></td></tr>
 <tr class="memitem:a128502dc926237b41ee2598574a4b409"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#a128502dc926237b41ee2598574a4b409">expandMat</a> (const cv::Mat &amp;src, cv::Mat &amp;dest, cv::Size newSize, cv::Scalar fillVal=cv::Scalar(), <a class="el" href="namespacecvutils.html#a955c1d8733f727414da8a357b938ced7">XLoc</a> xFlag=<a class="el" href="namespacecvutils.html#a955c1d8733f727414da8a357b938ced7a6a9a0a917be940c0641d145580dcf0f7">FIX_CENTER_X</a>, <a class="el" href="namespacecvutils.html#a0a32f5be1c20397001a2cdc59bacec81">YLoc</a> yFlag=<a class="el" href="namespacecvutils.html#a0a32f5be1c20397001a2cdc59bacec81ad6382055c3ad3cb882f8f123e3b64f38">FIX_CENTER_Y</a>)</td></tr>
 <tr class="memdesc:a128502dc926237b41ee2598574a4b409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pad <code>src</code> to a larger size and store in <code>dest</code>, filling extra space with <code>fillVal</code>.  <a href="#a128502dc926237b41ee2598574a4b409"></a><br/></td></tr>
-<tr class="memitem:afce5aa1e29332624c3f7cbabcbe19f69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#afce5aa1e29332624c3f7cbabcbe19f69">cvtBGR2RG</a> (const cv::Mat &amp;src, cv::Mat &amp;dest)</td></tr>
-<tr class="memdesc:afce5aa1e29332624c3f7cbabcbe19f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a matrix from BGR color space to rg chromaticity space, with the 3rd channel unused.  <a href="#afce5aa1e29332624c3f7cbabcbe19f69"></a><br/></td></tr>
-<tr class="memitem:acbbf9e8cbd6decade9a79781d981d085"><td class="memTemplParams" colspan="2">template&lt;class InSeqT , template&lt; class T=InSeqT, typename...Args &gt; class OutSeqT, class DistFuncT &gt; </td></tr>
-<tr class="memitem:acbbf9e8cbd6decade9a79781d981d085"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#acbbf9e8cbd6decade9a79781d981d085">cluster</a> (const InSeqT &amp;items, const DistFuncT &amp;getDist, float maxDist, OutSeqT&lt; InSeqT &gt; &amp;clusters)</td></tr>
-<tr class="memdesc:acbbf9e8cbd6decade9a79781d981d085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic naive clustering algorithm (<code>O(n^2)</code> worst case).  <a href="#acbbf9e8cbd6decade9a79781d981d085"></a><br/></td></tr>
+<tr class="memitem:a3b7156ed31820f4f6064135921984f11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#a3b7156ed31820f4f6064135921984f11">cvtBGR2RG</a> (const cv::Mat_&lt; cv::Vec3b &gt; &amp;src, cv::Mat_&lt; cv::Vec3b &gt; &amp;dest)</td></tr>
+<tr class="memdesc:a3b7156ed31820f4f6064135921984f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a matrix from BGR color space to rg chromaticity space, with the 3rd channel unused.  <a href="#a3b7156ed31820f4f6064135921984f11"></a><br/></td></tr>
 <tr class="memitem:a065c3fe57f6f80cd6a4ba369f3f5a635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#a065c3fe57f6f80cd6a4ba369f3f5a635">matwrite</a> (const char *fileName, const cv::Mat &amp;m)</td></tr>
 <tr class="memdesc:a065c3fe57f6f80cd6a4ba369f3f5a635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save Mat in file.  <a href="#a065c3fe57f6f80cd6a4ba369f3f5a635"></a><br/></td></tr>
 <tr class="memitem:ad6c54561b8064273ce92dc34fd8d5c06"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#ad6c54561b8064273ce92dc34fd8d5c06">matread</a> (const char *fileName)</td></tr>
@@ -575,20 +573,20 @@ template&lt;typename T1 , typename T2 , typename _FuncT &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="afce5aa1e29332624c3f7cbabcbe19f69"></a>
+<a class="anchor" id="a3b7156ed31820f4f6064135921984f11"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="namespacecvutils.html#afce5aa1e29332624c3f7cbabcbe19f69">cvutils::cvtBGR2RG</a> </td>
+          <td class="memname">void <a class="el" href="namespacecvutils.html#a3b7156ed31820f4f6064135921984f11">cvutils::cvtBGR2RG</a> </td>
           <td>(</td>
-          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramtype">const cv::Mat_&lt; cv::Vec3b &gt; &amp;&#160;</td>
           <td class="paramname"><em>src</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramtype">cv::Mat_&lt; cv::Vec3b &gt; &amp;&#160;</td>
           <td class="paramname"><em>dest</em>&#160;</td>
         </tr>
         <tr>
@@ -601,51 +599,6 @@ template&lt;typename T1 , typename T2 , typename _FuncT &gt; </div>
 <div class="memdoc">
 
 <p>Convert a matrix from BGR color space to rg chromaticity space, with the 3rd channel unused. </p>
-
-</div>
-</div>
-<a class="anchor" id="acbbf9e8cbd6decade9a79781d981d085"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class InSeqT , template&lt; class T=InSeqT, typename...Args &gt; class OutSeqT, class DistFuncT &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="namespacecvutils.html#acbbf9e8cbd6decade9a79781d981d085">cvutils::cluster</a> </td>
-          <td>(</td>
-          <td class="paramtype">const InSeqT &amp;&#160;</td>
-          <td class="paramname"><em>items</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const DistFuncT &amp;&#160;</td>
-          <td class="paramname"><em>getDist</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>maxDist</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">OutSeqT&lt; InSeqT &gt; &amp;&#160;</td>
-          <td class="paramname"><em>clusters</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Generic naive clustering algorithm (<code>O(n^2)</code> worst case). </p>
-<p>An item is added to the cluster if it is within <code>maxDist</code> from all other items in the cluster.</p>
-<p><code>getDist</code> should take two items and return their distance. </p>
 
 </div>
 </div>
@@ -876,7 +829,7 @@ template&lt;class InSeqT , template&lt; class T=InSeqT, typename...Args &gt; cla
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 7 2012 13:48:52 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 7 2012 15:04:21 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

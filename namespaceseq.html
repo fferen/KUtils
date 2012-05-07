@@ -123,6 +123,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a01ecaea35db083541a258a05ac8c1d30"><td class="memTemplParams" colspan="2">template&lt;class SeqT &gt; </td></tr>
 <tr class="memitem:a01ecaea35db083541a258a05ac8c1d30"><td class="memTemplItemLeft" align="right" valign="top">Slice&lt; typename SeqT::iterator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceseq.html#a01ecaea35db083541a258a05ac8c1d30">sl</a> (SeqT &amp;in, int i1, int i2)</td></tr>
 <tr class="memdesc:a01ecaea35db083541a258a05ac8c1d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get slice of sequence as a pair of iterators.  <a href="#a01ecaea35db083541a258a05ac8c1d30"></a><br/></td></tr>
+<tr class="memitem:aa94b667465072146a3badd193f77d2be"><td class="memTemplParams" colspan="2">template&lt;class InSeqT , template&lt; class T=InSeqT, typename...Args &gt; class OutSeqT, class DistFuncT &gt; </td></tr>
+<tr class="memitem:aa94b667465072146a3badd193f77d2be"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceseq.html#aa94b667465072146a3badd193f77d2be">cluster</a> (const InSeqT &amp;items, const DistFuncT &amp;getDist, float maxDist, OutSeqT&lt; InSeqT &gt; &amp;clusters)</td></tr>
+<tr class="memdesc:aa94b667465072146a3badd193f77d2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a sequence into clusters based on some distance metric.  <a href="#aa94b667465072146a3badd193f77d2be"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Generic sequence operations and structures. </p>
@@ -239,11 +242,56 @@ template&lt;class SeqT &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa94b667465072146a3badd193f77d2be"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class InSeqT , template&lt; class T=InSeqT, typename...Args &gt; class OutSeqT, class DistFuncT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="namespaceseq.html#aa94b667465072146a3badd193f77d2be">seq::cluster</a> </td>
+          <td>(</td>
+          <td class="paramtype">const InSeqT &amp;&#160;</td>
+          <td class="paramname"><em>items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DistFuncT &amp;&#160;</td>
+          <td class="paramname"><em>getDist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>maxDist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutSeqT&lt; InSeqT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>clusters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Split a sequence into clusters based on some distance metric. </p>
+<p>An item is added to a cluster if it is within <code>maxDist</code> from all other items in the cluster.</p>
+<p><code>getDist</code> should take two items and return their distance. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 7 2012 13:48:52 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 7 2012 15:04:21 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

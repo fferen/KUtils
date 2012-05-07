@@ -126,6 +126,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcvutils_1_1___data_depth___fixed.html">cvutils::_DataDepth_Fixed&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of bytes of a type at compile-time.  <a href="structcvutils_1_1___data_depth___fixed.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcvutils_1_1___data_depth___fixed_3_01uchar_01_4.html">cvutils::_DataDepth_Fixed&lt; uchar &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialize for <code>uchar</code> since <code>cv::DataDepth&lt;uchar&gt;</code> reports 0 instead of 1.  <a href="structcvutils_1_1___data_depth___fixed_3_01uchar_01_4.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcvutils_1_1_video_reader.html">cvutils::VideoReader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a video input source (either a video file or camera).  <a href="structcvutils_1_1_video_reader.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
@@ -136,6 +137,7 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacecvutils_1_1geom"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operations on <code>cv::Point</code>s, <code>cv::Vec</code>s, and <code>cv::Rect</code>s. <br/></td></tr>
 <tr class="memitem:namespacecvutils_1_1transform"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils_1_1transform.html">cvutils::transform</a></td></tr>
 <tr class="memdesc:namespacecvutils_1_1transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions related to affine transformations. <br/></td></tr>
+<tr class="memitem:namespacecv"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html">cv</a></td></tr>
 <tr><td colspan="2"><h2><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
@@ -173,11 +175,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ada4f02293fd7783beff2240b94d625a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pad <code>src</code> to a larger size and store in <code>dest</code>, filling extra space with <code>fillVal</code>.  <a href="#ada4f02293fd7783beff2240b94d625a7"></a><br/></td></tr>
 <tr class="memitem:a128502dc926237b41ee2598574a4b409"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#a128502dc926237b41ee2598574a4b409">cvutils::expandMat</a> (const cv::Mat &amp;src, cv::Mat &amp;dest, cv::Size newSize, cv::Scalar fillVal=cv::Scalar(), XLoc xFlag=FIX_CENTER_X, YLoc yFlag=FIX_CENTER_Y)</td></tr>
 <tr class="memdesc:a128502dc926237b41ee2598574a4b409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pad <code>src</code> to a larger size and store in <code>dest</code>, filling extra space with <code>fillVal</code>.  <a href="#a128502dc926237b41ee2598574a4b409"></a><br/></td></tr>
-<tr class="memitem:afce5aa1e29332624c3f7cbabcbe19f69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#afce5aa1e29332624c3f7cbabcbe19f69">cvutils::cvtBGR2RG</a> (const cv::Mat &amp;src, cv::Mat &amp;dest)</td></tr>
-<tr class="memdesc:afce5aa1e29332624c3f7cbabcbe19f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a matrix from BGR color space to rg chromaticity space, with the 3rd channel unused.  <a href="#afce5aa1e29332624c3f7cbabcbe19f69"></a><br/></td></tr>
-<tr class="memitem:acbbf9e8cbd6decade9a79781d981d085"><td class="memTemplParams" colspan="2">template&lt;class InSeqT , template&lt; class T=InSeqT, typename...Args &gt; class OutSeqT, class DistFuncT &gt; </td></tr>
-<tr class="memitem:acbbf9e8cbd6decade9a79781d981d085"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#acbbf9e8cbd6decade9a79781d981d085">cvutils::cluster</a> (const InSeqT &amp;items, const DistFuncT &amp;getDist, float maxDist, OutSeqT&lt; InSeqT &gt; &amp;clusters)</td></tr>
-<tr class="memdesc:acbbf9e8cbd6decade9a79781d981d085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic naive clustering algorithm (<code>O(n^2)</code> worst case).  <a href="#acbbf9e8cbd6decade9a79781d981d085"></a><br/></td></tr>
+<tr class="memitem:a3b7156ed31820f4f6064135921984f11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#a3b7156ed31820f4f6064135921984f11">cvutils::cvtBGR2RG</a> (const cv::Mat_&lt; cv::Vec3b &gt; &amp;src, cv::Mat_&lt; cv::Vec3b &gt; &amp;dest)</td></tr>
+<tr class="memdesc:a3b7156ed31820f4f6064135921984f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a matrix from BGR color space to rg chromaticity space, with the 3rd channel unused.  <a href="#a3b7156ed31820f4f6064135921984f11"></a><br/></td></tr>
 <tr class="memitem:a065c3fe57f6f80cd6a4ba369f3f5a635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#a065c3fe57f6f80cd6a4ba369f3f5a635">cvutils::matwrite</a> (const char *fileName, const cv::Mat &amp;m)</td></tr>
 <tr class="memdesc:a065c3fe57f6f80cd6a4ba369f3f5a635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save Mat in file.  <a href="#a065c3fe57f6f80cd6a4ba369f3f5a635"></a><br/></td></tr>
 <tr class="memitem:ad6c54561b8064273ce92dc34fd8d5c06"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils.html#ad6c54561b8064273ce92dc34fd8d5c06">cvutils::matread</a> (const char *fileName)</td></tr>
@@ -229,324 +228,31 @@ Functions</h2></td></tr>
 <tr class="memdesc:a4ba17f552aeae6ddce6ca2da28936f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size bounding the given size rotated by <code>angle</code>, given in degrees.  <a href="#a4ba17f552aeae6ddce6ca2da28936f42"></a><br/></td></tr>
 <tr class="memitem:a0b54497d842a62c5f538004ac93ba5ff"><td class="memItemLeft" align="right" valign="top">cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecvutils_1_1transform.html#a0b54497d842a62c5f538004ac93ba5ff">cvutils::transform::warpAffinePt</a> (const cv::Mat_&lt; float &gt; &amp;transMat, cv::Point2f pt)</td></tr>
 <tr class="memdesc:a0b54497d842a62c5f538004ac93ba5ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply 2x3 affine transform matrix to <code>pt</code> and return new point.  <a href="#a0b54497d842a62c5f538004ac93ba5ff"></a><br/></td></tr>
-<tr class="memitem:a0b14696e4e43f7a2a1e707fa208b4ea6"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#a0b14696e4e43f7a2a1e707fa208b4ea6">operator&lt;&lt;</a> (ostream &amp;out, const cv::Rect r)</td></tr>
-<tr class="memitem:acac9a564a7e46f10e2e1603edac9e540"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#acac9a564a7e46f10e2e1603edac9e540">operator&lt;&lt;</a> (ostream &amp;out, const cv::Size s)</td></tr>
-<tr class="memitem:a5b3e75872c29d47c8c8fe2226927b511"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#a5b3e75872c29d47c8c8fe2226927b511">operator&lt;&lt;</a> (ostream &amp;out, const cv::Size2f s)</td></tr>
-<tr class="memitem:a4ca6efe2216f3d895e6de2a5cec34fc1"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#a4ca6efe2216f3d895e6de2a5cec34fc1">operator&lt;&lt;</a> (ostream &amp;out, const cv::Scalar s)</td></tr>
-<tr class="memitem:a19e2583b33817fa0157b7ba5d0ef42cb"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#a19e2583b33817fa0157b7ba5d0ef42cb">operator&lt;&lt;</a> (ostream &amp;out, const uchar c)</td></tr>
-<tr class="memitem:a2a8d9a7b33a01731771e3ef6a6fbfa7f"><td class="memTemplParams" colspan="2">template&lt;typename T , int cn&gt; </td></tr>
-<tr class="memitem:a2a8d9a7b33a01731771e3ef6a6fbfa7f"><td class="memTemplItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#a2a8d9a7b33a01731771e3ef6a6fbfa7f">operator&lt;&lt;</a> (ostream &amp;out, const cv::Vec&lt; T, cn &gt; v)</td></tr>
-<tr class="memitem:a7da9a1c417dc019d61a71e6a1a0b0bca"><td class="memItemLeft" align="right" valign="top">cv::Size2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#a7da9a1c417dc019d61a71e6a1a0b0bca">operator*</a> (const cv::Size2f &amp;s, float a)</td></tr>
-<tr class="memitem:a67a540d977f82b8c23e06225ced19b36"><td class="memItemLeft" align="right" valign="top">cv::Size2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#a67a540d977f82b8c23e06225ced19b36">operator*</a> (float a, const cv::Size2f &amp;s)</td></tr>
-<tr class="memitem:ad0324d28d9e4d0699b6e02bca1e17fff"><td class="memItemLeft" align="right" valign="top">cv::Size2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#ad0324d28d9e4d0699b6e02bca1e17fff">operator/</a> (const cv::Size2f &amp;s, float a)</td></tr>
-<tr class="memitem:a604bd29f4a423624445b4641ae1f9eec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#a604bd29f4a423624445b4641ae1f9eec">operator==</a> (const cv::Size2f &amp;a, const cv::Size2f &amp;b)</td></tr>
-<tr class="memitem:ae01f9dafc21bb8ddab20628380a09547"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cvutils_8hpp.html#ae01f9dafc21bb8ddab20628380a09547">operator!=</a> (const cv::Size2f &amp;a, const cv::Size2f &amp;b)</td></tr>
+<tr class="memitem:af41b2871cf638319fdae651383ef95a5"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#af41b2871cf638319fdae651383ef95a5">cv::operator&lt;&lt;</a> (ostream &amp;out, const cv::Rect r)</td></tr>
+<tr class="memitem:a0e35d8a575d7407e3be51eb50bcd12d9"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a0e35d8a575d7407e3be51eb50bcd12d9">cv::operator&lt;&lt;</a> (ostream &amp;out, const cv::Size s)</td></tr>
+<tr class="memitem:a657b4b1caeb07b59d3b4be01cac81e02"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a657b4b1caeb07b59d3b4be01cac81e02">cv::operator&lt;&lt;</a> (ostream &amp;out, const cv::Size2f s)</td></tr>
+<tr class="memitem:a195d55e83abcba257c692c9904a4f023"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a195d55e83abcba257c692c9904a4f023">cv::operator&lt;&lt;</a> (ostream &amp;out, const cv::Scalar s)</td></tr>
+<tr class="memitem:ac0bcf5aa217ca77329df35e18a7cc600"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#ac0bcf5aa217ca77329df35e18a7cc600">cv::operator&lt;&lt;</a> (ostream &amp;out, const uchar c)</td></tr>
+<tr class="memdesc:ac0bcf5aa217ca77329df35e18a7cc600"><td class="mdescLeft">&#160;</td><td class="mdescRight">This must be overloaded, otherwise it prints it as a <code>char</code> instead of an <code>unsigned</code>, which is almost always what is wanted.  <a href="#ac0bcf5aa217ca77329df35e18a7cc600"></a><br/></td></tr>
+<tr class="memitem:af73c628c2990801140256f0368ae84a0"><td class="memTemplParams" colspan="2">template&lt;typename T , int cn&gt; </td></tr>
+<tr class="memitem:af73c628c2990801140256f0368ae84a0"><td class="memTemplItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecv.html#af73c628c2990801140256f0368ae84a0">cv::operator&lt;&lt;</a> (ostream &amp;out, const cv::Vec&lt; T, cn &gt; v)</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a9eaa2d1087f8d4405cfe4cd3ae98ff3f"><td class="memItemLeft" align="right" valign="top">cv::Size2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a9eaa2d1087f8d4405cfe4cd3ae98ff3f">cv::operator*</a> (const cv::Size2f &amp;s, float a)</td></tr>
+<tr class="memdesc:a9eaa2d1087f8d4405cfe4cd3ae98ff3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload common operators for <code>cv::Size</code>, because contrary to the documentation, <code>cv::Size</code> does NOT support the same operators as <code>cv::Point</code>.  <a href="#a9eaa2d1087f8d4405cfe4cd3ae98ff3f"></a><br/></td></tr>
+<tr class="memitem:ad5ae239d9fbcf544526e809eb0365982"><td class="memItemLeft" align="right" valign="top">cv::Size2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#ad5ae239d9fbcf544526e809eb0365982">cv::operator*</a> (float a, const Size2f &amp;s)</td></tr>
+<tr class="memdesc:ad5ae239d9fbcf544526e809eb0365982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload common operators for <code>cv::Size</code>, because contrary to the documentation, <code>cv::Size</code> does NOT support the same operators as <code>cv::Point</code>.  <a href="#ad5ae239d9fbcf544526e809eb0365982"></a><br/></td></tr>
+<tr class="memitem:af9779ca2f68bf823d473ba8e21fc7662"><td class="memItemLeft" align="right" valign="top">cv::Size2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#af9779ca2f68bf823d473ba8e21fc7662">cv::operator/</a> (const Size2f &amp;s, float a)</td></tr>
+<tr class="memdesc:af9779ca2f68bf823d473ba8e21fc7662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload common operators for <code>cv::Size</code>, because contrary to the documentation, <code>cv::Size</code> does NOT support the same operators as <code>cv::Point</code>.  <a href="#af9779ca2f68bf823d473ba8e21fc7662"></a><br/></td></tr>
+<tr class="memitem:a594ce2b8fa8aacea84800952fe8bf8b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#a594ce2b8fa8aacea84800952fe8bf8b9">cv::operator==</a> (const Size2f &amp;a, const cv::Size2f &amp;b)</td></tr>
+<tr class="memdesc:a594ce2b8fa8aacea84800952fe8bf8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload common operators for <code>cv::Size</code>, because contrary to the documentation, <code>cv::Size</code> does NOT support the same operators as <code>cv::Point</code>.  <a href="#a594ce2b8fa8aacea84800952fe8bf8b9"></a><br/></td></tr>
+<tr class="memitem:aeb052d406bf64e772e1df2e6f98d0415"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecv.html#aeb052d406bf64e772e1df2e6f98d0415">cv::operator!=</a> (const cv::Size2f &amp;a, const cv::Size2f &amp;b)</td></tr>
+<tr class="memdesc:aeb052d406bf64e772e1df2e6f98d0415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload common operators for <code>cv::Size</code>, because contrary to the documentation, <code>cv::Size</code> does NOT support the same operators as <code>cv::Point</code>.  <a href="#aeb052d406bf64e772e1df2e6f98d0415"></a><br/></td></tr>
 </table>
-<hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a0b14696e4e43f7a2a1e707fa208b4ea6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Rect&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="acac9a564a7e46f10e2e1603edac9e540"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Size&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5b3e75872c29d47c8c8fe2226927b511"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Size2f&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a4ca6efe2216f3d895e6de2a5cec34fc1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Scalar&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a19e2583b33817fa0157b7ba5d0ef42cb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const uchar&#160;</td>
-          <td class="paramname"><em>c</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a2a8d9a7b33a01731771e3ef6a6fbfa7f"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , int cn&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Vec&lt; T, cn &gt;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a7da9a1c417dc019d61a71e6a1a0b0bca"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cv::Size2f operator* </td>
-          <td>(</td>
-          <td class="paramtype">const cv::Size2f &amp;&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a67a540d977f82b8c23e06225ced19b36"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cv::Size2f operator* </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Size2f &amp;&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ad0324d28d9e4d0699b6e02bca1e17fff"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cv::Size2f operator/ </td>
-          <td>(</td>
-          <td class="paramtype">const cv::Size2f &amp;&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a604bd29f4a423624445b4641ae1f9eec"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool operator== </td>
-          <td>(</td>
-          <td class="paramtype">const cv::Size2f &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Size2f &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae01f9dafc21bb8ddab20628380a09547"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool operator!= </td>
-          <td>(</td>
-          <td class="paramtype">const cv::Size2f &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Size2f &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 7 2012 13:48:52 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 7 2012 15:04:20 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
