@@ -42,7 +42,7 @@ using namespace std;
 namespace argparse {
     /*! Holds the result of parsing arguments. */
     struct ArgHolder {
-        /*! Mapping from option string (eg. "-h") to its arguments. */
+        /*! Mapping from option string (eg "-h") to its arguments. */
         dict::Dict<string, vector<string>> optToArgs;
         /*! Any positional arguments left over. */
         vector<string> posArgs;

@@ -21,9 +21,9 @@ struct \hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}
 {\footnotesize template$<$typename Num\-T $>$ }\\\hyperlink{structseq_1_1math_1_1_x_range}{X\-Range}$<$ Num\-T $>$ \hyperlink{namespaceseq_1_1math_a4f2c47e50ba86a80778ccebd31d7fa16}{xrange} (Num\-T high, bool inclusive=false)
 \item 
 {\footnotesize template$<$typename Num\-T , class Seq\-T $>$ }\\Seq\-T \& \hyperlink{namespaceseq_1_1math_a6bd86d848fb47f455aff84c38c175ea4}{range} (Num\-T low, Num\-T high, Seq\-T \&out, Num\-T step=1)
-\begin{DoxyCompactList}\small\item\em Construct a sequence of numbers from low to high with optional step. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a sequence of numbers from {\ttfamily low} to {\ttfamily high} with optional {\ttfamily step}, store it in {\ttfamily out}, and return {\ttfamily out}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Num\-T , class Seq\-T $>$ }\\Seq\-T \& \hyperlink{namespaceseq_1_1math_ae9b127e8277c6c390b99c4a1195dc087}{range} (Num\-T high, Seq\-T \&out)
-\begin{DoxyCompactList}\small\item\em Construct a sequence of numbers from 0 to high with step=1. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a sequence of numbers from 0 to high with step=1, store it in {\ttfamily out}, and return {\ttfamily out}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Seq\-T $>$ }\\Seq\-T\-::value\-\_\-type \hyperlink{namespaceseq_1_1math_a27179daf6ca9a8d85434eda531fa134e}{sum} (const Seq\-T \&in)
 \begin{DoxyCompactList}\small\item\em Return the sum of sequence elements. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Seq\-T $>$ }\\Seq\-T\-::value\-\_\-type \hyperlink{namespaceseq_1_1math_ab019165412bf99555adfeaaaa86f319f}{mean} (const Seq\-T \&in)
@@ -71,7 +71,7 @@ Suggested usage\-: \begin{DoxyVerb} for (auto i : xrange(10)) {
 )}}\label{namespaceseq_1_1math_a6bd86d848fb47f455aff84c38c175ea4}
 
 
-Construct a sequence of numbers from low to high with optional step. 
+Construct a sequence of numbers from {\ttfamily low} to {\ttfamily high} with optional {\ttfamily step}, store it in {\ttfamily out}, and return {\ttfamily out}. 
 
 \hypertarget{namespaceseq_1_1math_ae9b127e8277c6c390b99c4a1195dc087}{\index{seq\-::math@{seq\-::math}!range@{range}}
 \index{range@{range}!seq::math@{seq\-::math}}
@@ -83,7 +83,7 @@ Construct a sequence of numbers from low to high with optional step.
 )}}\label{namespaceseq_1_1math_ae9b127e8277c6c390b99c4a1195dc087}
 
 
-Construct a sequence of numbers from 0 to high with step=1. 
+Construct a sequence of numbers from 0 to high with step=1, store it in {\ttfamily out}, and return {\ttfamily out}. 
 
 \hypertarget{namespaceseq_1_1math_a27179daf6ca9a8d85434eda531fa134e}{\index{seq\-::math@{seq\-::math}!sum@{sum}}
 \index{sum@{sum}!seq::math@{seq\-::math}}

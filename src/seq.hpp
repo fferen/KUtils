@@ -107,6 +107,7 @@ namespace seq {
      */
     template <class SeqT>
     struct WrappedSeq {
+        /*! The underlying sequence. */
         SeqT &s;
 
         WrappedSeq(SeqT &s) : s(s) {
@@ -131,10 +132,12 @@ namespace seq {
         }
         //@}
 
+        /*! Return the size of the underlying sequence. */
         size_t size() const {
             return this->s.size();
         }
 
+        /*! Return `true` if sequence is empty. */
         bool empty() const {
             return this->s.empty();
         }
@@ -152,11 +155,18 @@ namespace seq {
         }
     };
 
+    /*! Define a `Slice` as a pair of iterators. */
     template <class IterT>
     using Slice = pair<IterT, IterT>;
 
-    /*! Get slice of sequence as a pair of iterators. Throw `range_error` if
-     * `i1` > `i2`.
+    /*! Get slice of sequence as a pair of iterators. The definition of `Slice`
+     * is shown here, as Doxygen is unable to parse templated typedefs:
+     *
+     *      template <class IterT>
+     *      using Slice = pair<IterT, IterT>;
+     *
+     * @throws range_error
+     * Thrown if `i1` > `i2`.
      */
     template <class SeqT>
     Slice<typename SeqT::iterator> sl(SeqT &in, int i1, int i2) {
@@ -176,21 +186,21 @@ namespace seq {
      * These all should be fairly self-explanatory.
      */
     namespace functional {
-        template <class InSeqT, class OutSeqT, typename _FuncT>
-        OutSeqT &map(const _FuncT &func, const InSeqT &in, OutSeqT &out) {
+        template <class InSeqT, class OutSeqT, typename FuncT>
+        OutSeqT &map(const FuncT &func, const InSeqT &in, OutSeqT &out) {
             out.resize(in.size());
             transform(in.begin(), in.end(), out.begin(), func);
             return out;
         }
 
-        template <class InSeqT, class OutSeqT=InSeqT, typename _FuncT>
-        OutSeqT map(const _FuncT &func, const InSeqT &in) {
+        template <class InSeqT, class OutSeqT=InSeqT, typename FuncT>
+        OutSeqT map(const FuncT &func, const InSeqT &in) {
             OutSeqT out;
             return map(func, in, out);
         }
 
-        template <class InSeqT, class OutSeqT, typename _FuncT>
-        OutSeqT &filter(const _FuncT &test, const InSeqT &in, OutSeqT &out) {
+        template <class InSeqT, class OutSeqT, typename FuncT>
+        OutSeqT &filter(const FuncT &test, const InSeqT &in, OutSeqT &out) {
             size_t curI = 0;
             for (auto elem : in) {
                 if (test(elem)) {
@@ -206,14 +216,14 @@ namespace seq {
             return out;
         }
 
-        template <class InSeqT, class OutSeqT=InSeqT, typename _FuncT>
-        OutSeqT filter(const _FuncT &test, const InSeqT &in) {
+        template <class InSeqT, class OutSeqT=InSeqT, typename FuncT>
+        OutSeqT filter(const FuncT &test, const InSeqT &in) {
             OutSeqT out;
             return filter(test, in, out);
         }
 
-        template<class SeqT, typename _FuncT>
-        bool any(const _FuncT &test, const SeqT &in) {
+        template<class SeqT, typename FuncT>
+        bool any(const FuncT &test, const SeqT &in) {
             for (auto elem : in) {
                 if (test(elem)) {
                     return true;
@@ -222,8 +232,9 @@ namespace seq {
             return false;
         }
 
-        template<class IterT, typename _FuncT>
-        bool any(const _FuncT &test, const Slice<IterT> &its) {
+        /*! See sl() for the definition of `Slice`. */
+        template<class IterT, typename FuncT>
+        bool any(const FuncT &test, const Slice<IterT> &its) {
             for (auto it = its.first; it != its.second; it++) {
                 if (test(*it)) {
                     return true;
@@ -232,8 +243,8 @@ namespace seq {
             return false;
         }
 
-        template<class SeqT, typename _FuncT>
-        bool all(const _FuncT &test, const SeqT &in) {
+        template<class SeqT, typename FuncT>
+        bool all(const FuncT &test, const SeqT &in) {
             for (auto elem : in) {
                 if (not test(elem)) {
                     return false;
@@ -242,8 +253,9 @@ namespace seq {
             return true;
         }
 
-        template<class IterT, typename _FuncT>
-        bool all(const _FuncT &test, const Slice<IterT> &its) {
+        /*! See sl() for the definition of `Slice`. */
+        template<class IterT, typename FuncT>
+        bool all(const FuncT &test, const Slice<IterT> &its) {
             for (auto it = its.first; it != its.second; it++) {
                 if (not test(*it)) {
                     return false;
@@ -381,7 +393,8 @@ namespace seq {
             return xrange<NumT>(0, high, 1, inclusive);
         }
 
-        /*! Construct a sequence of numbers from low to high with optional step.
+        /*! Construct a sequence of numbers from `low` to `high` with optional
+         * `step`, store it in `out`, and return `out`.
          */
         template <typename NumT, class SeqT>
         SeqT &range(NumT low, NumT high, SeqT &out, NumT step=1) {
@@ -399,7 +412,8 @@ namespace seq {
             return out;
         }
 
-        /*! Construct a sequence of numbers from 0 to high with step=1.
+        /*! Construct a sequence of numbers from 0 to high with step=1, store it
+         * in `out`, and return `out`.
          */
         template <typename NumT, class SeqT>
         SeqT &range(NumT high, SeqT &out) {

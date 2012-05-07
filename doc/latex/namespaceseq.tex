@@ -73,4 +73,10 @@ For example, {\ttfamily \-\_\-real\-I\-Dist(3, 0, 4)} == 1. \hypertarget{namespa
 
 Get slice of sequence as a pair of iterators. 
 
-Throw {\ttfamily range\-\_\-error} if {\ttfamily i1} $>$ {\ttfamily i2}. 
+The definition of {\ttfamily Slice} is shown here, as Doxygen is unable to parse templated typedefs\-: \begin{DoxyVerb} template <class IterT>
+ using Slice = pair<IterT, IterT>;\end{DoxyVerb}
+ 
+\begin{DoxyExceptions}{Exceptions}
+{\em range\-\_\-error} & Thrown if {\ttfamily i1} $>$ {\ttfamily i2}. \\
+\hline
+\end{DoxyExceptions}

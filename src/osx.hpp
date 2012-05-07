@@ -48,7 +48,7 @@ namespace ms = mouse;
 
 /*! OSX-specific utilities. */
 namespace osx {
-    /* "Reverse enum" for the enum type `CGColorSpaceModel`, used for display
+    /*! "Reverse enum" for the enum type `CGColorSpaceModel`, used for display
      * purposes. Starting index in the enum is -1.
      */
     UNUSED_VAR static const char *COLOR_SPACE_MODEL_NAMES[] = {
@@ -62,7 +62,7 @@ namespace osx {
         "kCGColorSpaceModelPattern"
     };
 
-    /* "Reverse enum" for the enum type `CGImageAlphaInfo`. */
+    /*! "Reverse enum" for the enum type `CGImageAlphaInfo`. */
     UNUSED_VAR static const char *ALPHA_INFO_NAMES[] = {
         "kCGImageAlphaNone",
         "kCGImageAlphaPremultipliedLast",
@@ -73,13 +73,13 @@ namespace osx {
         "kCGImageAlphaNoneSkipFirst"
     };
 
-    /* Convert a `kmath::Point<T>` to a `CGPoint`. */
+    /*! Convert a `kmath::Point<T>` to a `CGPoint`. */
     template <typename T>
     inline CGPoint toCGPt(kmath::Point<T> pt) {
         return CGPointMake(pt.x, pt.y);
     }
 
-    /* Convert a `CGPoint` to a `kmath::PointF`. */
+    /*! Convert a `CGPoint` to a `kmath::PointF`. */
     inline kmath::PointF toPt(CGPoint pt) {
         return kmath::PointF(pt.x, pt.y);
     }

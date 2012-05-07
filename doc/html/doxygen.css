@@ -1064,3 +1064,7 @@ code {
     background-color: #eee;
     margin: 0 2px;
 }
+
+address.footer {
+    margin-bottom: 700px;
+}
