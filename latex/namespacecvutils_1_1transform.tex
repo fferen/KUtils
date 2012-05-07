@@ -1,0 +1,81 @@
+\hypertarget{namespacecvutils_1_1transform}{\section{cvutils\-:\-:transform Namespace Reference}
+\label{namespacecvutils_1_1transform}\index{cvutils\-::transform@{cvutils\-::transform}}
+}
+
+
+Functions related to affine transformations.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Mat \& \hyperlink{namespacecvutils_1_1transform_a74e90c5a7806491a108fad30703cae2c}{get\-Rotated\-R\-O\-I} (const cv\-::\-Mat \&src, const cv\-::\-Rotated\-Rect \&r, cv\-::\-Mat \&dest)
+\begin{DoxyCompactList}\small\item\em Store part of {\ttfamily src} in {\ttfamily dest} with the R\-O\-I specified by {\ttfamily r}, and return {\ttfamily dest}. \end{DoxyCompactList}\item 
+void \hyperlink{namespacecvutils_1_1transform_ac254c72298a9cd69aac2bde803739757}{rotozoom\-Mat} (const cv\-::\-Mat \&src, cv\-::\-Mat \&dest, float angle, float scale=1.\-0, cv\-::\-Mat $\ast$trans\-Mat=N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em Scale and rotate {\ttfamily src} and store in {\ttfamily dest} (must not be the same). \end{DoxyCompactList}\item 
+cv\-::\-Size2f \hyperlink{namespacecvutils_1_1transform_a4ba17f552aeae6ddce6ca2da28936f42}{rotate\-Size} (cv\-::\-Size2f s, float angle)
+\begin{DoxyCompactList}\small\item\em Return the size bounding the given size rotated by {\ttfamily angle}, given in degrees. \end{DoxyCompactList}\item 
+cv\-::\-Point2f \hyperlink{namespacecvutils_1_1transform_a0b54497d842a62c5f538004ac93ba5ff}{warp\-Affine\-Pt} (const cv\-::\-Mat\-\_\-$<$ float $>$ \&trans\-Mat, cv\-::\-Point2f pt)
+\begin{DoxyCompactList}\small\item\em Apply 2x3 affine transform matrix to {\ttfamily pt} and return new point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions related to affine transformations. 
+
+\subsection{Function Documentation}
+\hypertarget{namespacecvutils_1_1transform_a74e90c5a7806491a108fad30703cae2c}{\index{cvutils\-::transform@{cvutils\-::transform}!get\-Rotated\-R\-O\-I@{get\-Rotated\-R\-O\-I}}
+\index{get\-Rotated\-R\-O\-I@{get\-Rotated\-R\-O\-I}!cvutils::transform@{cvutils\-::transform}}
+\subsubsection[{get\-Rotated\-R\-O\-I}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat\& {\bf cvutils\-::transform\-::get\-Rotated\-R\-O\-I} (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat \&}]{src, }
+\item[{const cv\-::\-Rotated\-Rect \&}]{r, }
+\item[{cv\-::\-Mat \&}]{dest}
+\end{DoxyParamCaption}
+)}}\label{namespacecvutils_1_1transform_a74e90c5a7806491a108fad30703cae2c}
+
+
+Store part of {\ttfamily src} in {\ttfamily dest} with the R\-O\-I specified by {\ttfamily r}, and return {\ttfamily dest}. 
+
+\hypertarget{namespacecvutils_1_1transform_ac254c72298a9cd69aac2bde803739757}{\index{cvutils\-::transform@{cvutils\-::transform}!rotozoom\-Mat@{rotozoom\-Mat}}
+\index{rotozoom\-Mat@{rotozoom\-Mat}!cvutils::transform@{cvutils\-::transform}}
+\subsubsection[{rotozoom\-Mat}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf cvutils\-::transform\-::rotozoom\-Mat} (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat \&}]{src, }
+\item[{cv\-::\-Mat \&}]{dest, }
+\item[{float}]{angle, }
+\item[{float}]{scale = {\ttfamily 1.0}, }
+\item[{cv\-::\-Mat $\ast$}]{trans\-Mat = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{namespacecvutils_1_1transform_ac254c72298a9cd69aac2bde803739757}
+
+
+Scale and rotate {\ttfamily src} and store in {\ttfamily dest} (must not be the same). 
+
+{\ttfamily angle} is in degrees C\-C\-W.
+
+If {\ttfamily trans\-Mat} is provided, store the 2x3 transformation matrix in it. Provide {\ttfamily N\-U\-L\-L} if not needed.
+
+Extra space in {\ttfamily dest} will be filled to 0. \hypertarget{namespacecvutils_1_1transform_a4ba17f552aeae6ddce6ca2da28936f42}{\index{cvutils\-::transform@{cvutils\-::transform}!rotate\-Size@{rotate\-Size}}
+\index{rotate\-Size@{rotate\-Size}!cvutils::transform@{cvutils\-::transform}}
+\subsubsection[{rotate\-Size}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Size2f {\bf cvutils\-::transform\-::rotate\-Size} (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Size2f}]{s, }
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}}\label{namespacecvutils_1_1transform_a4ba17f552aeae6ddce6ca2da28936f42}
+
+
+Return the size bounding the given size rotated by {\ttfamily angle}, given in degrees. 
+
+It will always have a width and height $>$= those of the given size. \hypertarget{namespacecvutils_1_1transform_a0b54497d842a62c5f538004ac93ba5ff}{\index{cvutils\-::transform@{cvutils\-::transform}!warp\-Affine\-Pt@{warp\-Affine\-Pt}}
+\index{warp\-Affine\-Pt@{warp\-Affine\-Pt}!cvutils::transform@{cvutils\-::transform}}
+\subsubsection[{warp\-Affine\-Pt}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Point2f {\bf cvutils\-::transform\-::warp\-Affine\-Pt} (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat\-\_\-$<$ float $>$ \&}]{trans\-Mat, }
+\item[{cv\-::\-Point2f}]{pt}
+\end{DoxyParamCaption}
+)}}\label{namespacecvutils_1_1transform_a0b54497d842a62c5f538004ac93ba5ff}
+
+
+Apply 2x3 affine transform matrix to {\ttfamily pt} and return new point. 
+

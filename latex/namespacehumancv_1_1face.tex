@@ -1,0 +1,70 @@
+\hypertarget{namespacehumancv_1_1face}{\section{humancv\-:\-:face Namespace Reference}
+\label{namespacehumancv_1_1face}\index{humancv\-::face@{humancv\-::face}}
+}
+
+
+Basic face detection and modeling.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacehumancv_1_1face_a58c6c6dc7819af9f31bebf046ab64ee1}{store\-Masks} (const cv\-::\-Size im\-Size, const vector$<$ cv\-::\-Rect $>$ \&rois, cv\-::\-Mat\-\_\-$<$ uchar $>$ \&dest)
+\begin{DoxyCompactList}\small\item\em Given rectangles containing face and the size of the parent image, store face skin masks in dest of size {\ttfamily im\-Size}. \end{DoxyCompactList}\item 
+void \hyperlink{namespacehumancv_1_1face_a6d23e6d95e0f09e1be2b531c75913577}{get\-Rects} (const cv\-::\-Mat\-\_\-$<$ uchar $>$ \&im, cv\-::\-Cascade\-Classifier \&cascade, vector$<$ cv\-::\-Rect $>$ \&out, float scale=1)
+\begin{DoxyCompactList}\small\item\em Store rectangles containing faces in {\ttfamily out}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic face detection and modeling. 
+
+\subsection{Function Documentation}
+\hypertarget{namespacehumancv_1_1face_a58c6c6dc7819af9f31bebf046ab64ee1}{\index{humancv\-::face@{humancv\-::face}!store\-Masks@{store\-Masks}}
+\index{store\-Masks@{store\-Masks}!humancv::face@{humancv\-::face}}
+\subsubsection[{store\-Masks}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf humancv\-::face\-::store\-Masks} (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Size}]{im\-Size, }
+\item[{const vector$<$ cv\-::\-Rect $>$ \&}]{rois, }
+\item[{cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{dest}
+\end{DoxyParamCaption}
+)}}\label{namespacehumancv_1_1face_a58c6c6dc7819af9f31bebf046ab64ee1}
+
+
+Given rectangles containing face and the size of the parent image, store face skin masks in dest of size {\ttfamily im\-Size}. 
+
+Faces are approximated as ellipses with a small overlapping rectangle to model the neck.
+
+
+\begin{DoxyParams}{Parameters}
+{\em im\-Size} & Size of parent image where faces were found. \\
+\hline
+{\em rois} & Vector of face rectangles. \\
+\hline
+{\em dest} & Destination mask to store faces -\/ will be resized to {\ttfamily im\-Size}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacehumancv_1_1face_a6d23e6d95e0f09e1be2b531c75913577}{\index{humancv\-::face@{humancv\-::face}!get\-Rects@{get\-Rects}}
+\index{get\-Rects@{get\-Rects}!humancv::face@{humancv\-::face}}
+\subsubsection[{get\-Rects}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf humancv\-::face\-::get\-Rects} (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{im, }
+\item[{cv\-::\-Cascade\-Classifier \&}]{cascade, }
+\item[{vector$<$ cv\-::\-Rect $>$ \&}]{out, }
+\item[{float}]{scale = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{namespacehumancv_1_1face_a6d23e6d95e0f09e1be2b531c75913577}
+
+
+Store rectangles containing faces in {\ttfamily out}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em im} & Grayscale image to search for faces. \\
+\hline
+{\em cascade} & Classifier cascade, typically loaded from an X\-M\-L file. Open\-C\-V comes with several of these; look for the {\ttfamily haarcascades} directory in your Open\-C\-V install path. \\
+\hline
+{\em out} & Output vector of {\ttfamily cv\-::\-Rect}s. \\
+\hline
+{\em scale} & Scaling factor for the image. Image is scaled by this factor before being passed into the face detector, which may improve performance for large images. \\
+\hline
+\end{DoxyParams}

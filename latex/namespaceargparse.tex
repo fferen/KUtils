@@ -1,0 +1,123 @@
+\hypertarget{namespaceargparse}{\section{argparse Namespace Reference}
+\label{namespaceargparse}\index{argparse@{argparse}}
+}
+
+
+Command-\/line argument parser with a focus on brevity.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder}
+\begin{DoxyCompactList}\small\item\em Holds the result of parsing arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespaceargparse_a0ee3e8ca883816181b45c15a9ad0b6ed}{make\-Usage\-String} (const string \&prog\-Name, const string \&desc, const string \&pos\-Args=string(), const dict\-::\-Dict$<$ string, string $>$ \&opt\-To\-Help=dict\-::\-Dict$<$ string, string $>$(), unsigned cols=80, unsigned help\-Cols=60)
+\begin{DoxyCompactList}\small\item\em Create a usage string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Func\-Type $>$ }\\\hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} \hyperlink{namespaceargparse_a4b1b6c03b45175acd13d1620f328e4aa}{parse} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const dict\-::\-Dict$<$ string, Func\-Type $>$ \&opt\-To\-Chker, char opt\-Char='-\/', bool gen\-Help\-Chker=true)
+\begin{DoxyCompactList}\small\item\em Return an \hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} object holding the parsed arguments. \end{DoxyCompactList}\item 
+\hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} \hyperlink{namespaceargparse_a6cfba06102a610840779069dfda1b98d}{parse} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const char opt\-Char='-\/', bool gen\-Help\-Chker=true)
+\begin{DoxyCompactList}\small\item\em For programs that take no options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Command-\/line argument parser with a focus on brevity. 
+
+\subsection{Function Documentation}
+\hypertarget{namespaceargparse_a0ee3e8ca883816181b45c15a9ad0b6ed}{\index{argparse@{argparse}!make\-Usage\-String@{make\-Usage\-String}}
+\index{make\-Usage\-String@{make\-Usage\-String}!argparse@{argparse}}
+\subsubsection[{make\-Usage\-String}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf argparse\-::make\-Usage\-String} (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{prog\-Name, }
+\item[{const string \&}]{desc, }
+\item[{const string \&}]{pos\-Args = {\ttfamily string()}, }
+\item[{const dict\-::\-Dict$<$ string, string $>$ \&}]{opt\-To\-Help = {\ttfamily dict\-:\-:Dict$<$string,~string$>$()}, }
+\item[{unsigned}]{cols = {\ttfamily 80}, }
+\item[{unsigned}]{help\-Cols = {\ttfamily 60}}
+\end{DoxyParamCaption}
+)}}\label{namespaceargparse_a0ee3e8ca883816181b45c15a9ad0b6ed}
+
+
+Create a usage string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prog\-Name} & Name of the program as run on the command line. Typically {\ttfamily argv\mbox{[}0\mbox{]}} is passed. \\
+\hline
+{\em desc} & Description of the program. \\
+\hline
+{\em pos\-Args} & String representing the positional arguments. \\
+\hline
+{\em opt\-To\-Help} & Mapping from option to help dialog. \\
+\hline
+{\em cols} & Maximum number of columns -\/ strings longer than this will be wrapped. \\
+\hline
+{\em help\-Cols} & Number of columns that the option help should take up.\\
+\hline
+\end{DoxyParams}
+Example\-: \begin{DoxyVerb} makeUsageString(
+         "testprog",
+         "This is a description of the program.",
+         "arg1 arg2 arg3",
+         makeDict(
+             string("-h"), string("print a help message"),
+             string("-a"), string("add some numbers")
+             )
+         )\end{DoxyVerb}
+ generates this help string\-: \begin{DoxyVerb} Usage: testprog [options] arg1 arg2 arg3
+
+ This is a description of the program.
+
+ Options:
+ -a                  add some numbers
+ -h                  print a help message\end{DoxyVerb}
+ \hypertarget{namespaceargparse_a4b1b6c03b45175acd13d1620f328e4aa}{\index{argparse@{argparse}!parse@{parse}}
+\index{parse@{parse}!argparse@{argparse}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Func\-Type $>$ {\bf Arg\-Holder} {\bf argparse\-::parse} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}, }
+\item[{const dict\-::\-Dict$<$ string, Func\-Type $>$ \&}]{opt\-To\-Chker, }
+\item[{char}]{opt\-Char = {\ttfamily '-\/'}, }
+\item[{bool}]{gen\-Help\-Chker = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespaceargparse_a4b1b6c03b45175acd13d1620f328e4aa}
+
+
+Return an \hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} object holding the parsed arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc,argv} & The arguments to main(). \\
+\hline
+{\em opt\-To\-Chker} & Should map an option string (anything beginning with {\ttfamily opt\-Char}) to a checker function that takes a vector of argument strings and returns the number of arguments read. The function should also throw an {\ttfamily invalid\-\_\-argument} exception if any arguments are invalid. For example, a simple help option checker\-: \begin{DoxyVerb}makeDict(string("-h"), [](vector<string> args) { return 0; })
+\end{DoxyVerb}
+ \\
+\hline
+{\em opt\-Char} & Signifies the start of an option. \\
+\hline
+{\em gen\-Help\-Chker} & If {\ttfamily true}, checks \char`\"{}-\/h\char`\"{} and \char`\"{}-\/-\/help\char`\"{} options automatically.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & Thrown if unknown option is encountered, as well as if a checker throws an {\ttfamily invalid\-\_\-argument} exception. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{namespaceargparse_a6cfba06102a610840779069dfda1b98d}{\index{argparse@{argparse}!parse@{parse}}
+\index{parse@{parse}!argparse@{argparse}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arg\-Holder} {\bf argparse\-::parse} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}, }
+\item[{const char}]{opt\-Char = {\ttfamily '-\/'}, }
+\item[{bool}]{gen\-Help\-Chker = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespaceargparse_a6cfba06102a610840779069dfda1b98d}
+
+
+For programs that take no options. 
+
+See \hyperlink{namespaceargparse_a4b1b6c03b45175acd13d1620f328e4aa}{parse()} above. 

@@ -1,0 +1,82 @@
+\hypertarget{structcvutils_1_1_video_reader}{\section{cvutils\-:\-:Video\-Reader Struct Reference}
+\label{structcvutils_1_1_video_reader}\index{cvutils\-::\-Video\-Reader@{cvutils\-::\-Video\-Reader}}
+}
+
+
+Represents a video input source (either a video file or camera).  
+
+
+
+
+{\ttfamily \#include $<$cvutils.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{structcvutils_1_1_video_reader_a5d5f4f366698b131e3c80ac200cafbac}{Video\-Reader} (T input, cv\-::\-Size \hyperlink{structcvutils_1_1_video_reader_ac26957b49d881cb0dc896f076f4892a5}{size}=cv\-::\-Size(0, 0))
+\begin{DoxyCompactList}\small\item\em Construct from either a device id (int) or filename. \end{DoxyCompactList}\item 
+void \hyperlink{structcvutils_1_1_video_reader_aeefc2060b91297a48c465324eb1ad628}{operator$>$$>$} (cv\-::\-Mat \&im)
+\begin{DoxyCompactList}\small\item\em Read next frame from input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\-::\-Video\-Capture \hyperlink{structcvutils_1_1_video_reader_ae6b07273677636bf2144734c761153a6}{cap}
+\item 
+cv\-::\-Size \hyperlink{structcvutils_1_1_video_reader_ac26957b49d881cb0dc896f076f4892a5}{size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a video input source (either a video file or camera). 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structcvutils_1_1_video_reader_a5d5f4f366698b131e3c80ac200cafbac}{\index{cvutils\-::\-Video\-Reader@{cvutils\-::\-Video\-Reader}!Video\-Reader@{Video\-Reader}}
+\index{Video\-Reader@{Video\-Reader}!cvutils::VideoReader@{cvutils\-::\-Video\-Reader}}
+\subsubsection[{Video\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf cvutils\-::\-Video\-Reader\-::\-Video\-Reader} (
+\begin{DoxyParamCaption}
+\item[{T}]{input, }
+\item[{cv\-::\-Size}]{size = {\ttfamily cv\-:\-:Size(0,~0)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{structcvutils_1_1_video_reader_a5d5f4f366698b131e3c80ac200cafbac}
+
+
+Construct from either a device id (int) or filename. 
+
+Specify {\ttfamily size} to manually set the size of the returned frames.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\-\_\-argument} & Thrown if unable to open input source. \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structcvutils_1_1_video_reader_aeefc2060b91297a48c465324eb1ad628}{\index{cvutils\-::\-Video\-Reader@{cvutils\-::\-Video\-Reader}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!cvutils::VideoReader@{cvutils\-::\-Video\-Reader}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}void cvutils\-::\-Video\-Reader\-::operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Mat \&}]{im}
+\end{DoxyParamCaption}
+)}}\label{structcvutils_1_1_video_reader_aeefc2060b91297a48c465324eb1ad628}
+
+
+Read next frame from input. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structcvutils_1_1_video_reader_ae6b07273677636bf2144734c761153a6}{\index{cvutils\-::\-Video\-Reader@{cvutils\-::\-Video\-Reader}!cap@{cap}}
+\index{cap@{cap}!cvutils::VideoReader@{cvutils\-::\-Video\-Reader}}
+\subsubsection[{cap}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Video\-Capture {\bf cvutils\-::\-Video\-Reader\-::cap}}}\label{structcvutils_1_1_video_reader_ae6b07273677636bf2144734c761153a6}
+\hypertarget{structcvutils_1_1_video_reader_ac26957b49d881cb0dc896f076f4892a5}{\index{cvutils\-::\-Video\-Reader@{cvutils\-::\-Video\-Reader}!size@{size}}
+\index{size@{size}!cvutils::VideoReader@{cvutils\-::\-Video\-Reader}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Size {\bf cvutils\-::\-Video\-Reader\-::size}}}\label{structcvutils_1_1_video_reader_ac26957b49d881cb0dc896f076f4892a5}
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{cvutils_8hpp}{cvutils.\-hpp}\item 
+\hyperlink{cvutils_8cpp}{cvutils.\-cpp}\end{DoxyCompactItemize}

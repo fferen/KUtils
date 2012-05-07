@@ -1,0 +1,49 @@
+\hypertarget{namespacehumancv_1_1skin}{\section{humancv\-:\-:skin Namespace Reference}
+\label{namespacehumancv_1_1skin}\index{humancv\-::skin@{humancv\-::skin}}
+}
+
+
+Color-\/based skin segmentation.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacehumancv_1_1skin_a310ce17c9746ffbb85f230592b41094c}{get\-Mask} (const cv\-::\-Mat\-\_\-$<$ cv\-::\-Vec3b $>$ \&im, const Cv\-Boost \&cls, cv\-::\-Mat\-\_\-$<$ uchar $>$ \&dest, cv\-::\-Sparse\-Mat\-\_\-$<$ float $>$ $\ast$lookup=N\-U\-L\-L, float \hyperlink{humancv_8cpp_a17e0538341040ddcd8191df955bee277}{thres}=0)
+\begin{DoxyCompactList}\small\item\em Store a binary mask with skin pixels = 255, non-\/skin pixels = 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Color-\/based skin segmentation. 
+
+\subsection{Function Documentation}
+\hypertarget{namespacehumancv_1_1skin_a310ce17c9746ffbb85f230592b41094c}{\index{humancv\-::skin@{humancv\-::skin}!get\-Mask@{get\-Mask}}
+\index{get\-Mask@{get\-Mask}!humancv::skin@{humancv\-::skin}}
+\subsubsection[{get\-Mask}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf humancv\-::skin\-::get\-Mask} (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat\-\_\-$<$ cv\-::\-Vec3b $>$ \&}]{im, }
+\item[{const Cv\-Boost \&}]{cls, }
+\item[{cv\-::\-Mat\-\_\-$<$ uchar $>$ \&}]{dest, }
+\item[{cv\-::\-Sparse\-Mat\-\_\-$<$ float $>$ $\ast$}]{lookup = {\ttfamily NULL}, }
+\item[{float}]{thres = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{namespacehumancv_1_1skin_a310ce17c9746ffbb85f230592b41094c}
+
+
+Store a binary mask with skin pixels = 255, non-\/skin pixels = 0. 
+
+Runs a boosted classifier on each pixel to classify it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em im} & Image to compute the mask on. Must have same pixel format as the one used to train the classifier. \\
+\hline
+{\em cls} & Boosted classifier that takes a 1x3 {\ttfamily Mat} representing one pixel and classifies it as skin/non-\/skin. It should have been trained with skin as the higher-\/valued class, as {\ttfamily thres} is the minimum response (weighted sum) required to classify a pixel as skin. \\
+\hline
+{\em dest} & Where to store the resulting mask. \\
+\hline
+{\em lookup} & Pointer to a lookup table for the pixels -\/ can significantly speed up computation. If {\ttfamily N\-U\-L\-L} is provided a new one will be initialized and destroyed each function call. \\
+\hline
+{\em thres} & Pixels with classifier responses (weighted sums) above this threshold will be classified as skin. \\
+\hline
+\end{DoxyParams}

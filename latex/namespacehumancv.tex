@@ -1,0 +1,81 @@
+\hypertarget{namespacehumancv}{\section{humancv Namespace Reference}
+\label{namespacehumancv}\index{humancv@{humancv}}
+}
+
+
+Human-\/related computer vision utilities.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacehumancv_1_1face}{face}
+\begin{DoxyCompactList}\small\item\em Basic face detection and modeling. \end{DoxyCompactList}\item 
+namespace \hyperlink{namespacehumancv_1_1skin}{skin}
+\begin{DoxyCompactList}\small\item\em Color-\/based skin segmentation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structhumancv_1_1_finger_data}{Finger\-Data}
+\begin{DoxyCompactList}\small\item\em Indices into a {\ttfamily Contour} denoting a finger. \end{DoxyCompactList}\item 
+class \hyperlink{classhumancv_1_1_cursor_finder}{Cursor\-Finder}
+\begin{DoxyCompactList}\small\item\em Framework for tracking hand gestures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structseq_1_1_wrapped_seq}{seq\-::\-Wrapped\-Seq}\\*
+$<$ vector$<$ cv\-::\-Point $>$ $>$ \hyperlink{namespacehumancv_ac3621cda88df26d2718f6bd5ec4de1dd}{Contour}
+\begin{DoxyCompactList}\small\item\em Since contours are actually \char`\"{}ring\char`\"{} structures but are represented as {\ttfamily vector}s in Open\-C\-V, we wrap them so that indices wrap around. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacehumancv_aa7c8371defc1384bddefbe8daba81ae9}{get\-Fingers} (const \hyperlink{namespacehumancv_ac3621cda88df26d2718f6bd5ec4de1dd}{Contour} \&ctr, const cv\-::\-Size \&hand\-Size, vector$<$ \hyperlink{structhumancv_1_1_finger_data}{Finger\-Data} $>$ \&out, int k, float min\-Dist, float finger\-Angle=1.\-0)
+\begin{DoxyCompactList}\small\item\em Store finger data from a {\ttfamily Contour} representing a hand (with possible arm attached). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Human-\/related computer vision utilities. 
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacehumancv_ac3621cda88df26d2718f6bd5ec4de1dd}{\index{humancv@{humancv}!Contour@{Contour}}
+\index{Contour@{Contour}!humancv@{humancv}}
+\subsubsection[{Contour}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf seq\-::\-Wrapped\-Seq}$<$vector$<$cv\-::\-Point$>$ $>$ {\bf humancv\-::\-Contour}}}\label{namespacehumancv_ac3621cda88df26d2718f6bd5ec4de1dd}
+
+
+Since contours are actually \char`\"{}ring\char`\"{} structures but are represented as {\ttfamily vector}s in Open\-C\-V, we wrap them so that indices wrap around. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacehumancv_aa7c8371defc1384bddefbe8daba81ae9}{\index{humancv@{humancv}!get\-Fingers@{get\-Fingers}}
+\index{get\-Fingers@{get\-Fingers}!humancv@{humancv}}
+\subsubsection[{get\-Fingers}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf humancv\-::get\-Fingers} (
+\begin{DoxyParamCaption}
+\item[{const Contour \&}]{ctr, }
+\item[{const cv\-::\-Size \&}]{hand\-Size, }
+\item[{vector$<$ Finger\-Data $>$ \&}]{out, }
+\item[{int}]{k, }
+\item[{float}]{min\-Dist, }
+\item[{float}]{finger\-Angle = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}}\label{namespacehumancv_aa7c8371defc1384bddefbe8daba81ae9}
+
+
+Store finger data from a {\ttfamily Contour} representing a hand (with possible arm attached). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctr} & The {\ttfamily Contour} to search for fingers in. \\
+\hline
+{\em hand\-Size} & Estimated hand size (must be big enough to contain any possible hands). \\
+\hline
+{\em out} & Output vector of {\ttfamily \hyperlink{structhumancv_1_1_finger_data}{Finger\-Data}} objects. \\
+\hline
+{\em k} & Number to use for k-\/curvature computation. \\
+\hline
+{\em min\-Dist} & Minimum distance between finger peaks. \\
+\hline
+{\em finger\-Angle} & Maximum angle (curvature) a finger can have.\\
+\hline
+\end{DoxyParams}
+See the implementation in {\ttfamily cfinder.\-cpp} for more details. 

@@ -1,0 +1,167 @@
+\hypertarget{namespacekrandom}{\section{krandom Namespace Reference}
+\label{namespacekrandom}\index{krandom@{krandom}}
+}
+
+
+Simple wrapper around {\ttfamily $<$random$>$} with a Python-\/like interface.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacekrandom_a32b7337c1131ea0fbbd6b5f20aac2002}{randint} (int low, int high)
+\item 
+long \hyperlink{namespacekrandom_adc8e2bfa37c40fdecc8f601a266ab447}{randint} (long low, long high)
+\item 
+long long \hyperlink{namespacekrandom_a4672262133b6b130d7ca8b49f55595a2}{randint} (long long low, long long high)
+\item 
+double \hyperlink{namespacekrandom_a6a320147afafc7e81429b1a1ab4ec2e0}{random} ()
+\item 
+float \hyperlink{namespacekrandom_aa5f77704c3bf39731c986b7d27caf0fe}{uniform} (float low, float high)
+\item 
+double \hyperlink{namespacekrandom_ae89a756b3d067650aa9712efe6e930e2}{uniform} (double low, double high)
+\item 
+{\footnotesize template$<$class Iter\-Type $>$ }\\void \hyperlink{namespacekrandom_abac374525fd029faa58cb9c43cab41eb}{shuffle} (Iter\-Type start, Iter\-Type end)
+\item 
+{\footnotesize template$<$class Seq\-Type $>$ }\\void \hyperlink{namespacekrandom_a3cf920703fa6e180b1aa4d4c86799626}{shuffle} (Seq\-Type \&seq)
+\item 
+{\footnotesize template$<$class Seq\-Type $>$ }\\Seq\-Type\-::value\-\_\-type \hyperlink{namespacekrandom_ae031164eba3b0311cbae22aed8894898}{choice} (const Seq\-Type \&seq)
+\item 
+vector$<$ unsigned $>$ \& \hyperlink{namespacekrandom_a50015c42a5cb2ab60017b00abbb4ffde}{get\-Sample\-Inds} (unsigned pop\-Size, unsigned samp\-Size, vector$<$ unsigned $>$ \&inds, bool with\-Replacement=true)
+\begin{DoxyCompactList}\small\item\em Store {\ttfamily samp\-Size} random numbers in range \mbox{[}0, {\ttfamily pop\-Size}) in {\ttfamily inds}, with or without replacement. \end{DoxyCompactList}\item 
+vector$<$ unsigned $>$ \hyperlink{namespacekrandom_aa1ecb85e031f5505020d74732acd846a}{get\-Sample\-Inds} (unsigned pop\-Size, unsigned samp\-Size, bool with\-Replacement=true)
+\item 
+{\footnotesize template$<$typename Seq\-Type $>$ }\\void \hyperlink{namespacekrandom_a924f7dd5ed9785fd396615b9995e47da}{sample} (const Seq\-Type \&seq, unsigned samp\-Size, Seq\-Type \&out, bool with\-Replacement=true)
+\item 
+{\footnotesize template$<$typename Seq\-Type $>$ }\\Seq\-Type \hyperlink{namespacekrandom_a59cee8cdbf9ac39cc5d3762935dbdfb7}{sample} (const Seq\-Type \&seq, unsigned samp\-Size, bool with\-Replacement=true)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+random\-\_\-device \hyperlink{namespacekrandom_a5c40b80390a0425475af691519056f21}{engine}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple wrapper around {\ttfamily $<$random$>$} with a Python-\/like interface. For any functions undocumented here see the Python documentation\-:
+
+\href{http://docs.python.org/library/random.html}{\tt http\-://docs.\-python.\-org/library/random.\-html} 
+
+\subsection{Function Documentation}
+\hypertarget{namespacekrandom_a32b7337c1131ea0fbbd6b5f20aac2002}{\index{krandom@{krandom}!randint@{randint}}
+\index{randint@{randint}!krandom@{krandom}}
+\subsubsection[{randint}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf krandom\-::randint} (
+\begin{DoxyParamCaption}
+\item[{int}]{low, }
+\item[{int}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_a32b7337c1131ea0fbbd6b5f20aac2002}
+\hypertarget{namespacekrandom_adc8e2bfa37c40fdecc8f601a266ab447}{\index{krandom@{krandom}!randint@{randint}}
+\index{randint@{randint}!krandom@{krandom}}
+\subsubsection[{randint}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf krandom\-::randint} (
+\begin{DoxyParamCaption}
+\item[{long}]{low, }
+\item[{long}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_adc8e2bfa37c40fdecc8f601a266ab447}
+\hypertarget{namespacekrandom_a4672262133b6b130d7ca8b49f55595a2}{\index{krandom@{krandom}!randint@{randint}}
+\index{randint@{randint}!krandom@{krandom}}
+\subsubsection[{randint}]{\setlength{\rightskip}{0pt plus 5cm}long long {\bf krandom\-::randint} (
+\begin{DoxyParamCaption}
+\item[{long long}]{low, }
+\item[{long long}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_a4672262133b6b130d7ca8b49f55595a2}
+\hypertarget{namespacekrandom_a6a320147afafc7e81429b1a1ab4ec2e0}{\index{krandom@{krandom}!random@{random}}
+\index{random@{random}!krandom@{krandom}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf krandom\-::random} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_a6a320147afafc7e81429b1a1ab4ec2e0}
+\hypertarget{namespacekrandom_aa5f77704c3bf39731c986b7d27caf0fe}{\index{krandom@{krandom}!uniform@{uniform}}
+\index{uniform@{uniform}!krandom@{krandom}}
+\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf krandom\-::uniform} (
+\begin{DoxyParamCaption}
+\item[{float}]{low, }
+\item[{float}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_aa5f77704c3bf39731c986b7d27caf0fe}
+\hypertarget{namespacekrandom_ae89a756b3d067650aa9712efe6e930e2}{\index{krandom@{krandom}!uniform@{uniform}}
+\index{uniform@{uniform}!krandom@{krandom}}
+\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf krandom\-::uniform} (
+\begin{DoxyParamCaption}
+\item[{double}]{low, }
+\item[{double}]{high}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_ae89a756b3d067650aa9712efe6e930e2}
+\hypertarget{namespacekrandom_abac374525fd029faa58cb9c43cab41eb}{\index{krandom@{krandom}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!krandom@{krandom}}
+\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Iter\-Type $>$ void {\bf krandom\-::shuffle} (
+\begin{DoxyParamCaption}
+\item[{Iter\-Type}]{start, }
+\item[{Iter\-Type}]{end}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_abac374525fd029faa58cb9c43cab41eb}
+\hypertarget{namespacekrandom_a3cf920703fa6e180b1aa4d4c86799626}{\index{krandom@{krandom}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!krandom@{krandom}}
+\subsubsection[{shuffle}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-Type $>$ void {\bf krandom\-::shuffle} (
+\begin{DoxyParamCaption}
+\item[{Seq\-Type \&}]{seq}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_a3cf920703fa6e180b1aa4d4c86799626}
+\hypertarget{namespacekrandom_ae031164eba3b0311cbae22aed8894898}{\index{krandom@{krandom}!choice@{choice}}
+\index{choice@{choice}!krandom@{krandom}}
+\subsubsection[{choice}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Seq\-Type $>$ Seq\-Type\-::value\-\_\-type {\bf krandom\-::choice} (
+\begin{DoxyParamCaption}
+\item[{const Seq\-Type \&}]{seq}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_ae031164eba3b0311cbae22aed8894898}
+\hypertarget{namespacekrandom_a50015c42a5cb2ab60017b00abbb4ffde}{\index{krandom@{krandom}!get\-Sample\-Inds@{get\-Sample\-Inds}}
+\index{get\-Sample\-Inds@{get\-Sample\-Inds}!krandom@{krandom}}
+\subsubsection[{get\-Sample\-Inds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ unsigned $>$ \& {\bf krandom\-::get\-Sample\-Inds} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pop\-Size, }
+\item[{unsigned}]{samp\-Size, }
+\item[{vector$<$ unsigned $>$ \&}]{inds, }
+\item[{bool}]{with\-Replacement = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_a50015c42a5cb2ab60017b00abbb4ffde}
+
+
+Store {\ttfamily samp\-Size} random numbers in range \mbox{[}0, {\ttfamily pop\-Size}) in {\ttfamily inds}, with or without replacement. 
+
+\hypertarget{namespacekrandom_aa1ecb85e031f5505020d74732acd846a}{\index{krandom@{krandom}!get\-Sample\-Inds@{get\-Sample\-Inds}}
+\index{get\-Sample\-Inds@{get\-Sample\-Inds}!krandom@{krandom}}
+\subsubsection[{get\-Sample\-Inds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned$>$ {\bf krandom\-::get\-Sample\-Inds} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{pop\-Size, }
+\item[{unsigned}]{samp\-Size, }
+\item[{bool}]{with\-Replacement = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_aa1ecb85e031f5505020d74732acd846a}
+\hypertarget{namespacekrandom_a924f7dd5ed9785fd396615b9995e47da}{\index{krandom@{krandom}!sample@{sample}}
+\index{sample@{sample}!krandom@{krandom}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Seq\-Type $>$ void {\bf krandom\-::sample} (
+\begin{DoxyParamCaption}
+\item[{const Seq\-Type \&}]{seq, }
+\item[{unsigned}]{samp\-Size, }
+\item[{Seq\-Type \&}]{out, }
+\item[{bool}]{with\-Replacement = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_a924f7dd5ed9785fd396615b9995e47da}
+\hypertarget{namespacekrandom_a59cee8cdbf9ac39cc5d3762935dbdfb7}{\index{krandom@{krandom}!sample@{sample}}
+\index{sample@{sample}!krandom@{krandom}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Seq\-Type $>$ Seq\-Type {\bf krandom\-::sample} (
+\begin{DoxyParamCaption}
+\item[{const Seq\-Type \&}]{seq, }
+\item[{unsigned}]{samp\-Size, }
+\item[{bool}]{with\-Replacement = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{namespacekrandom_a59cee8cdbf9ac39cc5d3762935dbdfb7}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacekrandom_a5c40b80390a0425475af691519056f21}{\index{krandom@{krandom}!engine@{engine}}
+\index{engine@{engine}!krandom@{krandom}}
+\subsubsection[{engine}]{\setlength{\rightskip}{0pt plus 5cm}random\-\_\-device {\bf krandom\-::engine}}}\label{namespacekrandom_a5c40b80390a0425475af691519056f21}

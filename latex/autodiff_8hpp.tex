@@ -1,0 +1,115 @@
+\hypertarget{autodiff_8hpp}{\section{autodiff.\-hpp File Reference}
+\label{autodiff_8hpp}\index{autodiff.\-hpp@{autodiff.\-hpp}}
+}
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for autodiff.\-hpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{autodiff_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{autodiff_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num}
+\begin{DoxyCompactList}\small\item\em Represents the \char`\"{}real\char`\"{} part of a number in member {\ttfamily r} and the derivative in {\ttfamily d}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceautodiff}{autodiff}
+\begin{DoxyCompactList}\small\item\em Implements automatic differentiation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \hyperlink{namespaceautodiff_a19b889e35f523cc6ca0f377dc8bed262}{autodiff\-::d\-Pow} (const \hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \&a, const \hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \&b)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \hyperlink{namespaceautodiff_a0f6df25515f7f05f838a9fd96f53fd37}{autodiff\-::d\-Sin} (const \hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \&a)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \hyperlink{namespaceautodiff_a49d66a6f54fffb4250795cc589158a14}{autodiff\-::d\-Cos} (const \hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \&a)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \hyperlink{namespaceautodiff_a4bdb0754d9ad8a5c4aba2d7ea9f040db}{autodiff\-::d\-Tan} (const \hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \&a)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \hyperlink{namespaceautodiff_af2706967e031d3472b823760b0c67dcb}{autodiff\-::d\-Exp} (const \hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \&a)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \hyperlink{namespaceautodiff_a003e7455b4727bad71fdb9b6bc676e86}{autodiff\-::d\-Log} (const \hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \&a)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \hyperlink{namespaceautodiff_a656dafc1fc9422d40ade97d24905f875}{autodiff\-::d\-Log10} (const \hyperlink{structautodiff_1_1_dual_num}{Dual\-Num} \&a)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \hyperlink{autodiff_8hpp_afcaa49648f532c1593415c845c2fdba6}{operator+} (const \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \&a, const \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \&b)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \hyperlink{autodiff_8hpp_a74872447d0a3ced20978ab51ee1f657d}{operator-\/} (const \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \&a, const \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \&b)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \hyperlink{autodiff_8hpp_a5b2488b390f5cf4f33ba2d057209eace}{operator-\/} (const \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \&a)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \hyperlink{autodiff_8hpp_a87030a560abe7446ab81995b3724cc51}{operator$\ast$} (const \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \&a, const \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \&b)
+\item 
+\hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \hyperlink{autodiff_8hpp_a0fa02b284f6ac59a838b8458d2dc381b}{operator/} (const \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \&a, const \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \&b)
+\item 
+ostream \& \hyperlink{autodiff_8hpp_aba8d3eb9946f938d7ea0f6980732bfb5}{operator$<$$<$} (ostream \&out, const \hyperlink{structautodiff_1_1_dual_num}{autodiff\-::\-Dual\-Num} \&a)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{namespaceautodiff_ac438d71cd4847e9f19efe6a4f1cfd5d7}{autodiff\-::\-I\-N\-V\-\_\-\-L\-O\-G\-\_\-10} = 1 / log(10)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{autodiff_8hpp_afcaa49648f532c1593415c845c2fdba6}{\index{autodiff.\-hpp@{autodiff.\-hpp}!operator+@{operator+}}
+\index{operator+@{operator+}!autodiff.hpp@{autodiff.\-hpp}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf autodiff\-::\-Dual\-Num} operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf autodiff\-::\-Dual\-Num} \&}]{a, }
+\item[{const {\bf autodiff\-::\-Dual\-Num} \&}]{b}
+\end{DoxyParamCaption}
+)}}\label{autodiff_8hpp_afcaa49648f532c1593415c845c2fdba6}
+\hypertarget{autodiff_8hpp_a74872447d0a3ced20978ab51ee1f657d}{\index{autodiff.\-hpp@{autodiff.\-hpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!autodiff.hpp@{autodiff.\-hpp}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf autodiff\-::\-Dual\-Num} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf autodiff\-::\-Dual\-Num} \&}]{a, }
+\item[{const {\bf autodiff\-::\-Dual\-Num} \&}]{b}
+\end{DoxyParamCaption}
+)}}\label{autodiff_8hpp_a74872447d0a3ced20978ab51ee1f657d}
+\hypertarget{autodiff_8hpp_a5b2488b390f5cf4f33ba2d057209eace}{\index{autodiff.\-hpp@{autodiff.\-hpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!autodiff.hpp@{autodiff.\-hpp}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf autodiff\-::\-Dual\-Num} operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf autodiff\-::\-Dual\-Num} \&}]{a}
+\end{DoxyParamCaption}
+)}}\label{autodiff_8hpp_a5b2488b390f5cf4f33ba2d057209eace}
+\hypertarget{autodiff_8hpp_a87030a560abe7446ab81995b3724cc51}{\index{autodiff.\-hpp@{autodiff.\-hpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!autodiff.hpp@{autodiff.\-hpp}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf autodiff\-::\-Dual\-Num} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf autodiff\-::\-Dual\-Num} \&}]{a, }
+\item[{const {\bf autodiff\-::\-Dual\-Num} \&}]{b}
+\end{DoxyParamCaption}
+)}}\label{autodiff_8hpp_a87030a560abe7446ab81995b3724cc51}
+\hypertarget{autodiff_8hpp_a0fa02b284f6ac59a838b8458d2dc381b}{\index{autodiff.\-hpp@{autodiff.\-hpp}!operator/@{operator/}}
+\index{operator/@{operator/}!autodiff.hpp@{autodiff.\-hpp}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf autodiff\-::\-Dual\-Num} operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf autodiff\-::\-Dual\-Num} \&}]{a, }
+\item[{const {\bf autodiff\-::\-Dual\-Num} \&}]{b}
+\end{DoxyParamCaption}
+)}}\label{autodiff_8hpp_a0fa02b284f6ac59a838b8458d2dc381b}
+\hypertarget{autodiff_8hpp_aba8d3eb9946f938d7ea0f6980732bfb5}{\index{autodiff.\-hpp@{autodiff.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!autodiff.hpp@{autodiff.\-hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf autodiff\-::\-Dual\-Num} \&}]{a}
+\end{DoxyParamCaption}
+)}}\label{autodiff_8hpp_aba8d3eb9946f938d7ea0f6980732bfb5}

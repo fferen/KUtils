@@ -1,0 +1,46 @@
+\hypertarget{argparse_8hpp}{\section{argparse.\-hpp File Reference}
+\label{argparse_8hpp}\index{argparse.\-hpp@{argparse.\-hpp}}
+}
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}dict.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}str.\-hpp\char`\"{}}\\*
+Include dependency graph for argparse.\-hpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{argparse_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{argparse_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structargparse_1_1_arg_holder}{argparse\-::\-Arg\-Holder}
+\begin{DoxyCompactList}\small\item\em Holds the result of parsing arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceargparse}{argparse}
+\begin{DoxyCompactList}\small\item\em Command-\/line argument parser with a focus on brevity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespaceargparse_a0ee3e8ca883816181b45c15a9ad0b6ed}{argparse\-::make\-Usage\-String} (const string \&prog\-Name, const string \&desc, const string \&pos\-Args=string(), const dict\-::\-Dict$<$ string, string $>$ \&opt\-To\-Help=dict\-::\-Dict$<$ string, string $>$(), unsigned cols=80, unsigned help\-Cols=60)
+\begin{DoxyCompactList}\small\item\em Create a usage string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Func\-Type $>$ }\\Arg\-Holder \hyperlink{namespaceargparse_a4b1b6c03b45175acd13d1620f328e4aa}{argparse\-::parse} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const dict\-::\-Dict$<$ string, Func\-Type $>$ \&opt\-To\-Chker, char opt\-Char='-\/', bool gen\-Help\-Chker=true)
+\begin{DoxyCompactList}\small\item\em Return an \hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} object holding the parsed arguments. \end{DoxyCompactList}\item 
+\hyperlink{structargparse_1_1_arg_holder}{Arg\-Holder} \hyperlink{namespaceargparse_a6cfba06102a610840779069dfda1b98d}{argparse\-::parse} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, const char opt\-Char='-\/', bool gen\-Help\-Chker=true)
+\begin{DoxyCompactList}\small\item\em For programs that take no options. \end{DoxyCompactList}\end{DoxyCompactItemize}
