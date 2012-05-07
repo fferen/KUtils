@@ -48,6 +48,7 @@ float kmath::Interval::closest(float n) const {
     }
     throw invalid_argument("can't get closest point of open interval");
 }
+
 double kmath::normalCDF(double x) {
     // constants
     double a1 =  0.254829592;
