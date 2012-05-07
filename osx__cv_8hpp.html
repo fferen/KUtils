@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>KUtils: Main Page</title>
+<title>KUtils: osx_cv.hpp File Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -46,10 +46,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -68,7 +68,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +88,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div>
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">KUtils Documentation</div>  </div>
+<div class="title">osx_cv.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;opencv2/opencv.hpp&gt;</code><br/>
+<code>#include &lt;ApplicationServices/ApplicationServices.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="osx_8hpp_source.html">osx.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="kmath_8hpp_source.html">kmath.hpp</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for osx_cv.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="osx__cv_8hpp__incl.png" border="0" usemap="#osx__cv_8hpp" alt=""/></div>
+<map name="osx__cv_8hpp" id="osx__cv_8hpp">
+<area shape="rect" id="node7" href="osx_8hpp.html" title="osx.hpp" alt="" coords="408,80,480,107"/><area shape="rect" id="node20" href="kmath_8hpp.html" title="kmath.hpp" alt="" coords="595,229,680,256"/><area shape="rect" id="node16" href="mouse_8hpp.html" title="mouse.hpp" alt="" coords="507,155,597,181"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="osx__cv_8hpp__dep__incl.png" border="0" usemap="#osx__cv_8hppdep" alt=""/></div>
+<map name="osx__cv_8hppdep" id="osx__cv_8hppdep">
+<area shape="rect" id="node3" href="osx__cv_8cpp.html" title="osx_cv.cpp" alt="" coords="5,80,99,107"/></map>
+</div>
+</div>
+<p><a href="osx__cv_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceosx__cv"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx__cv.html">osx_cv</a></td></tr>
+<tr class="memdesc:namespaceosx__cv"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions for interoperability between ApplicationServices and OpenCV. <br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a06ac26ae0cdd938ae2885095282aef15"><td class="memItemLeft" align="right" valign="top">cv::Mat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx__cv.html#a06ac26ae0cdd938ae2885095282aef15">osx_cv::toMat</a> (const CGImageRef &amp;image, cv::Mat &amp;out, <a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659">osx::disp::RGBType</a> destType=<a class="el" href="namespaceosx_1_1disp.html#a63adf9b0b0b0365ec428dd44fc30c659ab96ecb2ad3c69bf9019d7ed4253603b1">osx::disp::COLOR_BGR</a>)</td></tr>
+<tr class="memdesc:a06ac26ae0cdd938ae2885095282aef15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <code>CGImageRef</code> to a <code>cv::Mat</code>.  <a href="#a06ac26ae0cdd938ae2885095282aef15"></a><br/></td></tr>
+<tr class="memitem:a501b2a8c59949eb3d398e8a9b58372b4"><td class="memItemLeft" align="right" valign="top">CGPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx__cv.html#a501b2a8c59949eb3d398e8a9b58372b4">osx_cv::toCGPt</a> (cv::Point pt)</td></tr>
+<tr class="memdesc:a501b2a8c59949eb3d398e8a9b58372b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <code>cv::Point</code> to a <code>CGPoint</code>.  <a href="#a501b2a8c59949eb3d398e8a9b58372b4"></a><br/></td></tr>
+<tr class="memitem:a9a9f0fa8d7a16879c88a19914a3c2484"><td class="memItemLeft" align="right" valign="top">cv::Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosx__cv.html#a9a9f0fa8d7a16879c88a19914a3c2484">osx_cv::toCVPt</a> (CGPoint pt)</td></tr>
+<tr class="memdesc:a9a9f0fa8d7a16879c88a19914a3c2484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <code>CGPoint</code> to a <code>cv::Point</code>.  <a href="#a9a9f0fa8d7a16879c88a19914a3c2484"></a><br/></td></tr>
+</table>
 </div><!-- contents -->
 
 

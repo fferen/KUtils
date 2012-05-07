@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>KUtils: Main Page</title>
+<title>KUtils: ktime.hpp File Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -46,10 +46,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -68,7 +68,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,16 +88,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div>
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">KUtils Documentation</div>  </div>
+<div class="title">ktime.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &lt;queue&gt;</code><br/>
+<code>#include &lt;chrono&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for ktime.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="ktime_8hpp__incl.png" border="0" usemap="#ktime_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="ktime_8hpp__dep__incl.png" border="0" usemap="#ktime_8hppdep" alt=""/></div>
+<map name="ktime_8hppdep" id="ktime_8hppdep">
+<area shape="rect" id="node3" href="ktime_8cpp.html" title="ktime.cpp" alt="" coords="5,80,88,107"/></map>
+</div>
+</div>
+<p><a href="ktime_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classktime_1_1_running_avg_timer.html">ktime::RunningAvgTimer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep a running average of the time between calls to <code><a class="el" href="classktime_1_1_running_avg_timer.html#a1b28c95f0c44346321af8738e35f8025">addTime()</a></code>.  <a href="classktime_1_1_running_avg_timer.html#details">More...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacektime"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacektime.html">ktime</a></td></tr>
+<tr class="memdesc:namespacektime"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilities for working with time. <br/></td></tr>
+<tr><td colspan="2"><h2><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac6b33ea027bdc032e7ba377509c8e51f"><td class="memItemLeft" align="right" valign="top">typedef chrono::system_clock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacektime.html#ac6b33ea027bdc032e7ba377509c8e51f">ktime::ClockT</a></td></tr>
+<tr class="memitem:aacefffdcc0ccc2f45598475b3557d6f2"><td class="memItemLeft" align="right" valign="top">typedef ClockT::duration&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacektime.html#aacefffdcc0ccc2f45598475b3557d6f2">ktime::TimeDiff</a></td></tr>
+<tr class="memitem:a038a3d1fb2cb9885396233d6e412773e"><td class="memItemLeft" align="right" valign="top">typedef ClockT::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacektime.html#a038a3d1fb2cb9885396233d6e412773e">ktime::TimePoint</a></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a89b89374ae2f385f58b64c5a2438a718"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacektime.html#a89b89374ae2f385f58b64c5a2438a718">ktime::toSecs</a> (const <a class="el" href="namespacektime.html#aacefffdcc0ccc2f45598475b3557d6f2">TimeDiff</a> &amp;diff)</td></tr>
+<tr class="memdesc:a89b89374ae2f385f58b64c5a2438a718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a TimeDiff to seconds.  <a href="#a89b89374ae2f385f58b64c5a2438a718"></a><br/></td></tr>
+</table>
 </div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 6 2012 22:14:18 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 22:14:17 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
