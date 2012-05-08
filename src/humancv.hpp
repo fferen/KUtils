@@ -132,8 +132,8 @@ namespace humancv {
          * Runs a boosted classifier on each pixel to classify it.
          *
          * @param im
-         *      Image to compute the mask on. Must have same pixel format as
-         *      the one used to train the classifier.
+         *      Image to compute the mask on. Must have same pixel format as the
+         *      one used to train the classifier.
          * @param cls
          *      Boosted classifier that takes a 1x3 `Mat` representing one pixel
          *      and classifies it as skin/non-skin. It should have been trained
@@ -159,11 +159,18 @@ namespace humancv {
 
     }
 
-    /*! Framework for tracking hand gestures.
+    /*! Framework for tracking hand gestures and translating them into mouse
+     * motion and actions.
      *
-     * It has two phases, training and runtime.
+     * Currently, three gestures are defined:
      *
-     * ## Training
+     * no fingers -> left mouse button down<br>
+     * one fingers -> no buttons down<br>
+     * two fingers -> middle mouse button down
+     *
+     * ## Brief description of the method
+     *
+     * ### Training
      *
      * A sequence of frames, each containing a face, is gathered from a video
      * source.
@@ -173,9 +180,19 @@ namespace humancv {
      * other pixels as the negative class. The assumption is that no other
      * objects containing skin, besides the faces, are present in the frames.
      *
-     * ## Runtime
+     * ### Runtime
      *
-     * <TODO>
+     * A skin mask is generated using the classifier, then post-processed with
+     * erosion/dilation and removal of small contours and those inside the face.
+     * If any contours remain, the largest is selected as the hand contour and
+     * used to store the mouse state and position via mouseStateFromContour().
+     * Finally, the mouse data is passed to a Kalman filter to smooth out noise.
+     *
+     * ---
+     *
+     * For more details please look at the source:
+     *
+     * https://github.com/fferen/KUtils/blob/master/src/humancv.cpp
      */
     class CursorFinder
     {
@@ -237,7 +254,19 @@ namespace humancv {
                 float minFingerDistProp=0.15
                 );
 
-        /*! <TODO> */
+        /*! Store the new mouse state given a hand contour (with possible arm
+         * attached).
+         *
+         * @param ctr
+         *      Contour of hand.
+         * @param handSize
+         *      The maximum estimated size of hand.
+         * @param windowSize
+         *      The size of the window containing contour.
+         * @param out
+         *      Where to store the new mouse state.
+         *
+         */
         void mouseStateFromContour(
                 const Contour &ctr,
                 const cv::Size &handSize,
@@ -245,17 +274,39 @@ namespace humancv {
                 mouse::State &out
                 ) const ;
 
-        /*! <TODO> */
+        /*! Train the Adaboost classifier.
+         *
+         * @param negFrames
+         *      Vector of frames in the BGR color format. Each must contain a
+         *      face and no other skin.
+         */
         void train(const vector<cv::Mat_<cv::Vec3b>> &negFrames);
 
-        /*! Return true if new mouse state was stored in `out` (hand was found).
+        /*! Compute new mouse state from new frame and return true if new mouse
+         * state was stored in `out` (hand was found). Frame must also contain face.
+         *
+         * @param frame
+         *      Frame in which to search for hand, in BGR color format.
+         * @param out
+         *      Where to store the new mouse state, if hand is found.
+         * @param skinMask
+         *      Pointer to a mask in which to store the raw skin mask, if face
+         *      is found.
+         * @param withoutFaceAndSmall
+         *      Pointer to a mask in which to store the skin mask with face
+         *      contours and small contours removed, if any remain.
+         * @param withLargestCtr
+         *      Pointer to a mask in which to store the skin mask with only the
+         *      largest contour drawn, if any remain.
+         * @param foundFace
+         *      If provided, stores whether face is found.
          */
         bool getMouseState(
                 const cv::Mat_<cv::Vec3b> &frame,
                 mouse::State &out,
                 cv::Mat_<uchar> *skinMask=NULL,
                 cv::Mat_<uchar> *withoutFaceAndSmall=NULL,
-                cv::Mat_<uchar> *withHighestCtr=NULL,
+                cv::Mat_<uchar> *withLargestCtr=NULL,
                 bool *foundFace=NULL
                 );
     };

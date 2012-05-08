@@ -63,123 +63,9 @@ SeqT &operator/=(SeqT &s, const OperandT &e) {
  * "sequence" because "seq" in variable names looks better than "ctr".
  */
 namespace seq {
-    /*! Get the wrapped index to an array of size `sz`. Throw `length_error`
-     * if `sz` == 0.
-     */
-    inline size_t _realI(int i, size_t sz) {
-        if (sz == 0) {
-            throw length_error("`sz` must be != 0");
-        }
-        i %= int(sz);
-        if (i < 0) {
-            i += int(sz);
-        }
-        return size_t(i);
-    }
-
-    /*! Get the wrapped distance between left and right indices in an array of
-     * size `sz`. For example, `_realIDist(3, 0, 4)` == 1.
-     */
-    inline size_t _realIDist(size_t leftI, size_t rightI, size_t sz) {
-        if (rightI >= leftI) {
-            return rightI - leftI;
-        } else {
-            return rightI - leftI + sz;
-        }
-    }
-
-    /*! Provides a reference and an index of an element in a sequence. */
-    template <typename SeqT>
-    struct ElemView {
-        typename SeqT::reference e;
-        long int i;
-
-        /*! `itr` is the iterator to the desired element, `begin` is the
-         * starting iterator of the sequence.
-         */
-        ElemView(typename SeqT::iterator itr, typename SeqT::iterator begin)
-        : e(*itr), i(itr - begin) {
-        }
-    };
-
-    /*! Sequence wrapper that supports wrap-around indexing - all
-     * accessors will accept negative and out-of-bound indices and wrap around.
-     */
-    template <class SeqT>
-    struct WrappedSeq {
-        /*! The underlying sequence. */
-        SeqT &s;
-
-        WrappedSeq(SeqT &s) : s(s) {
-        }
-
-        //@{
-        /*! Wrapped accessor. */
-        typename SeqT::reference at(int i) {
-            return this->s.at(this->realI(i));
-        }
-
-        const typename SeqT::reference at(int i) const {
-            return this->s.at(this->realI(i));
-        }
-
-        typename SeqT::reference operator[](int i) {
-            return this->s[this->realI(i)];
-        }
-
-        const typename SeqT::reference operator[](int i) const {
-            return this->s[this->realI(i)];
-        }
-        //@}
-
-        /*! Return the size of the underlying sequence. */
-        size_t size() const {
-            return this->s.size();
-        }
-
-        /*! Return `true` if sequence is empty. */
-        bool empty() const {
-            return this->s.empty();
-        }
-
-        /*! Return the real, bounded index from a possibly out-of-bounds one. */
-        size_t realI(int i) const {
-            return _realI(i, this->s.size());
-        }
-
-        /*! Return the real (wrapped) distance between two indices. See
-         * _realIDist.
-         */
-        size_t realIDist(size_t leftI, size_t rightI) const {
-            return _realIDist(leftI, rightI, this->s.size());
-        }
-    };
-
     /*! Define a `Slice` as a pair of iterators. */
     template <class IterT>
     using Slice = pair<IterT, IterT>;
-
-    /*! Get slice of sequence as a pair of iterators. The definition of `Slice`
-     * is shown here, as Doxygen is unable to parse templated typedefs:
-     *
-     *      template <class IterT>
-     *      using Slice = pair<IterT, IterT>;
-     *
-     * @throws range_error
-     * Thrown if `i1` > `i2`.
-     */
-    template <class SeqT>
-    Slice<typename SeqT::iterator> sl(SeqT &in, int i1, int i2) {
-        size_t realI1 = _realI(i1, in.size());
-        size_t realI2 = _realI(i2, in.size());
-        if (i1 > i2) {
-            throw range_error("i1 must be <= i2");
-        }
-        return Slice<typename SeqT::iterator>(
-                in.begin() + (typename SeqT::difference_type)realI1,
-                in.begin() + (typename SeqT::difference_type)realI2
-                );
-    }
 
     /*! Functions commonly used in functional programming.
      *
@@ -437,63 +323,177 @@ namespace seq {
         }
     }
 
-#ifdef _SEQ_UTILS_TEST
+    /*! Get the wrapped index to an array of size `sz`. Throw `length_error`
+     * if `sz` == 0.
+     */
+    inline size_t _realI(int i, size_t sz) {
+        if (sz == 0) {
+            throw length_error("`sz` must be != 0");
+        }
+        i %= int(sz);
+        if (i < 0) {
+            i += int(sz);
+        }
+        return size_t(i);
+    }
 
-#include <vector>
+    /*! Get the wrapped distance between left and right indices in an array of
+     * size `sz`. For example, `_realIDist(3, 0, 4)` == 1.
+     */
+    inline size_t _realIDist(size_t leftI, size_t rightI, size_t sz) {
+        if (rightI >= leftI) {
+            return rightI - leftI;
+        } else {
+            return rightI - leftI + sz;
+        }
+    }
 
-    /*! To test: call `test()`. */
-    void test() {
-        vector<float> flv(10);
+    /*! Provides a reference and an index of an element in a sequence. */
+    template <typename SeqT>
+    struct ElemView {
+        typename SeqT::reference e;
+        long int i;
 
-        for (float i = 0; i < 10; i++) {
-            flv[i] = i;
+        /*! `itr` is the iterator to the desired element, `begin` is the
+         * starting iterator of the sequence.
+         */
+        ElemView(typename SeqT::iterator itr, typename SeqT::iterator begin)
+        : e(*itr), i(itr - begin) {
         }
 
-        io::print(flv);
+        friend ostream &operator<<(ostream &out, const ElemView &e) {
+            out << "<ElemView elem=" << e.e << " i=" << e.i << ">";
+            return out;
+        }
+    };
 
-        printf("mapped with (x -> x + 1)\n");
+    /*! Sequence wrapper that supports wrap-around indexing - all
+     * accessors will accept negative and out-of-bound indices and wrap around.
+     */
+    template <class SeqT>
+    struct WrappedSeq {
+        /*! The underlying sequence. */
+        SeqT &s;
 
-        flv = functional::map([](float i) { return i + 1; }, flv);
+        WrappedSeq(SeqT &s) : s(s) {
+        }
 
-        io::print(flv);
+        //@{
+        /*! Wrapped accessor. */
+        typename SeqT::reference at(int i) {
+            return this->s.at(this->realI(i));
+        }
 
-        printf("all > 5?\n");
+        const typename SeqT::reference at(int i) const {
+            return this->s.at(this->realI(i));
+        }
 
-        printf("%d\n", functional::all([](float i) { return i > 5; }, flv));
+        typename SeqT::reference operator[](int i) {
+            return this->s[this->realI(i)];
+        }
 
-        printf("all in last half > 5?\n");
+        const typename SeqT::reference operator[](int i) const {
+            return this->s[this->realI(i)];
+        }
+        //@}
 
-        printf("%d\n", functional::all([](float i) { return i > 5; }, sl(flv, flv.size() / 2, flv.size())));
+        /*! Return the size of the underlying sequence. */
+        size_t size() const {
+            return this->s.size();
+        }
 
-        printf("any > 5?\n");
+        /*! Return `true` if sequence is empty. */
+        bool empty() const {
+            return this->s.empty();
+        }
 
-        printf("%d\n", functional::any([](float i) { return i > 5; }, flv));
+        /*! Return the real, bounded index from a possibly out-of-bounds one. */
+        size_t realI(int i) const {
+            return _realI(i, this->s.size());
+        }
 
-        printf("passed!\n");
+        /*! Return the real (wrapped) distance between two indices. See
+         * _realIDist.
+         */
+        size_t realIDist(size_t leftI, size_t rightI) const {
+            return _realIDist(leftI, rightI, this->s.size());
+        }
+
+        friend ostream &operator<<(ostream &out, const WrappedSeq &s) {
+            out << "<WrappedSeq seq=" << s.s << ">";
+            return out;
+        }
+
+    };
+
+    /*! Get slice of sequence as a pair of iterators. The definition of `Slice`
+     * is shown here, as Doxygen is unable to parse templated typedefs:
+     *
+     *      template <class IterT>
+     *      using Slice = pair<IterT, IterT>;
+     *
+     * @throws range_error
+     * Thrown if `i1` > `i2`.
+     */
+    template <class SeqT>
+    Slice<typename SeqT::iterator> sl(SeqT &in, int i1, int i2) {
+        size_t realI1 = _realI(i1, in.size());
+        size_t realI2 = _realI(i2, in.size());
+        if (i1 > i2) {
+            throw range_error("i1 must be <= i2");
+        }
+        return Slice<typename SeqT::iterator>(
+                in.begin() + (typename SeqT::difference_type)realI1,
+                in.begin() + (typename SeqT::difference_type)realI2
+                );
     }
-#endif
-}
 
-template <class SeqT>
-ostream &operator<<(ostream &out, const seq::ElemView<SeqT> &e) {
-    out << "<ElemView elem=" << e.e << " i=" << e.i << ">";
-    return out;
-}
-
-template <class SeqT>
-ostream &operator<<(ostream &out, const seq::WrappedSeq<SeqT> &s) {
-    out << "<WrappedSeq seq=" << s.s << ">";
-    return out;
+    /*! Split a sequence into clusters based on some distance metric.
+     *
+     * An item is added to a cluster if it is within `maxDist` from all other
+     * items in the cluster.
+     *
+     * `getDist` should take two items and return their distance.
+     */
+    template <
+            class InSeqT,
+            template <class T=InSeqT, typename... Args> class OutSeqT,
+            class DistFuncT
+            >
+    void cluster(const InSeqT &items, const DistFuncT &getDist, float maxDist, OutSeqT<InSeqT> &clusters) {
+        clusters.clear();
+        if (items.empty()) {
+            return;
+        }
+        for (auto &item : items) {
+            bool added = false;
+            for (auto &cluster : clusters) {
+                if (functional::all(
+                        [&](typename InSeqT::reference cItem) {
+                            return getDist(cItem, item) <= maxDist;
+                        },
+                        cluster
+                       )) {
+                    cluster.push_back(item);
+                    added = true;
+                    break;
+                }
+            }
+            if (not added) {
+                clusters.push_back(InSeqT{item});
+            }
+        }
+    }
 }
 
 /*! Print each element of a container, surrounded by `[]` and separated by
  * commas.
  */
 template <
-        typename ElemType,
-        template <typename U, class Alloc=allocator<U>> class SeqType
+        class T,
+        template <class U=T, class Alloc=allocator<T>> class SeqT
         >
-ostream &operator<<(ostream &out, const SeqType<ElemType> &seq) {
+ostream &operator<<(ostream &out, const SeqT<T> &seq) {
     if (seq.empty()) {
         out << "[]";
         return out;

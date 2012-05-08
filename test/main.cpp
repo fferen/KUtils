@@ -24,16 +24,16 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include <iostream>
-#include <stdexcept>
+#include <cmath>
+#include <vector>
 
 #include "../core.hpp"
+#include "../src/cvutils.hpp"
 
 using namespace std;
 using namespace io;
 
 int main() {
-    kmath::PointI a = kmath::PointF(0, 1);
-    print(a);
+    print(cv::Rect());
     return 0;
 }

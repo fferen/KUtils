@@ -3,7 +3,7 @@ Miscellaneous C++ utilities, mainly with a focus on math and computer vision usi
 Major features (not an exhaustive list):
 
 * Computer vision
-    * Hand gesture recognition framework
+    * [Hand gesture recognition framework][cfinder]
         * Fingertip detection
         * Color-based skin segmentation
 * OSX-specific
@@ -23,6 +23,7 @@ See the full documentation [here][docs].
 
 The code relies heavily on C++11 features, so will not build with older compilers. GCC 4.7 works.
 
+[cfinder]: http://fferen.github.com/KUtils/classhumancv_1_1_cursor_finder.html
 [osx]: http://fferen.github.com/KUtils/namespaceosx.html
 [ad]: http://fferen.github.com/KUtils/namespaceautodiff.html#details
 [xrange]: http://fferen.github.com/KUtils/namespaceseq_1_1math.html#abfe793e999a374a4d5e6b1ef3f268b59

@@ -77,10 +77,10 @@ void face::getRects(
     cascade.detectMultiScale(scaled, out);
 
     for (auto &rect : out) {
-        rect.x = int(float(rect.x) / scale);
-        rect.y = int(float(rect.y) / scale);
-        rect.width = int(float(rect.width) / scale);
-        rect.height = int(float(rect.height) / scale);
+        rect.x = rect.x / scale;
+        rect.y = rect.y / scale;
+        rect.width = rect.width / scale;
+        rect.height = rect.height / scale;
     }
 
     sort(
@@ -219,7 +219,7 @@ void humancv::getFingers(
     vector<vector<FingerData>> clusters;
 
     // Cluster fingers by spatial distance (max distance `k`).
-    cvutils::cluster(
+    seq::cluster(
             rawFingers,
             [&](const FingerData &f1, const FingerData &f2) {
                 return cvutils::geom::ptNormSqrd(ctr[int(f1.i)] - ctr[int(f2.i)]);
@@ -401,7 +401,7 @@ void CursorFinder::train(const vector<Mat_<Vec3b>> &negFrames)
         face::storeMasks(negFrames[0].size(), this->faceRects, masks[i]);
 //        imshow("im", negFrames[i]);
 //        imshow("mask", masks[i]);
-//        waitForKeypress();
+//        cvutils::waitForKeypress();
     }
     print("done");
 
@@ -484,7 +484,7 @@ bool CursorFinder::getMouseState(
         mouse::State &out,
         Mat_<uchar> *skinMask,
         Mat_<uchar> *withoutFaceAndSmall,
-        Mat_<uchar> *withHighestCtr,
+        Mat_<uchar> *withLargestCtr,
         bool *foundFace
         )
 {
@@ -512,9 +512,8 @@ bool CursorFinder::getMouseState(
         *skinMask = this->skinMask.clone();
     }
 
-    // erodilate
-    cvutils::dilerode(this->skinMask, this->skinMask, 2);
     cvutils::erodilate(this->skinMask, this->skinMask, 1);
+    cvutils::dilerode(this->skinMask, this->skinMask, 2);
 
     // filter by in face + small
     Mat tempMat = this->skinMask;
@@ -554,24 +553,20 @@ bool CursorFinder::getMouseState(
 //
 //    imshow("4 after gc", this->skinMask);
 
-    // find the contour with highest center of mass
+    // find the largest contour
     seq::ElemView<vector<vector<Point>>> maxCtrView(
             max_element(
                 this->skinContours.begin(),
                 this->skinContours.end(),
                 [&](const vector<Point> &a, const vector<Point> &b) {
-                    Moments ms = moments(a);
-                    Point2f aPt(float(ms.m10 / ms.m00), float(ms.m01 / ms.m00));
-                    ms = moments(b);
-                    Point2f bPt(float(ms.m10 / ms.m00), float(ms.m01 / ms.m00));
-                    return aPt.y > bPt.y;
+                    return contourArea(a) < contourArea(b);
                 }
                 ),
             this->skinContours.begin()
             );
 
 
-    if (withHighestCtr != NULL) {
+    if (withLargestCtr != NULL) {
         // draw max contour on mask if needed
         this->skinMask = 0;
         drawContours(
@@ -582,7 +577,7 @@ bool CursorFinder::getMouseState(
                 CV_FILLED
                 );
 
-        *withHighestCtr = this->skinMask.clone();
+        *withLargestCtr = this->skinMask.clone();
     }
 
     // get new state

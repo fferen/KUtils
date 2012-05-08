@@ -50,11 +50,7 @@ void cvutils::VideoReader::operator>>(cv::Mat &im) {
 }
 
 void cvutils::waitForKeypress() {
-    while (true) {
-        if (waitKey(30) >= 0) {
-            break;
-        }
-    }
+    while (waitKey(30) < 0);
 }
 
 void cvutils::drawPolygon(
@@ -230,17 +226,20 @@ Rect geom::expandRect(const Rect &r, const Size &s) {
     return Rect(r.x - s.width, r.y - s.height, r.width + 2 * s.width, r.height + 2 * s.height);
 }
 
-void cvutils::cvtBGR2RG(const Mat &src, Mat &dest) {
-    dest.create(src.size(), CV_8UC3);
-    for (int i = 0; i < src.rows; i++) {
-        for (int j = 0; j < src.cols; j++) {
-            Vec3b px = src.at<Vec3b>(i, j);
-            float sum = float(px[0] + px[1] + px[2]);
-            px[0] = uchar(float(255 * px[2]) / sum);
-            px[1] = uchar(float(255 * px[1]) / sum);
-            dest.at<Vec3b>(i, j) = px;
-        }
-    }
+void cvutils::cvtBGR2RG(const cv::Mat_<cv::Vec3b> &src, cv::Mat_<cv::Vec3b> &dest) {
+    dest.create(src.size());
+    float sum;
+    cv::Vec3b srcPx;
+    applyBinaryOp(
+            [&](int row, int col, const cv::Vec3b *srcIt, cv::Vec3b *destIt) {
+                srcPx = *srcIt;
+                sum = srcPx[0] + srcPx[1] + srcPx[2];
+                (*destIt)[0] = 255 * srcPx[2] / sum;
+                (*destIt)[1] = 255 * srcPx[1] / sum;
+            },
+            src,
+            dest
+            );
 }
 
 /*** namespace `transform` ***/
@@ -290,47 +289,47 @@ Size2f cvutils::transform::rotateSize(Size2f s, float angle) {
             );
 }
 
-ostream &operator<<(ostream &out, const Rect r) {
+ostream &cv::operator<<(ostream &out, const Rect r) {
     out << "<Rect x=" << r.x << " y=" << r.y << " width=" << r.width << " height=" << r.height << ">";
     return out;
 }
 
-ostream &operator<<(ostream &out, const Size s) {
+ostream &cv::operator<<(ostream &out, const Size s) {
     out << "<Size width=" << s.width << " height=" << s.height << ">";
     return out;
 }
 
-ostream &operator<<(ostream &out, const Size2f s) {
+ostream &cv::operator<<(ostream &out, const Size2f s) {
     out << "<Size2f width=" << s.width << " height=" << s.height << ">";
     return out;
 }
 
-ostream &operator<<(ostream &out, const Scalar s) {
+ostream &cv::operator<<(ostream &out, const Scalar s) {
     out << "<Scalar (" << s[0] << ", " << s[1] << ", " << s[2] << ", " << s[3] << ")>";
     return out;
 }
 
-ostream &operator<<(ostream &out, const uchar c) {
+ostream &cv::operator<<(ostream &out, const uchar c) {
     out << unsigned(c);
     return out;
 }
 
-Size2f operator*(const Size2f &s, float a) {
+Size2f cv::operator*(const Size2f &s, float a) {
     return Size2f(kmath::fround(s.width * a), kmath::fround(s.height * a));
 }
 
-Size2f operator*(float a, const Size2f &s) {
+Size2f cv::operator*(float a, const Size2f &s) {
     return Size2f(kmath::fround(s.width * a), kmath::fround(s.height * a));
 }
 
-Size2f operator/(const Size2f &s, float a) {
+Size2f cv::operator/(const Size2f &s, float a) {
     return Size2f(kmath::fround(s.width / a), kmath::fround(s.height / a));
 }
 
-bool operator==(const Size2f &a, const Size2f &b) {
+bool cv::operator==(const Size2f &a, const Size2f &b) {
     return (a.width == b.width and a.height == b.height);
 }
 
-bool operator!=(const Size2f &a, const Size2f &b) {
+bool cv::operator!=(const Size2f &a, const Size2f &b) {
     return not (a == b);
 }

@@ -65,31 +65,23 @@ namespace autodiff {
         DualNum(double r, double d=0);
 
         operator double() const;
+
+        friend ostream &operator<<(ostream &out, const DualNum &v);
+
+        DualNum operator+(const autodiff::DualNum &a);
+        DualNum operator-();
+        DualNum operator-(const autodiff::DualNum &a);
+        DualNum operator*(const autodiff::DualNum &a);
+        DualNum operator/(const autodiff::DualNum &a);
     };
 
     DualNum dPow(const DualNum &a, const DualNum &b);
 
     DualNum dSin(const DualNum &a);
-
     DualNum dCos(const DualNum &a);
-
     DualNum dTan(const DualNum &a);
 
     DualNum dExp(const DualNum &a);
-
     DualNum dLog(const DualNum &a);
-
     DualNum dLog10(const DualNum &a);
 }
-
-autodiff::DualNum operator+(const autodiff::DualNum &a, const autodiff::DualNum &b);
-
-autodiff::DualNum operator-(const autodiff::DualNum &a, const autodiff::DualNum &b);
-
-autodiff::DualNum operator-(const autodiff::DualNum &a);
-
-autodiff::DualNum operator*(const autodiff::DualNum &a, const autodiff::DualNum &b);
-
-autodiff::DualNum operator/(const autodiff::DualNum &a, const autodiff::DualNum &b);
-
-ostream &operator<<(ostream &out, const autodiff::DualNum &a);

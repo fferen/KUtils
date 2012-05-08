@@ -47,7 +47,7 @@ namespace cvutils {
 
     /*! Get the number of bytes of a type at compile-time.
      *
-     * This is done with `cv::DataDepth<>`, but for some reason
+     * This is exactly the same as `cv::DataDepth<>`, but for some reason
      * `cv::DataDepth<uchar>::value` == 0, so we override it here with 1.
      */
     template <typename T>
@@ -55,6 +55,8 @@ namespace cvutils {
         static const int value = cv::DataDepth<T>::value;
     };
 
+    /*! Specialize for `uchar` since `cv::DataDepth<uchar>` reports 0 instead of 1.
+     */
     template <>
     struct _DataDepth_Fixed<uchar> {
         static const int value = 1;
@@ -207,43 +209,7 @@ namespace cvutils {
     /*! Convert a matrix from BGR color space to rg chromaticity space, with the
      * 3rd channel unused.
      */
-    void cvtBGR2RG(const cv::Mat &src, cv::Mat &dest);
-
-    /*! Generic naive clustering algorithm (`O(n^2)` worst case). An item is
-     * added to the cluster if it is within `maxDist` from all other items in
-     * the cluster.
-     *
-     * `getDist` should take two items and return their distance.
-     */
-    template <
-            class InSeqT,
-            template <class T=InSeqT, typename... Args> class OutSeqT,
-            class DistFuncT
-            >
-    void cluster(const InSeqT &items, const DistFuncT &getDist, float maxDist, OutSeqT<InSeqT> &clusters) {
-        clusters.clear();
-        if (items.empty()) {
-            return;
-        }
-        for (auto &item : items) {
-            bool added = false;
-            for (auto &cluster : clusters) {
-                if (seq::functional::all(
-                        [&](decltype(items[0]) &cItem) {
-                            return getDist(cItem, item) <= maxDist;
-                        },
-                        cluster
-                       )) {
-                    cluster.push_back(item);
-                    added = true;
-                    break;
-                }
-            }
-            if (not added) {
-                clusters.push_back(InSeqT{item});
-            }
-        }
-    }
+    void cvtBGR2RG(const cv::Mat_<cv::Vec3b> &src, cv::Mat_<cv::Vec3b> &dest);
 
     /*! Save Mat in file. */
     void matwrite(const char *fileName, const cv::Mat &m);
@@ -397,32 +363,40 @@ namespace cvutils {
     }
 }
 
-/* Printers */
-ostream &operator<<(ostream &out, const cv::Rect r);
-ostream &operator<<(ostream &out, const cv::Size s);
-ostream &operator<<(ostream &out, const cv::Size2f s);
-ostream &operator<<(ostream &out, const cv::Scalar s);
-ostream &operator<<(ostream &out, const uchar c);
+/*! Extend the `cv` namespace with missing operators like `<<` for some types. */
+namespace cv {
+    /*! Overload common operators for `cv::Size`, because contrary to the
+     * documentation, `cv::Size` does NOT support the same operators as
+     * `cv::Point`.
+     */
+    //@{
+    cv::Size2f operator*(const cv::Size2f &s, float a);
+    cv::Size2f operator*(float a, const Size2f &s);
+    cv::Size2f operator/(const Size2f &s, float a);
 
-template <typename T, int cn>
-ostream &operator<<(ostream &out, const cv::Vec<T, cn> v) {
-    out << "<Vec depth=" << cvutils::_DataDepth_Fixed<T>::value << " data=" << "(";
-    int i;
-    for (i = 0; i < cn - 1; i++) {
-        out << v[i] << ", ";
+    bool operator==(const Size2f &a, const cv::Size2f &b);
+    bool operator!=(const cv::Size2f &a, const cv::Size2f &b);
+    //@}
+
+    ostream &operator<<(ostream &out, const cv::Rect r);
+    ostream &operator<<(ostream &out, const cv::Size s);
+    ostream &operator<<(ostream &out, const cv::Size2f s);
+    ostream &operator<<(ostream &out, const cv::Scalar s);
+
+    /*! This must be overloaded, otherwise it prints it as a `char` instead of
+     * an `unsigned`, which is almost always what is wanted.
+     */
+    ostream &operator<<(ostream &out, const uchar c);
+
+    template <typename T, int cn>
+    ostream &operator<<(ostream &out, const cv::Vec<T, cn> v) {
+        out << "<Vec depth=" << cvutils::_DataDepth_Fixed<T>::value << " data=" << "(";
+        int i;
+        for (i = 0; i < cn - 1; i++) {
+            out << v[i] << ", ";
+        }
+        out << v[i] << ")>";
+
+        return out;
     }
-    out << v[i] << ")>";
-
-    return out;
 }
-
-/* Overload common operators for cv::Size, because the documentation is WRONG,
- * and cv::Size does NOT support the same operators as cv::Point. >:(
- */
-
-cv::Size2f operator*(const cv::Size2f &s, float a);
-cv::Size2f operator*(float a, const cv::Size2f &s);
-cv::Size2f operator/(const cv::Size2f &s, float a);
-
-bool operator==(const cv::Size2f &a, const cv::Size2f &b);
-bool operator!=(const cv::Size2f &a, const cv::Size2f &b);
