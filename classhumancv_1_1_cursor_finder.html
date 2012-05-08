@@ -105,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Framework for tracking hand gestures.  
+<p>Framework for tracking hand gestures and translating them into mouse motion and actions.  
  <a href="classhumancv_1_1_cursor_finder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="humancv_8hpp_source.html">humancv.hpp</a>&gt;</code></p>
@@ -116,11 +116,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ff8b8961e65f437484cc61bfb28dee1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhumancv_1_1_cursor_finder.html#a3ff8b8961e65f437484cc61bfb28dee1">CursorFinder</a> (const cv::Rect &amp;<a class="el" href="classhumancv_1_1_cursor_finder.html#ac24299e06cd5d271dac727a80bebc5c3">mouseRect</a>, const cv::Rect &amp;<a class="el" href="classhumancv_1_1_cursor_finder.html#a8a6474e4cf616789f7b14085e83261c8">screenRect</a>, const cv::CascadeClassifier &amp;<a class="el" href="classhumancv_1_1_cursor_finder.html#a5dd2e09ff9ca7e0667d0267d571a31ff">cascade</a>, float <a class="el" href="classhumancv_1_1_cursor_finder.html#ad7607c9dd807d16db9cda9cea42e8dcb">addChance</a>=0.1, float <a class="el" href="classhumancv_1_1_cursor_finder.html#aefec5ff071032bfce5d46c4cdedf3f10">minCtrProp</a>=0.05, float <a class="el" href="classhumancv_1_1_cursor_finder.html#a647e0325a998393648793c069524454d">handSizeProp</a>=1, float <a class="el" href="classhumancv_1_1_cursor_finder.html#a816167296fd52528605710cccd3336b8">kHandHeightProp</a>=0.25, float <a class="el" href="classhumancv_1_1_cursor_finder.html#a8703da65435e5707559fe59180634b40">minFingerDistProp</a>=0.15)</td></tr>
 <tr class="memitem:af2069456a8a2ec608e5d5cdd109d5396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhumancv_1_1_cursor_finder.html#af2069456a8a2ec608e5d5cdd109d5396">mouseStateFromContour</a> (const <a class="el" href="namespacehumancv.html#ac3621cda88df26d2718f6bd5ec4de1dd">Contour</a> &amp;ctr, const cv::Size &amp;handSize, const cv::Size &amp;windowSize, <a class="el" href="structmouse_1_1_state.html">mouse::State</a> &amp;out) const </td></tr>
-<tr class="memdesc:af2069456a8a2ec608e5d5cdd109d5396"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;TODO&gt;  <a href="#af2069456a8a2ec608e5d5cdd109d5396"></a><br/></td></tr>
+<tr class="memdesc:af2069456a8a2ec608e5d5cdd109d5396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the new mouse state given a hand contour (with possible arm attached).  <a href="#af2069456a8a2ec608e5d5cdd109d5396"></a><br/></td></tr>
 <tr class="memitem:a2767654c55943ef9d7e516a9f08dcb8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhumancv_1_1_cursor_finder.html#a2767654c55943ef9d7e516a9f08dcb8a">train</a> (const vector&lt; cv::Mat_&lt; cv::Vec3b &gt;&gt; &amp;negFrames)</td></tr>
-<tr class="memdesc:a2767654c55943ef9d7e516a9f08dcb8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;TODO&gt;  <a href="#a2767654c55943ef9d7e516a9f08dcb8a"></a><br/></td></tr>
-<tr class="memitem:a144b895a360b63699c3b36ac00aa04de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhumancv_1_1_cursor_finder.html#a144b895a360b63699c3b36ac00aa04de">getMouseState</a> (const cv::Mat_&lt; cv::Vec3b &gt; &amp;frame, <a class="el" href="structmouse_1_1_state.html">mouse::State</a> &amp;out, cv::Mat_&lt; uchar &gt; *skinMask=NULL, cv::Mat_&lt; uchar &gt; *withoutFaceAndSmall=NULL, cv::Mat_&lt; uchar &gt; *withHighestCtr=NULL, bool *foundFace=NULL)</td></tr>
-<tr class="memdesc:a144b895a360b63699c3b36ac00aa04de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if new mouse state was stored in <code>out</code> (hand was found).  <a href="#a144b895a360b63699c3b36ac00aa04de"></a><br/></td></tr>
+<tr class="memdesc:a2767654c55943ef9d7e516a9f08dcb8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Train the Adaboost classifier.  <a href="#a2767654c55943ef9d7e516a9f08dcb8a"></a><br/></td></tr>
+<tr class="memitem:ac211751276901eaeb2c013b92e737e60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhumancv_1_1_cursor_finder.html#ac211751276901eaeb2c013b92e737e60">getMouseState</a> (const cv::Mat_&lt; cv::Vec3b &gt; &amp;frame, <a class="el" href="structmouse_1_1_state.html">mouse::State</a> &amp;out, cv::Mat_&lt; uchar &gt; *skinMask=NULL, cv::Mat_&lt; uchar &gt; *withoutFaceAndSmall=NULL, cv::Mat_&lt; uchar &gt; *withLargestCtr=NULL, bool *foundFace=NULL)</td></tr>
+<tr class="memdesc:ac211751276901eaeb2c013b92e737e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute new mouse state from new frame and return true if new mouse state was stored in <code>out</code> (hand was found).  <a href="#ac211751276901eaeb2c013b92e737e60"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a5dd2e09ff9ca7e0667d0267d571a31ff"><td class="memItemLeft" align="right" valign="top">cv::CascadeClassifier&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhumancv_1_1_cursor_finder.html#a5dd2e09ff9ca7e0667d0267d571a31ff">cascade</a></td></tr>
@@ -137,13 +137,19 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ac24299e06cd5d271dac727a80bebc5c3"><td class="memItemLeft" align="right" valign="top">cv::Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhumancv_1_1_cursor_finder.html#ac24299e06cd5d271dac727a80bebc5c3">mouseRect</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Framework for tracking hand gestures. </p>
-<p>It has two phases, training and runtime.</p>
-<h2>Training</h2>
+<div class="textblock"><p>Framework for tracking hand gestures and translating them into mouse motion and actions. </p>
+<p>Currently, three gestures are defined:</p>
+<p>no fingers -&gt; left mouse button down<br/>
+ one fingers -&gt; no buttons down<br/>
+ two fingers -&gt; middle mouse button down</p>
+<h2>Brief description of the method</h2>
+<h3>Training</h3>
 <p>A sequence of frames, each containing a face, is gathered from a video source.</p>
-<p>This sequence is passed to <code><a class="el" href="classhumancv_1_1_cursor_finder.html#a2767654c55943ef9d7e516a9f08dcb8a" title="&lt;TODO&gt;">train()</a></code>, faces are detected, and an Adaboost classifier is trained with the face pixels as the positive class and all other pixels as the negative class. The assumption is that no other objects containing skin, besides the faces, are present in the frames.</p>
-<h2>Runtime</h2>
-<p>&lt;TODO&gt; </p>
+<p>This sequence is passed to <code><a class="el" href="classhumancv_1_1_cursor_finder.html#a2767654c55943ef9d7e516a9f08dcb8a" title="Train the Adaboost classifier.">train()</a></code>, faces are detected, and an Adaboost classifier is trained with the face pixels as the positive class and all other pixels as the negative class. The assumption is that no other objects containing skin, besides the faces, are present in the frames.</p>
+<h3>Runtime</h3>
+<p>A skin mask is generated using the classifier, then post-processed with erosion/dilation and removal of small contours and those inside the face. If any contours remain, the largest is selected as the hand contour and used to store the mouse state and position via <a class="el" href="classhumancv_1_1_cursor_finder.html#af2069456a8a2ec608e5d5cdd109d5396" title="Store the new mouse state given a hand contour (with possible arm attached).">mouseStateFromContour()</a>. Finally, the mouse data is passed to a Kalman filter to smooth out noise. <hr/>
+<p>For more details please look at the source:</p>
+<p><a href="https://github.com/fferen/KUtils/blob/master/src/humancv.cpp">https://github.com/fferen/KUtils/blob/master/src/humancv.cpp</a> </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3ff8b8961e65f437484cc61bfb28dee1"></a>
 <div class="memitem">
@@ -259,7 +265,16 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>&lt;TODO&gt; </p>
+<p>Store the new mouse state given a hand contour (with possible arm attached). </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctr</td><td>Contour of hand. </td></tr>
+    <tr><td class="paramname">handSize</td><td>The maximum estimated size of hand. </td></tr>
+    <tr><td class="paramname">windowSize</td><td>The size of the window containing contour. </td></tr>
+    <tr><td class="paramname">out</td><td>Where to store the new mouse state. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -278,16 +293,22 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>&lt;TODO&gt; </p>
+<p>Train the Adaboost classifier. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">negFrames</td><td>Vector of frames in the BGR color format. Each must contain a face and no other skin. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="a144b895a360b63699c3b36ac00aa04de"></a>
+<a class="anchor" id="ac211751276901eaeb2c013b92e737e60"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classhumancv_1_1_cursor_finder.html#a144b895a360b63699c3b36ac00aa04de">CursorFinder::getMouseState</a> </td>
+          <td class="memname">bool <a class="el" href="classhumancv_1_1_cursor_finder.html#ac211751276901eaeb2c013b92e737e60">CursorFinder::getMouseState</a> </td>
           <td>(</td>
           <td class="paramtype">const cv::Mat_&lt; cv::Vec3b &gt; &amp;&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
@@ -314,7 +335,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">cv::Mat_&lt; uchar &gt; *&#160;</td>
-          <td class="paramname"><em>withHighestCtr</em> = <code>NULL</code>, </td>
+          <td class="paramname"><em>withLargestCtr</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -331,7 +352,19 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Return true if new mouse state was stored in <code>out</code> (hand was found). </p>
+<p>Compute new mouse state from new frame and return true if new mouse state was stored in <code>out</code> (hand was found). </p>
+<p>Frame must also contain face.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>Frame in which to search for hand, in BGR color format. </td></tr>
+    <tr><td class="paramname">out</td><td>Where to store the new mouse state, if hand is found. </td></tr>
+    <tr><td class="paramname">skinMask</td><td>Pointer to a mask in which to store the raw skin mask, if face is found. </td></tr>
+    <tr><td class="paramname">withoutFaceAndSmall</td><td>Pointer to a mask in which to store the skin mask with face contours and small contours removed, if any remain. </td></tr>
+    <tr><td class="paramname">withLargestCtr</td><td>Pointer to a mask in which to store the skin mask with only the largest contour drawn, if any remain. </td></tr>
+    <tr><td class="paramname">foundFace</td><td>If provided, stores whether face is found. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -500,7 +533,7 @@ Public Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 7 2012 15:07:27 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 8 2012 10:20:26 for KUtils by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
