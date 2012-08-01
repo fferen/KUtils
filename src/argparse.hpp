@@ -125,7 +125,7 @@ namespace argparse {
             char optChar='-',
             bool genHelpChker=true
             ) {
-        ArgHolder holder{dict::Dict<string, vector<string>>(), vector<string>(), string()};
+        ArgHolder holder{dict::Dict<string, vector<string>>(), vector<string>()};
 
         vector<string> curArgs;
         string curOpt;
@@ -160,7 +160,7 @@ namespace argparse {
             try {
                 nargs = optToChker.at(curOpt)(curArgs);
             } catch (out_of_range &err) {
-                throw invalid_argument(strFmt("unknown option %s", curOpt));
+                throw invalid_argument(strFmt("unknown option %s", curOpt.c_str()));
             }
             
             holder.posArgs.insert(holder.posArgs.end(), curArgs.begin() + nargs, curArgs.end());

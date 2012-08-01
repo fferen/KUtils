@@ -261,7 +261,7 @@ namespace seq {
          * `true`.
          */
         template <typename NumT>
-        XRange<NumT> xrange(NumT low, NumT high, NumT step=1, bool inclusive=false) {
+        XRange<NumT> xrange(NumT low, NumT high, double step=1, bool inclusive=false) {
             NumT highOff = 0;
             if (inclusive) {
                 highOff = (NumT)(abs(step) * 0.5);
@@ -457,10 +457,10 @@ namespace seq {
      */
     template <
             class InSeqT,
-            template <class T=InSeqT, typename... Args> class OutSeqT,
+            class OutSeqT,
             class DistFuncT
             >
-    void cluster(const InSeqT &items, const DistFuncT &getDist, float maxDist, OutSeqT<InSeqT> &clusters) {
+    void cluster(const InSeqT &items, const DistFuncT &getDist, float maxDist, OutSeqT &clusters) {
         clusters.clear();
         if (items.empty()) {
             return;

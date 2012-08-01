@@ -52,10 +52,12 @@ static cv::Mat &_cvtRGBColor(
                 case osx::disp::COLOR_BGR:
                     cvtColor(in, out, cv::COLOR_RGBA2BGR);
                     break;
-                case osx::disp::COLOR_ARGB:
+                case osx::disp::COLOR_ARGB: {
                     out.create(in.size(), CV_8UC4);
-                    mixChannels(&in, 1, &out, 1, (int []){0,1, 1,2, 2,3, 3,0}, 4);
+                    const int fromTo[] = {0,1, 1,2, 2,3, 3,0};
+                    mixChannels(&in, 1, &out, 1, fromTo, 4);
                     break;
+                }
                 case osx::disp::COLOR_RGBA:
                     out = in;
                     break;
@@ -70,17 +72,21 @@ static cv::Mat &_cvtRGBColor(
             // fall through
         case kCGImageAlphaNoneSkipFirst:
             switch (destFmt) {
-                case osx::disp::COLOR_BGR:
+                case osx::disp::COLOR_BGR: {
                     out.create(in.size(), CV_8UC3);
-                    mixChannels(&in, 1, &out, 1, (int []){1,2, 2,1, 3,0}, 3);
+                    const int fromTo[] = {1,2, 2,1, 3,0};
+                    mixChannels(&in, 1, &out, 1, fromTo, 3);
                     break;
+                }
                 case osx::disp::COLOR_ARGB:
                     out = in;
                     break;
-                case osx::disp::COLOR_RGBA:
+                case osx::disp::COLOR_RGBA: {
                     out.create(in.size(), CV_8UC4);
-                    mixChannels(&in, 1, &out, 1, (int []){0,3, 1,0, 2,1, 3,2}, 4);
+                    const int fromTo[] = {0,3, 1,0, 2,1, 3,2};
+                    mixChannels(&in, 1, &out, 1, fromTo, 4);
                     break;
+                }
                 default:
                     throw invalid_argument("invalid destFmt");
                     break;

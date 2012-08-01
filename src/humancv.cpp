@@ -104,7 +104,9 @@ void skin::getMask(
     Mat_<float> samp(1, 3);
 
     if (lookup == NULL) {
-        SparseMat_<float> temp(3, (int []){256, 256, 256});
+        const int sizes[] = {256, 256, 256};
+
+        SparseMat_<float> temp(3, sizes);
         lookup = &temp;
     }
 
@@ -251,9 +253,11 @@ CursorFinder::CursorFinder(
             )
         : cascade(cascade), addChance(addChance), minCtrProp(minCtrProp),
         handSizeProp(handSizeProp), kHandHeightProp(kHandHeightProp),
-        minFingerDistProp(minFingerDistProp),
-        pxToPrediction(3, (int []){256, 256, 256}), thres(0), kFilter(4, 2, 0),
+        minFingerDistProp(minFingerDistProp), thres(0), kFilter(4, 2, 0),
         screenRect(screenRect), mouseRect(mouseRect) {
+    const int sizes[] = {256, 256, 256};
+    this->pxToPrediction = SparseMat_<float>(3, sizes);
+
     this->kFilter.transitionMatrix = (Mat_<float>(4, 4) << 1,0,1,0, 0,1,0,1, 0,0,1,0, 0,0,0,1);
     setIdentity(this->kFilter.measurementMatrix);
     setIdentity(this->kFilter.measurementNoiseCov, 0.3);
