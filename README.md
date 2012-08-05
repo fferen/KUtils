@@ -21,7 +21,7 @@ See the full documentation [here][docs].
 
 The code relies heavily on C++11 features, so will not build with older compilers.
 
-I haven't had time to write a proper 'configure/make/make install', so the included Makefile is specific to my system. Sorry :X
+I haven't had time to write a proper configuration script/Makefile, so the included Makefile is specific to my system. Sorry :X
 
 [cfinder]: http://fferen.github.com/KUtils/classhumancv_1_1_cursor_finder.html
 [osx]: http://fferen.github.com/KUtils/namespaceosx.html
