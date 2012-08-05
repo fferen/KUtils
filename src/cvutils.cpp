@@ -289,21 +289,6 @@ Size2f cvutils::transform::rotateSize(Size2f s, float angle) {
             );
 }
 
-ostream &cv::operator<<(ostream &out, const Rect r) {
-    out << "<Rect x=" << r.x << " y=" << r.y << " width=" << r.width << " height=" << r.height << ">";
-    return out;
-}
-
-ostream &cv::operator<<(ostream &out, const Size s) {
-    out << "<Size width=" << s.width << " height=" << s.height << ">";
-    return out;
-}
-
-ostream &cv::operator<<(ostream &out, const Size2f s) {
-    out << "<Size2f width=" << s.width << " height=" << s.height << ">";
-    return out;
-}
-
 ostream &cv::operator<<(ostream &out, const Scalar s) {
     out << "<Scalar (" << s[0] << ", " << s[1] << ", " << s[2] << ", " << s[3] << ")>";
     return out;
@@ -312,24 +297,4 @@ ostream &cv::operator<<(ostream &out, const Scalar s) {
 ostream &cv::operator<<(ostream &out, const uchar c) {
     out << unsigned(c);
     return out;
-}
-
-Size2f cv::operator*(const Size2f &s, float a) {
-    return Size2f(kmath::fround(s.width * a), kmath::fround(s.height * a));
-}
-
-Size2f cv::operator*(float a, const Size2f &s) {
-    return Size2f(kmath::fround(s.width * a), kmath::fround(s.height * a));
-}
-
-Size2f cv::operator/(const Size2f &s, float a) {
-    return Size2f(kmath::fround(s.width / a), kmath::fround(s.height / a));
-}
-
-bool cv::operator==(const Size2f &a, const Size2f &b) {
-    return (a.width == b.width and a.height == b.height);
-}
-
-bool cv::operator!=(const Size2f &a, const Size2f &b) {
-    return not (a == b);
 }

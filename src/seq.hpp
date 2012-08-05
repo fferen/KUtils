@@ -39,24 +39,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using namespace std;
 
-/*! Multiply each element in a sequence by `e`. */
-template <class SeqT, typename OperandT>
-SeqT &operator*=(SeqT &s, const OperandT &e) {
-    for (auto &elem : s) {
-        elem *= e;
-    }
-    return s;
-}
-
-/*! Divide each element in a sequence by `e`. */
-template <class SeqT, typename OperandT>
-SeqT &operator/=(SeqT &s, const OperandT &e) {
-    for (auto &elem : s) {
-        elem /= e;
-    }
-    return s;
-}
-
 /*! Generic sequence operations and structures.
  *
  * NB: "sequence" here means "container" in the rest of C++. I just chose
@@ -72,20 +54,20 @@ namespace seq {
      * These all should be fairly self-explanatory.
      */
     namespace functional {
-        template <class InSeqT, class OutSeqT, typename FuncT>
+        template <class InSeqT, class OutSeqT, class FuncT>
         OutSeqT &map(const FuncT &func, const InSeqT &in, OutSeqT &out) {
             out.resize(in.size());
             transform(in.begin(), in.end(), out.begin(), func);
             return out;
         }
 
-        template <class InSeqT, class OutSeqT=InSeqT, typename FuncT>
+        template <class InSeqT, class OutSeqT=InSeqT, class FuncT>
         OutSeqT map(const FuncT &func, const InSeqT &in) {
             OutSeqT out;
             return map(func, in, out);
         }
 
-        template <class InSeqT, class OutSeqT, typename FuncT>
+        template <class InSeqT, class OutSeqT, class FuncT>
         OutSeqT &filter(const FuncT &test, const InSeqT &in, OutSeqT &out) {
             size_t curI = 0;
             for (auto elem : in) {
@@ -102,13 +84,13 @@ namespace seq {
             return out;
         }
 
-        template <class InSeqT, class OutSeqT=InSeqT, typename FuncT>
+        template <class InSeqT, class OutSeqT=InSeqT, class FuncT>
         OutSeqT filter(const FuncT &test, const InSeqT &in) {
             OutSeqT out;
             return filter(test, in, out);
         }
 
-        template<class SeqT, typename FuncT>
+        template<class SeqT, class FuncT>
         bool any(const FuncT &test, const SeqT &in) {
             for (auto elem : in) {
                 if (test(elem)) {
@@ -119,7 +101,7 @@ namespace seq {
         }
 
         /*! See sl() for the definition of `Slice`. */
-        template<class IterT, typename FuncT>
+        template<class IterT, class FuncT>
         bool any(const FuncT &test, const Slice<IterT> &its) {
             for (auto it = its.first; it != its.second; it++) {
                 if (test(*it)) {
@@ -129,7 +111,7 @@ namespace seq {
             return false;
         }
 
-        template<class SeqT, typename FuncT>
+        template<class SeqT, class FuncT>
         bool all(const FuncT &test, const SeqT &in) {
             for (auto elem : in) {
                 if (not test(elem)) {
@@ -140,7 +122,7 @@ namespace seq {
         }
 
         /*! See sl() for the definition of `Slice`. */
-        template<class IterT, typename FuncT>
+        template<class IterT, class FuncT>
         bool all(const FuncT &test, const Slice<IterT> &its) {
             for (auto it = its.first; it != its.second; it++) {
                 if (not test(*it)) {
@@ -158,7 +140,7 @@ namespace seq {
          *
          * `this->step == 0` means that it's the end of a range.
          */
-        template <typename NumT>
+        template <class NumT>
         class XRangeIterator {
             public:
             typedef NumT value_type;
@@ -178,7 +160,7 @@ namespace seq {
                 this->step = step;
             }
 
-            template <typename OtherNumT>
+            template <class OtherNumT>
             XRangeIterator(const XRangeIterator<OtherNumT> &other) {
                 val = other.val;
                 step = other.step;
@@ -192,7 +174,7 @@ namespace seq {
                 val += step;
             }
 
-            template <typename OtherNumT>
+            template <class OtherNumT>
             bool operator==(const XRangeIterator<OtherNumT>& it) {
                 bool res = it.step == 0
                     ? (step > 0 ? val >= it.val : val <= it.val) // other one is end
@@ -200,7 +182,7 @@ namespace seq {
                 return res;
             }
 
-            template <typename OtherNumT>
+            template <class OtherNumT>
             bool operator!=(const XRangeIterator<OtherNumT>& it) {
                 bool res = not (*this == it);
                 return res;
@@ -217,7 +199,7 @@ namespace seq {
          * `xrange`. Typically only exists to provide iterators via `begin()`
          * and `end()`.
          */
-        template <typename NumT=int>
+        template <class NumT=int>
         struct XRange {
             typedef XRangeIterator<NumT> iterator;
             typedef NumT value_type;
@@ -233,7 +215,7 @@ namespace seq {
                 endIt = iterator(high);
             }
 
-            template <typename OtherNumT>
+            template <class OtherNumT>
             XRange(const XRange<OtherNumT> &other) {
                 startIt = other.begin();
                 endIt = other.end();
@@ -260,7 +242,7 @@ namespace seq {
          * can include the endpoint of the range by specifying `inclusive` =
          * `true`.
          */
-        template <typename NumT>
+        template <class NumT>
         XRange<NumT> xrange(NumT low, NumT high, double step=1, bool inclusive=false) {
             NumT highOff = 0;
             if (inclusive) {
@@ -274,7 +256,7 @@ namespace seq {
             return XRange<NumT>(low, high + highOff, step);
         }
 
-        template <typename NumT>
+        template <class NumT>
         XRange<NumT> xrange(NumT high, bool inclusive=false) {
             return xrange<NumT>(0, high, 1, inclusive);
         }
@@ -282,7 +264,7 @@ namespace seq {
         /*! Construct a sequence of numbers from `low` to `high` with optional
          * `step`, store it in `out`, and return `out`.
          */
-        template <typename NumT, class SeqT>
+        template <class NumT, class SeqT>
         SeqT &range(NumT low, NumT high, SeqT &out, NumT step=1) {
             if (high <= low) {
                 out.clear();
@@ -301,7 +283,7 @@ namespace seq {
         /*! Construct a sequence of numbers from 0 to high with step=1, store it
          * in `out`, and return `out`.
          */
-        template <typename NumT, class SeqT>
+        template <class NumT, class SeqT>
         SeqT &range(NumT high, SeqT &out) {
             range((NumT)0, high, out);
         }
@@ -349,7 +331,7 @@ namespace seq {
     }
 
     /*! Provides a reference and an index of an element in a sequence. */
-    template <typename SeqT>
+    template <class SeqT>
     struct ElemView {
         typename SeqT::reference e;
         long int i;
@@ -486,6 +468,79 @@ namespace seq {
     }
 }
 
+/*! Multiply each element in a sequence by `e`. */
+template <
+        class NumT,
+        class ElemT,
+        template <class U=ElemT, class Alloc=allocator<ElemT>> class SeqT
+        >
+SeqT<> &operator*=(SeqT<> &s, const NumT &e) {
+    for (auto &elem : s) {
+        elem *= e;
+    }
+    return s;
+}
+
+/*! Return a new sequence with each element multiplied by `e`. */
+template <
+        class NumT,
+        class ElemT,
+        template <class U=ElemT, class Alloc=allocator<ElemT>> class SeqT
+        >
+SeqT<> operator*(const SeqT<> &s, NumT e) {
+    SeqT<> res(s);
+    return (res *= e);
+}
+
+/*! Return a new sequence with each element multiplied by `e`. */
+template <
+        class NumT,
+        class ElemT,
+        template <class U=ElemT, class Alloc=allocator<ElemT>> class SeqT
+        >
+SeqT<> operator*(NumT e, const SeqT<> &s) {
+    SeqT<> res(s);
+    return (res *= e);
+}
+
+/*! Divide each element in a sequence by `e`. */
+template <
+        class NumT,
+        class ElemT,
+        template <class U=ElemT, class Alloc=allocator<ElemT>> class SeqT
+        >
+SeqT<> &operator/=(SeqT<> &s, const NumT &e) {
+    for (auto &elem : s) {
+        elem /= e;
+    }
+    return s;
+}
+
+/*! Return a new sequence with each element divided by `e`. */
+template <
+        class NumT,
+        class ElemT,
+        template <class U=ElemT, class Alloc=allocator<ElemT>> class SeqT
+        >
+SeqT<> operator/(const SeqT<> &s, NumT e) {
+    SeqT<> res(s);
+    return (res /= e);
+}
+
+/*! Return a new sequence with each element divided by `e`. */
+template <
+        class NumT,
+        class ElemT,
+        template <class U=ElemT, class Alloc=allocator<ElemT>> class SeqT
+        >
+SeqT<> operator/(NumT e, const SeqT<ElemT> &s) {
+    SeqT<> res(s);
+    for (auto &n: res) {
+        n = e / n;
+    }
+    return res;
+}
+
 /*! Print each element of a container, surrounded by `[]` and separated by
  * commas.
  */
@@ -493,7 +548,7 @@ template <
         class T,
         template <class U=T, class Alloc=allocator<T>> class SeqT
         >
-ostream &operator<<(ostream &out, const SeqT<T> &seq) {
+ostream &operator<<(ostream &out, const SeqT<> &seq) {
     if (seq.empty()) {
         out << "[]";
         return out;

@@ -15,13 +15,13 @@ Major features (not an exhaustive list):
     * [Functional programming tools][func] like `map`, `filter`, `any`, `all`
 * I/O
     * Convenience functions [print][print] and [printImm][printImm] to replace the messy `cout <<` syntax (simply calls `cout` underneath).
-    * Overloaded `operator<<` to print almost every type, including STL containers, `unordered_map`s, `pair`s, and most OpenCV types, using a uniform, XML-like format
-* Loose coupling
-    * OSX-specific modules and OpenCV-related modules are seperate from the rest (including each other, with a [special module][osx_cv] to convert between formats), making it easy to use what you need
+    * Overloaded `operator<<` to print many common types, including STL containers, `unordered_map`s, `pair`s, and most OpenCV types, using a uniform, XML-like format
 
 See the full documentation [here][docs].
 
-The code relies heavily on C++11 features, so will not build with older compilers. GCC 4.7 works.
+The code relies heavily on C++11 features, so will not build with older compilers.
+
+I haven't had time to write a proper 'configure/make/make install', so the included Makefile is specific to my system. Sorry :X
 
 [cfinder]: http://fferen.github.com/KUtils/classhumancv_1_1_cursor_finder.html
 [osx]: http://fferen.github.com/KUtils/namespaceosx.html
